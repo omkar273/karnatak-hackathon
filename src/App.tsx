@@ -1,15 +1,32 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ReactNode } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import LoadingPage from "./common/pages/loading_page";
+import useAuth from "./pages/auth/hooks/use_auth";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 
 const App = () => {
+  const { isUserLoggedIn } = useAuth();
+  // const isUserLoggedIn = true;
+
+  const getProtectedRoute = (element: ReactNode) => {
+    return isUserLoggedIn ? element : <Navigate to={"/auth"} replace={true} />;
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/auth"
+          element={
+            isUserLoggedIn ? <Navigate to={"/"} replace={true} /> : <AuthPage />
+          }
+        />
 
-        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/" element={getProtectedRoute(<HomePage />)} />
+
+        <Route path="/l" element={<LoadingPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
