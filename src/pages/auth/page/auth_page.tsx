@@ -1,8 +1,25 @@
 import capital_tech_logo from "@/assets/images/capital_tech_logo.png";
 import { VSpacer } from "@/common/components/spacer";
+import { useState } from "react";
 import InputField from "../components/input_field";
 
 const AuthPage = () => {
+  const [isLoading, setisLoading] = useState<boolean>(false);
+  const handleRegistration = async () => {
+    try {
+      setisLoading(true);
+      // await doSignUp({
+      //   email: "omkrsonawane6221@gmail.com",
+      //   password: "123456789",
+      //   username: "Omkar@1406",
+      // });
+
+      setisLoading(false);
+    } catch (error) {
+      setisLoading(false);
+    }
+  };
+
   return (
     <div className="pg md:flex">
       <div className="w-[45%] bg-blue-500"></div>
@@ -33,8 +50,11 @@ const AuthPage = () => {
           <InputField hint={"Password"} label="Password" />
           <VSpacer height={25} />
 
-          <div className="btn font-ubuntu cursor-pointer" onClick={() => {}}>
-            Login
+          <div
+            className="btn font-ubuntu cursor-pointer"
+            onClick={handleRegistration}
+          >
+            {isLoading ? "Loading..." : "Login"}
           </div>
           <VSpacer height={10} />
           <p className="cursor-pointer ">Forget Password?</p>

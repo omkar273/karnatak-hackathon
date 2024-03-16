@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { ScaleLoader } from "react-spinners";
 
-const LoadingPage = () => {
+const LoadingPage: FC<{
+  setisAnimationCompleted: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ setisAnimationCompleted }) => {
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -14,6 +16,7 @@ const LoadingPage = () => {
         index++;
       } else {
         clearInterval(interval);
+        setisAnimationCompleted(true);
       }
     }, 100); // Adjust the interval time as needed
 
@@ -21,7 +24,7 @@ const LoadingPage = () => {
   }, []);
 
   return (
-    <div className="bg-[#002D71] pg flex flex-col justify-center items-center">
+    <div className="bg-blue-500 pg flex flex-col justify-center items-center">
       <p className="text-5xl text-white font-fira-sans mb-6">{text}</p>
 
       <div className="flex items-center">

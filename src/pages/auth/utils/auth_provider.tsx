@@ -26,6 +26,8 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(false);
   const [authStateLoading, setAuthStateLoading] = useState<boolean>(true);
+  const [isAnimationCompleted, setisAnimationCompleted] =
+    useState<boolean>(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, initializeUser);
@@ -33,6 +35,8 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }, []);
 
   const initializeUser = (user: User | null): void => {
+    console.log(user);
+
     if (user) {
       setCurrentUser(user);
       setIsUserLoggedIn(true);
@@ -44,12 +48,15 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setAuthStateLoading(false);
   };
 
-  // Provide auth state and functions to child components
   return (
     <AuthContext.Provider
       value={{ currentUser, isUserLoggedIn, authStateLoading }}
     >
-      {authStateLoading ? <LoadingPage /> : children}
+      {authStateLoading || !isAnimationCompleted ? (
+        <LoadingPage setisAnimationCompleted={setisAnimationCompleted} />
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 };

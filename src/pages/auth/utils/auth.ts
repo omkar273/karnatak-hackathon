@@ -1,5 +1,9 @@
 import { auth, firestore } from "@/firebase/firebase_config";
-import { UserCredential, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  UserCredential,
+  createUserWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
 
 type SignUpData = {
@@ -8,7 +12,7 @@ type SignUpData = {
   password: string;
 };
 
-export const handleSignUp = async ({
+export const doSignUp = async ({
   username,
   email,
   password,
@@ -27,5 +31,13 @@ export const handleSignUp = async ({
     }
   } catch (error) {
     console.error("Error signing up:", error);
-}
+  }
+};
+
+export const doLogout = async () => {
+  try {
+    await signOut(auth);
+  } catch (error) {
+    console.log("error logging out:", error);
+  }
 };
