@@ -1,5 +1,4 @@
 import { setLogout } from "@/common/redux/auth_slice";
-import { RootState } from "@/common/redux/store";
 import { doLogout } from "@/pages/auth/utils/auth";
 import FIRPage from "@/pages/fir/page/fir_page";
 import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
@@ -8,12 +7,11 @@ import { Avatar, Layout, Menu, Popconfirm } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Header } from "antd/es/layout/layout";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import HomeNavbar from "../components/home_navbar";
 
 const HomePage = () => {
   const [isLoading, setisLoading] = useState<boolean>(false);
-  const user = useSelector((s: RootState) => s.auth.currentUser);
   const dispatch = useDispatch();
 
   const sidebarItems = [
@@ -61,19 +59,25 @@ const HomePage = () => {
 
   return (
     <Layout className="pg bg-white">
+      {/* navbar */}
       <Header className="w-full bg-[#002D71] sticky top-0 z-10">
         <HomeNavbar />
       </Header>
+
+      {/* main content */}
       <Layout>
+        {/* leftside pane */}
         <Sider
           width="15%"
           style={{ backgroundColor: "rgb(59 130 246 )" }}
           className="hidden md:flex md:flex-col"
         >
+          {/* user title */}
           <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
             Shailesh
             <Avatar src={url} />
           </p>
+
           <div className="h-[calc(100vh-7.6rem)] overflow-y-scroll">
             <Menu
               defaultOpenKeys={["home"]}

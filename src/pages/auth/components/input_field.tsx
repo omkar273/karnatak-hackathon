@@ -4,8 +4,18 @@ import { FC } from "react";
 const InputField: FC<{
   label?: string | undefined;
   hint?: undefined | string;
+  required?: boolean;
+  error?: string | null;
+  type?: React.HTMLInputTypeAttribute;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
-}> = ({ label = "", hint = "", onChange }) => {
+}> = ({
+  label = "",
+  hint = "",
+  onChange,
+  required = false,
+  error,
+  type = "text",
+}) => {
   return (
     <div>
       <label
@@ -16,12 +26,14 @@ const InputField: FC<{
       </label>
       <VSpacer height={5} />
       <input
-        type="text"
-        className="w-full bg-white md:bg-gray-200 p-4 rounded-md md:bg-opacity-50 mb-3 active:border-none"
+        type={type}
+        className="w-full bg-white md:bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
         id={label}
+        required={required}
         placeholder={hint}
         onChange={onChange}
       />
+      <p className="mb-3 text-xs text-red-600">{error}</p>
     </div>
   );
 };
