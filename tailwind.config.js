@@ -18,7 +18,7 @@ export default defineConfig({
         'ubuntu': 'Ubuntu',
       },
       colors: {
-        primary: colors.blue
+        primary: colors.purple
       }
     },
   },

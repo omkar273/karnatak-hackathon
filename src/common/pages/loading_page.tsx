@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { ScaleLoader } from "react-spinners";
+import { PacmanLoader } from "react-spinners";
 
 const LoadingPage: FC<{
   setisAnimationCompleted: React.Dispatch<React.SetStateAction<boolean>>;
@@ -28,7 +28,7 @@ const LoadingPage: FC<{
       <p className="text-5xl text-white font-fira-sans mb-6">{text}</p>
 
       <div className="flex items-center">
-        <ScaleLoader color="white" loading={true} />
+        <PacmanLoader color="white" loading={true} />
       </div>
     </div>
   );

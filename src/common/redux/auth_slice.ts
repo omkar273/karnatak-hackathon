@@ -9,7 +9,7 @@ type authstate = {
 
 const authInitalState: authstate = {
   currentUser: null,
-  isUserLoggedIn: true,
+  isUserLoggedIn: false,
   authStateLoading: false,
 };
 

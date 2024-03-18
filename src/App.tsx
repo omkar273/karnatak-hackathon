@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import LoadingPage from "./common/pages/loading_page";
 import { RootState } from "./common/redux/store";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
@@ -28,6 +29,8 @@ const App = () => {
         />
 
         <Route path="/" element={getProtectedRoute(<HomePage />)} />
+
+        <Route path="/l" element={<LoadingPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
