@@ -13,24 +13,32 @@ import HomeNavbar from "../components/home_navbar";
 const HomePage = () => {
   const [isLoading, setisLoading] = useState<boolean>(false);
   const dispatch = useDispatch();
+  const [page, setpage] = useState(<FIRPage />);
+
+  const getItem = (section: string) => (<div>{section}</div>)
 
   const sidebarItems = [
     {
       key: "home",
       label: "Home",
       icon: <HomeFilled />,
+
       children: [
         {
           key: "dashboard",
           label: "Dashboard",
+          onClick: () => setpage(<FIRPage />),
         },
         {
           key: "CrimeInvestigationDepartment",
           label: "Crime Investigation Department",
+          onClick: () => setpage(getItem('CrimeInvestigationDepartment')),
         },
         {
           key: "Station Management",
           label: "Station Management",
+          onClick: () => setpage(getItem('Station Management')),
+
         },
         {
           key: "L&O",
@@ -42,16 +50,21 @@ const HomePage = () => {
       key: "inbox",
       label: "Inbox",
       icon: <MessageFilled />,
+      onClick: () => setpage(getItem('inbox')),
     },
     {
       key: "docs",
       label: "Docs",
       icon: <AppstoreFilled />,
+      onClick: () => setpage(getItem('docs')),
+
     },
     {
       key: "more",
       label: "More",
       icon: <MoreVertIcon className="text-xl" />,
+      onClick: () => setpage(getItem('more')),
+
     },
   ];
   const url =
@@ -85,6 +98,7 @@ const HomePage = () => {
               mode="inline"
               style={{ height: "100%", borderRight: 0 }}
               items={sidebarItems}
+              onClick={(e) => { e.key }}
             />
             <Popconfirm
               title="Logout"
@@ -105,8 +119,11 @@ const HomePage = () => {
             </Popconfirm>
           </div>
         </Sider>
+
+
+        {/*  */}
         <Content className="h-[calc(100vh-5rem)] overflow-y-scroll">
-          <FIRPage />
+          {page}
         </Content>
       </Layout>
     </Layout>
