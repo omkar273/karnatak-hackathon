@@ -1,11 +1,11 @@
 import TextArea from "@/common/components/text_area";
 import InputField from "@/pages/auth/components/input_field";
+import { doSaveFIR } from "@/pages/fir/utils/do_save_fir";
 import { FileTextOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { FIRFormErrors, FIRModal } from "../modals/fir_modal";
-import { doSaveFIR } from "../utils/do_save_fir";
 
 const FIRPage = () => {
   const [isLoading, setisLoading] = useState<boolean>(false);

@@ -1,15 +1,12 @@
 import FIRPage from "@/pages/fir/page/fir_page";
 import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Layout } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Menu } from "antd";
 import { useState } from "react";
-import HomeNavbar from "../components/home_navbar";
-import Sidebar from "../components/sidebar";
+import Navbar from "../components/navbar";
+import Sidebar from "../components/sidebar2";
 
 const HomePage = () => {
-  // const [isLoading, setisLoading] = useState<boolean>(false);
-  // const dispatch = useDispatch();
   const [page, setpage] = useState(<FIRPage />);
 
   const getItem = (section: string) => (<div>{section}</div>)
@@ -64,28 +61,31 @@ const HomePage = () => {
 
     },
   ];
-
-
   return (
-    <Layout className="pg bg-white">
-      {/* navbar */}
-      <Header className="w-full bg-[#002D71] sticky top-0 z-10">
-        <HomeNavbar />
-      </Header>
+    <div className="pg">
+      <Navbar />
 
-      {/* main content */}
-      <Layout>
-        {/* leftside pane */}
-        <Sidebar sidebarItems={sidebarItems} />
+      <div className="flex max-h-screen mt-16">
+        <Sidebar >
 
+          <Menu
+            defaultOpenKeys={["home"]}
+            defaultSelectedKeys={["dashboard"]}
+            mode="inline"
+            items={sidebarItems}
+            onClick={(e) => { e.key }}
+            style={{ maxWidth: '18rem' }}
+          />
 
-        {/*  */}
-        <Content className="h-[calc(100vh-5rem)] overflow-y-scroll">
+        </Sidebar>
+
+        {/* main content */}
+        <main className="flex-grow overflow-y-scroll">
           {page}
-        </Content>
-      </Layout>
-    </Layout>
-  );
-};
+        </main>
+      </div>
+    </div>
+  )
+}
 
-export default HomePage;
+export default HomePage
