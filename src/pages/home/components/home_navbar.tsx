@@ -6,7 +6,7 @@ const HomeNavbar = () => {
   const url =
     "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
   return (
-    <div className=" flex justify-between items-center">
+    <div className=" w-full bg-[#002D71] flex justify-between items-center">
       <div className="flex justify-start items-center gap-2">
         <img
           // className="bg-white p-2 rounded-full"
