@@ -4,7 +4,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Menu } from "antd";
 import { useState } from "react";
 import Navbar from "../components/navbar";
-import Sidebar from "../components/sidebar2";
+import Sidebar from "../components/sidebar";
 
 const HomePage = () => {
   const [page, setpage] = useState(<FIRPage />);

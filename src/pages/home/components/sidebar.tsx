@@ -19,6 +19,8 @@ type sidebarItemProps = {
 const SidebarContext = createContext(true)
 
 const Sidebar: React.FC<Props> = ({ children }) => {
+    
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [expanded, setexpanded] = useState<boolean>(true);
     const url =
         "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
