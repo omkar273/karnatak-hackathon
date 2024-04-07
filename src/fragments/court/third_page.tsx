@@ -1,7 +1,7 @@
 import React from "react";
 import Calendar from "react-calendar";
 
-const CoutT: React.FC = () => {
+const CourtT: React.FC = () => {
   // Function to get color based on case status
 
   return (
@@ -34,4 +34,4 @@ const CoutT: React.FC = () => {
   );
 };
 
-export default CoutT;
+export default CourtT;

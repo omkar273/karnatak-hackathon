@@ -1,6 +1,6 @@
 import React from "react";
 
-const CoutTwo: React.FC = () => {
+const CourtTwo: React.FC = () => {
   // Function to get color based on case status
   const getColorForCaseStatus = (caseStatus: string): string => {
     // Your logic to determine color based on case status
@@ -47,4 +47,4 @@ const CoutTwo: React.FC = () => {
   );
 };
 
-export default CoutTwo;
+export default CourtTwo;
