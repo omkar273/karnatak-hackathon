@@ -1,6 +1,6 @@
 import TextArea from "@/common/components/text_area";
+import { doSaveFIR } from "@/fragments/fir/utils/do_save_fir";
 import InputField from "@/pages/auth/components/input_field";
-import { doSaveFIR } from "@/pages/fir/utils/do_save_fir";
 import { FileTextOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { PulseLoader } from "react-spinners";

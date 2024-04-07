@@ -1,4 +1,4 @@
-import FIRPage from "@/pages/fir/page/fir_page";
+import FIRPage from "@/fragments/fir/page/fir_page";
 import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Menu } from "antd";
