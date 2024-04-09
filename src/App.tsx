@@ -9,6 +9,8 @@ import { RootState } from "./common/redux/store";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
+import Record from "./fragments/station/record";
+import Reports from './fragments/station/report';
 
 const App = () => {
   // localStorage.removeItem("persist:root");
@@ -31,7 +33,7 @@ const App = () => {
       element: isUserLoggedIn ? (
         <Navigate to={"/"} replace={true} />
       ) : (
-        <AuthPage />
+        <Reports />
       ),
     },
     {
