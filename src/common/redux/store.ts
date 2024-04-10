@@ -10,9 +10,11 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage"; /* default storage path for web browser storage */
 import authReducer from "./auth_slice";
+import userdataReducer from "./userdata_slice";
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  userdata: userdataReducer,
 });
 
 const persistConfig = { key: "root", storage, version: 1 };

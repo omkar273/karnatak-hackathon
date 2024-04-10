@@ -1,20 +1,29 @@
 import { ReactNode } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import useUserData from "./common/hooks/useUserData";
 import { RootState } from "./common/redux/store";
+import { auth } from "./firebase/firebase_config";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 
 const App = () => {
-  // localStorage.removeItem("persist:root");
   const { isUserLoggedIn } = useSelector((state: RootState) => state.auth);
   console.log(isUserLoggedIn);
 
+  const dispatch = useDispatch();
+
+  const userData = useUserData(auth.currentUser?.uid)
+  console.log(auth.currentUser?.uid);
+
+  console.log(userData);
+
+  // doSignUp({ email: 'test@gmail.com', password: '123456789', username: 'test' })
   // const isUserLoggedIn = true;
 
   const getProtectedRoute = (element: ReactNode) => {
