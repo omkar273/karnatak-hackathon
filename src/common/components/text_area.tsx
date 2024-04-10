@@ -21,13 +21,13 @@ const TextArea = <TFieldValues extends FieldValues>({
     <div>
       <label
         htmlFor={label}
-        className="w-full text-[1rem] text-white md:text-gray-500"
+        className="w-full text-[1rem] text-gray-500"
       >
         {label}
       </label>
       <VSpacer height={5} />
       <textarea
-        className="w-full bg-white md:bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
+        className="w-full bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
         id={label}
         placeholder={label}
         {...register(name, validateOptions)}
