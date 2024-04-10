@@ -6,25 +6,23 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
+import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
-import { auth } from "./firebase/firebase_config";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 
 const App = () => {
-  const { isUserLoggedIn } = useSelector((state: RootState) => state.auth);
+  const { isUserLoggedIn, currentUser } = useSelector((state: RootState) => state.auth);
   console.log(isUserLoggedIn);
 
   const dispatch = useDispatch();
 
-  const userData = useUserData(auth.currentUser?.uid)
-  console.log(auth.currentUser?.uid);
-
+  const userData = useUserData(currentUser?.user.uid)
+  console.log(`user data retrived`);
   console.log(userData);
 
-  // doSignUp({ email: 'test@gmail.com', password: '123456789', username: 'test' })
-  // const isUserLoggedIn = true;
+  dispatch(setUserdata(userData));
 
   const getProtectedRoute = (element: ReactNode) => {
     return isUserLoggedIn ? element : <Navigate to={"/auth"} replace={true} />;

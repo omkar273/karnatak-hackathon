@@ -5,6 +5,8 @@ import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import MultiStep from 'react-multistep';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
+
+
 export type UserModel = {
     name: string;
     post: string;
@@ -247,6 +249,7 @@ const RegisterFragment = () => {
                     </button>
                 </form>
             </div>
+
         </div>
     );
 };

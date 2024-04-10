@@ -11,7 +11,6 @@ interface TextareaProps<TFieldValues extends FieldValues> {
 }
 const TextArea = <TFieldValues extends FieldValues>({
   label,
-  type = "text",
   error,
   register,
   name,

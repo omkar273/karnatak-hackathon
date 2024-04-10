@@ -1,8 +1,10 @@
+import { RootState } from '@/common/redux/store';
 import { MoreVert } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import { Avatar } from "antd";
 import { ChevronFirst, ChevronLast } from "lucide-react";
 import React, { createContext, ReactNode, useContext, useState } from "react";
+import { useSelector } from "react-redux";
 
 type Props = {
     children?: ReactNode,
@@ -20,6 +22,8 @@ const SidebarContext = createContext(true)
 
 const Sidebar: React.FC<Props> = ({ children }) => {
 
+    const { userdata } = useSelector((s: RootState) => s.auth)
+
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [expanded, setexpanded] = useState<boolean>(true);
     const url =
@@ -28,9 +32,14 @@ const Sidebar: React.FC<Props> = ({ children }) => {
         <aside id="sidebar" className="h-screen ">
             <nav className="h-[calc(100%-60px)] flex flex-col bg-white border-r shadow-sm">
                 <div className={`flex justify-between items-center p-2 pb-2`} >
-                    <Avatar className={`overflow-hidden transition-all ${expanded ? 'visible' : 'w-0 '} bg-blue-500 `}>
-                        s
-                    </Avatar>
+                    <span>
+                        <Avatar className={`overflow-hidden transition-all ${expanded ? 'visible' : 'w-0 '} bg-blue-500 `}>
+                            s
+                        </Avatar>
+                        <span className="ml-2">
+                            {userdata?.name}
+                        </span>
+                    </span>
                     <button
                         // onClick={() => setexpanded((prev) => !prev)}
                         type="button"

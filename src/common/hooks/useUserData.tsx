@@ -1,19 +1,14 @@
 import { firestore } from '@/firebase/firebase_config';
+import { UserModel } from '@/fragments/user-registartion/pages/register_page';
 import { doc, getDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
-type UserData = {
-    name: string | null;
-    email: string | null;
-    username: string | null;
-    policeId: string | null;
-};
 
-const useUserData = (userUid: string | null | undefined): UserData | null => {
+const useUserData = (userUid: string | null | undefined): UserModel | null => {
 
 
 
-    const [userData, setUserData] = useState<UserData | null>(null);
+    const [userData, setUserData] = useState<UserModel | null>(null);
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -31,8 +26,9 @@ const useUserData = (userUid: string | null | undefined): UserData | null => {
                 if (docSnap.exists()) {
                     const data = docSnap.data();
                     if (data) {
-                        const { name, email, username, policeId } = data;
-                        setUserData({ name, email, username, policeId });
+                        // const { name, email, username, policeId } = data;
+                        // setUserData({ name, email, username, policeId });
+                        setUserData(data as UserModel);
                     }
                 } else {
                     console.log("No such document!");
