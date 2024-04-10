@@ -1,105 +1,40 @@
 import TextArea from "@/common/components/text_area";
-import { doSaveFIR } from "@/fragments/fir/utils/do_save_fir";
 import InputField from "@/pages/auth/components/input_field";
 import { FileTextOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import { FIRFormErrors, FIRModal } from "../modals/fir_modal";
+import { FIRModal } from "../modals/fir_modal";
+import { doSaveFIR } from "../utils/do_save_fir";
 
 const FIRPage = () => {
-  const [isLoading, setisLoading] = useState<boolean>(false);
+  const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
 
-  const initialFormValues: FIRModal = {
-    name: "",
-    fatherName: "",
-    mobileNo: "",
-    emailAddress: "",
-    presentAddress: "",
-    dateOfIncident: "",
-    timeOfIncident: "",
-    placeOfIncident: "",
-    detailsOfIncident: "",
-  };
-
-  const [formValues, setFormValues] = useState<FIRModal>(initialFormValues);
-
-  const [errors, setErrors] = useState<FIRFormErrors>({
-    name: null,
-    fatherName: null,
-    mobileNo: null,
-    emailAddress: null,
-    presentAddress: null,
-    dateOfIncident: null,
-    timeOfIncident: null,
-    placeOfIncident: null,
-    detailsOfIncident: null,
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-    key: string
-  ) => {
-    const { value } = e.target;
-    console.log(`name : ${name} value: ${value}`);
-
-    setFormValues({ ...formValues, [key]: value });
-  };
-
-  const handleSubmit = async () => {
-    // Perform auto-validation logic
-    const newErrors: FIRFormErrors = {
-      name: null,
-      fatherName: null,
-      mobileNo: null,
-      emailAddress: null,
-      presentAddress: null,
-      dateOfIncident: null,
-      timeOfIncident: null,
-      placeOfIncident: null,
-      detailsOfIncident: null,
-    };
-
-    let formIsValid = true;
-
-    for (const key in formValues) {
-      if (formValues[key as keyof FIRModal].trim() === "") {
-        newErrors[key as keyof FIRFormErrors] = "This field is required*";
-        formIsValid = false;
+  const onSubmit: SubmitHandler<FIRModal> = async (data) => {
+    try {
+      if (isSubmitting) {
+        return;
       }
+
+      await doSaveFIR(data);
+      toast.success('fir saved sucessfully')
+      reset()
+    } catch (error) {
+      toast.error(`${error}`)
     }
 
-    setErrors(newErrors);
-    console.log(formValues);
+  }
 
-    if (isLoading) {
-      return;
-    }
-
-    if (formIsValid) {
-      setisLoading(true);
-      const response = await doSaveFIR(formValues);
-
-      console.log("Form submitted successfully!");
-      setisLoading(false);
-
-      if (response) {
-        toast.success("Fir details saved successfully");
-        setFormValues(initialFormValues);
-      }
-    } else {
-      setisLoading(false);
-      console.log("Form contains errors. Please correct them.");
-    }
-  };
-
+  const validationOptions: RegisterOptions = {
+    required: 'required',
+  }
   return (
     <div className="pg">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
         {"FIR Management"}
       </p>
       <div className="p-4">
-        <div className="card w-full  p-5 bg-white">
+        <form onSubmit={handleSubmit(onSubmit)} className="card w-full  p-5 bg-white">
           <div className="md:flex justify-center items-start gap-10">
             {/* fir details  */}
             <div className="flex-1">
@@ -110,45 +45,46 @@ const FIRPage = () => {
                 Please fill the form very carefully
               </p>
               <div className="my-3">
-                <InputField
-                  hint="Name"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Name"
-                  required={true}
-                  onChange={(e) => handleChange(e, "name")}
-                  error={errors.name}
+                  error={errors.name?.message}
+                  name="name"
                 />
 
-                <InputField
-                  hint="Father name"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Father name"
-                  required={true}
-                  onChange={(e) => handleChange(e, "fatherName")}
-                  error={errors.fatherName}
+                  error={errors.fatherName?.message}
+                  name="fatherName"
                 />
 
-                <InputField
-                  hint="Mobile No*"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Mobile No*"
-                  required={true}
-                  onChange={(e) => handleChange(e, "mobileNo")}
-                  error={errors.mobileNo}
+                  error={errors.mobileNo?.message}
+                  name="mobileNo"
                 />
 
-                <InputField
-                  hint="Email Address*"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Email Address*"
-                  required={true}
                   type="email"
-                  onChange={(e) => handleChange(e, "emailAddress")}
-                  error={errors.emailAddress}
+                  error={errors.emailAddress?.message}
+                  name="emailAddress"
                 />
+
 
                 <TextArea
-                  hint="Present Address*"
+                  register={register}
+                  error={errors.presentAddress?.message}
+                  name="presentAddress"
                   label="Present Address*"
-                  required={true}
-                  onChange={(e) => handleChange(e, "presentAddress")}
-                  error={errors.presentAddress}
+                  validateOptions={validationOptions}
                 />
               </div>
             </div>
@@ -160,54 +96,53 @@ const FIRPage = () => {
                 {"  Report Information"}
               </p>
               <div className="mt-[2.75rem]">
-                <InputField
-                  hint="Date of incident"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Date of incident"
-                  required={true}
-                  onChange={(e) => handleChange(e, "dateOfIncident")}
-                  error={errors.dateOfIncident}
+                  error={errors.dateOfIncident?.message}
+                  name="dateOfIncident"
                 />
 
-                <InputField
-                  hint="Time of incident"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Time of incident"
-                  required={true}
-                  onChange={(e) => handleChange(e, "timeOfIncident")}
-                  error={errors.timeOfIncident}
+                  error={errors.timeOfIncident?.message}
+                  name="timeOfIncident"
                 />
 
-                <InputField
-                  hint="Place if incident"
+                <InputField<FIRModal>
+                  validateOptions={validationOptions}
+                  register={register}
                   label="Place if incident"
-                  required={true}
-                  onChange={(e) => handleChange(e, "placeOfIncident")}
-                  error={errors.placeOfIncident}
+                  error={errors.placeOfIncident?.message}
+                  name="placeOfIncident"
                 />
 
                 <TextArea
-                  hint="Details of Incident"
+                  register={register}
                   label="Details of Incident"
-                  required={true}
-                  onChange={(e) => handleChange(e, "detailsOfIncident")}
-                  error={errors.detailsOfIncident}
+                  name="detailsOfIncident"
+                  validateOptions={validationOptions}
+                  error={errors.detailsOfIncident?.message}
                 />
               </div>
             </div>
           </div>
-          <div
+          <button type="submit"
             className="btn font-ubuntu cursor-pointer text-xl "
-            onClick={handleSubmit}
           >
-            {isLoading ? (
+            {isSubmitting ? (
               <span className="flex justify-center items-center gap-2">
                 {" Loading "}
-                <PulseLoader color="white" loading={isLoading} size={8} />
+                <PulseLoader color="white" loading={isSubmitting} size={8} />
               </span>
             ) : (
               "Submit FIR"
             )}
-          </div>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   );

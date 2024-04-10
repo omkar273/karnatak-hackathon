@@ -1,13 +1,22 @@
 import { VSpacer } from "@/common/components/spacer";
-import { ChangeEventHandler, FC } from "react";
+import { FieldValues, Path, RegisterOptions, UseFormRegister } from "react-hook-form";
 
-const TextArea: FC<{
-  label?: string;
-  hint?: string;
-  required?: boolean;
+interface TextareaProps<TFieldValues extends FieldValues> {
+  label: string;
+  type?: React.HTMLInputTypeAttribute;
   error?: string | null;
-  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
-}> = ({ label = "", hint = "", onChange, required = false, error }) => {
+  register: UseFormRegister<TFieldValues>;
+  name: Path<TFieldValues>;
+  validateOptions?: RegisterOptions<TFieldValues, Path<TFieldValues>>;
+}
+const TextArea = <TFieldValues extends FieldValues>({
+  label,
+  type = "text",
+  error,
+  register,
+  name,
+  validateOptions = {},
+}: TextareaProps<TFieldValues>) => {
   return (
     <div>
       <label
@@ -18,11 +27,10 @@ const TextArea: FC<{
       </label>
       <VSpacer height={5} />
       <textarea
-        className="w-full bg-white min-h-40 md:bg-gray-200 p-4 rounded-md md:bg-opacity-50 border-none focus:outline-none"
+        className="w-full bg-white md:bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
         id={label}
-        required={required}
-        placeholder={hint}
-        onChange={onChange}
+        placeholder={label}
+        {...register(name, validateOptions)}
       />
       <p className="mb-3 text-xs text-red-600">{error}</p>
     </div>

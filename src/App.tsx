@@ -11,8 +11,6 @@ import { auth } from "./firebase/firebase_config";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
-import Record from "./fragments/station/record";
-import Reports from './fragments/station/report';
 
 const App = () => {
   const { isUserLoggedIn } = useSelector((state: RootState) => state.auth);
@@ -42,7 +40,7 @@ const App = () => {
       element: isUserLoggedIn ? (
         <Navigate to={"/"} replace={true} />
       ) : (
-        <Reports />
+        <AuthPage />
       ),
     },
     {

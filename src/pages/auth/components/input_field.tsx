@@ -1,21 +1,22 @@
 import { VSpacer } from "@/common/components/spacer";
-import { FC } from "react";
+import { FieldValues, Path, RegisterOptions, UseFormRegister } from "react-hook-form";
 
-const InputField: FC<{
-  label?: string | undefined;
-  hint?: undefined | string;
-  required?: boolean;
-  error?: string | null;
+interface InputFieldProps<TFieldValues extends FieldValues> {
+  label: string;
   type?: React.HTMLInputTypeAttribute;
-  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
-}> = ({
-  label = "",
-  hint = "",
-  onChange,
-  required = false,
-  error,
+  error?: string | null;
+  register: UseFormRegister<TFieldValues>;
+  name: Path<TFieldValues>;
+  validateOptions?: RegisterOptions<TFieldValues, Path<TFieldValues>>;
+}
+const InputField = <TFieldValues extends FieldValues>({
+  label,
   type = "text",
-}) => {
+  error,
+  register,
+  name,
+  validateOptions = {},
+}: InputFieldProps<TFieldValues>) => {
   return (
     <div>
       <label
@@ -29,9 +30,8 @@ const InputField: FC<{
         type={type}
         className="w-full bg-white md:bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
         id={label}
-        required={required}
-        placeholder={hint}
-        onChange={onChange}
+        placeholder={label}
+        {...register(name, validateOptions)}
       />
       <p className="mb-3 text-xs text-red-600">{error}</p>
     </div>

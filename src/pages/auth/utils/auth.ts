@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { auth, firestore } from "@/firebase/firebase_config";
+import { UserModel } from "@/fragments/user-registartion/pages/register_page";
 import { FirebaseError } from "firebase/app";
 import {
   UserCredential,
@@ -20,14 +22,26 @@ type SignUpData = {
   username: string;
   email: string;
   password: string;
+  data: UserModel;
 };
 
 export const doSignUp = async ({
   username,
   email,
   password,
+  data,
 }: SignUpData): Promise<void> => {
   try {
+    const q = query(
+      collection(firestore, "usernames"),
+      where("username", "==", username)
+    );
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      throw new Error("Username already taken");
+    }
+
     const creds: UserCredential = await createUserWithEmailAndPassword(
       auth,
       email,
@@ -39,13 +53,10 @@ export const doSignUp = async ({
         username,
       });
 
-      await setDoc(doc(firestore, "users", creds.user.uid), {
-        email,
-        username,
-      });
+      await setDoc(doc(firestore, "users", creds.user.uid), data);
     }
   } catch (error) {
-    console.log("Error signing up:", error);
+    throw new Error(`Error signing up: ${error}`);
   }
 };
 

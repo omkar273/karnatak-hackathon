@@ -1,6 +1,7 @@
 import CourtTwo from "@/fragments/court/cout_two";
 import CourtT from "@/fragments/court/third_page";
 import FIRPage from "@/fragments/fir/page/fir_page";
+import RegisterPage from "@/fragments/user-registartion/pages/register_page";
 import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Menu } from "antd";
@@ -21,8 +22,8 @@ const HomePage = () => {
 
       children: [
         {
-          key: "dashboard",
-          label: "Dashboard",
+          key: "Add Fir",
+          label: "Add Fir",
           onClick: () => setpage(<FIRPage />),
         },
         {
@@ -43,10 +44,10 @@ const HomePage = () => {
       ],
     },
     {
-      key: "inbox",
-      label: "Inbox",
+      key: "Add new user",
+      label: "Add new user",
       icon: <MessageFilled />,
-      onClick: () => setpage(getItem('inbox')),
+      onClick: () => setpage(<RegisterPage />),
     },
     {
       key: "docs",
