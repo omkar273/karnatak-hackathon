@@ -2,6 +2,7 @@ import { VSpacer } from "@/common/components/spacer";
 import TextArea from "@/common/components/text_area";
 import InputField from "@/pages/auth/components/input_field";
 import { FileTextOutlined } from "@ant-design/icons";
+import { useState } from "react";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
@@ -12,6 +13,7 @@ import { doSaveFIR } from "../utils/do_save_fir";
 const FIRPage = () => {
   const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
 
+  const [reload, setreload] = useState(true)
 
 
   const onSubmit: SubmitHandler<FIRModal> = async (data) => {
@@ -22,6 +24,7 @@ const FIRPage = () => {
 
       await doSaveFIR(data);
       toast.success('fir saved sucessfully')
+      setreload((prev) => !prev)
       reset()
     } catch (error) {
       toast.error(`${error}`)
@@ -149,7 +152,7 @@ const FIRPage = () => {
         </form>
 
         <VSpacer height={100} />
-        <FirDetailsTable />
+        <FirDetailsTable reload={reload} />
         <VSpacer height={100} />
       </div>
     </div>

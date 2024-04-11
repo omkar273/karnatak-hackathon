@@ -2,15 +2,26 @@ import { VSpacer } from "@/common/components/spacer";
 import { FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table } from 'antd';
 import { useEffect, useState } from "react";
+import { FadeLoader } from "react-spinners";
 import useFIRs from "../hooks/use_get_fir";
 
-const FirDetailsTable = () => {
+const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
+
+
+
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
     const { documents, fetchFIRs, loading, error, hasMore } = useFIRs(timeFrame);
 
     useEffect(() => {
         fetchFIRs().catch(console.error);
-    }, [timeFrame]);
+    }, [timeFrame, reload]);
+
+
+
+    const handleTableChange = (pagination: any, filters: any, sorter: any) => {
+        const { current } = pagination;
+        fetchFIRs(current === 1); // If current page is 1, fetch first page
+    };
 
     const columns = [
         {
@@ -78,17 +89,32 @@ const FirDetailsTable = () => {
             </div>
 
             <VSpacer height={50} />
-            <Table
+
+            {loading &&
+                <div className="w-full flex flex-col justify-center items-center py-16 gap-4" >
+                    <FadeLoader
+                        color="#00edff"
+                        loading
+                    />
+                    <p className="font-semibold">Loading the fir details</p>
+                </div>
+            }
+
+            {!loading && <Table
                 dataSource={documents}
                 columns={columns}
-                pagination={false} // Disable default pagination
-                scroll={{ x: 'max-content' }} // Adjust the width as needed
-            />
+                pagination={{
+                    total: documents.length,
+                    showSizeChanger: true,
+                    showQuickJumper: true,
+                    showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+                }}
+                loading={loading}
+                onChange={handleTableChange}
+                scroll={{ x: 'max-content' }}
+            />}
 
-            <button type="button"
-                onClick={() => console.log(documents)}>
-                Print
-            </button>
+            {error && <div>Error: {error.message}</div>}
 
         </div >
     );
