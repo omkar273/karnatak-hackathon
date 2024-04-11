@@ -10,32 +10,28 @@ import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
 
 const HomePage = () => {
-  const [page, setpage] = useState(<FIRPage />);
-
-  const getItem = (section: string) => (<div>{section}</div>)
+  const [page, setPage] = useState(<FIRPage />);
 
   const sidebarItems = [
     {
       key: "home",
       label: "Home",
       icon: <HomeFilled />,
-
       children: [
         {
           key: "Add Fir",
           label: "Add Fir",
-          onClick: () => setpage(<FIRPage />),
+          onClick: () => setPage(<FIRPage />),
         },
         {
           key: "CrimeInvestigationDepartment",
           label: "Crime Investigation Department",
-          onClick: () => setpage(<CourtT />),
+          onClick: () => setPage(<CourtT />),
         },
         {
           key: "Station Management",
           label: "Station Management",
-          onClick: () => setpage(<CourtTwo />),
-
+          onClick: () => setPage(<CourtTwo />),
         },
         {
           key: "L&O",
@@ -47,30 +43,27 @@ const HomePage = () => {
       key: "Add new user",
       label: "Add new user",
       icon: <MessageFilled />,
-      onClick: () => setpage(<RegisterPage />),
+      onClick: () => setPage(<RegisterPage />),
     },
     {
       key: "docs",
       label: "Docs",
       icon: <AppstoreFilled />,
-      onClick: () => setpage(getItem('docs')),
-
+      onClick: () => setPage(<div>Docs</div>),
     },
     {
       key: "more",
       label: "More",
       icon: <MoreVertIcon className="text-xl" />,
-      onClick: () => setpage(getItem('more')),
-
+      onClick: () => setPage(<div>More</div>),
     },
   ];
+
   return (
-    <div className="pg">
+    <div className="pg max-h-screen overflow-hidden">
       <Navbar />
-
-      <div className="flex max-h-screen mt-16">
-        <Sidebar >
-
+      <div className="flex max-h-screen mt-16 overflow-hidden">
+        <Sidebar>
           <Menu
             defaultOpenKeys={["home"]}
             defaultSelectedKeys={["dashboard"]}
@@ -79,16 +72,16 @@ const HomePage = () => {
             onClick={(e) => { e.key }}
             style={{ maxWidth: '18rem' }}
           />
-
         </Sidebar>
 
-        {/* main content */}
-        <main className="flex-grow overflow-y-scroll">
-          {page}
+        <main className="flex-grow overflow-hidden">
+          <div className="max-h-screen overflow-y-auto">
+            {page}
+          </div>
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

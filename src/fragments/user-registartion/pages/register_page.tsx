@@ -156,7 +156,7 @@ const RegisterFragment = () => {
     }
 
     return (
-        <div className="overflow-y-scroll pg scroll-m-0">
+        <div className="">
             <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
                 {"FIR Management"}
             </p>
@@ -249,7 +249,7 @@ const RegisterFragment = () => {
                     </button>
                 </form>
             </div>
-
+            <VSpacer height={100} />
         </div>
     );
 };

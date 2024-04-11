@@ -1,9 +1,11 @@
+import { VSpacer } from "@/common/components/spacer";
 import TextArea from "@/common/components/text_area";
 import InputField from "@/pages/auth/components/input_field";
 import { FileTextOutlined } from "@ant-design/icons";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
+import FirDetailsTable from "../components/fir_table";
 import { FIRModal } from "../modals/fir_modal";
 import { doSaveFIR } from "../utils/do_save_fir";
 
@@ -29,7 +31,7 @@ const FIRPage = () => {
     required: 'required',
   }
   return (
-    <div className="pg">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
         {"FIR Management"}
       </p>
@@ -143,6 +145,10 @@ const FIRPage = () => {
             )}
           </button>
         </form>
+
+        <VSpacer height={100} />
+        <FirDetailsTable />
+        <VSpacer height={100} />
       </div>
     </div>
   );
