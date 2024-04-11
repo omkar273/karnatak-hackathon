@@ -5,7 +5,7 @@ const CourtT: React.FC = () => {
   // Function to get color based on case status
 
   return (
-    <div style={{ backgroundColor: "#BFBFBF" }}>
+    <div className="bg-gray-200">
       <div className="w-full h-12 bg-blue-500"></div>
       <div className="w-full h-12 bg-blue-100">
         <p className="p-1">Court Monitoring </p>
@@ -30,7 +30,11 @@ const CourtT: React.FC = () => {
 
         <div className="flex-1 bg-white rounded-lg p-5">Court Details</div>
       </div>
+
+      
     </div>
+
+    
   );
 };
 

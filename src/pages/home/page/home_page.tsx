@@ -8,6 +8,8 @@ import { Menu } from "antd";
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
+import FirPage from "@/fragments/court/fir_page";
+import Record from "@/fragments/station/record";
 
 const HomePage = () => {
   const [page, setPage] = useState(<FIRPage />);
@@ -29,9 +31,24 @@ const HomePage = () => {
           onClick: () => setPage(<CourtT />),
         },
         {
+          key: "Court Monitoring",
+          label: "Court Monitoring",
+          onClick: () => setPage(<FirPage />),
+        },
+        {
+          key: "Witness Management",
+          label: "Witness Management",
+          onClick: () => setPage(<CourtT />),
+        },
+        {
+          key: "Case Preparation",
+          label: "Case Preparation",
+          onClick: () => setPage(<CourtTwo />),
+        },
+        {
           key: "Station Management",
           label: "Station Management",
-          onClick: () => setPage(<CourtTwo />),
+          onClick: () => setPage(<Record/>),
         },
         {
           key: "L&O",
