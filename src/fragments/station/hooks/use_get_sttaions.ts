@@ -12,26 +12,12 @@ import {
   where,
 } from "firebase/firestore";
 import { useCallback, useState } from "react";
-
-// FIR Document Interface
-export interface FIRDocument {
-  id: string;
-  name: string;
-  fatherName: string;
-  mobileNo: string;
-  emailAddress: string;
-  presentAddress: string;
-  dateOfIncident: string;
-  timeOfIncident: string;
-  placeOfIncident: string;
-  detailsOfIncident: string;
-  timestamp: Timestamp;
-}
+import { StationModel } from "../utils/do_save_station";
 
 // Hook return type
 interface UseFIRsReturn {
-  documents: FIRDocument[];
-  fetchFIRs: (newPage?: boolean) => Promise<void>;
+  documents: StationModel[];
+  fetchStations: (newPage?: boolean) => Promise<void>;
   loading: boolean;
   error: Error | null;
   hasMore: boolean;
@@ -75,18 +61,18 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useFIRs(
+function useGetStations(
   timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
   initialLimit = 15
 ): UseFIRsReturn {
-  const [documents, setDocuments] = useState<FIRDocument[]>([]);
+  const [documents, setDocuments] = useState<StationModel[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
   const [lastDoc, setLastDoc] =
     useState<QueryDocumentSnapshot<DocumentData> | null>(null);
   const [hasMore, setHasMore] = useState<boolean>(true);
 
-  const fetchFIRs = useCallback(
+  const fetchStations = useCallback(
     async (newPage = false) => {
       setLoading(true);
       setError(null);
@@ -95,7 +81,7 @@ function useFIRs(
       try {
         const { start, end } = getTimeFrameTimestamps(timeFrame);
         let q = query(
-          collection(firestore, "fir_details"),
+          collection(firestore, "stations"),
           where("timestamp", ">=", start),
           where("timestamp", "<=", end),
           orderBy("timestamp"),
@@ -107,11 +93,11 @@ function useFIRs(
         }
 
         const querySnapshot = await getDocs(q);
-        const fetchedDocuments: FIRDocument[] = [];
+        const fetchedDocuments: StationModel[] = [];
         let lastVisible: QueryDocumentSnapshot<DocumentData> | null = null;
 
         querySnapshot.forEach((doc) => {
-          const data = doc.data() as FIRDocument;
+          const data = doc.data() as StationModel;
           fetchedDocuments.push({ ...data, id: doc.id });
           lastVisible = doc;
         });
@@ -133,7 +119,7 @@ function useFIRs(
     [timeFrame, initialLimit, lastDoc]
   );
 
-  return { documents, fetchFIRs, loading, error, hasMore };
+  return { documents, fetchStations: fetchStations, loading, error, hasMore };
 }
 
-export default useFIRs;
+export default useGetStations;

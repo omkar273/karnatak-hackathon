@@ -26,7 +26,7 @@ const TextArea = <TFieldValues extends FieldValues>({
       </label>
       <VSpacer height={5} />
       <textarea
-        className="w-full bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
+        className="w-full min-h-[10rem] bg-gray-200 p-4 rounded-md md:bg-opacity-50  active:border-none  focus:outline-none"
         id={label}
         placeholder={label}
         {...register(name, validateOptions)}

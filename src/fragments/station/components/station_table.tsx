@@ -4,17 +4,16 @@ import { Radio, Table, TablePaginationConfig } from 'antd';
 import { FilterValue, TableCurrentDataSource } from "antd/es/table/interface";
 import { useEffect, useState } from "react";
 import { FadeLoader } from "react-spinners";
-import useFIRs from "../hooks/use_get_fir";
+import useGetStations from "../hooks/use_get_sttaions";
+import { StationModel } from "../utils/do_save_station";
 
-const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
-
-
+const StationsTable = ({ reload = true }: { reload: boolean }) => {
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchFIRs, loading, error, hasMore } = useFIRs(timeFrame);
+    const { documents, fetchStations, loading, error } = useGetStations(timeFrame);
 
     useEffect(() => {
-        fetchFIRs().catch(console.error);
+        fetchStations().catch(console.error);
     }, [timeFrame, reload]);
 
 
@@ -22,9 +21,9 @@ const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
     const handleTableChange = (
         pagination: TablePaginationConfig,
         filters: Record<string, FilterValue | null>,
-        sorter: TableCurrentDataSource<FIRDocument>) => {
+        sorter: TableCurrentDataSource<StationModel>) => {
         const { current } = pagination;
-        fetchFIRs(current === 1);
+        fetchStations(current === 1);
     };
 
     const columns = [
@@ -42,45 +41,26 @@ const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
             key: 'name',
         },
         {
-            title: 'Father Name',
-            dataIndex: 'fatherName',
-            key: 'fatherName',
+            title: 'Region',
+            dataIndex: 'region',
+            key: 'region',
         },
         {
-            title: 'Mobile No',
-            dataIndex: 'mobileNo',
-            key: 'mobileNo',
+            title: 'stationID',
+            dataIndex: 'stationID',
+            key: 'stationID',
         },
         {
-            title: 'Email Address',
-            dataIndex: 'emailAddress',
-            key: 'emailAddress',
+            title: 'location',
+            dataIndex: 'location',
+            key: 'location',
         },
         {
-            title: 'Present Address',
-            dataIndex: 'presentAddress',
-            key: 'presentAddress',
+            title: 'description',
+            dataIndex: 'description',
+            key: 'description',
         },
-        {
-            title: 'Date of Incident',
-            dataIndex: 'dateOfIncident',
-            key: 'dateOfIncident',
-        },
-        {
-            title: 'Time of Incident',
-            dataIndex: 'timeOfIncident',
-            key: 'timeOfIncident',
-        },
-        {
-            title: 'Place of Incident',
-            dataIndex: 'placeOfIncident',
-            key: 'placeOfIncident',
-        },
-        {
-            title: 'Details of Incident',
-            dataIndex: 'detailsOfIncident',
-            key: 'detailsOfIncident',
-        },
+
     ];
 
     return (
@@ -133,4 +113,4 @@ const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
     );
 }
 
-export default FirDetailsTable;
+export default StationsTable;

@@ -8,6 +8,7 @@ import {
 import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
+import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
@@ -29,6 +30,10 @@ const App = () => {
     {
       path: "/",
       element: getProtectedRoute(<HomePage />),
+    },
+    {
+      path: "/fir/:id",
+      element: getProtectedRoute(<FirDetailsPage />),
     },
     {
       path: "/auth",

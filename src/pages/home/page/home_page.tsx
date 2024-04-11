@@ -1,6 +1,7 @@
 import CourtTwo from "@/fragments/court/cout_two";
 import CourtT from "@/fragments/court/third_page";
 import FIRPage from "@/fragments/fir/page/fir_page";
+import AddStationFragment from "@/fragments/station/pages/station_management";
 import RegisterPage from "@/fragments/user-registartion/pages/register_page";
 import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -22,6 +23,11 @@ const HomePage = () => {
           key: "Add Fir",
           label: "Add Fir",
           onClick: () => setPage(<FIRPage />),
+        },
+        {
+          key: "Add Station",
+          label: "Add Station",
+          onClick: () => setPage(<AddStationFragment />),
         },
         {
           key: "CrimeInvestigationDepartment",
