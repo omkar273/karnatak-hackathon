@@ -1,40 +1,48 @@
+import { Calendar } from "antd";
 import React from "react";
-import Calendar from "react-calendar";
 
 const CourtT: React.FC = () => {
   // Function to get color based on case status
 
   return (
     <div className="bg-gray-200">
-      <div className="w-full h-12 bg-blue-500"></div>
-      <div className="w-full h-12 bg-blue-100">
-        <p className="p-1">Court Monitoring </p>
-      </div>
-      <h1>Witness Management </h1>
-      <div className="flex bg-white  rounded-lg p-5 space-x-5 h-48 mx-4">
-        <p>Witness Details</p>
-        <p>Contact Information</p>
-        <p>Statements</p>
-        <p>Availablity For Court</p>
-      </div>
-      Calender For( Upcoming Alarms)
-
-      <div className="flex #BFBFBF rounded-lg p-5 space-x-5 h-55 mx-4">
-        {/* First box */}
-        <div className="flex-1 bg-white rounded-lg p-5">
-          <Calendar />
-        </div>
-
-        {/* Second box */}
-        <div className="flex-1 bg-white rounded-lg p-5">Appointments</div>
-
-        <div className="flex-1 bg-white rounded-lg p-5">Court Details</div>
-      </div>
-
-      
+  <div className="w-full h-12 bg-blue-500"></div>
+  <div className="w-full h-12 bg-blue-100">
+    <p className="p-1">Court Monitoring</p>
+  </div>
+  <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">Witness Management</h1>
+  <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
+    <div className="flex-1">
+      <p className="text-gray-800 font-semibold">Witness Details</p>
+    </div>
+    <div className="flex-1">
+      <p className="text-gray-800 font-semibold">Contact Information</p>
+    </div>
+    <div className="flex-1">
+      <p className="text-gray-800 font-semibold">Statements</p>
+    </div>
+    <div className="flex-1">
+      <p className="text-gray-800 font-semibold">Availability For Court</p>
+    </div>
+  </div>
+  <h2 className="text-2xl font-semibold text-gray-800 py-4 px-6">Calendar</h2>
+  <div className="flex bg-white rounded-lg p-5 space-x-5 mx-4">
+    {/* First box */}
+    <div className="flex-1 bg-white rounded-lg p-5">
+      <Calendar />
     </div>
 
-    
+    {/* Second box */}
+    <div className="flex-1 bg-white rounded-lg p-5">
+      <p className="text-gray-800 font-semibold">Appointments</p>
+    </div>
+
+    <div className="flex-1 bg-white rounded-lg p-5">
+      <p className="text-gray-800 font-semibold">Court Details</p>
+    </div>
+  </div>
+</div>
+
   );
 };
 

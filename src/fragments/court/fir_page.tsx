@@ -2,19 +2,29 @@ import React from "react";
 
 const FirPage: React.FC = () => {
   return (
-    <div style={{ backgroundColor: "#f0f0f0" }}>
+    <div className="bg-gray-200">
       <div className="w-full h-12 bg-blue-500"></div>
       <div className="w-full h-12 bg-blue-100">
-        <p className="p-1">Court Monitoring </p>
-      </div>
-      <h1>Chargesheet </h1>
-
+    <p className="p-1">Court Monitoring</p>
+  </div>
+      <h1> </h1>
+      <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">Chargesheet</h1>
       <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
-        <p>Name of accused(Age)</p>
-        <p>Nature of offence</p>
-        <p>Evidence</p>
-        <p>Officer In-charge</p>
-        <p>Investigation status</p>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Name of accused(Age)</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Nature of offence</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Evidence</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Officer In-charge</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Investigation status</p>
+        </div>
       </div>
       <div>
         <div className="flex #BFBFBF rounded-lg space-x-5">
@@ -46,14 +56,25 @@ const FirPage: React.FC = () => {
       <div className="mx-4 h-10">
         <h1>Chargesheet </h1>
       </div>
-
       <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
-        <p>Case Number</p>
-        <p>Nature of Offence</p>
-        <p>IPC Section</p>
-        <p>Judge Name</p>
-        <p>Case Status</p>
-        <p>Next Date of Hearing</p>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Case Number</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Nature of Offence</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">IPC Section</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Judge Name</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Case Status</p>
+        </div>
+        <div className="flex-1">
+          <p className="text-gray-800 font-semibold">Case Status</p>
+        </div>
       </div>
 
       <div className="flex #BFBFBF rounded-lg p-5">
