@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Reports = () => {
   return (
-    <div className="bg-gray-300 min-h-screen">
+    <div className="#f0f0f0 min-h-screen">
         <div className="w-full h-12 bg-blue-100">Station Management 
         <p className="p-1"> </p>
       </div>
