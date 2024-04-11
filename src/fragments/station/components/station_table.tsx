@@ -1,11 +1,9 @@
 import { VSpacer } from "@/common/components/spacer";
 import { ExportOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table, TablePaginationConfig } from 'antd';
-import { FilterValue, TableCurrentDataSource } from "antd/es/table/interface";
 import { useEffect, useState } from "react";
 import { FadeLoader } from "react-spinners";
 import useGetStations from "../hooks/use_get_sttaions";
-import { StationModel } from "../utils/do_save_station";
 
 const StationsTable = ({ reload = true }: { reload: boolean }) => {
 
@@ -20,8 +18,7 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
 
     const handleTableChange = (
         pagination: TablePaginationConfig,
-        filters: Record<string, FilterValue | null>,
-        sorter: TableCurrentDataSource<StationModel>) => {
+    ) => {
         const { current } = pagination;
         fetchStations(current === 1);
     };

@@ -40,7 +40,7 @@ const App = () => {
       element: isUserLoggedIn ? (
         <Navigate to={"/"} replace={true} />
       ) : (
-        <HomePage />
+        <AuthPage />
       ),
     },
     {

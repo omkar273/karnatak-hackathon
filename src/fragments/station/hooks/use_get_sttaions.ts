@@ -47,8 +47,8 @@ function getTimeFrameTimestamps(
       end = new Date(now.getFullYear(), 11, 31, 23, 59, 59, 999);
       break;
     case "all":
-      start = Timestamp.fromDate(new Date(1970, 0, 1)); // Firestore timestamp for 'beginning of time'
-      end = Timestamp.now(); // Current timestamp
+      start = Timestamp.fromDate(new Date(1970, 0, 1));
+      end = Timestamp.now();
       break;
     default:
       throw new Error("Invalid time frame specified.");
