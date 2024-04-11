@@ -84,7 +84,6 @@ export const doLogin = async (
     }
 
     const userEmail = querySnapshot.docs[0].data().email;
-    console.log(`User email: ${userEmail}`);
 
     const user = await signInWithEmailAndPassword(auth, userEmail, password);
     return user;

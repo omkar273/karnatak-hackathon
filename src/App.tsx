@@ -14,13 +14,10 @@ import HomePage from "./pages/home/page/home_page";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector((state: RootState) => state.auth);
-  console.log(isUserLoggedIn);
 
   const dispatch = useDispatch();
 
   const userData = useUserData(currentUser?.user.uid)
-  console.log(`user data retrived`);
-  console.log(userData);
 
   dispatch(setUserdata(userData));
 

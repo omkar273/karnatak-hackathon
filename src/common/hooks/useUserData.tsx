@@ -17,7 +17,7 @@ const useUserData = (userUid: string | null | undefined): UserModel | null => {
                     return null;
                 }
 
-                console.log(`user id is ${userUid}`);
+              
 
 
                 const docRef = doc(firestore, 'users', userUid);
@@ -31,7 +31,7 @@ const useUserData = (userUid: string | null | undefined): UserModel | null => {
                         setUserData(data as UserModel);
                     }
                 } else {
-                    console.log("No such document!");
+                   
                     setUserData(null);
                 }
             } catch (error) {
