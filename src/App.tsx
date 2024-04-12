@@ -37,7 +37,7 @@ const App = () => {
 
           </Route>
           {/* <Route path="/fir/:id" element={getProtectedRoute(<FirDetailsPage />)} /> */}
-          <Route path="/fir/details" element={getProtectedRoute(<FirDetailsPage2 />)} />
+          <Route path="/fir_details" element={getProtectedRoute(<FirDetailsPage2 />)} />
 
           {/* station routes */}
           <Route path="station"  >
