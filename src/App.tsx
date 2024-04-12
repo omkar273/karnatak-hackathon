@@ -5,7 +5,7 @@ import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
-import FirDetailsPage from "./fragments/fir/page/fir_details_page";
+import FirDetailsPage2 from "./fragments/fir/page/fir_details2";
 import FIRPage from "./fragments/fir/page/fir_page";
 import AddStationFragment from "./fragments/station/pages/station_management";
 import RegisterFragment from "./fragments/user_management/register_page";
@@ -36,8 +36,8 @@ const App = () => {
           <Route path="fir" element={getProtectedRoute(<AllFirPage />)}>
 
           </Route>
-          <Route path="/fir/:id" element={getProtectedRoute(<FirDetailsPage />)} />
-
+          {/* <Route path="/fir/:id" element={getProtectedRoute(<FirDetailsPage />)} /> */}
+          <Route path="/fir/details" element={getProtectedRoute(<FirDetailsPage2 />)} />
 
           {/* station routes */}
           <Route path="station"  >

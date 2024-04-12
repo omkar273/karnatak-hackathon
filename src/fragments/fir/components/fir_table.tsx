@@ -28,7 +28,7 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
             title: 'View',
             dataIndex: 'id',
             key: 'id',
-            render: (id: string) => (<a href={`/fir/${id}`}>
+            render: (id: string) => (<a href={`/fir/details?id=${id}`}>
                 <span className="mr-2">view</span> <ExportOutlined />
             </a>)
         },
