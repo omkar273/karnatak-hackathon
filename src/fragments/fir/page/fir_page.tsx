@@ -1,9 +1,14 @@
 import { VSpacer } from "@/common/components/spacer";
 import TextArea from "@/common/components/text_area";
+import { RootState } from '@/common/redux/store';
+import useUnderlyingData from "@/fragments/user_management/hooks/useUnderlyingData ";
 import InputField from "@/pages/auth/components/input_field";
 import { FileTextOutlined } from "@ant-design/icons";
-import { useState } from "react";
-import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
+import { Select, SelectProps, Space } from "antd";
+import { DefaultOptionType } from "antd/es/select";
+import { useEffect, useState } from "react";
+import { Controller, RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
+import { useSelector } from 'react-redux';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import FirDetailsTable from "../components/fir_table";
@@ -11,10 +16,44 @@ import { FIRModal } from "../modals/fir_modal";
 import { doSaveFIR } from "../utils/do_save_fir";
 
 const FIRPage = () => {
-  const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
+  const { control, register, handleSubmit, setValue, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
+  const { currentUser, userdata } = useSelector((state: RootState) => state.auth);
 
+  // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
+  const { data, loading } = useUnderlyingData(currentUser?.user.uid!)
   const [reload, setreload] = useState(true)
 
+  const [underlyingData, setunderlyingData] = useState<DefaultOptionType[]>([]);
+
+  useEffect(() => {
+    console.log('printing underlying data');
+    console.log(data);
+
+    const optionsData: SelectProps['options'] = [{
+      label: userdata?.name,
+      value: userdata?.name,
+      desc: userdata?.name,
+      emoji: '(Self)'
+    }]
+
+    if (loading) {
+      optionsData.push({
+        label: 'Loading...',
+        value: 'Loading...',
+        desc: 'Loading...',
+      })
+    }
+
+    data.map((user) => {
+      optionsData.push({
+        label: user?.name,
+        value: user?.name,
+        desc: user?.name,
+        emoji: user?.post
+      })
+    })
+    setunderlyingData(optionsData);
+  }, [loading])
 
   const onSubmit: SubmitHandler<FIRModal> = async (data) => {
     try {
@@ -22,15 +61,20 @@ const FIRPage = () => {
         return;
       }
 
-      await doSaveFIR(data);
+      await doSaveFIR({ ...data, status: 'registered' });
       toast.success('fir saved sucessfully')
       setreload((prev) => !prev)
       reset()
     } catch (error) {
       toast.error(`${error}`)
     }
-
   }
+
+  const handleChange = (value: string[]) => {
+    console.log(`selected ${value}`);
+    setValue('allotedTo', value);
+  };
+
 
   const validationOptions: RegisterOptions = {
     required: 'required',
@@ -93,6 +137,36 @@ const FIRPage = () => {
                   label="Present Address*"
                   validateOptions={validationOptions}
                 />
+
+
+                <div className="my-3">
+                  <Controller
+                    name="allotedTo"
+                    control={control}
+                    defaultValue={['omkar']}
+                    rules={{ required: 'Please select user(s) to allot this case' }}
+                    render={({ field }) => (
+                      <Select
+                        {...field}
+                        mode="multiple"
+                        className="w-full h-12 text-black"
+                        allowClear={true}
+                        placeholder="Select user to allot this case"
+                        onChange={handleChange}
+                        options={underlyingData}
+                        optionRender={(option) => (
+                          <Space>
+                            <span role="img" aria-label={option.data.label}>
+                              {option.data.emoji}
+                            </span>
+                            {option.data.desc}
+                          </Space>
+                        )}
+                      />
+                    )}
+                  />
+                  <p className="mb-3 text-xs text-red-600">{errors.allotedTo?.message}</p>
+                </div>
               </div>
             </div>
 
@@ -100,7 +174,7 @@ const FIRPage = () => {
             <div className="flex-1">
               <p className="font-semibold">
                 <FileTextOutlined />
-                {"  Report Information"}
+                {"Report Information"}
               </p>
               <div className="mt-[2.75rem]">
                 <InputField<FIRModal>

@@ -5,27 +5,10 @@ import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import MultiStep from 'react-multistep';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
+import { UserModel } from "./models/user_model";
 
 
-export type UserModel = {
-    name: string;
-    post: string;
-    dateOfJoining: string;
-    batch: string;
-    currentPosting: string;
-    workExperience: string;
-    certification: string;
-    qualification: string;
-    solvedCases: string;
-    height: string;
-    weight: string;
-    previousPosting: string;
-    skills: string;
-    awards: string;
-    email: string;
-    password: string;
-    username: string;
-}
+
 
 const RegisterFragment = () => {
     const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<UserModel>()
@@ -158,12 +141,12 @@ const RegisterFragment = () => {
     return (
         <div className="">
             <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
-                {"FIR Management"}
+                {"Add new user"}
             </p>
             <div className="p-4">
                 <form onSubmit={handleSubmit(onSubmit)} className="card w-full  p-5 bg-white">
-                    <MultiStep
 
+                    <MultiStep
                         activeStep={0}
                         prevButton={{
                             title: 'Back',

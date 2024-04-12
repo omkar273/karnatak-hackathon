@@ -50,23 +50,27 @@ const Navbar = () => {
         <header className="fixed top-0 w-full flex items-center justify-between px-4 py-2 h-[60px] bg-cyan-600 transition-all duration-500 z-[1000] shadow-lg">
             <div className="flex justify-start items-center gap-2">
                 {/* logo  */}
-                <img
-                    // className="bg-white p-2 rounded-full"
-                    src={karntankPoliceLogo}
-                    alt="karnatak police logo"
-                    height={45}
-                    width={45}
-                    className="cursor-pointer"
-                />
-                <img
-                    // className="bg-white p-2 rounded-full"
-                    src={capital_tech_logo}
-                    alt="capital tech logo"
-                    height={45}
-                    width={45}
-                    className="cursor-pointer"
+                <a href="/">
+                    <img
+                        // className="bg-white p-2 rounded-full"
+                        src={karntankPoliceLogo}
+                        alt="karnatak police logo"
+                        height={45}
+                        width={45}
+                        className="cursor-pointer"
+                    />
+                </a>
+                <a href="/">
+                    <img
+                        // className="bg-white p-2 rounded-full"
+                        src={capital_tech_logo}
+                        alt="capital tech logo"
+                        height={45}
+                        width={45}
+                        className="cursor-pointer"
 
-                />
+                    />
+                </a>
 
                 <HSpacer width={100} />
                 {/* menu toggle button */}

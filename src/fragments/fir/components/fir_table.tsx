@@ -1,17 +1,16 @@
 import { VSpacer } from "@/common/components/spacer";
 import { ExportOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table, TablePaginationConfig } from 'antd';
-import { FilterValue, TableCurrentDataSource } from "antd/es/table/interface";
 import { useEffect, useState } from "react";
 import { FadeLoader } from "react-spinners";
-import useFIRs from "../hooks/use_get_fir";
+import useGetAllFIRs from "../hooks/use_getall_fir";
 
-const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
+const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
 
 
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchFIRs, loading, error, hasMore } = useFIRs(timeFrame);
+    const { documents, fetchFIRs, loading, error } = useGetAllFIRs(timeFrame);
 
     useEffect(() => {
         fetchFIRs().catch(console.error);
@@ -19,10 +18,7 @@ const FirDetailsTable = ({ reload = true }: { reload: boolean }) => {
 
 
 
-    const handleTableChange = (
-        pagination: TablePaginationConfig,
-        filters: Record<string, FilterValue | null>,
-        sorter: TableCurrentDataSource<FIRDocument>) => {
+    const handleTableChange = (pagination: TablePaginationConfig,) => {
         const { current } = pagination;
         fetchFIRs(current === 1);
     };

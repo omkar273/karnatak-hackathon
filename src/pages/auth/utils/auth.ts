@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { auth, firestore } from "@/firebase/firebase_config";
-import { UserModel } from "@/fragments/user-registartion/pages/register_page";
+import { UserModel } from "@/fragments/user_management/register_page";
 import { FirebaseError } from "firebase/app";
 import {
   UserCredential,

@@ -75,7 +75,7 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useFIRs(
+function useGetAllFIRs(
   timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
   initialLimit = 15
 ): UseFIRsReturn {
@@ -136,4 +136,4 @@ function useFIRs(
   return { documents, fetchFIRs, loading, error, hasMore };
 }
 
-export default useFIRs;
+export default useGetAllFIRs;

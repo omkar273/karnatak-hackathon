@@ -1,85 +1,78 @@
-import CourtTwo from "@/fragments/court/cout_two";
-import CourtT from "@/fragments/court/third_page";
-import FIRPage from "@/fragments/fir/page/fir_page";
-import AddStationFragment from "@/fragments/station/pages/station_management";
-import RegisterPage from "@/fragments/user-registartion/pages/register_page";
-import { AppstoreFilled, HomeFilled, MessageFilled } from "@ant-design/icons";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { HomeFilled } from "@ant-design/icons";
 import { Menu } from "antd";
-import { useState } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
-import FirPage from "@/fragments/court/fir_page";
-import Record from "@/fragments/station/record";
 
 const HomePage = () => {
-  const [page, setPage] = useState(<FIRPage />);
+  const navigate = useNavigate();
 
   const sidebarItems = [
     {
-      key: "home",
-      label: "Home",
+      key: "Station Management",
+      label: "Station Management",
       icon: <HomeFilled />,
       children: [
-        {
-          key: "Add Fir",
-          label: "Add Fir",
-          onClick: () => setPage(<FIRPage />),
-        },
+
         {
           key: "Add Station",
           label: "Add Station",
-          onClick: () => setPage(<AddStationFragment />),
+          onClick: () => navigate('/station'),
         },
-        {
-          key: "CrimeInvestigationDepartment",
-          label: "Crime Investigation Department",
-          onClick: () => setPage(<CourtT />),
-        },
+
         {
           key: "Court Monitoring",
           label: "Court Monitoring",
-          onClick: () => setPage(<FirPage />),
+          // onClick: () => setPage(<FirPage />),
         },
         {
           key: "Witness Management",
           label: "Witness Management",
-          onClick: () => setPage(<CourtT />),
+          // onClick: () => setPage(<CourtT />),
         },
         {
           key: "Case Preparation",
           label: "Case Preparation",
-          onClick: () => setPage(<CourtTwo />),
+          // onClick: () => setPage(<CourtTwo />),
         },
         {
           key: "Station Management",
           label: "Station Management",
-          onClick: () => setPage(<Record/>),
+          // onClick: () => setPage(<Record />),
         },
-        {
-          key: "L&O",
-          label: "L&O",
-        },
+
       ],
     },
     {
-      key: "Add new user",
-      label: "Add new user",
-      icon: <MessageFilled />,
-      onClick: () => setPage(<RegisterPage />),
+      key: "Fir Management",
+      label: "Fir Management",
+      // icon: <MessageFilled />,
+      children: [
+        {
+          key: "Add Fir",
+          label: "Add Fir",
+          onClick: () => navigate('/'),
+        },
+        {
+          key: "All Fir",
+          label: "All Fir",
+          onClick: () => navigate('/fir'),
+        },
+      ]
     },
     {
-      key: "docs",
-      label: "Docs",
-      icon: <AppstoreFilled />,
-      onClick: () => setPage(<div>Docs</div>),
+      key: "User Management",
+      label: "User Management",
+      // icon: <MessageFilled />,
+      children: [
+        {
+          key: "Add new user",
+          label: "Add new user",
+          onClick: () => navigate('/register'),
+        },
+      ]
     },
-    {
-      key: "more",
-      label: "More",
-      icon: <MoreVertIcon className="text-xl" />,
-      onClick: () => setPage(<div>More</div>),
-    },
+
   ];
 
   return (
@@ -99,7 +92,8 @@ const HomePage = () => {
 
         <main className="flex-grow overflow-hidden">
           <div className="max-h-screen overflow-y-auto">
-            {page}
+            {/* {page} */}
+            <Outlet />
           </div>
         </main>
       </div>

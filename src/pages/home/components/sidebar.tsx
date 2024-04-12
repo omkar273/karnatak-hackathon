@@ -34,14 +34,14 @@ const Sidebar: React.FC<Props> = ({ children }) => {
                 <div className={`flex justify-between items-center p-2 pb-2`} >
                     <span>
                         <Avatar className={`overflow-hidden transition-all ${expanded ? 'visible' : 'w-0 '} bg-blue-500 `}>
-                            s
+                            {userdata?.name.substring(0, 1)}
                         </Avatar>
-                        <span className="ml-2">
+                        <span className={`ml-2 ${expanded ? 'visible' : 'hidden'}`}>
                             {userdata?.name}
                         </span>
                     </span>
                     <button
-                        // onClick={() => setexpanded((prev) => !prev)}
+                        onClick={() => setexpanded((prev) => !prev)}
                         type="button"
                         className="p-1.5 rounded-lg bg-gray-50 size-8 hover:bg-gray-100">
                         {expanded ? <ChevronFirst /> : <ChevronLast />}

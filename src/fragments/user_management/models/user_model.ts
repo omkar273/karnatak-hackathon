@@ -1,0 +1,19 @@
+export type UserModel = {
+  name: string;
+  post: string;
+  dateOfJoining: string;
+  batch: string;
+  currentPosting: string;
+  workExperience: string;
+  certification: string;
+  qualification: string;
+  solvedCases: string;
+  height: string;
+  weight: string;
+  previousPosting: string;
+  skills: string;
+  awards: string;
+  email: string;
+  password: string;
+  username: string;
+};

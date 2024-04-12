@@ -1,4 +1,4 @@
-import { FieldValue } from "firebase/firestore";
+import { Timestamp } from "firebase/firestore";
 
 export type FIRModal = {
   name: string;
@@ -10,5 +10,7 @@ export type FIRModal = {
   timeOfIncident: string;
   placeOfIncident: string;
   detailsOfIncident: string;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
+  status: "registered" | "pending" | "in court" | "closed";
+  allotedTo: string[];
 };

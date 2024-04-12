@@ -1,4 +1,4 @@
-import { UserModel } from "@/fragments/user-registartion/pages/register_page";
+import { UserModel } from "@/fragments/user_management/models/user_model";
 import { createSlice } from "@reduxjs/toolkit";
 import { UserCredential } from "firebase/auth";
 
