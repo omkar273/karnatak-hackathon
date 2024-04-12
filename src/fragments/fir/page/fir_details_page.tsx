@@ -1,8 +1,6 @@
 import { VSpacer } from "@/common/components/spacer";
 import { DatePicker } from "antd";
 import { FilePlus2 } from "lucide-react";
-import 'react-calendar/dist/Calendar.css';
-import 'react-date-picker/dist/DatePicker.css';
 import { useParams } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 import useGetFirDetails from "../hooks/use_get_fir_details";
