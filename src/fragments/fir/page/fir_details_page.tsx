@@ -1,14 +1,13 @@
 import { VSpacer } from "@/common/components/spacer";
 import { DatePicker } from "antd";
 import { FilePlus2 } from "lucide-react";
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 
 
-const FirDetailsPage2 = () => {
-    const [queryParams] = useSearchParams()
-    const id = queryParams.get('id');
+const FirDetailsPage = () => {
+    const { id } = useParams()
     const { data, error, loading } = useGetFirDetails(id);
 
 
@@ -105,4 +104,4 @@ const FirDetailsPage2 = () => {
     );
 };
 
-export default FirDetailsPage2
+export default FirDetailsPage

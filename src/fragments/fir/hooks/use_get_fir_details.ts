@@ -4,7 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { FIRModal } from "../modals/fir_modal";
 
-const useGetFirDetails = (firID: string | undefined | null) => {
+const useGetFirDetails = (firID: string | undefined) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>(""); // Default empty error message
   const [data, setData] = useState<FIRModal | null>(null);
