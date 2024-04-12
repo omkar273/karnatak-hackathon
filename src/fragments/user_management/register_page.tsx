@@ -7,6 +7,11 @@ import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import { UserModel } from "./models/user_model";
 
+type detailsType = {
+    label: string,
+    error: string | undefined,
+    name: "name" | "post" | "dateOfJoining" | "batch" | "certification" | "solvedCases" | "height" | "weight" | "previousPosting" | "username" | "skills" | "awards" | "certification" | 'qualification' | 'currentPosting' | 'password' | 'email' | 'workExperience'
+}
 
 
 
@@ -34,7 +39,7 @@ const RegisterFragment = () => {
 
     }
 
-    const personalDetails = [
+    const personalDetails: detailsType[] = [
         {
             label: 'Name',
             error: errors.name?.message,
@@ -79,7 +84,7 @@ const RegisterFragment = () => {
         },
     ]
 
-    const workDetails = [
+    const workDetails: detailsType[] = [
 
         {
             label: 'certification',
@@ -114,7 +119,7 @@ const RegisterFragment = () => {
         },
     ]
 
-    const registrationDetails = [
+    const registrationDetails: detailsType[] = [
         {
             label: 'username',
             error: errors.username?.message,
