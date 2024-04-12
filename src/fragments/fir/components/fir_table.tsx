@@ -2,6 +2,7 @@ import { VSpacer } from "@/common/components/spacer";
 import { ExportOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table, TablePaginationConfig } from 'antd';
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 import useGetAllFIRs from "../hooks/use_getall_fir";
 
@@ -28,9 +29,9 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
             title: 'View',
             dataIndex: 'id',
             key: 'id',
-            render: (id: string) => (<a href={`/fir/${id}`}>
+            render: (id: string) => (<Link to={`/fir_details?id=${id}`}>
                 <span className="mr-2">view</span> <ExportOutlined />
-            </a>)
+            </Link>)
         },
         {
             title: 'Name',
