@@ -29,7 +29,7 @@ const Sidebar: React.FC<Props> = ({ children }) => {
     const url =
         "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
     return (
-        <aside id="sidebar" className="h-screen ">
+        <aside id="sidebar" className="h-screen hidden md:block">
             <nav className="h-[calc(100%-60px)] flex flex-col bg-white border-r shadow-sm">
                 <div className={`flex justify-between items-center p-2 pb-2`} >
                     <span>

@@ -4,14 +4,37 @@ import { HSpacer } from "@/common/components/spacer";
 import { setLogout } from "@/common/redux/auth_slice";
 import { doLogout } from "@/pages/auth/utils/auth";
 import { SearchOutlined } from "@ant-design/icons";
-import MenuIcon from "@ant-design/icons/MenuOutlined";
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Avatar, Badge, Dropdown, Input, MenuProps, Popconfirm } from "antd";
+import { Avatar, Badge, Drawer, Dropdown, Input, Menu, MenuProps, Popconfirm } from "antd";
+import { MenuIcon, X } from "lucide-react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-const Navbar = () => {
-    const dispatch = useDispatch();
+type Props = {
+    sidebarItems: ({
+        key: string;
+        label: string;
+        icon: JSX.Element;
+        children: {
+            key: string;
+            label: string;
+            onClick: () => void;
+        }[];
+    } | {
+        key: string;
+        label: string;
+        children: {
+            key: string;
+            label: string;
+            onClick: () => void;
+        }[];
+        icon?: undefined;
+    })[]
+}
 
+const Navbar: React.FC<Props> = ({ sidebarItems }) => {
+    const dispatch = useDispatch();
+    const [drawerOpen, setdrawerOpen] = useState<boolean>(false)
     const items: MenuProps['items'] = [
         {
             label: 'loading...',
@@ -44,11 +67,14 @@ const Navbar = () => {
             key: '1',
         },
     ];
+
+
+
     const url =
         "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
     return (
         <header className="fixed top-0 w-full flex items-center justify-between px-4 py-2 h-[60px] bg-cyan-600 transition-all duration-500 z-[1000] shadow-lg">
-            <div className="flex justify-start items-center gap-2">
+            <div className="hidden md:flex justify-start items-center gap-2">
                 {/* logo  */}
                 <a href="/">
                     <img
@@ -74,7 +100,7 @@ const Navbar = () => {
 
                 <HSpacer width={100} />
                 {/* menu toggle button */}
-                <MenuIcon className="cursor-pointer text-white text-xl " />
+
 
                 <HSpacer width={15} />
                 {/* searchbar */}
@@ -85,6 +111,11 @@ const Navbar = () => {
                     suffix={<SearchOutlined className="cursor-pointer" />} />
 
             </div>
+
+            {/* mobile navigation */}
+            <MenuIcon
+                className="cursor-pointer text-white text-xl md:hidden"
+                onClick={() => setdrawerOpen((prev) => !prev)} />
 
             {/* right hand side options */}
             <div className="flex justify-start items-center gap-8 cursor-pointer">
@@ -99,16 +130,39 @@ const Navbar = () => {
                     </Badge>
                 </Dropdown>
 
-
                 <Dropdown menu={{ items: profileOptions }}
                     placement="bottomRight"
                     trigger={['click']}
                     arrow={true}>
                     <Avatar src={url} />
                 </Dropdown>
-
-
             </div>
+
+            {/* mobile navigation */}
+
+            <Drawer
+                // title="Basic Drawer"
+                placement='left'
+                closable={false}
+                open={drawerOpen}
+                className="w-fit"
+            >
+                <div className="w-full flex justify-between mb-2">
+                    <p className="text-xl font-semibold">
+                        Capital tech logo
+                    </p>
+                    <X onClick={() => setdrawerOpen((prev) => !prev)} />
+                </div>
+                <Menu
+                    defaultOpenKeys={["home"]}
+                    defaultSelectedKeys={["dashboard"]}
+                    mode="inline"
+                    items={sidebarItems}
+                    onClick={(e) => {
+                        e.key;
+                    }}
+                />
+            </Drawer>
         </header>
     )
 }

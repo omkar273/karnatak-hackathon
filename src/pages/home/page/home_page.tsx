@@ -95,7 +95,7 @@ const HomePage = () => {
 
   return (
     <div className="pg max-h-screen overflow-hidden">
-      <Navbar />
+      <Navbar sidebarItems={sidebarItems} />
       <div className="flex max-h-screen mt-16 overflow-hidden">
         <Sidebar>
           <Menu
