@@ -73,9 +73,10 @@ const FirDetailsPage = () => {
                         <VSpacer height={25} />
                         {/* evidence details */}
                         <div className="md:grid gap-4 md:grid-cols-1">
+                            <EvidencesCard />
+
                             <ProgressCard />
 
-                            <EvidencesCard />
                         </div>
                     </div>
                 )}
