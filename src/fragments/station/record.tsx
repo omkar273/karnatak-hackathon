@@ -12,7 +12,7 @@ const Record = () => {
         <div className="shadow-md rounded-lg p-4 mx-auto mt-4 bg-white">
           <div className="grid grid-cols-5 gap-4">
             <div className="text-center font-bold">Name Of Officer (Post)</div>
-            <div className="text-center font-bold">Finances</div>
+            <div className="text-center font-bold">Finances </div>
             <div className="text-center font-bold">Track record</div>
             <div className="text-center font-bold">FIR/Case Number</div>
             <div className="text-center font-bold">Entry and Exit</div>
