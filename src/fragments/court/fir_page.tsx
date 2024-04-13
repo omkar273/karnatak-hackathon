@@ -3,12 +3,13 @@ import React from "react";
 const FirPage: React.FC = () => {
   return (
     <div className="bg-gray-200">
-      <div className="w-full h-12 bg-blue-500"></div>
-      <div className="w-full h-12 bg-blue-100">
-    <p className="p-1">Court Monitoring</p>
-  </div>
+      <div className="w-full h-12 bg-blue-300">
+        <p className="p-3 font-semibold">Court Monitoring</p>
+      </div>
       <h1> </h1>
-      <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">Chargesheet</h1>
+      <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">
+        Chargesheet
+      </h1>
       <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
         <div className="flex-1">
           <p className="text-gray-800 font-semibold">Name of accused(Age)</p>

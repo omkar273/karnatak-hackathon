@@ -11,9 +11,11 @@ const Lawnoder: FC<LawnoderProps> = (
 ) => {
   return (
     <div>
+      <div className="w-full h-12 bg-blue-300">
+        <p className="p-3 font-semibold">Law and Order</p>
+      </div>
       <div className=" justify-center bg-gray-100 p-10 items-center">
         <div className="rounded-lg bg-white shadow-md p-8">
-          Law and OrderLaw and Order
           <h2 className="text-2xl font-bold mb-4">Incident Reporting</h2>
           <div className="grid grid-cols-5 gap-4">
             <div className="col-span-1">

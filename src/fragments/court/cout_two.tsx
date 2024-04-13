@@ -20,9 +20,8 @@ const CourtTwo: React.FC = () => {
   return (
     <div className="bg-gray-200">
       <div className="bg-gray-50">
-        <div className="w-full h-12 bg-blue-500"></div>
-        <div className="w-full h-12 bg-blue-100 flex items-center px-4">
-          <p className="text-lg font-bold">Court Monitoring</p>
+        <div className="w-full h-12 bg-blue-300">
+          <p className="p-3 font-semibold">Court Monitoring</p>
         </div>
         <h1 className="px-4 py-2 text-xl font-bold">Case Preparation</h1>
 
@@ -40,7 +39,9 @@ const CourtTwo: React.FC = () => {
             <p className="text-lg font-bold">Case Name (Number)</p>
           </div>
           <div className="flex-1 bg-white rounded-lg p-5 flex items-center justify-center">
-            <p className="text-lg font-bold text-blue-500">Case Progress Meter</p>
+            <p className="text-lg font-bold text-blue-500">
+              Case Progress Meter
+            </p>
           </div>
         </div>
 
@@ -51,7 +52,6 @@ const CourtTwo: React.FC = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
