@@ -1,0 +1,122 @@
+import { VSpacer } from "@/common/components/spacer";
+import { ExportOutlined } from "@ant-design/icons";
+import { Table } from "antd";
+import { Calendar, Clock9, MapPinned, Phone, UserRound } from "lucide-react";
+import ReactSpeedometer from "react-d3-speedometer";
+import { Link } from "react-router-dom";
+import { chargesheetData } from "../data/chargesheet_data";
+const ChargesheetPage = () => {
+
+  const chargesheetColumns = [
+    {
+      title: 'View',
+      dataIndex: 'Name',
+      key: 'Name',
+      render: () => (<Link to={``}>
+        <span className="mr-2">view</span> <ExportOutlined />
+      </Link>)
+    },
+    {
+      title: 'Name',
+      dataIndex: 'Name',
+      key: 'Name',
+    },
+    {
+      title: 'Age',
+      dataIndex: 'Age',
+      key: 'Age',
+    },
+    {
+      title: 'Nationality',
+      dataIndex: 'Nationality',
+      key: 'Nationality',
+    },
+    {
+      title: 'Evidence',
+      dataIndex: 'Evidence',
+      key: 'Evidence',
+    },
+    {
+      title: 'Officer Incharge',
+      dataIndex: 'Officer_Incharge',
+      key: 'Officer_Incharge',
+    },
+    {
+      title: 'Investigation staus',
+      dataIndex: 'Investigation_Status',
+      key: 'Investigation_Status',
+    },
+
+  ]
+
+
+  return (
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
+      <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
+        {"Court Monitoring"}
+      </p>
+      <div className="p-4 mb-20">
+        <p className="text-3xl font-semibold mb-8">Chargesheet details</p>
+
+        {/* case progress meter */}
+        <div className="md:flex gap-8 w-full">
+
+          {/* case basic data */}
+          <div className="card bg-white flex-grow p-8 flex-1">
+            <p className="font-semibold text-xl">
+              Fir No :
+              <span className="font-medium">1369</span>
+            </p>
+
+
+            <p className="font-medium  text-base">status : Investigation</p>
+            <VSpacer height={30} />
+            <div className="w-full flex flex-col gap-4">
+              <span className="flex gap-2"><Calendar /> Date : 14/04/2024 </span>
+              <span className="flex gap-2"><MapPinned />Place : Petrol pump</span>
+              <span className="flex gap-2"><UserRound />Father name : Rajiv yadav </span>
+              <span className="flex gap-2"><Phone />Phone : +91 xxxxxxxxxx</span>
+              <span className="flex gap-2"><Clock9 />Time of incident : 4 PM noon</span>
+            </div>
+          </div>
+
+          <div className="card bg-white flex-grow flex-1 justify-between items-center w-full flex flex-col">
+            <p className="font-semibold text-2xl mb-1">
+              Case Progress meter
+            </p>
+            <VSpacer height={30} />
+            <ReactSpeedometer
+              minValue={0}
+              maxValue={100}
+              needleTransitionDuration={2000}
+              value={Math.floor(Math.random() * 101)}
+              // fluidWidth={true}
+              currentValueText="Case progress percentage"
+            />
+          </div>
+        </div>
+        <VSpacer height={25} />
+
+        {/* chargeet copies */}
+        <div className="card bg-white">
+          <p className="text-2xl my-3 font-semibold">All chargesheet</p>
+          <Table
+            dataSource={chargesheetData}
+            columns={chargesheetColumns}
+            pagination={{
+              total: chargesheetData.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+
+            }}
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export default ChargesheetPage

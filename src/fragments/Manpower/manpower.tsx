@@ -1,4 +1,35 @@
 const Manpower = () => {
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const rapidActionsColumns = [
+    {
+      title: 'Resource ID',
+      dataIndex: 'resource_id',
+      key: 'resource_id',
+    },
+    {
+      title: 'Type of Force needed',
+      dataIndex: 'type_of_force_needed',
+      key: 'type_of_force_needed',
+    },
+    {
+      title: 'Name',
+      dataIndex: 'nearby_force_available',
+      key: 'nearby_force_available',
+    },
+    {
+      title: 'Current location of nearby force',
+      dataIndex: 'current_location_of_nearby_force',
+      key: 'current_location_of_nearby_force',
+    },
+    {
+      title: 'Time to react',
+      dataIndex: 'time_to_reach_location',
+      key: 'time_to_reach_location',
+    },
+
+  ]
+
   return (
     <div>
       <div className="w-full h-12 bg-blue-300">

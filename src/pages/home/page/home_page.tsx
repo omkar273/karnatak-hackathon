@@ -32,9 +32,9 @@ const HomePage = () => {
         },
 
         {
-          key: "Court Monitoring",
-          label: "Court Monitoring",
-          onClick: () => navigateAndCloseDrawer("/FirPage"),
+          key: "Chargesheet",
+          label: "Chargesheet",
+          onClick: () => navigateAndCloseDrawer("/chargesheet"),
         },
         {
           key: "Witness Management",

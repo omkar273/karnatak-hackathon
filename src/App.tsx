@@ -5,8 +5,8 @@ import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
 import Manpower from "./fragments/Manpower/manpower";
+import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtTwo from "./fragments/court/cout_two";
-import FirPage from "./fragments/court/fir_page";
 import CourtT from "./fragments/court/third_page";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
@@ -59,7 +59,7 @@ const App = () => {
 
           <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
 
-          <Route path="/FirPage" element={getProtectedRoute(<FirPage />)} />
+          <Route path="/chargesheet" element={getProtectedRoute(<ChargesheetPage />)} />
 
           <Route path="/CourtTwo" element={getProtectedRoute(<CourtTwo />)} />
 

@@ -1,8 +1,9 @@
 import { VSpacer } from "@/common/components/spacer";
+import { UserOutlined } from "@ant-design/icons";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PieChart } from '@mui/x-charts/PieChart';
-import { Collapse, Table } from "antd";
+import { Avatar, Collapse, Rate, Table } from "antd";
 import { Landmark, Mail, MapPinned, Phone, ShieldPlus, University } from "lucide-react";
 import React from "react";
 import CrimeLineChart from "../components/chart";
@@ -139,34 +140,47 @@ const MyStationPage: React.FC = () => {
                 <div className="bg-gray-100 min-h-screen">
 
                     {/* basic station details */}
-                    <div className="card bg-white">
-                        <p className="text-2xl font-semibold flex gap-2 items-center">
-                            <ShieldPlus />
-                            {stationData.name}
-                        </p>
-                        <p className="text-base font-bold">Station Incharge : {stationData.station_incharge}</p>
-                        <VSpacer height={25} />
-                        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-2">
-                            <span className="flex gap-2 my-1 items-center">
-                                <MapPinned />{stationData.district}
-                            </span>
+                    <div className="card bg-white md:flex p-10">
+                        <div className="flex-[70%] flex-grow">
+                            <p className="text-2xl font-semibold flex gap-2 items-center">
+                                <ShieldPlus />
+                                {stationData.name}
+                            </p>
+                            <p className="text-base font-bold">Station Incharge : {stationData.station_incharge}</p>
+                            <VSpacer height={25} />
+                            <div className="md:flex flex-wrap gap-x-12 gap-y-4 ">
+                                <span className="flex gap-2 my-1 items-center">
+                                    <MapPinned />{stationData.district}
+                                </span>
 
-                            <span className="flex gap-2 my-1 items-center">
-                                <Landmark />{stationData.district}
-                            </span>
-                            <span className="flex gap-2 my-1 items-center">
-                                <Phone />{stationData.phone}
-                            </span>
-                            <span className="flex gap-2 my-1 items-center">
-                                <Mail />{stationData.email}
-                            </span>
+                                <span className="flex gap-2 my-1 items-center">
+                                    <Landmark />{stationData.address}
+                                </span>
+                                <span className="flex gap-2 my-1 items-center">
+                                    <Phone />{stationData.phone}
+                                </span>
+                                <span className="flex gap-2 my-1 items-center">
+                                    <Mail />{stationData.email}
+                                </span>
 
+                            </div>
+                            <VSpacer height={25} />
+                            <span className="flex gap-2 my-1 items-center">
+                                <University />{stationData.address}
+                            </span>
                         </div>
-                        <VSpacer height={25} />
-                        <span className="flex gap-2 my-1 items-center">
-                            <University />{stationData.address}
-                        </span>
+                        <div className="flex-[30%] w-full flex-grow  flex shadow-md bg-cyan-100 justify-center flex-col items-center border-2 rounded-md">
+                            <ShieldPlus className="text-center  size-28 mb-2" />
+                            <Rate disabled
+                                allowHalf
+                                defaultValue={4.5}
+                                tooltips={['Bad', 'betterment needed', 'good', 'Excellent', 'Ideal station']} />
+                            <p className="font-semibold text-base my-2">Overall station rating</p>
+                        </div>
                     </div>
+
+                    {/* imp staff */}
+                    <VSpacer height={25} />
 
                     {/* station map */}
                     <div className="card bg-white my-4">
@@ -180,13 +194,35 @@ const MyStationPage: React.FC = () => {
                         />
                     </div>
 
+                    <VSpacer height={25} />
+                    <p className="text-3xl p-4 font-semibold">Staff list</p>
+                    <div className="card p-12 bg-white">
+
+                        <div className="flex flex-wrap text-wrap gap-16 justify-evenly " >
+                            {stationData.staff.slice(0, 10).map((staff, index) => (
+                                <div key={index} className="flex flex-1 flex-col items-center p-4 rounded-lg shadow-md bg-cyan-100 border-2">
+                                    <Avatar size={100} icon={<UserOutlined />} />
+                                    <p className="font-bold text-center my-2">
+                                        {staff.name}
+                                    </p>
+                                    <p className="text-center">{staff.post}</p>
+                                </div>
+                            ))}
+
+                        </div>
+                    </div>
+                    <VSpacer height={25} />
+
+
+
+
                     <div className="card bg-white grid grid-cols-1 gap-y-16">
                         <CrimeLineChart />
 
-                        <div className="w-full grid grid-cols-2 gap-4 p-4 rounded border-2 border-gray-500">
+                        <div className="w-full grid md:grid-cols-2 gap-4 p-4 rounded border-2 border-gray-500">
 
                             <div className="flex flex-col w-full h-full justify-between items-center">
-                                <p className="text-xl my-3">Crime percentage in this last</p>
+                                <p className="text-xl my-3">Crime percentage in this last month</p>
                                 <PieChart
                                     series={[
                                         {
@@ -195,6 +231,7 @@ const MyStationPage: React.FC = () => {
                                             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                         },
                                     ]}
+                                    title="Crime percentage in this last"
                                     height={200}
                                 />
                             </div>
@@ -210,6 +247,7 @@ const MyStationPage: React.FC = () => {
                                             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                         },
                                     ]}
+                                    title="Crime percentage in this Month"
                                     height={200}
                                 />
                             </div>
@@ -219,7 +257,7 @@ const MyStationPage: React.FC = () => {
                     <div className="shadow-md rounded-lg p-4 mx-auto mt-4 bg-white">
                         <div className="grid grid-cols-4 gap-4 my-3">
                             <div className="text-center font-bold">Name Of Officer (Post)</div>
-                            {/* <div className="text-center font-bold">Finances </div> */}
+                            <div className="text-center font-bold">Post </div>
                             <div className="text-center font-bold">Track record/Solved cases</div>
                             <div className="text-center font-bold">FIR/Case Number</div>
                             <div className="text-center font-bold">Shift</div>
@@ -232,9 +270,12 @@ const MyStationPage: React.FC = () => {
                                     </div>
 
                                     <div className="text-center border p-2 w-full">
-                                        {person.solved_cases}
+                                        {person.post}
                                     </div>
 
+                                    <div className="text-center border p-2 w-full">
+                                        {person.solved_cases}
+                                    </div>
 
                                     <div className="text-center border p-2 w-full">
                                         <FontAwesomeIcon icon={faFilePdf} className="text-blue-500" />

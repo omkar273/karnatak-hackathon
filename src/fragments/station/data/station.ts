@@ -10,19 +10,19 @@ export const stationData = {
   staff: [
     {
       name: "Amit Sharma",
-      post: "Head Constable",
+      post: "Station Incharge",
       solved_cases: "20",
       shift_timing: "Day",
     },
     {
       name: "Priya Patel",
-      post: "Sub-Inspector",
+      post: "Inspector",
       solved_cases: "15",
       shift_timing: "Night",
     },
     {
       name: "Rajesh Singh",
-      post: "Constable",
+      post: "Sub Inspector",
       solved_cases: "10",
       shift_timing: "Day",
     },
