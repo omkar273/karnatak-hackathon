@@ -86,6 +86,10 @@ const FirPage: React.FC = () => {
         <div className="flex-1 #BFBFBF rounded-lg p-5"> In Hearing </div>
         <div className="flex-1 #BFBFBF rounded-lg p-5">In progress</div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
