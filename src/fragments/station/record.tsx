@@ -240,8 +240,6 @@ const Record = () => {
       <br />
       <br />
       <br/>
-      <br/>
-      <br />
     </div>
   );
 };
