@@ -3,7 +3,7 @@ import { ExportOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table, TablePaginationConfig } from 'antd';
 import { useEffect, useState } from "react";
 import { FadeLoader } from "react-spinners";
-import useGetStations from "../hooks/use_get_sttaions";
+import useGetStations from "../hooks/use_get_stations";
 
 const StationsTable = ({ reload = true }: { reload: boolean }) => {
 
@@ -13,8 +13,6 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
     useEffect(() => {
         fetchStations().catch(console.error);
     }, [timeFrame, reload]);
-
-
 
     const handleTableChange = (
         pagination: TablePaginationConfig,

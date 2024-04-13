@@ -80,7 +80,7 @@ const FIRPage = () => {
     required: 'required',
   }
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-200">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
         {"FIR Management"}
       </p>
@@ -167,6 +167,7 @@ const FIRPage = () => {
                   />
                   <p className="mb-3 text-xs text-red-600">{errors.allotedTo?.message}</p>
                 </div>
+
               </div>
             </div>
 

@@ -81,7 +81,7 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
     ];
 
     return (
-        <div className="card">
+        <div className="card bg-white">
 
             {/* heading */}
             <div className="md:flex justify-between items-center">
