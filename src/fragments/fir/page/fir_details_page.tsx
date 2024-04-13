@@ -2,6 +2,7 @@ import { VSpacer } from "@/common/components/spacer";
 import { Calendar, CircleUserRound, Clock9, MapPinned, Phone, ReceiptText, UserRound } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
+import EvidencesCard from "../components/fir_evidence_card";
 import ProgressCard from "../components/fir_progress_card";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 
@@ -10,6 +11,7 @@ const FirDetailsPage = () => {
     const [queryParams] = useSearchParams()
     const id = queryParams.get('id');
     const { data, error, loading } = useGetFirDetails(id);
+
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden">
@@ -73,10 +75,7 @@ const FirDetailsPage = () => {
                         <div className="md:grid gap-4 md:grid-cols-1">
                             <ProgressCard />
 
-                            <div className="card">
-                                <p className="font-semibold text-xl">Evidences Details</p>
-                                <VSpacer height={15} />
-                            </div>
+                            <EvidencesCard />
                         </div>
                     </div>
                 )}
