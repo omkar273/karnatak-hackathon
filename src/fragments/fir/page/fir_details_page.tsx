@@ -1,16 +1,15 @@
 import { VSpacer } from "@/common/components/spacer";
-import { DatePicker } from "antd";
-import { FilePlus2 } from "lucide-react";
+import { Calendar, CircleUserRound, Clock9, MapPinned, Phone, ReceiptText, UserRound } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
+import ProgressCard from "../components/fir_progress_card";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 
 
-const FirDetailsPage2 = () => {
+const FirDetailsPage = () => {
     const [queryParams] = useSearchParams()
     const id = queryParams.get('id');
     const { data, error, loading } = useGetFirDetails(id);
-
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden">
@@ -39,7 +38,7 @@ const FirDetailsPage2 = () => {
                 {!error && !loading && (
                     <div className="">
                         <div className="card">
-                            <p className="font-semibold  text-xl">{data?.name}</p>
+                            <p className="font-semibold  text-xl flex gap-2"><CircleUserRound /> {data?.name}</p>
                             <VSpacer height={5} />
                             <p className="font-medium  text-base">{`Registered on:  ${data?.timestamp.toDate().toLocaleDateString()}`}</p>
                             <p>status : {data?.status}</p>
@@ -47,15 +46,15 @@ const FirDetailsPage2 = () => {
                             <VSpacer height={75} />
                             {/* basic details */}
                             <div className="w-full md:grid md:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-4">
-                                <span>Date : {data?.dateOfIncident}</span>
-                                <span>Place : {data?.placeOfIncident}</span>
-                                <span>Father name : {data?.fatherName}</span>
-                                <span>Phone : {data?.mobileNo}</span>
-                                <span>Time of incident : {data?.timeOfIncident}</span>
+                                <span className="flex gap-2"><Calendar /> Date : {data?.dateOfIncident}</span>
+                                <span className="flex gap-2"><MapPinned />Place : {data?.placeOfIncident}</span>
+                                <span className="flex gap-2"><UserRound />Father name : {data?.fatherName}</span>
+                                <span className="flex gap-2"><Phone />Phone : {data?.mobileNo}</span>
+                                <span className="flex gap-2"><Clock9 />Time of incident : {data?.timeOfIncident}</span>
                             </div>
 
                             <VSpacer height={15} />
-                            <p>Details : {data?.detailsOfIncident}</p>
+                            <p className="flex gap-2"><ReceiptText /> Details : {data?.detailsOfIncident}</p>
                         </div>
 
                         <VSpacer height={25} />
@@ -71,30 +70,12 @@ const FirDetailsPage2 = () => {
 
                         <VSpacer height={25} />
                         {/* evidence details */}
-                        <div className="md:grid gap-4 md:grid-cols-2">
+                        <div className="md:grid gap-4 md:grid-cols-1">
+                            <ProgressCard />
+
                             <div className="card">
-
-                                {/* titlebar */}
-                                <div className="flex justify-between items-center">
-                                    <p className="font-semibold text-xl">Case Progress</p>
-                                    <span className="tap">
-                                        <FilePlus2 />
-                                    </span>
-                                </div>
-
-                                <VSpacer height={15} />
-                                <div className="p-4 border">
-                                    <DatePicker />
-
-                                </div>
-
-
-                                <VSpacer height={15} />
-
-                            </div> <div className="card">
                                 <p className="font-semibold text-xl">Evidences Details</p>
                                 <VSpacer height={15} />
-
                             </div>
                         </div>
                     </div>
@@ -105,4 +86,4 @@ const FirDetailsPage2 = () => {
     );
 };
 
-export default FirDetailsPage2
+export default FirDetailsPage
