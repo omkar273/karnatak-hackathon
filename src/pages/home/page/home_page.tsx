@@ -13,39 +13,53 @@ const HomePage = () => {
       label: "Station Management",
       icon: <HomeFilled />,
       children: [
-
         {
           key: "My Station",
           label: "My Station",
-          onClick: () => navigate('/station'),
+          onClick: () => navigate("/station"),
         },
         {
           key: "Add Station",
           label: "Add Station",
-          onClick: () => navigate('/station/add'),
+          onClick: () => navigate("/station/add"),
         },
 
         {
           key: "Court Monitoring",
           label: "Court Monitoring",
+          onClick: () => navigate("/FirPage"),
           // onClick: () => setPage(<FirPage />),
         },
         {
           key: "Witness Management",
           label: "Witness Management",
+          onClick: () => navigate("/CourtT"),
           // onClick: () => setPage(<CourtT />),
         },
         {
           key: "Case Preparation",
           label: "Case Preparation",
+          onClick: () => navigate("/CourtTwo"),
           // onClick: () => setPage(<CourtTwo />),
         },
         {
           key: "Station Management",
           label: "Station Management",
+          onClick: () => navigate("/Record"),
           // onClick: () => setPage(<Record />),
         },
-
+        {
+          key: "Manpower",
+          label: "Manpower",
+          onClick: () => navigate("/Manpower"),
+          // onClick: () => setPage(<Record />),
+        },
+        {
+          key: "Law and order",
+          label: "Law and order",
+          onClick: () => navigate("/Lawnoder"),
+          // onClick: () => setPage(<Record />),
+        },
       ],
     },
     {
@@ -56,14 +70,14 @@ const HomePage = () => {
         {
           key: "Add Fir",
           label: "Add Fir",
-          onClick: () => navigate('/'),
+          onClick: () => navigate("/"),
         },
         {
           key: "All Fir",
           label: "All Fir",
-          onClick: () => navigate('/fir'),
+          onClick: () => navigate("/fir"),
         },
-      ]
+      ],
     },
     {
       key: "User Management",
@@ -73,11 +87,10 @@ const HomePage = () => {
         {
           key: "Add new user",
           label: "Add new user",
-          onClick: () => navigate('/register'),
+          onClick: () => navigate("/register"),
         },
-      ]
+      ],
     },
-
   ];
 
   return (
@@ -90,8 +103,10 @@ const HomePage = () => {
             defaultSelectedKeys={["dashboard"]}
             mode="inline"
             items={sidebarItems}
-            onClick={(e) => { e.key }}
-            style={{ maxWidth: '18rem' }}
+            onClick={(e) => {
+              e.key;
+            }}
+            style={{ maxWidth: "18rem" }}
           />
         </Sidebar>
 
