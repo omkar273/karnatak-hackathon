@@ -7,7 +7,8 @@ import { RootState } from "./common/redux/store";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
-import AddStationFragment from "./fragments/station/pages/station_management";
+import AddStationPage from "./fragments/station/pages/all_station";
+import MyStationPage from "./fragments/station/pages/my_station";
 import RegisterFragment from "./fragments/user_management/register_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
@@ -31,18 +32,15 @@ const App = () => {
 
           {/* fir route */}
           <Route index element={getProtectedRoute(<FIRPage />)} />
-
-
           <Route path="fir" element={getProtectedRoute(<AllFirPage />)}>
-
           </Route>
-          {/* <Route path="/fir/:id" element={getProtectedRoute(<FirDetailsPage />)} /> */}
+
           <Route path="/fir_details" element={getProtectedRoute(<FirDetailsPage />)} />
 
           {/* station routes */}
           <Route path="station"  >
-            <Route index element={getProtectedRoute(<AddStationFragment />)} />
-
+            <Route index element={getProtectedRoute(<MyStationPage />)} />
+            <Route path="add" element={getProtectedRoute(<AddStationPage />)} />
           </Route>
 
           <Route path="register" element={getProtectedRoute(<RegisterFragment />)} />

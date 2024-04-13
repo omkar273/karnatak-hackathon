@@ -15,9 +15,14 @@ const HomePage = () => {
       children: [
 
         {
+          key: "My Station",
+          label: "My Station",
+          onClick: () => navigate('/station'),
+        },
+        {
           key: "Add Station",
           label: "Add Station",
-          onClick: () => navigate('/station'),
+          onClick: () => navigate('/station/add'),
         },
 
         {

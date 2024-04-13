@@ -5,12 +5,12 @@ import { useState } from "react";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import { doSaveStation, StationModel } from "../utils/do_save_station";
 import StationsTable from "../components/station_table";
+import { doSaveStation, StationModel } from "../utils/do_save_station";
 
 
 
-const AddStationFragment = () => {
+const AddStationPage = () => {
     const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<StationModel>()
 
     const [reload, setreload] = useState(true)
@@ -121,4 +121,4 @@ const AddStationFragment = () => {
     );
 };
 
-export default AddStationFragment;
+export default AddStationPage;
