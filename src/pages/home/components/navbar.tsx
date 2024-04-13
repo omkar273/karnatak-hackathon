@@ -7,10 +7,11 @@ import { SearchOutlined } from "@ant-design/icons";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, Badge, Drawer, Dropdown, Input, Menu, MenuProps, Popconfirm } from "antd";
 import { MenuIcon, X } from "lucide-react";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 type Props = {
+    drawerOpen: boolean,
+    setdrawerOpen: React.Dispatch<React.SetStateAction<boolean>>,
     sidebarItems: ({
         key: string;
         label: string;
@@ -32,9 +33,8 @@ type Props = {
     })[]
 }
 
-const Navbar: React.FC<Props> = ({ sidebarItems }) => {
+const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) => {
     const dispatch = useDispatch();
-    const [drawerOpen, setdrawerOpen] = useState<boolean>(false)
     const items: MenuProps['items'] = [
         {
             label: 'loading...',

@@ -1,11 +1,18 @@
 import { HomeFilled } from "@ant-design/icons";
 import { Menu } from "antd";
+import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [drawerOpen, setdrawerOpen] = useState<boolean>(false)
+
+  const navigateAndCloseDrawer = (path: string) => {
+    setdrawerOpen(false);
+    navigate(path);
+  }
 
   const sidebarItems = [
     {
@@ -16,66 +23,59 @@ const HomePage = () => {
         {
           key: "My Station",
           label: "My Station",
-          onClick: () => navigate("/station"),
+          onClick: () => navigateAndCloseDrawer("/station"),
         },
         {
           key: "Add Station",
           label: "Add Station",
-          onClick: () => navigate("/station/add"),
+          onClick: () => navigateAndCloseDrawer("/station/add"),
         },
 
         {
           key: "Court Monitoring",
           label: "Court Monitoring",
-          onClick: () => navigate("/FirPage"),
-          // onClick: () => setPage(<FirPage />),
+          onClick: () => navigateAndCloseDrawer("/FirPage"),
         },
         {
           key: "Witness Management",
           label: "Witness Management",
-          onClick: () => navigate("/CourtT"),
-          // onClick: () => setPage(<CourtT />),
+          onClick: () => navigateAndCloseDrawer("/CourtT"),
         },
         {
           key: "Case Preparation",
           label: "Case Preparation",
-          onClick: () => navigate("/CourtTwo"),
-          // onClick: () => setPage(<CourtTwo />),
+          onClick: () => navigateAndCloseDrawer("/CourtTwo"),
         },
         {
           key: "Station Management",
           label: "Station Management",
-          onClick: () => navigate("/Record"),
-          // onClick: () => setPage(<Record />),
+          onClick: () => navigateAndCloseDrawer("/Record"),
         },
         {
           key: "Manpower",
           label: "Manpower",
-          onClick: () => navigate("/Manpower"),
-          // onClick: () => setPage(<Record />),
+          onClick: () => navigateAndCloseDrawer("/Manpower"),
         },
         {
           key: "Law and order",
           label: "Law and order",
-          onClick: () => navigate("/Lawnoder"),
-          // onClick: () => setPage(<Record />),
+          onClick: () => navigateAndCloseDrawer("/Lawnoder"),
         },
       ],
     },
     {
       key: "Fir Management",
       label: "Fir Management",
-      // icon: <MessageFilled />,
       children: [
         {
           key: "Add Fir",
           label: "Add Fir",
-          onClick: () => navigate("/"),
+          onClick: () => navigateAndCloseDrawer("/"),
         },
         {
           key: "All Fir",
           label: "All Fir",
-          onClick: () => navigate("/fir"),
+          onClick: () => navigateAndCloseDrawer("/fir"),
         },
       ],
     },
@@ -87,7 +87,7 @@ const HomePage = () => {
         {
           key: "Add new user",
           label: "Add new user",
-          onClick: () => navigate("/register"),
+          onClick: () => navigateAndCloseDrawer("/register"),
         },
       ],
     },
@@ -95,7 +95,13 @@ const HomePage = () => {
 
   return (
     <div className="pg max-h-screen overflow-hidden">
-      <Navbar sidebarItems={sidebarItems} />
+
+      <Navbar
+        sidebarItems={sidebarItems}
+        drawerOpen={drawerOpen}
+        setdrawerOpen={setdrawerOpen} />
+
+
       <div className="flex max-h-screen mt-16 overflow-hidden">
         <Sidebar>
           <Menu
