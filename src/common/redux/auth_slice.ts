@@ -14,6 +14,7 @@ const authInitalState: authstate = {
   isUserLoggedIn: false,
   authStateLoading: false,
   userdata: {
+    stationId: "",
     name: "",
     post: "",
     dateOfJoining: "",
