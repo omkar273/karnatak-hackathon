@@ -59,7 +59,8 @@ const Reports = () => {
           <div className="flex-1 text-center"></div>
         </div>
       </div>
-      <br/>
+      <br />
+      <br />
     </div>
   );
 };
