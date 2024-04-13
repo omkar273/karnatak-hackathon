@@ -12,7 +12,7 @@ const CourtT: React.FC = () => {
       <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">
         Witness Management
       </h1>
-      <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
+      <div className="flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4 flex-wrap">
         <div className="flex-1">
           <p className="text-gray-800 font-semibold">Witness Details</p>
         </div>
@@ -29,7 +29,7 @@ const CourtT: React.FC = () => {
       <h2 className="text-2xl font-semibold text-gray-800 py-4 px-6">
         Calendar
       </h2>
-      <div className="flex bg-white rounded-lg p-1 space-x-5 mx-5">
+      <div className="flex bg-white rounded-lg p-1 space-x-5 mx-5 flex-wrap">
         {/* First box */}
         <div className="flex-1 bg-white rounded-lg p-1">
           <Calendar />
@@ -44,9 +44,9 @@ const CourtT: React.FC = () => {
           <p className="text-gray-800 font-semibold">Court Details</p>
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
 
     </div>
 

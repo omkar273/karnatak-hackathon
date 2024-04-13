@@ -10,7 +10,7 @@ const FirPage: React.FC = () => {
       <h1 className="text-3xl font-semibold text-gray-800 py-4 px-6">
         Chargesheet
       </h1>
-      <div className="shadow-md flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
+      <div className="shadow-md flex bg-white rounded-lg p-5 space-x-5 h-48 mx-4 flex-wrap">
         <div className="flex-1">
           <p className="text-gray-800 font-semibold">Name of accused(Age)</p>
         </div>
@@ -28,7 +28,7 @@ const FirPage: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="flex #BFBFBF rounded-lg space-x-5">
+        <div className="flex #BFBFBF rounded-lg space-x-5 flex-wrap">
           {/* First box */}
 
           <div className="flex-1 #BFBFBF rounded-lg p-5 ">
@@ -42,7 +42,7 @@ const FirPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="  flex #BFBFBF rounded-lg p-5 space-x-5 h-48 mx-4">
+      <div className="flex-wrap flex #BFBFBF rounded-lg p-5 space-x-5 h-48 mx-4">
         {/* First box */}
 
         <div className="flex-1 shadow-md bg-white rounded-lg p-5 font-semibold">
@@ -57,7 +57,7 @@ const FirPage: React.FC = () => {
       <div className="mx-4 h-10">
         <h1>Chargesheet </h1>
       </div>
-      <div className="flex shadow-md bg-white rounded-lg p-5 space-x-5 h-48 mx-4">
+      <div className="flex shadow-md bg-white rounded-lg p-5 space-x-5 h-48 mx-4 flex-wrap">
         <div className="flex-1">
           <p className="text-gray-800 font-semibold">Case Number</p>
         </div>
@@ -78,7 +78,7 @@ const FirPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex #BFBFBF rounded-lg p-5">
+      <div className="flex #BFBFBF rounded-lg p-5 flex-wrap">
         <div className="flex-1 #BFBFBF rounded-lg p-5">
           <p>Investigation stage</p>
         </div>
