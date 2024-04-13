@@ -44,6 +44,10 @@ const CourtT: React.FC = () => {
           <p className="text-gray-800 font-semibold">Court Details</p>
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
 
   );
