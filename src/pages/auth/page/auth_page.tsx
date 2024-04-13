@@ -1,4 +1,5 @@
 import capital_tech_logo from "@/assets/images/capital_tech_logo.png";
+import karntankPoliceLogo from "@/assets/images/karnatakpolice.png";
 import { VSpacer } from "@/common/components/spacer";
 import { setLogin } from "@/common/redux/auth_slice";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
@@ -39,61 +40,86 @@ const AuthPage = () => {
   }
 
   return (
-    <div className="pg md:flex">
-      <div className="w-[45%] bg-purple-600"></div>
-      <form className="flex-1 p-4 md:p-16" onSubmit={handleSubmit(handleLogin)}>
-        <p className="text-xl md:text-3xl font-poppins">
-          Welcome to capital tech
+    <div className="pg block md:flex ">
+      <div className="md:w-[45%] hidden  bg-cyan-500 md:h-screen md:flex flex-col justify-center items-center text-white text-xl">
+        <img src={karntankPoliceLogo} alt="" className="w-[50%]" />
+        <p>
+          Default username : omkar273
         </p>
-        <VSpacer height={50} />
+        <p>
+          password : 123456789
+        </p>
 
-        <div className="w-full flex justify-center">
-          <img
-            src={capital_tech_logo}
-            alt="capital tech logo"
-            width={200}
-            height={200}
-          />
-        </div>
+      </div>
 
-        {/* login section */}
-        <VSpacer height={25} />
-        <div>
-          <p className="text-xl">Login to Capital Tech</p>
+      <div className="bg-cyan-500 py-3 px-6 shadow-lg z-10 md:hidden flex justify-between items-center">
+        <img src={karntankPoliceLogo} alt="" className="w-16" />
+        <p className="text-white text-xl font-bold">Capital tech</p>
+      </div>
+
+      <div className={`flex-1 max-h-screen overflow-y-scroll relative bg-[url('${karntankPoliceLogo}')] bg-cover bg-center`}>
+        <form className=" p-4 md:p-16" onSubmit={handleSubmit(handleLogin)}>
+          <p className="text-xl md:text-3xl font-poppins">
+            Welcome to capital tech
+          </p>
+          <VSpacer height={50} />
+
+          <div className="w-full flex justify-center">
+            <img
+              src={capital_tech_logo}
+              alt="capital tech logo"
+              width={200}
+              height={200}
+            />
+          </div>
+
+          {/* login section */}
           <VSpacer height={25} />
+          <div>
+            <p className="text-xl">Login to Capital Tech</p>
+            <VSpacer height={25} />
 
-          <InputField
-            register={register}
-            name="username"
-            error={errors.username?.message}
-            validateOptions={validationOptions}
-            label="Username"
-          />
-          <VSpacer height={10} />
+            <InputField
+              register={register}
+              name="username"
+              error={errors.username?.message}
+              validateOptions={validationOptions}
+              label="Username"
+            />
+            <p>
+              Default username : omkar273
+            </p>
 
-          <InputField
-            register={register}
-            name="password"
-            error={errors.password?.message}
-            validateOptions={validationOptions}
-            label="Password"
-          />
-          <VSpacer height={25} />
+            <VSpacer height={35} />
 
-          <button className="btn font-ubuntu cursor-pointer" type="submit">
-            {isSubmitting ? (
-              <span className="flex justify-center items-center gap-2">
-                {" Loading "}
-                <PulseLoader color="white" loading={isSubmitting} size={8} />
-              </span>
-            ) : (
-              "Login"
-            )}
-          </button>
-          <VSpacer height={10} />
-          <p className="cursor-pointer ">Forget Password?</p>
-        </div>
-      </form>
+            <InputField
+              register={register}
+              name="password"
+              error={errors.password?.message}
+              validateOptions={validationOptions}
+              label="Password"
+              type="password"
+            />
+            <p>
+              Default password : 123456789
+            </p>
+            <VSpacer height={25} />
+
+            <button className="btn font-ubuntu cursor-pointer" type="submit">
+              {isSubmitting ? (
+                <span className="flex justify-center items-center gap-2">
+                  {" Loading "}
+                  <PulseLoader color="white" loading={isSubmitting} size={8} />
+                </span>
+              ) : (
+                "Login"
+              )}
+            </button>
+            <VSpacer height={10} />
+            <p className="cursor-pointer ">Forget Password?</p>
+          </div>
+        </form>
+      </div>
       {/* <ToastContainer /> */}
     </div>
   );
