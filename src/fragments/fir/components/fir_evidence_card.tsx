@@ -44,7 +44,7 @@ const EvidencesCard = () => {
     };
 
     // Handling date change
-    const onChange: DatePickerProps['onChange'] = (date, dateString) => {
+    const onChange: DatePickerProps['onChange'] = (_date, dateString) => {
         setValue('date', dateString as string, { shouldValidate: true });
         console.log(dateString, typeof (dateString));
 

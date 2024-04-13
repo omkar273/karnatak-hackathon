@@ -58,6 +58,7 @@ const useFetchFirEvidences = (
   useEffect(() => {
     fetchEvidences();
     return () => {};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firId, reload]);
 
   return { evidenceList, loading, error };
