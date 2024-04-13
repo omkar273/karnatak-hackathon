@@ -28,6 +28,45 @@ const Manpower = () => {
           {/* Add data rows here */}
           <div className="grid grid-cols-5 gap-4">
             <div className="col-span-1">
+              <p className="">Raj Sharma</p>
+            </div>
+            <div className="col-span-1">
+              <p className="">1st</p>
+            </div>
+            <div className="col-span-1">
+              <p className="">Administration</p>
+            </div>
+            <div className="col-span-1">
+              <p className="">7.5.2024</p>
+            </div>
+            <div className="col-span-1">
+              <p className="">Team Spirit</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-5 gap-4">
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-5 gap-4">
+            <div className="col-span-1">
+              <p className="font-bold">-</p>
+            </div>
+            <div className="col-span-1">
               <p className="font-bold">-</p>
             </div>
             <div className="col-span-1">
