@@ -5,7 +5,7 @@ const CourtT: React.FC = () => {
   // Function to get color based on case status
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <div className="w-full h-12 bg-blue-300">
         <p className="p-3 font-semibold">Court Monitoring</p>
       </div>

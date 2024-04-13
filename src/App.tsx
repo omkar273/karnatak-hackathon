@@ -4,21 +4,21 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
+import Manpower from "./fragments/Manpower/manpower";
+import CourtTwo from "./fragments/court/cout_two";
+import FirPage from "./fragments/court/fir_page";
+import CourtT from "./fragments/court/third_page";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
+import Lawnoder from "./fragments/lawNorder/lawnoder";
 import AddStationPage from "./fragments/station/pages/all_station";
 import MyStationPage from "./fragments/station/pages/my_station";
+import Record from "./fragments/station/record";
 import RegisterFragment from "./fragments/user_management/register_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
-import CourtT from "./fragments/court/third_page";
-import FirPage from "./fragments/court/fir_page";
-import CourtTwo from "./fragments/court/cout_two";
-import Record from "./fragments/station/record";
-import Manpower from "./fragments/Manpower/manpower";
-import Lawnoder from "./fragments/lawNorder/lawnoder";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(

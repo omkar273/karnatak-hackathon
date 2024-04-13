@@ -25,7 +25,7 @@ const CourtTwo: React.FC = () => {
         </div>
         <h1 className="px-4 py-2 text-xl font-bold">Case Preparation</h1>
 
-        <div className="flex bg-white rounded-lg p-5 space-x-5 mx-4 my-4">
+        <div className="shadow-md flex bg-white rounded-lg p-5 space-x-5 mx-4 my-4">
           <p className="flex-1">Case Number</p>
           <p className="flex-1">Nature of Offence</p>
           <p className="flex-1">Evidence</p>
@@ -33,12 +33,12 @@ const CourtTwo: React.FC = () => {
           <p className="flex-1">Investigation Status</p>
         </div>
 
-        <div className="flex space-x-5 mx-4">
+        <div className="flex space-x-5 mx-4 rounded-lg">
           {/* First box */}
-          <div className="flex-1 bg-white rounded-lg p-5">
+          <div className="flex-1 shadow-md bg-white rounded-lg p-5">
             <p className="text-lg font-bold">Case Name (Number)</p>
           </div>
-          <div className="flex-1 bg-white rounded-lg p-5 flex items-center justify-center">
+          <div className="flex-1 shadow-md bg-white rounded-lg p-5 flex items-center justify-center">
             <p className="text-lg font-bold text-blue-500">
               Case Progress Meter
             </p>
