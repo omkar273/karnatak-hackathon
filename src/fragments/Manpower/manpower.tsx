@@ -206,7 +206,7 @@ const Manpower = () => {
   ]
 
   const pieChartData = departmentDetails.map((d) => ({ 'id': d.dept_name, 'value': d.no_people, 'label': d.dept_name }))
-
+ 
   const valueFormatter = (value: number | null) => `${value} people`;
 
   return (
