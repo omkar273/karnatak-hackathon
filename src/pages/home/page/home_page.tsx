@@ -39,7 +39,7 @@ const HomePage = () => {
         {
           key: "Witness Management",
           label: "Witness Management",
-          onClick: () => navigateAndCloseDrawer("/CourtT"),
+          onClick: () => navigateAndCloseDrawer("/witness"),
         },
         {
           key: "Case Preparation",
@@ -59,7 +59,7 @@ const HomePage = () => {
         {
           key: "Law and order",
           label: "Law and order",
-          onClick: () => navigateAndCloseDrawer("/Lawnoder"),
+          onClick: () => navigateAndCloseDrawer("/law"),
         },
       ],
     },

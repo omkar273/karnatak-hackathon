@@ -5,17 +5,17 @@ import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
 import Manpower from "./fragments/Manpower/manpower";
-import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtTwo from "./fragments/court/cout_two";
+import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
-import Lawnoder from "./fragments/lawNorder/lawnoder";
+import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import AddStationPage from "./fragments/station/pages/all_station";
 import MyStationPage from "./fragments/station/pages/my_station";
-import Record from "./fragments/station/record";
 import RegisterFragment from "./fragments/user_management/register_page";
+import WitnessManagementPage from "./fragments/witness management/pages/witness_management_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
@@ -63,11 +63,13 @@ const App = () => {
 
           <Route path="/CourtTwo" element={getProtectedRoute(<CourtTwo />)} />
 
-          <Route path="/Record" element={getProtectedRoute(<Record />)} />
+          <Route path="/witness" element={getProtectedRoute(<WitnessManagementPage />)} />
+
+          <Route path="/Record" element={getProtectedRoute(<MyStationPage />)} />
 
           <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
 
-          <Route path="/Lawnoder" element={getProtectedRoute(<Lawnoder />)} />
+          <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
         </Route>
 
         {/* auth route */}

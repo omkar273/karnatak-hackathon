@@ -132,6 +132,46 @@ const Manpower = () => {
       "no_people": 10
     }
   ]
+
+  const movingTableColumns = [
+    {
+      "title": "unit_id",
+      "dataIndex": "unit_id",
+      "key": "unit_idt"
+    },
+    {
+      "title": "name",
+      "dataIndex": "name",
+      "key": "name"
+    },
+    {
+      "title": "suspicious_activity_response",
+      "dataIndex": "suspicious_activity_response",
+      "key": "suspicious_activity_response"
+    },
+    {
+      "title": "action_taken",
+      "dataIndex": "action_taken",
+      "key": "action_taken"
+    },
+    {
+      "title": "alert",
+      "dataIndex": "alert",
+      "key": "alert"
+    },
+    {
+      "title": "designation",
+      "dataIndex": "designation",
+      "key": "designation"
+    },
+    {
+      "title": "thumbnail",
+      "dataIndex": "thumbnail",
+      "key": "thumbnail"
+    },
+  ]
+
+
   const chartSettings = {
     yAxis: [
       {
@@ -147,21 +187,41 @@ const Manpower = () => {
     },
   };
 
+  const forensicTableColumns = [
+    {
+      "title": "unit_id",
+      "dataIndex": "unit_id",
+      "key": "unit_id"
+    },
+    {
+      "title": "status",
+      "dataIndex": "status",
+      "key": "status"
+    },
+    {
+      "title": "visual_cue",
+      "dataIndex": "visual_cue",
+      "key": "visual_cue"
+    },
+  ]
+
   const pieChartData = departmentDetails.map((d) => ({ 'id': d.dept_name, 'value': d.no_people, 'label': d.dept_name }))
 
   const valueFormatter = (value: number | null) => `${value} people`;
 
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
         {"Manpower mapping"}
       </p>
 
       {/* analytics */}
-      <div className="card grid md:grid-cols-2 grid-cols-1">
+      <div className="card grid md:grid-cols-2 grid-cols-1 bg-white">
+
         <div className="flex flex-col w-full h-full justify-between items-center">
           <p className="text-xl my-3">Crime percentage in this last month</p>
           <PieChart
+
             series={[
               {
                 data: pieChartData,
@@ -170,7 +230,8 @@ const Manpower = () => {
               },
             ]}
             title="Crime percentage in this last"
-            height={200}
+            height={300}
+            width={600}
           />
         </div>
         <div className="">
@@ -247,6 +308,46 @@ const Manpower = () => {
             columns={rapidActionsColumns}
             pagination={{
               total: manpowerMappingData.rapid_action_force_resources.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+
+            }}
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
+
+        <div className="bg-white p-4 my-4 card">
+
+          <p className="my-4 font-bold text-xl">
+            Forensic Unit
+          </p>
+
+          <Table
+            dataSource={manpowerMappingData.forensic_unit_status}
+            columns={forensicTableColumns}
+            pagination={{
+              total: manpowerMappingData.forensic_unit_status.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+
+            }}
+            scroll={{ x: 'max-content' }}
+          />
+        </div>
+
+        <div className="bg-white p-4 my-4 card">
+
+          <p className="my-4 font-bold text-xl">
+            Moving Unit
+          </p>
+
+          <Table
+            dataSource={manpowerMappingData.moving_unit_response}
+            columns={movingTableColumns}
+            pagination={{
+              total: manpowerMappingData.moving_unit_response.length,
               showSizeChanger: true,
               showQuickJumper: true,
               showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,

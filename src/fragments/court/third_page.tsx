@@ -4,6 +4,8 @@ import React from "react";
 const CourtT: React.FC = () => {
   // Function to get color based on case status
 
+
+
   return (
     <div className="bg-gray-100">
       <div className="w-full h-12 bg-blue-300">
