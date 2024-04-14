@@ -7,9 +7,10 @@ import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { CircleUserRound, FileCheck, FileClock, FileText } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const DashboardPage = () => {
+    const navigate = useNavigate()
     const chartSettings = {
         yAxis: [
             {
@@ -298,7 +299,9 @@ const DashboardPage = () => {
                             <VSpacer height={25} />
                             {
                                 dummyUserData.slice(0, 8).map((data, index) => (
-                                    <div key={index} className="p-2 border-b my-2 ">
+                                    <div key={index}
+                                        onClick={() => navigate(`/user?id=${data.email}`)}
+                                        className="p-2 border-b my-2 hover:card cursor-pointer">
                                         <div className="flex gap-2 mb-1">
                                             <CircleUserRound />
                                             <p className="font-medium">{data.name}</p>

@@ -8,9 +8,9 @@ const UnderlyingDataPage = () => {
     const underlyingTableColumns = [
         {
             title: 'View',
-            dataIndex: 'id',
-            key: 'id',
-            render: (id: string) => (<Link to={`/fir_details?id=${id}`}>
+            dataIndex: 'email',
+            key: 'email',
+            render: (email: string) => (<Link to={`/user?id=${email}`}>
                 <span className="mr-2">view</span> <ExportOutlined />
             </Link>)
         },

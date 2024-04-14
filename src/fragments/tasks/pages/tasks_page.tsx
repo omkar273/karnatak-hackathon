@@ -1,3 +1,4 @@
+import TextArea from "@/common/components/text_area";
 import dummyUserData from "@/fragments/user_management/data/underlying_data";
 import InputField from "@/pages/auth/components/input_field";
 import { Select, Space } from "antd";
@@ -150,17 +151,15 @@ const TaskAssignmentPage = () => {
                         <InputField<taskType>
                             validateOptions={validationOptions}
                             register={register}
-                            label="Email Address*"
-                            type="email"
+                            label="Task Title"
                             error={errors.task_title?.message}
                             name="task_title"
                         />
 
-                        <InputField<taskType>
+                        <TextArea<taskType>
                             validateOptions={validationOptions}
                             register={register}
-                            label="Email Address*"
-                            type="email"
+                            label="Task description"
                             error={errors.details?.message}
                             name="details"
                         />
