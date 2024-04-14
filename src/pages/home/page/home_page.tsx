@@ -1,5 +1,5 @@
-import { HomeFilled } from "@ant-design/icons";
 import { Menu } from "antd";
+import { BarChartBig, FileStack, FileText, Home, Landmark, Mic, NotebookPen, NotepadText, Scale, ScrollText, University, User, UserCog, UserRoundPlus } from "lucide-react";
 import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
@@ -16,65 +16,89 @@ const HomePage = () => {
 
   const sidebarItems = [
     {
+      key: "Dashboard",
+      label: "Dashboard",
+      onClick: () => navigateAndCloseDrawer("/dashboard"),
+      icon: <BarChartBig />
+    },
+    {
       key: "Station Management",
       label: "Station Management",
-      icon: <HomeFilled />,
+      icon: <Home />,
       children: [
         {
           key: "My Station",
           label: "My Station",
           onClick: () => navigateAndCloseDrawer("/station"),
+          icon: <Home />,
         },
         {
           key: "Add Station",
           label: "Add Station",
+          icon: <University />,
           onClick: () => navigateAndCloseDrawer("/station/add"),
-        },
-
-        {
-          key: "Chargesheet",
-          label: "Chargesheet",
-          onClick: () => navigateAndCloseDrawer("/chargesheet"),
-        },
-        {
-          key: "Witness Management",
-          label: "Witness Management",
-          onClick: () => navigateAndCloseDrawer("/witness"),
-        },
-        {
-          key: "Case Preparation",
-          label: "Case Preparation",
-          onClick: () => navigateAndCloseDrawer("/CourtTwo"),
         },
         {
           key: "Station Management",
           label: "Station Management",
+          icon: <Mic />,
           onClick: () => navigateAndCloseDrawer("/Record"),
         },
         {
           key: "Manpower",
           label: "Manpower",
+          icon: <User />,
           onClick: () => navigateAndCloseDrawer("/Manpower"),
         },
         {
           key: "Law and order",
           label: "Law and order",
+          icon: <Scale />,
           onClick: () => navigateAndCloseDrawer("/law"),
         },
       ],
     },
     {
+      key: "Court Monitoring",
+      label: "Court Monitoring",
+      icon: <Landmark />,
+      children: [
+        {
+          key: "Chargesheet",
+          label: "Chargesheet",
+          icon: <ScrollText />,
+          onClick: () => navigateAndCloseDrawer("/chargesheet"),
+        },
+        {
+          key: "Witness Management",
+          label: "Witness Management",
+          icon: <Mic />,
+          onClick: () => navigateAndCloseDrawer("/witness"),
+        },
+        {
+          key: "Case Preparation",
+          label: "Case Preparation",
+          icon: <NotepadText />,
+
+          onClick: () => navigateAndCloseDrawer("/CourtTwo"),
+        },
+      ]
+    },
+    {
       key: "Fir Management",
       label: "Fir Management",
+      icon: <FileText />,
       children: [
         {
           key: "Add Fir",
           label: "Add Fir",
+          icon: <NotebookPen />,
           onClick: () => navigateAndCloseDrawer("/"),
         },
         {
           key: "All Fir",
           label: "All Fir",
+          icon: <FileStack />,
           onClick: () => navigateAndCloseDrawer("/fir"),
         },
       ],
@@ -82,11 +106,12 @@ const HomePage = () => {
     {
       key: "User Management",
       label: "User Management",
-      // icon: <MessageFilled />,
+      icon: <UserCog />,
       children: [
         {
           key: "Add new user",
           label: "Add new user",
+          icon: <UserRoundPlus />,
           onClick: () => navigateAndCloseDrawer("/register"),
         },
       ],

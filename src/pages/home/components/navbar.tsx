@@ -6,31 +6,14 @@ import { doLogout } from "@/pages/auth/utils/auth";
 import { SearchOutlined } from "@ant-design/icons";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, Badge, Drawer, Dropdown, Input, Menu, MenuProps, Popconfirm } from "antd";
+import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch } from "react-redux";
 
 type Props = {
     drawerOpen: boolean,
     setdrawerOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    sidebarItems: ({
-        key: string;
-        label: string;
-        icon: JSX.Element;
-        children: {
-            key: string;
-            label: string;
-            onClick: () => void;
-        }[];
-    } | {
-        key: string;
-        label: string;
-        children: {
-            key: string;
-            label: string;
-            onClick: () => void;
-        }[];
-        icon?: undefined;
-    })[]
+    sidebarItems: MenuItemType[] | undefined
 }
 
 const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) => {

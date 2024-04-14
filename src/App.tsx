@@ -8,6 +8,7 @@ import Manpower from "./fragments/Manpower/manpower";
 import CourtTwo from "./fragments/court/cout_two";
 import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
+import DashboardPage from "./fragments/dashboard/pages/dashboard_page";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
@@ -70,6 +71,8 @@ const App = () => {
           <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
 
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
+
+          <Route path="/dashboard" element={getProtectedRoute(<DashboardPage />)} />
         </Route>
 
         {/* auth route */}

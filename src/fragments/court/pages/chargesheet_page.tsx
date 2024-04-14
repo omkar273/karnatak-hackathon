@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { chargesheetData } from "../data/chargesheet_data";
 
 
-const getStatusColorFromStatus = (status: string) => {
+ const getStatusColorFromStatus = (status: string) => {
   let color = ''
   switch (status) {
     case 'Ongoing':
