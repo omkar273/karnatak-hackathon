@@ -5,6 +5,38 @@ import { Calendar, Clock9, MapPinned, Phone, UserRound } from "lucide-react";
 import ReactSpeedometer from "react-d3-speedometer";
 import { Link } from "react-router-dom";
 import { chargesheetData } from "../data/chargesheet_data";
+
+
+const getStatusColorFromStatus = (status: string) => {
+  let color = ''
+  switch (status) {
+    case 'Ongoing':
+      color = '#FF0000 '
+      break;
+    case 'Pending':
+      color = '#FF5733'
+      break;
+    case 'Under Review':
+      color = '#FFA500'
+      break;
+    case 'Closed - Charges filed':
+      color = '#FFFF00'
+      break;
+    case 'Under Investigation':
+      color = '#FFFF00'
+      break;
+    case 'Closed - Warning issued':
+      color = '#ADFF2F'
+      break;
+    case 'Closed - Arrest made':
+      color = '#00FF00'
+      break;
+    default:
+      break;
+  }
+  return (<div className={`size-4 rounded-full border`} style={{ backgroundColor: color }} ></div>)
+}
+
 const ChargesheetPage = () => {
 
   const chargesheetColumns = [
@@ -20,6 +52,7 @@ const ChargesheetPage = () => {
       title: 'Name',
       dataIndex: 'Name',
       key: 'Name',
+      render: (name: string) => (<span className="font-semibold text-base">{name}</span>)
     },
     {
       title: 'Age',
@@ -45,6 +78,11 @@ const ChargesheetPage = () => {
       title: 'Investigation staus',
       dataIndex: 'Investigation_Status',
       key: 'Investigation_Status',
+      render: (status: string) => (
+        <span className="flex gap-3 font-semibold items-center">
+          {getStatusColorFromStatus(status)}{status}
+        </span>
+      )
     },
 
   ]
