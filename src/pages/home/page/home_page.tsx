@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import { BarChartBig, FileStack, FileText, Home, Landmark, Mic, NotebookPen, NotepadText, Scale, ScrollText, University, User, UserCog, UserRoundPlus } from "lucide-react";
+import { BarChartBig, ClipboardList, FileStack, FileText, Home, Landmark, Mic, NotebookPen, NotepadText, Scale, ScrollText, University, User, UserCog, UserRoundPlus, Users } from "lucide-react";
 import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
@@ -18,7 +18,7 @@ const HomePage = () => {
     {
       key: "Dashboard",
       label: "Dashboard",
-      onClick: () => navigateAndCloseDrawer("/dashboard"),
+      onClick: () => navigateAndCloseDrawer("/"),
       icon: <BarChartBig />
     },
     {
@@ -43,6 +43,12 @@ const HomePage = () => {
           label: "Station Management",
           icon: <Mic />,
           onClick: () => navigateAndCloseDrawer("/Record"),
+        },
+        {
+          key: "Task Assignment",
+          label: "Task Assignment",
+          icon: <ClipboardList />,
+          onClick: () => navigateAndCloseDrawer("/station/tasks"),
         },
         {
           key: "Manpower",
@@ -93,13 +99,13 @@ const HomePage = () => {
           key: "Add Fir",
           label: "Add Fir",
           icon: <NotebookPen />,
-          onClick: () => navigateAndCloseDrawer("/"),
+          onClick: () => navigateAndCloseDrawer("/fir"),
         },
         {
           key: "All Fir",
           label: "All Fir",
           icon: <FileStack />,
-          onClick: () => navigateAndCloseDrawer("/fir"),
+          onClick: () => navigateAndCloseDrawer("/fir/all"),
         },
       ],
     },
@@ -112,7 +118,19 @@ const HomePage = () => {
           key: "Add new user",
           label: "Add new user",
           icon: <UserRoundPlus />,
-          onClick: () => navigateAndCloseDrawer("/register"),
+          onClick: () => navigateAndCloseDrawer("/user/register"),
+        },
+        {
+          key: "Underlyings",
+          label: "Underlyings",
+          icon: <Users />,
+          onClick: () => navigateAndCloseDrawer("/user/underlying"),
+        },
+        {
+          key: "Profile",
+          label: "Profile",
+          icon: <User />,
+          onClick: () => navigateAndCloseDrawer("/user"),
         },
       ],
     },

@@ -13,8 +13,11 @@ import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
 import LawOrderPage from "./fragments/law and order/pages/law_order_page";
+import ProfilePage from "./fragments/profile/page/profile_page";
 import AddStationPage from "./fragments/station/pages/all_station";
 import MyStationPage from "./fragments/station/pages/my_station";
+import TaskAssignmentPage from "./fragments/tasks/pages/tasks_page";
+import UnderlyingDataPage from "./fragments/underlying/page/underlying_page";
 import RegisterFragment from "./fragments/user_management/register_page";
 import WitnessManagementPage from "./fragments/witness management/pages/witness_management_page";
 import AuthPage from "./pages/auth/page/auth_page";
@@ -38,9 +41,12 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={getProtectedRoute(<HomePage />)}>
+
+          <Route index element={getProtectedRoute(<DashboardPage />)} />
+
           {/* fir route */}
-          <Route index element={getProtectedRoute(<FIRPage />)} />
-          <Route path="fir" element={getProtectedRoute(<AllFirPage />)}></Route>
+          <Route path="fir" element={getProtectedRoute(<FIRPage />)} />
+          <Route path="fir/all" element={getProtectedRoute(<AllFirPage />)}></Route>
 
           <Route
             path="/fir_details"
@@ -49,14 +55,27 @@ const App = () => {
 
           {/* station routes */}
           <Route path="station">
+
             <Route index element={getProtectedRoute(<MyStationPage />)} />
+
             <Route path="add" element={getProtectedRoute(<AddStationPage />)} />
+
+            <Route path="tasks" element={getProtectedRoute(<TaskAssignmentPage />)} />
+
           </Route>
 
-          <Route
-            path="register"
-            element={getProtectedRoute(<RegisterFragment />)}
-          />
+          <Route path="user">
+            <Route
+              path="register"
+              element={getProtectedRoute(<RegisterFragment />)}
+            />
+            <Route
+              path="underlying"
+              element={getProtectedRoute(<UnderlyingDataPage />)}
+            />
+            <Route index element={getProtectedRoute(<ProfilePage />)}
+            />
+          </Route>
 
           <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
 
@@ -72,7 +91,6 @@ const App = () => {
 
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
 
-          <Route path="/dashboard" element={getProtectedRoute(<DashboardPage />)} />
         </Route>
 
         {/* auth route */}
