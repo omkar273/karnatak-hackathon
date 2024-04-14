@@ -38,7 +38,7 @@ export type FIRModal = {
 
 export const dummyUserData: UserModel[] = [
   {
-    name: "Amit Kumar",
+    name: "Omkar sonawane",
     post: "Inspector",
     dateOfJoining: "2020-01-15",
     batch: "2018",
@@ -52,9 +52,9 @@ export const dummyUserData: UserModel[] = [
     previousPosting: "Delhi Police Station",
     skills: "Investigation, Interrogation, Surveillance",
     awards: "Best Investigator of the Year 2022",
-    email: "amit.kumar@example.com",
-    password: "password123",
-    username: "amit.kumar",
+    email: "omkarsonawane622@gmail.com",
+    password: "123456789",
+    username: "omkar273",
     stationId: "MUM001",
   },
   {

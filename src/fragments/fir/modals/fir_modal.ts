@@ -10,7 +10,7 @@ export type FIRModal = {
   timeOfIncident: string;
   placeOfIncident: string;
   detailsOfIncident: string;
-  timestamp?: Timestamp;
+  timestamp: Timestamp;
   status: "registered" | "pending" | "in court" | "closed";
   allotedTo: string[];
 };
