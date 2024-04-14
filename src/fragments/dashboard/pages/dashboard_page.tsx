@@ -120,12 +120,61 @@ const DashboardPage = () => {
                                 <p className="text-2xl font-bold text-center my-2">69</p>
                             </div>
 
+
                             <div className="card bg-white flex justify-between items-center flex-col">
                                 <p className="font-semibold ; flex gap-2 ">
                                     <FileText />
                                     Cases alloted to you
                                 </p>
-                                <p className="text-2xl font-bold text-center my-2">9</p>
+                                <p className="cursor-pointer hover:scale-105 font-semibold text-center my-2">9</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Select Year
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Total calls for service
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Total Arrests
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Total Police Station
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Total FIR
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
+                            </div>
+
+                            <div className="card bg-blue-400 text-white">
+                                <p className="font-semibold flex gap-2 ">
+                                    <FileText />
+                                    Police Squad
+                                </p>
+                                <p className="cursor-pointer w-full text-end hover:scale-105 font-medium my-2">(view)</p>
                             </div>
 
                         </div>
