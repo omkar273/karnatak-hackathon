@@ -143,7 +143,7 @@ const DashboardPage = () => {
                                         {
                                             scaleType: 'band',
                                             dataKey: 'dept_name',
-                                            label: 'No of people alloted in different departments'
+                                            label: 'No of personnel alloted in different departments'
                                         }]}
                                     series={[{
                                         dataKey: 'no_people',
@@ -154,7 +154,7 @@ const DashboardPage = () => {
                                 />
                             </div>
                             <div className="flex flex-col w-full h-full justify-between items-center  card bg-white">
-                                <p className="text-xl my-3">No of people alloted in different departments
+                                <p className="text-xl my-3">No of personnel alloted in different departments
                                 </p>
                                 <PieChart
                                     series={[
@@ -164,7 +164,7 @@ const DashboardPage = () => {
                                             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                                         },
                                     ]}
-                                    title="Crime percentage in this last"
+                                    title="Crime percentage in this last month"
                                     margin={{ top: 20, bottom: 100, left: 10, right: 0 }}
                                     height={500}
                                     width={300}
