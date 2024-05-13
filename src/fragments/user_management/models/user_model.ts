@@ -11,10 +11,13 @@ export type UserModel = {
   height: string;
   weight: string;
   previousPosting: string;
-  skills: string;
-  awards: string;
+  skills: string[];
+  awards: string[];
   email: string;
   password: string;
   username: string;
   stationId: string;
+  open_cases: number;
+  closed_cases: number;
+  stationCode: string;
 };

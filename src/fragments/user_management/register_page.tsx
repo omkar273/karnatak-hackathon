@@ -27,7 +27,7 @@ const RegisterFragment = () => {
             await doSignUp({
                 password: data.password,
                 email: data.email,
-                data: data,
+                data: { ...data, closed_cases: 0, open_cases: 0 },
                 username: data.username
             });
 

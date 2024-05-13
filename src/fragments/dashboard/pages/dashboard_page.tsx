@@ -2,7 +2,8 @@ import { VSpacer } from "@/common/components/spacer";
 import FirDetailsTable from "@/fragments/fir/components/fir_table";
 import CrimeLineChart from "@/fragments/station/components/chart";
 import { dummyFIRData } from "@/fragments/user_management/data/fir_data";
-import dummyUserData from "@/fragments/user_management/data/underlying_data";
+import dummyUserData, { rolesData } from "@/fragments/user_management/data/underlying_data";
+import { doSignUp } from "@/pages/auth/utils/auth";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
@@ -25,6 +26,26 @@ const DashboardPage = () => {
             },
         },
     };
+
+    const uploadZonesData = async () => {
+        try {
+
+
+            for (const user of rolesData) {
+                await doSignUp({
+                    email: user.email,
+                    username: user.username,
+                    password: user.password,
+                    data: user,
+                });
+            }
+
+            console.log("Zones data uploaded successfully!");
+        } catch (error) {
+            console.error("Error uploading zones data:", error);
+        }
+    };
+
 
     const departmentDetails = [
         {
@@ -216,8 +237,7 @@ const DashboardPage = () => {
                                     ]}
                                     title="Crime percentage in this last month"
                                     margin={{ top: 20, bottom: 100, left: 10, right: 0 }}
-                                    height={500}
-                                    width={300}
+
                                     slotProps={{
                                         legend: {
                                             direction: 'row',
@@ -237,15 +257,24 @@ const DashboardPage = () => {
                                 <PieChart
                                     series={[
                                         {
-                                            data: casesDetails.map((d) => ({ 'id': d.dept_name, 'value': d.no_people, 'label': d.dept_name })),
+                                            data: casesDetails.map((d) => ({
+                                                'id': d.dept_name,
+                                                'value': d.no_people,
+                                                'label': d.dept_name,
+                                            })),
+
                                             highlightScope: { faded: 'global', highlighted: 'item' },
-                                            faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+
+                                            faded: {
+                                                innerRadius: 30,
+                                                additionalRadius: -30,
+                                                color: 'gray',
+                                            },
                                         },
                                     ]}
                                     title="Crime percentage in this last"
                                     margin={{ top: 20, bottom: 100, left: 10, right: 0 }}
-                                    height={500}
-                                    width={300}
+
                                     slotProps={{
                                         legend: {
                                             direction: 'row',
@@ -366,6 +395,8 @@ const DashboardPage = () => {
                         </div>
 
 
+                        {/* dummy button */}
+                        <button type="button" onClick={uploadZonesData}>Upload zones</button>
                         <VSpacer height={150} />
                     </div>
                 </div>

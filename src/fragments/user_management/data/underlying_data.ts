@@ -1,6 +1,6 @@
 import { Timestamp } from "firebase/firestore";
 
-export type UserModel = {
+export type UserModel2 = {
   name: string;
   post: string;
   dateOfJoining: string;
@@ -36,7 +36,7 @@ export type FIRModal = {
   status: "registered" | "pending" | "in court" | "closed";
 };
 
-export const dummyUserData: UserModel[] = [
+export const dummyUserData: UserModel2[] = [
   {
     name: "Omkar sonawane",
     post: "Inspector",
@@ -320,3 +320,66 @@ export const dummyUserData: UserModel[] = [
 ];
 
 export default dummyUserData;
+
+export const rolesData: UserModel2[] = [
+  {
+    name: "Inspector",
+    post: "Inspector",
+    dateOfJoining: "2020-01-15",
+    batch: "2018",
+    currentPosting: "Banglore Police Station",
+    workExperience: "5 years",
+    certification: "Crime Scene Investigation",
+    qualification: "Bachelor of Arts",
+    solvedCases: "25",
+    height: "175 cm",
+    weight: "70 kg",
+    previousPosting: "Delhi Police Station",
+    skills: "Investigation, Interrogation, Surveillance",
+    awards: "Best Investigator of the Year 2022",
+    email: "omkarsonawane622@gmail.com",
+    password: "123456789",
+    username: "inspector",
+    stationId: "MUM001",
+  },
+  {
+    name: "Headconstable",
+    post: "Head Constable",
+    dateOfJoining: "2019-05-20",
+    batch: "2017",
+    currentPosting: "Chennai Police Station",
+    workExperience: "4 years",
+    certification: "Forensic Science",
+    qualification: "Bachelor of Science",
+    solvedCases: "20",
+    height: "165 cm",
+    weight: "55 kg",
+    previousPosting: "Bangalore Police Station",
+    skills: "Forensic Analysis, Surveillance",
+    awards: "Exemplary Service Medal",
+    email: "headconstable@gmail.com",
+    password: "123456789",
+    username: "headconstable",
+    stationId: "CHE002",
+  },
+  {
+    name: "commissioner",
+    post: "Commissioner",
+    dateOfJoining: "2021-03-10",
+    batch: "2019",
+    currentPosting: "Kolkata Police Station",
+    workExperience: "2 years",
+    certification: "First Aid Training",
+    qualification: "High School Diploma",
+    solvedCases: "15",
+    height: "170 cm",
+    weight: "65 kg",
+    previousPosting: "Patna Police Station",
+    skills: "Patrolling, Traffic Control",
+    awards: "Outstanding Performance Award",
+    email: "rahul.singh@example.com",
+    password: "123456789",
+    username: "commissioner",
+    stationId: "KOL003",
+  },
+];
