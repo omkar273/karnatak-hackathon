@@ -27,11 +27,14 @@ const authInitalState: authstate = {
     height: "",
     weight: "",
     previousPosting: "",
-    skills: "",
-    awards: "",
+    skills: [""],
+    awards: [""],
     email: "",
     password: "",
     username: "",
+    open_cases: 0,
+    closed_cases: 0,
+    stationCode: "",
   },
 };
 

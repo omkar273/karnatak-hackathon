@@ -10,7 +10,11 @@ const getUserDetails = (userEmail: string): UserModel | null => {
     for (let index = 0; index < dummyUserData.length; index++) {
         const element = dummyUserData[index];
         if (userEmail === element.email) {
-            return element;
+            return {
+                ...element,
+                skills: [element.skills],
+                awards: [element.awards]
+            };
         }
     }
     return null;

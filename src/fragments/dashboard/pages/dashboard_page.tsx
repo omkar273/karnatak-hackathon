@@ -2,8 +2,7 @@ import { VSpacer } from "@/common/components/spacer";
 import FirDetailsTable from "@/fragments/fir/components/fir_table";
 import CrimeLineChart from "@/fragments/station/components/chart";
 import { dummyFIRData } from "@/fragments/user_management/data/fir_data";
-import dummyUserData, { rolesData } from "@/fragments/user_management/data/underlying_data";
-import { doSignUp } from "@/pages/auth/utils/auth";
+import dummyUserData from "@/fragments/user_management/data/underlying_data";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
@@ -28,22 +27,7 @@ const DashboardPage = () => {
     };
 
     const uploadZonesData = async () => {
-        try {
 
-
-            for (const user of rolesData) {
-                await doSignUp({
-                    email: user.email,
-                    username: user.username,
-                    password: user.password,
-                    data: user,
-                });
-            }
-
-            console.log("Zones data uploaded successfully!");
-        } catch (error) {
-            console.error("Error uploading zones data:", error);
-        }
     };
 
 

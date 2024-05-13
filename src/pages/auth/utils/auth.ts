@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { auth, firestore } from "@/firebase/firebase_config";
-import { UserModel2 } from "@/fragments/user_management/data/underlying_data";
+import { UserModel } from "@/fragments/user_management/models/user_model";
 import { FirebaseError } from "firebase/app";
 import {
   UserCredential,
@@ -22,7 +22,7 @@ type SignUpData = {
   username: string;
   email: string;
   password: string;
-  data: UserModel2;
+  data: UserModel;
 };
 
 export const doSignUp = async ({

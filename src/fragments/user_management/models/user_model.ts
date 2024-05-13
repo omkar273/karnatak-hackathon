@@ -4,9 +4,9 @@ export type UserModel = {
   dateOfJoining: string;
   batch: string;
   currentPosting: string;
-  workExperience: string;
-  certification: string;
-  qualification: string;
+  workExperience?: string;
+  certification?: string;
+  qualification?: string;
   solvedCases: string;
   height: string;
   weight: string;
@@ -17,7 +17,7 @@ export type UserModel = {
   password: string;
   username: string;
   stationId: string;
-  open_cases: number;
-  closed_cases: number;
-  stationCode: string;
+  open_cases?: number;
+  closed_cases?: number;
+  stationCode?: string;
 };
