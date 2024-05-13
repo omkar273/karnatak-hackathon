@@ -337,7 +337,7 @@ export const rolesData: UserModel2[] = [
     previousPosting: "Delhi Police Station",
     skills: "Investigation, Interrogation, Surveillance",
     awards: "Best Investigator of the Year 2022",
-    email: "omkarsonawane622@gmail.com",
+  email: "inspector@gmail.com",
     password: "123456789",
     username: "inspector",
     stationId: "MUM001",

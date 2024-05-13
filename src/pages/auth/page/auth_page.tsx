@@ -8,6 +8,8 @@ import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import InputField from "../components/input_field";
 import { doLogin } from "../utils/auth";
+import { useState } from "react";
+import { Button, Modal } from "antd";
 
 type LoginData = {
   username: string,
@@ -16,6 +18,9 @@ type LoginData = {
 
 const AuthPage = () => {
   const dispatch = useDispatch();
+  const [modalOpen, setmodalOpen] = useState<boolean>(true);
+
+
 
   const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm<LoginData>()
 
@@ -41,6 +46,53 @@ const AuthPage = () => {
 
   return (
     <div className="pg block md:flex ">
+
+
+      {/* password modal */}
+      <Modal
+        title="Test Credentials"
+        centered
+        open={modalOpen}
+        onCancel={() => setmodalOpen(false)}
+        footer={[
+          <Button
+            key="submit"
+            type="primary"
+            className="bg-blue-600"
+            onClick={() => setmodalOpen(false)}>
+            Ok
+          </Button>,
+        ]}
+      >
+        <table className="table-auto w-full">
+          <thead>
+            <tr>
+              <th className="px-4 py-2 bg-gray-200 border">Name</th>
+              <th className="px-4 py-2 bg-gray-200 border">Username</th>
+              <th className="px-4 py-2 bg-gray-200 border">Password</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-4 py-2 border">Commissioner</td>
+              <td className="px-4 py-2 border">commissioner</td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-2 border">Inspector</td>
+              <td className="px-4 py-2 border">inspector</td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-2 border">head constable</td>
+              <td className="px-4 py-2 border">headconstable</td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+          </tbody>
+        </table>
+      </Modal>
+
+
       <div className="md:w-[45%] hidden  bg-cyan-500 md:h-screen md:flex flex-col justify-center items-center text-white text-xl">
         <img src={karntankPoliceLogo} alt="" className="w-[50%]" />
         <p>
@@ -114,6 +166,14 @@ const AuthPage = () => {
               ) : (
                 "Login"
               )}
+            </button>
+            <VSpacer height={15} />
+
+            <button
+              className="btn font-ubuntu cursor-pointer"
+              onClick={() => setmodalOpen(true)}
+              type="button">
+              Show Credentials
             </button>
             <VSpacer height={10} />
             <p className="cursor-pointer ">Forget Password?</p>
