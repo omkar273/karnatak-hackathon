@@ -1,12 +1,14 @@
 import { VSpacer } from "@/common/components/spacer";
-import TextArea from "@/common/components/text_area";
 import InputField from "@/pages/auth/components/input_field";
 import { useState } from "react";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import StationsTable from "../components/station_table";
-import { doSaveStation, StationModel } from "../utils/do_save_station";
+import { doSaveStation } from "../utils/do_save_station";
+
+import { StationModel } from '@/fragments/station/models/station_model';
+import TextArea from "@/common/components/text_area";
 
 
 
@@ -35,32 +37,42 @@ const AddStationPage = () => {
     const stationDetails: {
         label: string,
         error: string | undefined,
-        name: "name" | "region" | "stationID" | "location" | "description" | "crimeRate" | "timestamp"
+        name: "stationName" | "email" | "stationId" | "district" | "station_incharge" | "crimeRate" | "address" | 'phone' | 'zone_name' | 'zoneCode'
     }[] = [
             {
-                label: 'Name',
-                error: errors.name?.message,
-                name: 'name'
+                label: 'Station Name',
+                error: errors.stationName?.message,
+                name: 'stationName'
             },
             {
-                label: 'region',
-                error: errors.region?.message,
-                name: 'region'
+                label: 'Zone code',
+                error: errors.zoneCode?.message,
+                name: 'zoneCode'
             },
             {
-                label: 'location',
-                error: errors.location?.message,
-                name: 'location'
+                label: 'Zone Code', 
+                error: errors.zoneCode?.message,
+                name: 'zoneCode'
             },
             {
-                label: 'Station Id',
-                error: errors.stationID?.message,
-                name: 'stationID'
+                label: 'email',
+                error: errors.email?.message,
+                name: 'email'
             },
             {
-                label: 'Description',
-                error: errors.description?.message,
-                name: 'description'
+                label: 'district',
+                error: errors.district?.message,
+                name: 'district'
+            },
+            {
+                label: 'station_incharge',
+                error: errors.station_incharge?.message,
+                name: 'station_incharge'
+            },
+            {
+                label: 'phone',
+                error: errors.phone?.message,
+                name: 'phone'
             },
 
         ]
@@ -84,7 +96,7 @@ const AddStationPage = () => {
                                     validateOptions={validationOptions}
                                     register={register}
                                     label={station.label}
-                                    error={errors.name?.message}
+                                    error={errors[station.name]?.message}
                                     name={station.name}
                                 />)
                             })
@@ -93,9 +105,9 @@ const AddStationPage = () => {
                     <TextArea<StationModel>
                         validateOptions={validationOptions}
                         register={register}
-                        label={"Description"}
-                        error={errors.description?.message}
-                        name={'description'}
+                        label={"address"}
+                        error={errors.address?.message}
+                        name={'address'}
                     />
 
                     <VSpacer height={50} />

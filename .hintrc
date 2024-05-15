@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "development"
-  ],
+  "extends": ["development"],
   "hints": {
     "no-inline-styles": "off",
     "axe/forms": [
@@ -9,6 +7,7 @@
       {
         "label": "off"
       }
-    ]
+    ],
+    "typescript-config/consistent-casing": "off"
   }
 }

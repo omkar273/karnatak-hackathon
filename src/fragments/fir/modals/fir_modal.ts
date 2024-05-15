@@ -13,4 +13,5 @@ export type FIRModal = {
   timestamp: Timestamp;
   status: "registered" | "pending" | "in court" | "closed";
   allotedTo: string[];
+  title: string;  
 };

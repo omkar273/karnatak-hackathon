@@ -31,29 +31,24 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
             </a>)
         },
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: 'Station Name',
+            dataIndex: 'stationName',
+            key: 'stationName',
         },
         {
-            title: 'Region',
-            dataIndex: 'region',
-            key: 'region',
+            title: 'Station incharge',
+            dataIndex: 'station_incharge',
+            key: 'station_incharge',
         },
         {
-            title: 'stationID',
-            dataIndex: 'stationID',
-            key: 'stationID',
+            title: 'District',
+            dataIndex: 'district',
+            key: 'district',
         },
         {
-            title: 'location',
-            dataIndex: 'location',
-            key: 'location',
-        },
-        {
-            title: 'description',
-            dataIndex: 'description',
-            key: 'description',
+            title: 'zone name',
+            dataIndex: 'zone_name',
+            key: 'zone_name',
         },
 
     ];

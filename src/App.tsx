@@ -14,7 +14,7 @@ import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
 import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import ProfilePage from "./fragments/profile/page/profile_page";
-import AddStationPage from "./fragments/station/pages/all_station";
+import AddStationPage from "./fragments/station/pages/add_station_page";
 import MyStationPage from "./fragments/station/pages/my_station";
 import TaskAssignmentPage from "./fragments/tasks/pages/tasks_page";
 import UnderlyingDataPage from "./fragments/underlying/page/underlying_page";

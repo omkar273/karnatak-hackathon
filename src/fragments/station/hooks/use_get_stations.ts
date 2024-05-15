@@ -12,7 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { useCallback, useState } from "react";
-import { StationModel } from "../utils/do_save_station";
+import { StationModel } from "../models/station_model";
 
 // Hook return type
 interface UseFIRsReturn {

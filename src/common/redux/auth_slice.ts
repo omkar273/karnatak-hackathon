@@ -23,9 +23,9 @@ const authInitalState: authstate = {
     workExperience: "",
     certification: "",
     qualification: "",
-    solvedCases: "",
-    height: "",
-    weight: "",
+    solvedCases: 0,
+    height: 0,
+    weight: 0,
     previousPosting: "",
     skills: [""],
     awards: [""],
@@ -35,6 +35,7 @@ const authInitalState: authstate = {
     open_cases: 0,
     closed_cases: 0,
     stationCode: "",
+    superiors: [],
   },
 };
 

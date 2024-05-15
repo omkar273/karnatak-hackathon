@@ -12,8 +12,6 @@ const getUserDetails = (userEmail: string): UserModel | null => {
         if (userEmail === element.email) {
             return {
                 ...element,
-                skills: [element.skills],
-                awards: [element.awards]
             };
         }
     }
