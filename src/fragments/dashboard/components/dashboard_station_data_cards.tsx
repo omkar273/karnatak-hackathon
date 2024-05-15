@@ -1,18 +1,13 @@
-import { RootState } from "@/common/redux/store";
-import { useSelector } from "react-redux";
-import useUserCounts from "../utils/use_user_counts";
-import DataCard from "./data_card";
+import useStationCounts from "../utils/use_station_counts"
+import DataCard from "./data_card"
+
+const DashboardStationCards = ({ stationId }: { stationId: string }) => {
 
 
-const DashboardUserDataCards = () => {
-    const { currentUser } = useSelector((s: RootState) => s.auth)
-
-    const { data, error, loading } = useUserCounts(currentUser?.user.uid);
-
-
+    const { data, error, loading } = useStationCounts(stationId)
     return (
         <div
-            className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-3 lg:grid-cols-4 p-4 ">
+            className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-3  ">
 
             {
                 !error && (
@@ -35,11 +30,6 @@ const DashboardUserDataCards = () => {
                             change_percentage={'+40'}
                         />
 
-                        <DataCard
-                            title="Cases alloted to you"
-                            value={loading ? '--' : (data?.cases_alloted_to_me ?? '--')}
-                            change_percentage={'-20%'}
-                        />
                     </>
                 )
             }
@@ -47,5 +37,4 @@ const DashboardUserDataCards = () => {
     )
 }
 
-export default DashboardUserDataCards
-
+export default DashboardStationCards

@@ -65,7 +65,6 @@ const useUserCounts = (
       } finally {
         setLoading(false);
       }
-      console.log(data, loading, error);
     };
 
     fetchData();

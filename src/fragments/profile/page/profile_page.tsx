@@ -23,7 +23,6 @@ const ProfilePage = () => {
     let id = queryParams.get('id');
 
     if (!id) {
-        console.log('user id not given');
         id = 'omkarsonawane622@gmail.com'
     }
     const userData: UserModel | null = getUserDetails(id);

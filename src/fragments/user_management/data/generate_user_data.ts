@@ -17,7 +17,7 @@ function generateRandomDate(startYear = 2000, endYear = 2002) {
   return randomDate.toISOString().split("T")[0]; // Format the date as YYYY-MM-DD
 }
 
-function getRandomInteger(startValue: number, endValue: number) {
+export function getRandomInteger(startValue: number, endValue: number) {
   if (startValue > endValue) {
     throw new Error(
       "The start value must be less than or equal to the end value."

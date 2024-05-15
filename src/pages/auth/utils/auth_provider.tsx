@@ -35,7 +35,6 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }, []);
 
   const initializeUser = (user: User | null): void => {
-    console.log(user);
 
     if (user) {
       setCurrentUser(user);

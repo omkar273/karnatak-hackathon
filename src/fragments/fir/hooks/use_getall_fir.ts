@@ -90,7 +90,6 @@ function useGetAllFIRs(
     async (newPage = false) => {
       setLoading(true);
       setError(null);
-      console.log(`calling function again with timefrmae ${timeFrame} `);
 
       try {
         const { start, end } = getTimeFrameTimestamps(timeFrame);

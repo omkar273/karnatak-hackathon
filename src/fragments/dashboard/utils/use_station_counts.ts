@@ -3,11 +3,31 @@ import { useState, useEffect } from "react";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { firestore } from "@/firebase/firebase_config";
 import { FirebaseError } from "firebase/app";
+import { getRandomInteger } from "@/fragments/user_management/data/generate_user_data";
 
 interface StationCounts {
   cases_registered: number;
   pending_cases: number;
   closed_cases: number;
+
+  staff_distribution: {
+    Cyber_Crime: number;
+    Traffic: number;
+    Narcotics: number;
+    Forensics: number;
+    Patrol: number;
+    Public_Affairs: number;
+    K9_Unit: number;
+  };
+
+  cases_distribution: {
+    Theft: number;
+    Drug_Trafficking: number;
+    Violence: number;
+    Assault: number;
+    Bribery: number;
+    Fraud: number;
+  };
 }
 
 interface UseStationCountsResult {
@@ -24,7 +44,7 @@ const getCurrentMonthYear = () => {
 };
 
 const useStationCounts = (
-  userUid: string,
+  stationId: string,
   monthYear: string = getCurrentMonthYear()
 ): UseStationCountsResult => {
   const [data, setData] = useState<StationCounts | null>(null);
@@ -36,7 +56,10 @@ const useStationCounts = (
       setLoading(true);
       setError(null);
 
-      const docRef = doc(firestore, `users/${userUid}/counts/${monthYear}`);
+      const docRef = doc(
+        firestore,
+        `stations/${stationId}/counts/${monthYear}`
+      );
       try {
         const docSnap = await getDoc(docRef);
 
@@ -44,9 +67,28 @@ const useStationCounts = (
           setData(docSnap.data() as StationCounts);
         } else {
           const initialData: StationCounts = {
-            cases_registered: 0,
-            pending_cases: 0,
-            closed_cases: 0,
+            cases_registered: getRandomInteger(0, 100),
+            pending_cases: getRandomInteger(0, 30),
+            closed_cases: getRandomInteger(0, 70),
+
+            cases_distribution: {
+              Theft: getRandomInteger(0, 30),
+              Drug_Trafficking: getRandomInteger(0, 30),
+              Violence: getRandomInteger(0, 30),
+              Assault: getRandomInteger(0, 30),
+              Bribery: getRandomInteger(0, 30),
+              Fraud: getRandomInteger(0, 30),
+            },
+
+            staff_distribution: {
+              Cyber_Crime: getRandomInteger(0, 15),
+              Traffic: getRandomInteger(0, 15),
+              Narcotics: getRandomInteger(0, 15),
+              Forensics: getRandomInteger(0, 15),
+              Patrol: getRandomInteger(0, 15),
+              Public_Affairs: getRandomInteger(0, 15),
+              K9_Unit: getRandomInteger(0, 15),
+            },
           };
           await setDoc(docRef, initialData);
           setData(initialData);
@@ -60,10 +102,11 @@ const useStationCounts = (
       } finally {
         setLoading(false);
       }
+      console.log(data, loading, error);
     };
 
     fetchData();
-  }, [userUid, monthYear]);
+  }, [stationId, monthYear]);
 
   return { data, loading, error };
 };

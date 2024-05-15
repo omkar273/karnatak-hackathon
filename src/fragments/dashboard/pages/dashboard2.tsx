@@ -7,7 +7,6 @@ import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { CircleUserRound, FileText } from "lucide-react";
 import { Link, useNavigate } from 'react-router-dom';
-import DashboardCasesPieCharts from "../components/dashboard_cases_piecharts";
 import { generateRandomUserData } from "@/fragments/user_management/data/generate_user_data";
 import { doSignUp } from "@/pages/auth/utils/auth";
 
@@ -39,9 +38,7 @@ const DashboardPage = () => {
                     password: element.password,
                     username: element.username,
                 });
-                console.log('saved the data of user ', index + 1);
             }
-            console.log('saved all the users data');
 
         } catch (error) {
             console.log(error);
@@ -205,7 +202,7 @@ const DashboardPage = () => {
 
 
                         {/* dashboard statistics */}
-                        <DashboardCasesPieCharts />
+                        {/* <DashboardCasesPieCharts /> */}
 
 
                         <div className="bg-white card my-6">

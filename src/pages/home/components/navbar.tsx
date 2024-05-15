@@ -90,7 +90,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                 <Input
                     className=" focus-within:w-96 "
                     placeholder="Search here"
-                    onChange={(e) => console.log(e.currentTarget.value)}
+                    // onChange={(e) => console.log(e.currentTarget.value)}
                     suffix={<SearchOutlined className="cursor-pointer" />} />
 
             </div>
