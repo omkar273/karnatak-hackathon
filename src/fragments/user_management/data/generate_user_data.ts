@@ -36,6 +36,12 @@ export function getRandomElementFromArray(arr: string[]) {
   return arr[randomIndex];
 }
 
+export const user_roles_ids = [
+  "9JNU15eYCvXbrg0TB9Fw86nIitl1",
+  "cIdq3uFJS1aNTBFaS5tdDVj9Sgh1",
+  "OXuO1zPvLferzTF6sc6xAyRKOKA3",
+];
+
 export const generateRandomUserData = (index: number) => {
   const tempPost = getRandomElementFromArray(RanksArray);
 
