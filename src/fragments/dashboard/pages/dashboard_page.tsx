@@ -19,7 +19,7 @@ const DashboardPage = () => {
 
     useEffect(() => {
         recent_cases.fetchFIRs();
-    }, []);
+    }, [recent_cases]);
 
     console.log(recent_cases.documents);
 

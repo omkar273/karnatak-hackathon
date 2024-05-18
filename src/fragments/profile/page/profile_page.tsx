@@ -1,12 +1,11 @@
 import { VSpacer } from "@/common/components/spacer";
 import dummyUserData from "@/fragments/user_management/data/underlying_data";
-import { UserModel } from "@/fragments/user_management/models/user_model";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Rate } from "antd";
 import { BriefcaseBusiness, CalendarCheck2, Dumbbell, GraduationCap, MapPinned, NotebookTabs, NotepadText, ShieldEllipsis, Weight } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 
-const getUserDetails = (userEmail: string): UserModel | null => {
+const getUserDetails = (userEmail: string) => {
     for (let index = 0; index < dummyUserData.length; index++) {
         const element = dummyUserData[index];
         if (userEmail === element.email) {
@@ -25,7 +24,7 @@ const ProfilePage = () => {
     if (!id) {
         id = 'omkarsonawane622@gmail.com'
     }
-    const userData: UserModel | null = getUserDetails(id);
+    const userData = getUserDetails(id);
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">

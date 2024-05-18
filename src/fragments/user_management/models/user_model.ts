@@ -1,4 +1,5 @@
 export type UserModel = {
+  id?: string;
   name: string;
   post: string;
   dateOfJoining: string;
