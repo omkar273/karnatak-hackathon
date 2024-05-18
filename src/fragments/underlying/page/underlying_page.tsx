@@ -2,7 +2,7 @@
 import { RootState } from "@/common/redux/store";
 import { useSelector } from "react-redux";
 import useGetAllUnderlyings from "../hooks/use_get_all_underlyings";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ReactFlow, {
     Node,
     Controls,
@@ -52,18 +52,22 @@ const UnderlyingDataPage = () => {
 
     const [searchParams, setSearchParams] = useSearchParams();
     // const navigate = useNavigate();
-
+    const [superiorId, setsuperiorId] = useState<string | null>(null)
     useEffect(() => {
         let id = searchParams.get('id');
         if (!id) {
             id = currentUser?.user.uid ?? '';
-            searchParams.set('id', id);
-            setSearchParams(searchParams);
+            changeSuperiorId(id)
         }
 
         console.log('ID:', id);
     }, [searchParams, setSearchParams]);
 
+    const changeSuperiorId = (id: string) => {
+        searchParams.set('id', id)
+        setSearchParams(searchParams);
+        setsuperiorId(id);
+    }
 
     const { documents, fetchUnderlyings } = useGetAllUnderlyings(15,
         searchParams.get('id')
@@ -74,8 +78,10 @@ const UnderlyingDataPage = () => {
 
 
     useEffect(() => {
+        setNodes([])
+        setEdges([])
         fetchUnderlyings();
-    }, [searchParams.get('id')]);
+    }, [superiorId]);
 
     useEffect(() => {
         console.log('logging');
@@ -113,13 +119,11 @@ const UnderlyingDataPage = () => {
                     id: userUnderlying.underlyingId ?? i.toString(),
                     position: positions[i],
                     style: { width: 'max-content' },
+
                     data: {
-                        label: <UnderlyingCard data={userUnderlying} onClick={
-                            () => {
-                                console.log('clicked');
-                                console.log(userUnderlying.underlyingId);
-                                searchParams.set('id', userUnderlying?.underlyingId ?? '')
-                            }} />
+                        label: <UnderlyingCard data={userUnderlying} onclick={() => [
+                            changeSuperiorId(userUnderlying.underlyingId)
+                        ]} />
                     }
                 }))
             ]);

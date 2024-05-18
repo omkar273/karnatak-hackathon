@@ -7,11 +7,11 @@ import { Handle, NodeResizer, Position } from "reactflow";
 
 interface Props {
     data: UnderlyingModel,
-    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined,
+    onclick?: VoidFunction
 
 }
 
-const UnderlyingCard: React.FC<Props> = ({ data }) => {
+const UnderlyingCard: React.FC<Props> = ({ data, onclick }) => {
     return (
         <div className="rounded-md w-max p-2">
             <NodeResizer minWidth={200} minHeight={30} />
@@ -29,12 +29,16 @@ const UnderlyingCard: React.FC<Props> = ({ data }) => {
                     >
                         view Profile
                     </Link>
-                    <Link
-                        to={`/user/underlying?id=${data.underlyingId}`}
+                    <button
+                        onClick={onclick}
+                        // to={`/user/underlying?id=${data.underlyingId}`}
                         className="bg-blue-400 p-2 rounded-lg text-white"
                     >
                         view Underlying
-                    </Link>
+                    </button>
+                </div>
+                <div className="w-full bg-blue-400 my-2 rounded-lg p-3 text-white">
+                    Add Task
                 </div>
             </div>
 
