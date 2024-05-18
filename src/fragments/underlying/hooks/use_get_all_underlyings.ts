@@ -53,7 +53,7 @@ function useGetAllUnderlyings(
 
         querySnapshot.forEach((doc) => {
           const data = doc.data() as UnderlyingModel;
-          fetchedDocuments.push({ ...data, id: doc.id });
+          fetchedDocuments.push({ ...data });
           lastVisible = doc;
         });
 

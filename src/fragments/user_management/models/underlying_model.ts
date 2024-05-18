@@ -1,5 +1,5 @@
 export interface UnderlyingModel {
-  id?: string;
+  underlyingId: string;
   name: string;
   openCases: number;
   post: string;

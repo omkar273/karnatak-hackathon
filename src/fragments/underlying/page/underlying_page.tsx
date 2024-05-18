@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { RootState } from "@/common/redux/store";
 import { useSelector } from "react-redux";
 import useGetAllUnderlyings from "../hooks/use_get_all_underlyings";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ReactFlow, {
     Node,
     Controls,
@@ -13,6 +14,7 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import 'reactflow/dist/base.css';
 import UnderlyingCard from "../components/underlyings_card";
+import { useSearchParams } from "react-router-dom";
 
 type pair = {
     x: number,
@@ -48,7 +50,24 @@ const UnderlyingDataPage = () => {
         (state: RootState) => state.auth
     );
 
-    const { documents, fetchUnderlyings } = useGetAllUnderlyings(15, currentUser?.user.uid);
+    const [searchParams, setSearchParams] = useSearchParams();
+    // const navigate = useNavigate();
+
+    useEffect(() => {
+        let id = searchParams.get('id');
+        if (!id) {
+            id = currentUser?.user.uid ?? '';
+            searchParams.set('id', id);
+            setSearchParams(searchParams);
+        }
+
+        console.log('ID:', id);
+    }, [searchParams, setSearchParams]);
+
+
+    const { documents, fetchUnderlyings } = useGetAllUnderlyings(15,
+        searchParams.get('id')
+    );
 
     const [nodes, setNodes, onNodesChange] = useNodesState([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState([]);
@@ -56,7 +75,15 @@ const UnderlyingDataPage = () => {
 
     useEffect(() => {
         fetchUnderlyings();
-    }, []);
+    }, [searchParams.get('id')]);
+
+    useEffect(() => {
+        console.log('logging');
+
+        console.log(documents);
+
+    }, [documents])
+
 
     useEffect(() => {
         if (documents.length > 0) {
@@ -70,25 +97,29 @@ const UnderlyingDataPage = () => {
                     position: { x: window.innerWidth / 2, y: 0 },
                     style: { width: 'max-content' },
                     data: {
-                        label: <UnderlyingCard data={{
-                            id: currentUser?.user.uid ?? '',
-                            name: userdata?.name ?? '',
-                            openCases: userdata?.open_cases ?? 0,
-                            post: userdata?.post ?? '',
-                            stationId: userdata?.stationId ?? '',
-
-                        }}
-
+                        label: <UnderlyingCard
+                            data={{
+                                underlyingId: currentUser?.user.uid ?? '',
+                                name: userdata?.name ?? '',
+                                openCases: userdata?.open_cases ?? 0,
+                                post: userdata?.post ?? '',
+                                stationId: userdata?.stationId ?? '',
+                            }}
                         />
                     },
                     type: 'input'
                 },
                 ...documents.map((userUnderlying, i) => ({
-                    id: userUnderlying.id ?? i.toString(),
+                    id: userUnderlying.underlyingId ?? i.toString(),
                     position: positions[i],
                     style: { width: 'max-content' },
                     data: {
-                        label: <UnderlyingCard data={userUnderlying} />
+                        label: <UnderlyingCard data={userUnderlying} onClick={
+                            () => {
+                                console.log('clicked');
+                                console.log(userUnderlying.underlyingId);
+                                searchParams.set('id', userUnderlying?.underlyingId ?? '')
+                            }} />
                     }
                 }))
             ]);
@@ -98,7 +129,7 @@ const UnderlyingDataPage = () => {
                 ...documents.map((userUnderlying, i) => ({
                     id: `e-${i}`,
                     source: currentUser?.user.uid ?? '',
-                    target: userUnderlying.id ?? i.toString(),
+                    target: userUnderlying.underlyingId ?? i.toString(),
                     type: 'smoothstep',
                 }))
             ]);

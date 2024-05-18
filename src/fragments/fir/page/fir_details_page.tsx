@@ -42,7 +42,7 @@ const FirDetailsPage = () => {
                         <div className="card">
                             <p className="font-semibold  text-xl flex gap-2"><CircleUserRound /> {data?.name}</p>
                             <VSpacer height={5} />
-                            <p className="font-medium  text-base">{`Registered on:  ${data?.timestamp.toDate().toLocaleDateString()}`}</p>
+                            <p className="font-medium  text-base">{`Registered on:  ${data?.timestamp?.toDate().toLocaleDateString()}`}</p>
                             <p>status : {data?.status}</p>
 
                             <VSpacer height={75} />
