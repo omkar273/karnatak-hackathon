@@ -1,5 +1,7 @@
 {
-  "extends": ["development"],
+  "extends": [
+    "development"
+  ],
   "hints": {
     "no-inline-styles": "off",
     "axe/forms": [
@@ -8,6 +10,14 @@
         "label": "off"
       }
     ],
-    "typescript-config/consistent-casing": "off"
+    "typescript-config/consistent-casing": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[allow]"
+        ]
+      }
+    ]
   }
 }

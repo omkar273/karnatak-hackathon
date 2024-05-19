@@ -4,7 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
-import Manpower from "./fragments/Manpower/manpower";
+import Manpower from "./fragments/Manpower/pages/manpower";
 import CourtTwo from "./fragments/court/cout_two";
 import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
@@ -23,6 +23,7 @@ import WitnessManagementPage from "./fragments/witness management/pages/witness_
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
+import VideoPage from "./pages/videos/page/video_page";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(
@@ -98,6 +99,9 @@ const App = () => {
           path="/auth"
           element={isUserLoggedIn ? <Navigate to="/" replace /> : <AuthPage />}
         />
+
+        {/* video page link */}
+        <Route path="video" element={<VideoPage />} />
 
         {/* error route */}
         <Route path="*" element={<ErrorPage />} />

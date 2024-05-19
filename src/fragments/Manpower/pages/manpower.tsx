@@ -5,7 +5,7 @@ import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { Collapse, Table } from "antd";
 import { Link } from "react-router-dom";
-import { manpowerMappingData } from "./data/manpower_mapping";
+import { manpowerMappingData } from "../data/manpower_mapping";
 
 const Manpower = () => {
 
@@ -206,7 +206,7 @@ const Manpower = () => {
   ]
 
   const pieChartData = departmentDetails.map((d) => ({ 'id': d.dept_name, 'value': d.no_people, 'label': d.dept_name }))
- 
+
   const valueFormatter = (value: number | null) => `${value} people`;
 
   return (

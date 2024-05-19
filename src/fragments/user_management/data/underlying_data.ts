@@ -3,7 +3,7 @@
 
 export const dummyUserData = [
   {
-    name: "Omkar sonawane",
+    name: "Rakesh menon",
     post: "Inspector",
     dateOfJoining: "2020-01-15",
     batch: "2018",

@@ -8,6 +8,7 @@ import useGetAllFIRs from "@/fragments/fir/hooks/use_getall_fir";
 import { useEffect } from "react";
 import { EyeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Map from "@/fragments/Manpower/components/map";
 // import { fir_dataset } from "@/fragments/fir/data/fir_data";
 // import { doSaveFIR2 } from "@/fragments/fir/utils/do_save_fir";
 
@@ -32,6 +33,7 @@ const DashboardPage = () => {
             <p className="font-bold text-3xl px-4 pb-4">
                 Station Data
             </p>
+            <Map />
             <div className="lg:flex lg:flex-grow lg:flex-row lg:gap-4">
                 {/* left container */}
                 <div className="flex-grow md:flex-[85%] px-4 overflow-y-auto max-h-[calc(100vh-138px)]">

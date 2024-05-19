@@ -15,6 +15,7 @@ const getUserDetails = (userEmail: string) => {
         }
     }
     return null;
+
 }
 
 const ProfilePage = () => {
@@ -25,6 +26,14 @@ const ProfilePage = () => {
         id = 'omkarsonawane622@gmail.com'
     }
     const userData = getUserDetails(id);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         toast.success('New task alloted to you', {
+    //             toastId: 'update'
+    //         })
+    //     }, 5000);
+    // }, [])
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
