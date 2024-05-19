@@ -18,7 +18,6 @@ const useUnderlyingData = (userId: string) => {
         const underlyingData = querySnapshot.docs.map(
           (doc) =>
             ({
-              id: doc.id,
               ...doc.data(),
             } as UnderlyingModel)
         );

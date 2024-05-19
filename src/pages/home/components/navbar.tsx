@@ -64,8 +64,8 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                         // className="bg-white p-2 rounded-full"
                         src={karntankPoliceLogo}
                         alt="karnatak police logo"
-                        height={45}
-                        width={45}
+                        height={80}
+                        width={80}
                         className="cursor-pointer"
                     />
                 </a>
@@ -74,8 +74,8 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                         // className="bg-white p-2 rounded-full"
                         src={capital_tech_logo}
                         alt="capital tech logo"
-                        height={45}
-                        width={45}
+                        height={80}
+                        width={80}
                         className="cursor-pointer"
 
                     />

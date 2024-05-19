@@ -23,7 +23,7 @@ type pair = {
 
 const getPositions = (length: number, gap: number = 150, yGap: number): pair[] => {
 
-    let initialY = 100;
+    let initialY = 20;
     const positionsArr: pair[] = []
 
     for (let index = 0; index < length; index++) {
@@ -92,9 +92,31 @@ const UnderlyingDataPage = () => {
 
 
     useEffect(() => {
+
+        setNodes((nds) => [
+            ...nds,
+            {
+                id: currentUser?.user.uid ?? '',
+                position: { x: window.innerWidth / 2, y: 0 },
+                style: { width: 'max-content' },
+                data: {
+                    label: <UnderlyingCard
+                        data={{
+                            underlyingId: currentUser?.user.uid ?? '',
+                            name: userdata?.name ?? '',
+                            openCases: userdata?.open_cases ?? 0,
+                            post: userdata?.post ?? '',
+                            stationId: userdata?.stationId ?? '',
+                        }}
+                    />
+                },
+                type: 'input'
+            },
+        ])
+
         if (documents.length > 0) {
 
-            const positions = getPositions(documents.length, 200, 200)
+            const positions = getPositions(documents.length, 200, 300)
 
             setNodes((nds) => [
                 ...nds,
