@@ -11,7 +11,7 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
 
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchFIRs, loading, error } = useGetAllFIRs(timeFrame);
+    const { documents, fetchFIRs, loading, error } = useGetAllFIRs({ timeFrame });
 
     useEffect(() => {
         fetchFIRs().catch(console.error);
