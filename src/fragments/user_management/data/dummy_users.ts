@@ -83,6 +83,7 @@ export const policeAwards = [
   "Distinguished Conduct Medal",
 ];
 
+
 export const stationsIDs = [
   "0I4m67wUiN2gtgS90kq0",
   "0rWPlw9omz29Sl7WdlhM",
@@ -108,6 +109,7 @@ export const stationsIDs = [
   "6cUnteqHmnKcKpglN0Mr",
   "7GtXY5y6dPMxuociEYWP",
 ];
+
 export const policeOfficerSkills = [
   "Investigation",
   "Patrolling",

@@ -61,12 +61,19 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useGetAllFIRs(
-  timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
-  initialLimit = 15,
-  status?: "registered" | "pending" | "in court" | "closed" | null,
-  stationId?: string | null
-): UseFIRsReturn {
+interface GetAllFIRsParams {
+  timeFrame?: "thisMonth" | "lastMonth" | "thisYear" | "all";
+  initialLimit?: number;
+  status?: "registered" | "pending" | "in court" | "closed";
+  stationId?: string | null;
+}
+
+function useGetAllFIRs({
+  timeFrame = "all",
+  initialLimit = 2,
+  status,
+  stationId = null,
+}: GetAllFIRsParams = {}): UseFIRsReturn {
   const [documents, setDocuments] = useState<FIRRecord[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);

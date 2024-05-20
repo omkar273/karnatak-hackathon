@@ -23,6 +23,12 @@ interface UseFIRsReturn {
   hasMore: boolean;
 }
 
+interface GetAllStationsParams {
+  timeFrame?: "thisMonth" | "lastMonth" | "thisYear" | "all";
+  initialLimit?: number;
+  comesUnder?: string;
+}
+
 function getTimeFrameTimestamps(
   frame: "thisMonth" | "lastMonth" | "thisYear" | "all"
 ): {
@@ -61,10 +67,11 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useGetStations(
-  timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
-  initialLimit = 15
-): UseFIRsReturn {
+function useGetAllStations({
+  timeFrame = "all",
+  initialLimit = 2,
+  comesUnder,
+}: GetAllStationsParams = {}): UseFIRsReturn {
   const [documents, setDocuments] = useState<StationModel[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
@@ -86,6 +93,10 @@ function useGetStations(
           orderBy("timestamp"),
           limit(initialLimit)
         );
+
+        if (comesUnder) {
+          q = query(q, where("comesUnder", "==", comesUnder));
+        }
 
         if (newPage && lastDoc) {
           q = query(q, startAfter(lastDoc));
@@ -118,7 +129,7 @@ function useGetStations(
     [timeFrame, initialLimit, lastDoc]
   );
 
-  return { documents, fetchStations: fetchStations, loading, error, hasMore };
+  return { documents, fetchStations, loading, error, hasMore };
 }
 
-export default useGetStations;
+export default useGetAllStations;
