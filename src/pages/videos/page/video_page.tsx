@@ -2,8 +2,8 @@ import { useEffect } from "react"
 
 const VideoPage = () => {
 
-    const videoEmbeddedUrl = 'https://www.youtube.com/embed/0pKWM7urpKU?si=8-39ZxmZw_4zzTuY'
-    const videoUrl = 'https://youtu.be/0pKWM7urpKU?si=8-39ZxmZw_4zzTuY'
+    const videoEmbeddedUrl = 'https://www.youtube.com/embed/YhFXRWolBT0?si=VdAguPITOCDJsbKw'
+    const videoUrl = 'https://youtu.be/YhFXRWolBT0?si=VdAguPITOCDJsbKw'
     
     useEffect(() => {
         window.location.href = videoUrl;
