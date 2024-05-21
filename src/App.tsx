@@ -24,6 +24,7 @@ import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
+import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(
@@ -89,6 +90,8 @@ const App = () => {
           <Route path="/Record" element={getProtectedRoute(<MyStationPage />)} />
 
           <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
+
+          <Route path="/man" element={getProtectedRoute(<ManpowerStatic />)} />
 
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
 

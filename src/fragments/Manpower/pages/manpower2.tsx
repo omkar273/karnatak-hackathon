@@ -7,7 +7,7 @@ import { Collapse, Table } from "antd";
 import { Link } from "react-router-dom";
 import { manpowerMappingData } from "../data/manpower_mapping";
 
-const Manpower = () => {
+const ManpowerStatic = () => {
 
   const rapidActionsColumns = [
     {
@@ -215,10 +215,10 @@ const Manpower = () => {
         {"Manpower mapping"}
       </p>
 
-      <div className="w-full h-[500px]">
-        {/* <Map stationId={stationId}/> */}
+      {/* <div className="w-full h-[500px]"> */}
+      {/* <SimpleMap /> */}
 
-      </div>
+      {/* </div> */}
 
       {/* analytics */}
       <div className="card grid md:grid-cols-2 grid-cols-1 bg-white">
@@ -368,4 +368,4 @@ const Manpower = () => {
   );
 };
 
-export default Manpower;
+export default ManpowerStatic;

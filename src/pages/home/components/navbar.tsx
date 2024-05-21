@@ -9,6 +9,7 @@ import { Avatar, Badge, Drawer, Dropdown, Input, Menu, MenuProps, Popconfirm } f
 import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 type Props = {
     drawerOpen: boolean,
@@ -26,7 +27,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
     ];
     const profileOptions: MenuProps['items'] = [
         {
-            label: 'Profile',
+            label: <Link to={'/user'}>Profile</Link>,
             key: 'profile'
         },
         {

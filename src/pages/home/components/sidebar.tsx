@@ -1,10 +1,13 @@
+import { setLogout } from '@/common/redux/auth_slice';
 import { RootState } from '@/common/redux/store';
+import { doLogout } from '@/pages/auth/utils/auth';
 import { MoreVert } from "@mui/icons-material";
 import { Divider } from "@mui/material";
-import { Avatar } from "antd";
+import { Avatar, Dropdown, MenuProps, Popconfirm } from "antd";
 import { ChevronFirst, ChevronLast } from "lucide-react";
 import React, { createContext, ReactNode, useContext, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
 
 type Props = {
     children?: ReactNode,
@@ -23,7 +26,34 @@ const SidebarContext = createContext(true)
 const Sidebar: React.FC<Props> = ({ children }) => {
 
     const { userdata } = useSelector((s: RootState) => s.auth)
+    const dispatch = useDispatch();
 
+    const profileOptions: MenuProps['items'] = [
+        {
+            label: <Link to={'/user'}>Profile</Link>,
+            key: 'profile'
+        },
+        {
+            label: <div>
+                <Popconfirm
+                    title="Logout"
+                    description="Are you sure to Logout?"
+                    okText="Yes"
+                    cancelText="No"
+                    okButtonProps={{
+                        danger: true,
+                    }}
+                    onConfirm={async () => {
+                        await doLogout();
+                        dispatch(setLogout());
+                    }}
+                >
+                    <div className="py-1">Logout</div>
+                </Popconfirm>
+            </div>,
+            key: '1',
+        },
+    ];
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [expanded, setexpanded] = useState<boolean>(true);
     const url =
@@ -63,12 +93,18 @@ const Sidebar: React.FC<Props> = ({ children }) => {
                     {/* <HSpacer width={10} /> */}
                     <div className={`text-base ml-3 overflow-hidden transition-all ${expanded ? 'w-52 ml-3' : 'w-0'} flex items-center justify-between`}>
                         <div>
-                            <h6>Omkar sonawane</h6>
+                            <h6>{userdata?.name}</h6>
                             <span className="text-xs">
-                                omkarsonawane622@gmail.com
+                                {userdata?.email}
                             </span>
                         </div>
-                        <MoreVert className="cursor-pointer" />
+
+                        <Dropdown menu={{ items: profileOptions }}
+                            placement="bottomRight"
+                            trigger={['click']}
+                            arrow={true}>
+                            <MoreVert className="cursor-pointer" />
+                        </Dropdown>
                     </div>
                     {/* <HSpacer width={20} /> */}
 
