@@ -38,3 +38,9 @@
     height: 100%;
   }
 }
+
+
+/* leaflet styles */
+.leaflet-container {
+  @apply h-[80vh] w-full
+}

@@ -70,7 +70,7 @@ interface GetAllFIRsParams {
 
 function useGetAllFIRs({
   timeFrame = "all",
-  initialLimit = 2,
+  initialLimit = 10,
   status,
   stationId = null,
 }: GetAllFIRsParams = {}): UseFIRsReturn {

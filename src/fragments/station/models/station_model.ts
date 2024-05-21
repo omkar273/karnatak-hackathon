@@ -15,4 +15,6 @@ export type StationModel = {
   zoneCode: string;
   zoneId?: string;
   comesUnder?: string;
+  lat?: number;
+  lng?: number;
 };

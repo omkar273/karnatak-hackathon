@@ -8,7 +8,6 @@ import useGetAllFIRs from "@/fragments/fir/hooks/use_getall_fir";
 import { useEffect, useState } from "react";
 import { EyeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import Map from "@/fragments/Manpower/components/map";
 import useGetAllStations from "@/fragments/station/hooks/use_get_all_stations";
 import { Select } from "antd";
 // import { fir_dataset } from "@/fragments/fir/data/fir_data";
@@ -22,11 +21,11 @@ const DashboardPage = () => {
         label: 'Own station',
         value: userdata?.stationId,
     }])
-    const stations = useGetAllStations({ comesUnder: stationId, initialLimit: 2 })
+    const stations = useGetAllStations({ comesUnder: stationId, initialLimit: 10 })
 
     const recent_cases = useGetAllFIRs({
         stationId,
-        initialLimit: 0,
+        initialLimit: 10,
     });
 
 
@@ -81,7 +80,7 @@ const DashboardPage = () => {
             <p className="font-bold text-3xl px-4 pb-4">
                 Station Data
             </p>
-            <Map />
+            {/* <Map /> */}
             <div className="lg:flex lg:flex-grow lg:flex-row lg:gap-4">
                 {/* left container */}
                 <div className="flex-grow md:flex-[85%] px-4 overflow-y-auto max-h-[calc(100vh-138px)]">

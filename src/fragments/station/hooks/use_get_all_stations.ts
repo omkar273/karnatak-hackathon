@@ -15,7 +15,7 @@ import { useCallback, useState } from "react";
 import { StationModel } from "../models/station_model";
 
 // Hook return type
-interface UseFIRsReturn {
+interface UseStationReturn {
   documents: StationModel[];
   fetchStations: (newPage?: boolean) => Promise<void>;
   loading: boolean;
@@ -69,9 +69,9 @@ function getTimeFrameTimestamps(
 
 function useGetAllStations({
   timeFrame = "all",
-  initialLimit = 2,
+  initialLimit = 10,
   comesUnder,
-}: GetAllStationsParams = {}): UseFIRsReturn {
+}: GetAllStationsParams = {}): UseStationReturn {
   const [documents, setDocuments] = useState<StationModel[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);

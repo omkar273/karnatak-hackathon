@@ -21,7 +21,7 @@ interface UseFIRsReturn {
 }
 
 function useGetAllUnderlyings(
-  initialLimit: number | null = 2,
+  initialLimit: number | null = 10,
   userUid?: string | null
 ): UseFIRsReturn {
   const [documents, setDocuments] = useState<UnderlyingModel[]>([]);

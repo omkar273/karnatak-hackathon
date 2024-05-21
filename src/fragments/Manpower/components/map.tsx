@@ -1,32 +1,76 @@
-// import React, { useRef, useEffect, useState } from 'react';
-// import * as maptilersdk from '@maptiler/sdk';
-import "@maptiler/sdk/dist/maptiler-sdk.css";
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import { useEffect, useState } from 'react';
+import { LatLngExpression } from 'leaflet';
+import useGetStationDetails from '@/fragments/station/hooks/use_get_station_data';
 
-export default function Map() {
-    // const mapContainer = useRef(null);
-    // const map = useRef(null);
-    // const tokyo = { lng: 139.753, lat: 35.6844 };
-    // const [zoom] = useState(14);
-    // maptilersdk.config.apiKey = '1qOOrm4cDMzTHY10oo6I';
+interface Props {
+    stationId: string,
+}
 
-    // useEffect(() => {
-    //     if (map.current) return; // stops map from intializing more than once
 
-    //     map.current = new maptilersdk.Map({
-    //         container: mapContainer.current,
-    //         style: maptilersdk.MapStyle.STREETS,
-    //         center: [tokyo.lng, tokyo.lat],
-    //         zoom: zoom
-    //     });
+const LocationMarker = () => {
+    const [position, setPosition] = useState<LatLngExpression | null>(null);
+    const map = useMap(); // Access the map instance
+    useMapEvents({
+        // click() {
+        //     map.locate();
+        // },
+        locationfound(e) {
+            setPosition(e.latlng);
+            map.flyTo(e.latlng, map.getZoom());
+        },
+    });
 
-    //     new maptilersdk.Marker({ color: "#FF0000" })
-    //         .setLngLat([139.7525, 35.6846])
-    //         .addTo(map.current);
-    // }, [tokyo.lng, tokyo.lat, zoom]);
+    useEffect(() => {
+        map.locate();
+    }, [])
+
+    return position === null ? null : (
+        <Marker position={position}>
+            <Popup>You are here</Popup>
+        </Marker>
+    );
+};
+
+const Map: React.FC<Props> = ({ stationId }) => {
+
+    const { data } = useGetStationDetails(stationId)
+    console.log(data);
+
 
     return (
-        <div className="map-wrap">
-            {/* <div ref={mapContainer} className="map" /> */}
-        </div>
+        <MapContainer center={[12.9781343, 77.5669546]} zoom={13} scrollWheelZoom={true}>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[51.505, -0.09]}>
+                <Popup>
+                    Station
+                </Popup>
+            </Marker>
+
+
+            <Marker position={[51.505, -0.09]}>
+                <Popup>
+                    Station
+                </Popup>
+            </Marker>
+
+            {
+                (data?.lat && data?.lng) && (
+                    <Marker position={[data.lat, data.lng]}>
+                        <Popup>
+                            Station
+                        </Popup>
+                    </Marker>
+                )
+            }
+
+            <LocationMarker />
+        </MapContainer>
     );
-}
+};
+
+export default Map;
