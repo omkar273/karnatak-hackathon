@@ -5,9 +5,9 @@ import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { Collapse, Table } from "antd";
 import { Link } from "react-router-dom";
-import { manpowerMappingData } from "./data/manpower_mapping";
+import { manpowerMappingData } from "../data/manpower_mapping";
 
-const Manpower = () => {
+const ManpowerStatic = () => {
 
   const rapidActionsColumns = [
     {
@@ -206,7 +206,7 @@ const Manpower = () => {
   ]
 
   const pieChartData = departmentDetails.map((d) => ({ 'id': d.dept_name, 'value': d.no_people, 'label': d.dept_name }))
- 
+
   const valueFormatter = (value: number | null) => `${value} people`;
 
   return (
@@ -214,6 +214,11 @@ const Manpower = () => {
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
         {"Manpower mapping"}
       </p>
+
+      {/* <div className="w-full h-[500px]"> */}
+      {/* <SimpleMap /> */}
+
+      {/* </div> */}
 
       {/* analytics */}
       <div className="card grid md:grid-cols-2 grid-cols-1 bg-white">
@@ -363,4 +368,4 @@ const Manpower = () => {
   );
 };
 
-export default Manpower;
+export default ManpowerStatic;

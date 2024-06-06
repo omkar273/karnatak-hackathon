@@ -12,15 +12,21 @@ import {
   where,
 } from "firebase/firestore";
 import { useCallback, useState } from "react";
-import { StationModel } from "../utils/do_save_station";
+import { StationModel } from "../models/station_model";
 
 // Hook return type
-interface UseFIRsReturn {
+interface UseStationReturn {
   documents: StationModel[];
   fetchStations: (newPage?: boolean) => Promise<void>;
   loading: boolean;
   error: Error | null;
   hasMore: boolean;
+}
+
+interface GetAllStationsParams {
+  timeFrame?: "thisMonth" | "lastMonth" | "thisYear" | "all";
+  initialLimit?: number;
+  comesUnder?: string;
 }
 
 function getTimeFrameTimestamps(
@@ -61,10 +67,11 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useGetStations(
-  timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
-  initialLimit = 15
-): UseFIRsReturn {
+function useGetAllStations({
+  timeFrame = "all",
+  initialLimit = 10,
+  comesUnder,
+}: GetAllStationsParams = {}): UseStationReturn {
   const [documents, setDocuments] = useState<StationModel[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
@@ -76,7 +83,6 @@ function useGetStations(
     async (newPage = false) => {
       setLoading(true);
       setError(null);
-      console.log(`calling function again with timefrmae ${timeFrame} `);
 
       try {
         const { start, end } = getTimeFrameTimestamps(timeFrame);
@@ -87,6 +93,10 @@ function useGetStations(
           orderBy("timestamp"),
           limit(initialLimit)
         );
+
+        if (comesUnder) {
+          q = query(q, where("comesUnder", "==", comesUnder));
+        }
 
         if (newPage && lastDoc) {
           q = query(q, startAfter(lastDoc));
@@ -119,7 +129,7 @@ function useGetStations(
     [timeFrame, initialLimit, lastDoc]
   );
 
-  return { documents, fetchStations: fetchStations, loading, error, hasMore };
+  return { documents, fetchStations, loading, error, hasMore };
 }
 
-export default useGetStations;
+export default useGetAllStations;

@@ -1,44 +1,9 @@
-import { Timestamp } from "firebase/firestore";
+// import { Timestamp } from "firebase/firestore";
+// import { UserModel } from "../models/user_model";
 
-export type UserModel2 = {
-  name: string;
-  post: string;
-  dateOfJoining: string;
-  batch: string;
-  currentPosting: string;
-  workExperience: string;
-  certification: string;
-  qualification: string;
-  solvedCases: string;
-  height: string;
-  weight: string;
-  previousPosting: string;
-  skills: string;
-  awards: string;
-  email: string;
-  password: string;
-  username: string;
-  stationId: string;
-};
-
-export type FIRModal = {
-  name: string;
-  fatherName: string;
-  mobileNo: string;
-  emailAddress: string;
-  presentAddress: string;
-  dateOfIncident: string;
-  timeOfIncident: string;
-  placeOfIncident: string;
-  detailsOfIncident: string;
-  timestamp?: Timestamp;
-  title: string;
-  status: "registered" | "pending" | "in court" | "closed";
-};
-
-export const dummyUserData: UserModel2[] = [
+export const dummyUserData = [
   {
-    name: "Omkar sonawane",
+    name: "Rakesh menon",
     post: "Inspector",
     dateOfJoining: "2020-01-15",
     batch: "2018",
@@ -321,7 +286,7 @@ export const dummyUserData: UserModel2[] = [
 
 export default dummyUserData;
 
-export const rolesData: UserModel2[] = [
+export const rolesData = [
   {
     name: "Inspector",
     post: "Inspector",
@@ -337,7 +302,7 @@ export const rolesData: UserModel2[] = [
     previousPosting: "Delhi Police Station",
     skills: "Investigation, Interrogation, Surveillance",
     awards: "Best Investigator of the Year 2022",
-  email: "inspector@gmail.com",
+    email: "inspector@gmail.com",
     password: "123456789",
     username: "inspector",
     stationId: "MUM001",

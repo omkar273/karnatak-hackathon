@@ -11,7 +11,7 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
 
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchFIRs, loading, error } = useGetAllFIRs(timeFrame);
+    const { documents, fetchFIRs, loading, error } = useGetAllFIRs({ timeFrame });
 
     useEffect(() => {
         fetchFIRs().catch(console.error);
@@ -34,50 +34,50 @@ const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
             </Link>)
         },
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: 'Fir Status',
+            dataIndex: 'fir_status',
+            key: 'fir_status',
         },
         {
-            title: 'Father Name',
-            dataIndex: 'fatherName',
-            key: 'fatherName',
+            title: 'Victim Village Area',
+            dataIndex: 'Village_Area_Name',
+            key: 'Village_Area_Name',
         },
         {
-            title: 'Mobile No',
-            dataIndex: 'mobileNo',
-            key: 'mobileNo',
+            title: 'Unit Name',
+            dataIndex: 'UnitName',
+            key: 'UnitName',
         },
         {
-            title: 'Email Address',
-            dataIndex: 'emailAddress',
-            key: 'emailAddress',
+            title: 'Incharge Officer',
+            dataIndex: 'IOName',
+            key: 'IOName',
         },
-        {
-            title: 'Present Address',
-            dataIndex: 'presentAddress',
-            key: 'presentAddress',
-        },
-        {
-            title: 'Date of Incident',
-            dataIndex: 'dateOfIncident',
-            key: 'dateOfIncident',
-        },
-        {
-            title: 'Time of Incident',
-            dataIndex: 'timeOfIncident',
-            key: 'timeOfIncident',
-        },
-        {
-            title: 'Place of Incident',
-            dataIndex: 'placeOfIncident',
-            key: 'placeOfIncident',
-        },
-        {
-            title: 'Details of Incident',
-            dataIndex: 'detailsOfIncident',
-            key: 'detailsOfIncident',
-        },
+        // {
+        //     title: 'Present Address',
+        //     dataIndex: 'presentAddress',
+        //     key: 'presentAddress',
+        // },
+        // {
+        //     title: 'Date of Incident',
+        //     dataIndex: 'dateOfIncident',
+        //     key: 'dateOfIncident',
+        // },
+        // {
+        //     title: 'Time of Incident',
+        //     dataIndex: 'timeOfIncident',
+        //     key: 'timeOfIncident',
+        // },
+        // {
+        //     title: 'Place of Incident',
+        //     dataIndex: 'placeOfIncident',
+        //     key: 'placeOfIncident',
+        // },
+        // {
+        //     title: 'Details of Incident',
+        //     dataIndex: 'detailsOfIncident',
+        //     key: 'detailsOfIncident',
+        // },
     ];
 
     return (

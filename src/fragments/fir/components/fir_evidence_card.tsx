@@ -46,14 +46,12 @@ const EvidencesCard = () => {
     // Handling date change
     const onChange: DatePickerProps['onChange'] = (_date, dateString) => {
         setValue('date', dateString as string, { shouldValidate: true });
-        console.log(dateString, typeof (dateString));
 
     };
 
     const onSubmit: SubmitHandler<FirEvidenceTypeModal> = async (data) => {
         try {
             // Here you'd usually call an API to submit your data
-            console.log('Submitted Data:', data);
 
             await saveEvidence(id, {
                 ...data,

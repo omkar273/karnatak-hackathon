@@ -9,6 +9,7 @@ const CrimeLineChart = () => {
         },
         chart: {
             height: 350,
+            width:'50%',
             type: 'line',
             zoom: {
                 enabled: true
@@ -47,9 +48,9 @@ const CrimeLineChart = () => {
     }
 
     return (
-        <div>
+        <div className='p-4 bg-white rounded-lg my-4'>
             <div id="chart">
-                <ReactApexChart options={chartData.options} series={chartData.series} type="line" height={350} />
+                <ReactApexChart options={chartData.options} series={chartData.series} type="line" height={300} />
             </div>
             <div id="html-dist"></div>
         </div>

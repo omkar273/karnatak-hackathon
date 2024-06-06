@@ -3,12 +3,14 @@ import { ExportOutlined, FileTextOutlined } from "@ant-design/icons";
 import { Radio, Table, TablePaginationConfig } from 'antd';
 import { useEffect, useState } from "react";
 import { FadeLoader } from "react-spinners";
-import useGetStations from "../hooks/use_get_stations";
+import useGetAllStations from "../hooks/use_get_all_stations";
 
 const StationsTable = ({ reload = true }: { reload: boolean }) => {
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchStations, loading, error } = useGetStations(timeFrame);
+    const { documents, fetchStations, loading, error } = useGetAllStations({
+        timeFrame
+    });
 
     useEffect(() => {
         fetchStations().catch(console.error);
@@ -31,29 +33,24 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
             </a>)
         },
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: 'Station Name',
+            dataIndex: 'stationName',
+            key: 'stationName',
         },
         {
-            title: 'Region',
-            dataIndex: 'region',
-            key: 'region',
+            title: 'Station incharge',
+            dataIndex: 'station_incharge',
+            key: 'station_incharge',
         },
         {
-            title: 'stationID',
-            dataIndex: 'stationID',
-            key: 'stationID',
+            title: 'District',
+            dataIndex: 'district',
+            key: 'district',
         },
         {
-            title: 'location',
-            dataIndex: 'location',
-            key: 'location',
-        },
-        {
-            title: 'description',
-            dataIndex: 'description',
-            key: 'description',
+            title: 'zone name',
+            dataIndex: 'zone_name',
+            key: 'zone_name',
         },
 
     ];

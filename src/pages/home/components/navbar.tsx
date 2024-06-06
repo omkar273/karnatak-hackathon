@@ -26,7 +26,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
     ];
     const profileOptions: MenuProps['items'] = [
         {
-            label: 'Profile',
+            label: <Link to={'/user'}>Profile</Link>,
             key: 'profile'
         },
         {
@@ -62,8 +62,8 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                         // className="bg-white p-2 rounded-full"
                         src={karntankPoliceLogo}
                         alt="karnatak police logo"
-                        height={45}
-                        width={45}
+                        height={80}
+                        width={80}
                         className="cursor-pointer"
                     />
                 </a>
@@ -72,8 +72,8 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                         // className="bg-white p-2 rounded-full"
                         src={capital_tech_logo}
                         alt="capital tech logo"
-                        height={45}
-                        width={45}
+                        height={80}
+                        width={80}
                         className="cursor-pointer"
 
                     />
@@ -85,7 +85,11 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
 
                 <HSpacer width={15} />
                 {/* searchbar */}
-
+                <Input
+                    className=" focus-within:w-96 "
+                    placeholder="Search here"
+                    onChange={(e) => console.log(e.currentTarget.value)}
+                    suffix={<SearchOutlined className="cursor-pointer" />} />
 
             </div>
 

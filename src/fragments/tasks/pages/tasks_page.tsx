@@ -45,12 +45,10 @@ const TaskAssignmentPage = () => {
     }
 
     const handleChange = (value: string[]) => {
-        console.log(`selected ${value}`);
         setValue('type', value);
     };
 
     const handleUnderlyingChange = (value: string[]) => {
-        console.log(`selected ${value}`);
         setValue('allotedTo', value);
     };
 

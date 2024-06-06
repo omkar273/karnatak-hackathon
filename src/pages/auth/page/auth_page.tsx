@@ -32,7 +32,6 @@ const AuthPage = () => {
     try {
 
       const user = await doLogin(data.username, data.password);
-      console.log(user);
       dispatch(setLogin({ user }));
 
     } catch (error) {

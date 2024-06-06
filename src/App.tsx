@@ -4,7 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
-import Manpower from "./fragments/Manpower/manpower";
+import Manpower from "./fragments/Manpower/pages/manpower";
 import CourtTwo from "./fragments/court/cout_two";
 import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
@@ -14,7 +14,7 @@ import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import FIRPage from "./fragments/fir/page/fir_page";
 import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import ProfilePage from "./fragments/profile/page/profile_page";
-import AddStationPage from "./fragments/station/pages/all_station";
+import AddStationPage from "./fragments/station/pages/add_station_page";
 import MyStationPage from "./fragments/station/pages/my_station";
 import TaskAssignmentPage from "./fragments/tasks/pages/tasks_page";
 import UnderlyingDataPage from "./fragments/underlying/page/underlying_page";
@@ -23,6 +23,8 @@ import WitnessManagementPage from "./fragments/witness management/pages/witness_
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
+import VideoPage from "./pages/videos/page/video_page";
+import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(
@@ -89,6 +91,8 @@ const App = () => {
 
           <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
 
+          <Route path="/man" element={getProtectedRoute(<ManpowerStatic />)} />
+
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
 
         </Route>
@@ -98,6 +102,9 @@ const App = () => {
           path="/auth"
           element={isUserLoggedIn ? <Navigate to="/" replace /> : <AuthPage />}
         />
+
+        {/* video page link */}
+        <Route path="video" element={<VideoPage />} />
 
         {/* error route */}
         <Route path="*" element={<ErrorPage />} />

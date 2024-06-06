@@ -25,40 +25,40 @@ type SignUpData = {
   data: UserModel;
 };
 
-export const doSignUp = async ({
-  username,
-  email,
-  password,
-  data,
-}: SignUpData): Promise<void> => {
-  try {
-    const q = query(
-      collection(firestore, "usernames"),
-      where("username", "==", username)
-    );
-    const querySnapshot = await getDocs(q);
+// export const doSignUp = async ({
+//   username,
+//   email,
+//   password,
+//   data,
+// }: SignUpData): Promise<void> => {
+//   try {
+//     const q = query(
+//       collection(firestore, "usernames"),
+//       where("username", "==", username)
+//     );
+//     const querySnapshot = await getDocs(q);
 
-    if (!querySnapshot.empty) {
-      throw new Error("Username already taken");
-    }
+//     if (!querySnapshot.empty) {
+//       throw new Error("Username already taken");
+//     }
 
-    const creds: UserCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    if (creds) {
-      await addDoc(collection(firestore, "usernames"), {
-        email,
-        username,
-      });
+//     const creds: UserCredential = await createUserWithEmailAndPassword(
+//       auth,
+//       email,
+//       password
+//     );
+//     if (creds) {
+//       await addDoc(collection(firestore, "usernames"), {
+//         email,
+//         username,
+//       });
 
-      await setDoc(doc(firestore, "users", creds.user.uid), data);
-    }
-  } catch (error) {
-    throw new Error(`Error signing up: ${error}`);
-  }
-};
+//       await setDoc(doc(firestore, "users", creds.user.uid), data);
+//     }
+//   } catch (error) {
+//     throw new Error(`Error signing up: ${error}`);
+//   }
+// };
 
 export const doLogout = async () => {
   try {
@@ -96,5 +96,52 @@ export const doLogin = async (
     } else {
       throw new Error(`${error}`);
     }
+  }
+};
+
+export const doSignUp = async ({
+  username,
+  email,
+  password,
+  data,
+}: SignUpData): Promise<void> => {
+  try {
+    const q = query(
+      collection(firestore, "usernames"),
+      where("username", "==", username)
+    );
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      throw new Error("Username already taken");
+    }
+
+    const creds: UserCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    if (creds) {
+      await addDoc(collection(firestore, "usernames"), { email, username });
+
+      const userRef = doc(firestore, "users", creds.user.uid);
+      await setDoc(userRef, data);
+
+      if (data.superiors && data.superiors.length > 0) {
+        for (const superiorId of data.superiors) {
+          const superiorRef = doc(firestore, "users", superiorId);
+          const underlyingRef = collection(superiorRef, "underlying");
+          await addDoc(underlyingRef, {
+            underlyingId: creds.user.uid,
+            name: data.name,
+            post: data.post,
+            stationId: data.stationId,
+            openCases: data.open_cases || 0,
+          });
+        }
+      }
+    }
+  } catch (error) {
+    throw new Error(`Error signing up: ${error}`);
   }
 };

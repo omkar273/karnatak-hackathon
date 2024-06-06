@@ -12,25 +12,11 @@ import {
   where,
 } from "firebase/firestore";
 import { useCallback, useState } from "react";
-
-// FIR Document Interface
-export interface FIRDocument {
-  id: string;
-  name: string;
-  fatherName: string;
-  mobileNo: string;
-  emailAddress: string;
-  presentAddress: string;
-  dateOfIncident: string;
-  timeOfIncident: string;
-  placeOfIncident: string;
-  detailsOfIncident: string;
-  timestamp: Timestamp;
-}
+import { FIRRecord } from "../modals/fir_modal";
 
 // Hook return type
 interface UseFIRsReturn {
-  documents: FIRDocument[];
+  documents: FIRRecord[];
   fetchFIRs: (newPage?: boolean) => Promise<void>;
   loading: boolean;
   error: Error | null;
@@ -75,11 +61,20 @@ function getTimeFrameTimestamps(
   return { start, end };
 }
 
-function useGetAllFIRs(
-  timeFrame: "thisMonth" | "lastMonth" | "thisYear" | "all",
-  initialLimit = 15
-): UseFIRsReturn {
-  const [documents, setDocuments] = useState<FIRDocument[]>([]);
+interface GetAllFIRsParams {
+  timeFrame?: "thisMonth" | "lastMonth" | "thisYear" | "all";
+  initialLimit?: number;
+  status?: "registered" | "pending" | "in court" | "closed";
+  stationId?: string | null;
+}
+
+function useGetAllFIRs({
+  timeFrame = "all",
+  initialLimit = 10,
+  status,
+  stationId = null,
+}: GetAllFIRsParams = {}): UseFIRsReturn {
+  const [documents, setDocuments] = useState<FIRRecord[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
   const [lastDoc, setLastDoc] =
@@ -90,8 +85,7 @@ function useGetAllFIRs(
     async (newPage = false) => {
       setLoading(true);
       setError(null);
-      console.log(`calling function again with timefrmae ${timeFrame} `);
-
+      const fetchedDocuments: FIRRecord[] = [];
       try {
         const { start, end } = getTimeFrameTimestamps(timeFrame);
         let q = query(
@@ -102,18 +96,26 @@ function useGetAllFIRs(
           limit(initialLimit)
         );
 
+        if (status) {
+          q = query(q, where("stationId", "==", stationId));
+        }
+
+        if (stationId) {
+          q = query(q, where("fir_status", "==", status));
+        }
+
         if (newPage && lastDoc) {
           q = query(q, startAfter(lastDoc));
         }
 
         const querySnapshot = await getDocs(q);
-        const fetchedDocuments: FIRDocument[] = [];
+
         let lastVisible: QueryDocumentSnapshot<DocumentData> | null = null;
 
         console.log(`size of doc fetched ${querySnapshot.size}`);
 
         querySnapshot.forEach((doc) => {
-          const data = doc.data() as FIRDocument;
+          const data = doc.data() as FIRRecord;
           fetchedDocuments.push({ ...data, id: doc.id });
           lastVisible = doc;
         });
@@ -132,7 +134,7 @@ function useGetAllFIRs(
         setLoading(false);
       }
     },
-    [timeFrame, initialLimit, lastDoc]
+    [timeFrame, initialLimit, status, stationId, lastDoc]
   );
 
   return { documents, fetchFIRs, loading, error, hasMore };

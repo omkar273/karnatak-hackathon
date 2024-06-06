@@ -1,6 +1,7 @@
 export interface UnderlyingModel {
+  underlyingId: string;
   name: string;
-  id: string;
+  openCases: number;
   post: string;
-  policeId: string;
+  stationId: string;
 }

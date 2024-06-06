@@ -1,4 +1,5 @@
 export type UserModel = {
+  id?: string;
   name: string;
   post: string;
   dateOfJoining: string;
@@ -7,9 +8,9 @@ export type UserModel = {
   workExperience?: string;
   certification?: string;
   qualification?: string;
-  solvedCases: string;
-  height: string;
-  weight: string;
+  solvedCases: number;
+  height: number;
+  weight: number;
   previousPosting: string;
   skills: string[];
   awards: string[];
@@ -20,4 +21,5 @@ export type UserModel = {
   open_cases?: number;
   closed_cases?: number;
   stationCode?: string;
+  superiors: string[];
 };

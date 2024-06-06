@@ -23,7 +23,6 @@ const RegisterFragment = () => {
             if (isSubmitting) {
                 return;
             }
-            console.log(data);
             await doSignUp({
                 password: data.password,
                 email: data.email,

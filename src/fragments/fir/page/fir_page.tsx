@@ -26,8 +26,6 @@ const FIRPage = () => {
   const [underlyingData, setunderlyingData] = useState<DefaultOptionType[]>([]);
 
   useEffect(() => {
-    console.log('printing underlying data');
-    console.log(data);
 
     const optionsData: SelectProps['options'] = [{
       label: userdata?.name,
@@ -71,7 +69,6 @@ const FIRPage = () => {
   }
 
   const handleChange = (value: string[]) => {
-    console.log(`selected ${value}`);
     setValue('allotedTo', value);
   };
 

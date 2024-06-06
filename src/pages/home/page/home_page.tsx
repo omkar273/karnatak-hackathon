@@ -39,7 +39,7 @@ const HomePage = () => {
           onClick: () => navigateAndCloseDrawer("/station/add"),
         },
         {
-          key: "Station Management",
+          key: "Station Management2",
           label: "Station Management",
           icon: <Mic />,
           onClick: () => navigateAndCloseDrawer("/Record"),
@@ -55,6 +55,12 @@ const HomePage = () => {
           label: "Manpower",
           icon: <User />,
           onClick: () => navigateAndCloseDrawer("/Manpower"),
+        },
+        {
+          key: "Manpower2",
+          label: "Manpower Mapping",
+          icon: <User />,
+          onClick: () => navigateAndCloseDrawer("/man"),
         },
         {
           key: "Law and order",
