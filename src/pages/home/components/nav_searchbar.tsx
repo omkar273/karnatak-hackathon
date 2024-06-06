@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SearchOutlined } from "@ant-design/icons";
+import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import { useNavigate } from 'react-router-dom';
 
@@ -58,7 +58,14 @@ const Searchbar = () => {
                 placeholder="Search here"
                 value={query}
                 onChange={handleSearch}
-                suffix={<SearchOutlined className="cursor-pointer text-xl" />}
+                suffix={query === '' ? (
+                    <SearchOutlined
+                        className="cursor-pointer text-xl" />
+                ) : (
+                    <CloseOutlined
+                        onClick={() => setQuery('')}
+                        className="cursor-pointer text-xl" />
+                )}
             />
             {query && (
                 <div className="absolute left-0 right-0 z-10 mt-1 bg-white border border-gray-300 rounded-md shadow-lg">

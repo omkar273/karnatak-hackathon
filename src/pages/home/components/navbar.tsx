@@ -84,10 +84,6 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                 {/* menu toggle button */}
                 <Searchbar />
 
-                <HSpacer width={15} />
-                {/* searchbar */}
-                <Searchbar />
-
             </div>
 
             {/* mobile navigation */}
