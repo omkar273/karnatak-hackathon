@@ -110,6 +110,8 @@ function useGetAllFIRs(
         const fetchedDocuments: FIRDocument[] = [];
         let lastVisible: QueryDocumentSnapshot<DocumentData> | null = null;
 
+        console.log(`size of doc fetched ${querySnapshot.size}`);
+
         querySnapshot.forEach((doc) => {
           const data = doc.data() as FIRDocument;
           fetchedDocuments.push({ ...data, id: doc.id });

@@ -3,12 +3,12 @@ import karntankPoliceLogo from "@/assets/images/karnatak_police_logo.png";
 import { HSpacer } from "@/common/components/spacer";
 import { setLogout } from "@/common/redux/auth_slice";
 import { doLogout } from "@/pages/auth/utils/auth";
-import { SearchOutlined } from "@ant-design/icons";
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Avatar, Badge, Drawer, Dropdown, Input, Menu, MenuProps, Popconfirm } from "antd";
+import { Avatar, Badge, Drawer, Dropdown, Menu, MenuProps, Popconfirm } from "antd";
 import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch } from "react-redux";
+import Searchbar from "./nav_searchbar";
 
 type Props = {
     drawerOpen: boolean,
@@ -51,8 +51,6 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
         },
     ];
 
-
-
     const url =
         "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
     return (
@@ -83,15 +81,11 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
 
                 <HSpacer width={100} />
                 {/* menu toggle button */}
-
+                <Searchbar />
 
                 <HSpacer width={15} />
                 {/* searchbar */}
-                <Input
-                    className=" focus-within:w-96 "
-                    placeholder="Search here"
-                    onChange={(e) => console.log(e.currentTarget.value)}
-                    suffix={<SearchOutlined className="cursor-pointer" />} />
+
 
             </div>
 
