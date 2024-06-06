@@ -9,6 +9,7 @@ import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch } from "react-redux";
 import Searchbar from "./nav_searchbar";
+import { Link } from "react-router-dom";
 
 type Props = {
     drawerOpen: boolean,
@@ -85,11 +86,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
 
                 <HSpacer width={15} />
                 {/* searchbar */}
-                <Input
-                    className=" focus-within:w-96 "
-                    placeholder="Search here"
-                    onChange={(e) => console.log(e.currentTarget.value)}
-                    suffix={<SearchOutlined className="cursor-pointer" />} />
+                <Searchbar />
 
             </div>
 
