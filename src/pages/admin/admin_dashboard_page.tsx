@@ -197,9 +197,11 @@ const AdminDashboardPage = () => {
                 await saveAllDocs(`users/${element.id}`, element)
                 console.log('commissioner saved', element);
 
-                toast.success('commisioner saved')
+                toast.success('commisioner data saved')
                 sleep(1000);
             }
+
+            
         } catch (error) {
             toast.error(`${error}`);
             console.log(error);
