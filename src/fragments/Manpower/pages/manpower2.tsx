@@ -5,7 +5,7 @@ import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
 import { Collapse, Table } from "antd";
 import { Link } from "react-router-dom";
-import { manpowerMappingData } from "../data/manpower_mapping";
+import { manpowerMappingData } from "../../../data/manpower_mapping";
 
 const ManpowerStatic = () => {
 
@@ -265,7 +265,7 @@ const ManpowerStatic = () => {
             {
               key: '1',
               label: 'Show on map',
-              children: (<iframe className="w-full min-h-[500px]" src="https://maps.google.com/maps?q=14.51475,75.80687&amp;hl=es;z=14&amp;output=embed" title="" ></iframe>)
+              children: (<iframe  className="w-full min-h-[500px]" src="https://maps.google.com/maps?q=14.51475,75.80687&amp;hl=es;z=14&amp;output=embed" title="map" ></iframe>)
             }
           ]}
           />

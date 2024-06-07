@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { firestore } from "@/firebase/firebase_config";
 import { FirebaseError } from "firebase/app";
-import { getRandomInteger } from "@/fragments/user_management/data/generate_user_data";
+import { getRandomInteger } from "@/data/data/generate_user_data";
 
 interface Stationrates {
   jan: Rates;

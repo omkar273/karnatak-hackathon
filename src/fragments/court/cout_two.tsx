@@ -5,7 +5,7 @@ import { Calendar, Clock9, MapPinned, Phone, UserRound } from "lucide-react";
 import React from "react";
 import ReactSpeedometer from "react-d3-speedometer";
 import { Link } from "react-router-dom";
-import { chargesheetData } from "./data/chargesheet_data";
+import { chargesheetData } from "../../data/chargesheet_data";
 
 const getStatusColorFromStatus = (status: string) => {
   let color = ''

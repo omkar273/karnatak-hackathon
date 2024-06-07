@@ -1,25 +1,47 @@
 export type UserModel = {
   id?: string;
+
+  // personal details
   name: string;
   post: string;
   dateOfJoining: string;
   batch: string;
-  currentPosting: string;
-  workExperience?: string;
-  certification?: string;
-  qualification?: string;
-  solvedCases: number;
   height: number;
   weight: number;
-  previousPosting: string;
-  skills: string[];
-  awards: string[];
+
+  // work details
+  workExperience?: number;
+  certification?: string[];
+  qualification?: string;
+  solvedCases: number;
+
+  previousPosting?: string;
+  skills?: string[];
+  awards?: string[];
+  superiors?: string[];
+  underlyings?: string[];
+  reporting_officer_name?: string;
+  reporting_officer_id?: string;
+
+  open_cases?: number;
+  closed_cases?: number;
+
+  stationList?: { stationName: string; stationId: string }[];
+
+  // authentication details
   email: string;
   password: string;
   username: string;
-  stationId: string;
-  open_cases?: number;
-  closed_cases?: number;
+
+  // role specific details
+
+  // commisioner role details
+  zone_id?: string;
+  zone_name?: string;
+
+  // inspector , sub inspector , head constable , constable role details
+  stationId?: string;
+
   stationCode?: string;
-  superiors: string[];
+  currentPosting?: string;
 };

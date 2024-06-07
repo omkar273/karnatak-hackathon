@@ -1,7 +1,7 @@
 import { ExportOutlined } from "@ant-design/icons"
 import { Table } from "antd"
 import { Link } from "react-router-dom"
-import { witnessManagementData } from "../data/witness_management_data"
+import { witnessManagementData } from "../../../data/witness_management_data"
 
 const WitnessManagementPage = () => {
     const witnessTableColumns = [

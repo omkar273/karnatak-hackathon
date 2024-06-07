@@ -79,6 +79,8 @@ const App = () => {
             />
           </Route>
 
+          
+
           <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
 
           <Route path="/chargesheet" element={getProtectedRoute(<ChargesheetPage />)} />

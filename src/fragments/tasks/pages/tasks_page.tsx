@@ -1,5 +1,5 @@
 import TextArea from "@/common/components/text_area";
-import dummyUserData from "@/fragments/user_management/data/underlying_data";
+import dummyUserData from "@/data/underlying_data";
 import InputField from "@/pages/auth/components/input_field";
 import { Select, Space } from "antd";
 import { Controller, RegisterOptions, SubmitHandler, useForm } from "react-hook-form";

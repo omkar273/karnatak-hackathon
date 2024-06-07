@@ -1,4 +1,4 @@
-import { FIRRecord } from "../modals/fir_modal";
+import { FIRRecord } from "../fragments/fir/modals/fir_modal";
 
 export const fir_dataset: FIRRecord[] = [
   {

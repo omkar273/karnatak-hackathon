@@ -4,10 +4,10 @@ import { Table } from "antd";
 import { Calendar, Clock9, MapPinned, Phone, UserRound } from "lucide-react";
 import ReactSpeedometer from "react-d3-speedometer";
 import { Link } from "react-router-dom";
-import { chargesheetData } from "../data/chargesheet_data";
+import { chargesheetData } from "../../../data/chargesheet_data";
 
 
- const getStatusColorFromStatus = (status: string) => {
+const getStatusColorFromStatus = (status: string) => {
   let color = ''
   switch (status) {
     case 'Ongoing':

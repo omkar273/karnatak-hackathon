@@ -10,6 +10,7 @@ import { EyeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import useGetAllStations from "@/fragments/station/hooks/use_get_all_stations";
 import { Select } from "antd";
+import SaveFile from "@/data/data/dummy_data";
 // import { fir_dataset } from "@/fragments/fir/data/fir_data";
 // import { doSaveFIR2 } from "@/fragments/fir/utils/do_save_fir";
 
@@ -21,11 +22,11 @@ const DashboardPage = () => {
         label: 'Own station',
         value: userdata?.stationId,
     }])
-    const stations = useGetAllStations({ comesUnder: stationId, initialLimit: 10 })
+    const stations = useGetAllStations({ comesUnder: stationId, initialLimit: 0 })
 
     const recent_cases = useGetAllFIRs({
         stationId,
-        initialLimit: 10,
+        initialLimit: 0,
     });
 
 
@@ -86,6 +87,7 @@ const DashboardPage = () => {
                 <div className="flex-grow md:flex-[85%] px-4 overflow-y-auto max-h-[calc(100vh-138px)]">
                     {/* left container content */}
                     <div>
+                        <SaveFile />
                         <DashboardStationCards stationId={stationId} />
                         <StationRatesGraph stationId={stationId} />
                         <DashboardCasesPieCharts stationId={stationId} />

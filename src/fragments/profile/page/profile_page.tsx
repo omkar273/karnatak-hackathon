@@ -1,5 +1,5 @@
 import { VSpacer } from "@/common/components/spacer";
-import dummyUserData from "@/fragments/user_management/data/underlying_data";
+import dummyUserData from "@/data/underlying_data";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Rate } from "antd";
 import { BriefcaseBusiness, CalendarCheck2, Dumbbell, GraduationCap, MapPinned, NotebookTabs, NotepadText, ShieldEllipsis, Weight } from "lucide-react";

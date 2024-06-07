@@ -1,7 +1,7 @@
 import { ExportOutlined } from "@ant-design/icons"
 import { Table } from "antd"
 import { Link } from "react-router-dom"
-import { law_and_order_data } from "../data/law_order_data"
+import { law_and_order_data } from "../../../data/law_order_data"
 
 const LawOrderPage = () => {
     const trafficMnagamentColumns = [

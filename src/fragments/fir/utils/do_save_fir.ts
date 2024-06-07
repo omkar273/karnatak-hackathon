@@ -3,8 +3,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { FIRModal, FIRRecord } from "../modals/fir_modal";
 import {
   getRandomElementFromArray,
-  user_roles_ids,
-} from "@/fragments/user_management/data/generate_user_data";
+} from "@/data/data/generate_user_data";
 
 export const doSaveFIR = async (firData: FIRModal): Promise<boolean> => {
   try {
@@ -31,7 +30,7 @@ export const doSaveFIR2 = async (firData: FIRRecord): Promise<boolean> => {
     await addDoc(collection(firestore, "fir_details"), {
       ...firData,
       timestamp: serverTimestamp(),
-      allotedTo: user_roles_ids,
+      allotedTo: [],
       fir_status: getRandomElementFromArray(fir_status),
       stationId: getRandomElementFromArray(user_roles_station_ids),
     });
