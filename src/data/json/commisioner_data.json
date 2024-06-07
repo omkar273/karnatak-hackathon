@@ -1,0 +1,41 @@
+[
+  {
+    "id": "a19da88afcba4551a2193ac8ed00d673",
+    "name": "Chandrabhaga Nair",
+    "post": "Commisioner",
+    "dateOfJoining": "11/10/2005",
+    "batch": "dummy batch",
+    "height": 179,
+    "weight": 78,
+    "workExperience": 7,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 3,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Negotiation",
+      "CrisisManagement",
+      "Teamwork",
+      "Tactics"
+    ],
+    "awards": [
+      "Police Chief's Commendation",
+      "Frontline Hero Award",
+      "Civic Duty Award",
+      "Meritorious Service Medal"
+    ],
+    "open_cases": 3,
+    "closed_cases": 6,
+    "email": "Chandrabhaga Nair1@gmail.com",
+    "password": "23456789",
+    "username": "Chandrabhaga Nair1",
+    "reporting_officer_name": null,
+    "reporting_officer_id": null,
+    "stationId": "",
+    "superiors_list": [],
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  }
+]

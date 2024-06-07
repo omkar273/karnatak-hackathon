@@ -103,7 +103,7 @@ export const generateRandomUserData = (index: number) => {
     open_cases: 0,
     closed_cases: 0,
     stationCode: "CHE002",
-    superiors: superiorsId,
+    superiors_list: superiorsId,
   };
 
   return temp;

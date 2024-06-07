@@ -3,13 +3,13 @@ import { Auth, getAuth } from "firebase/auth";
 import { Firestore, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAm34pfCKk1N_c0QOZl4nwKuhXCCO2UNDA",
-  authDomain: "capital-tech-fintech.firebaseapp.com",
-  projectId: "capital-tech-fintech",
-  storageBucket: "capital-tech-fintech.appspot.com",
-  messagingSenderId: "729233128912",
-  appId: "1:729233128912:web:03285c24359c6cc05d4dd5",
-  measurementId: "G-F830K5T2PZ",
+  apiKey: "AIzaSyBtsqIHYmI7O3UDWpIo9Y1yam0RvUGKdf0",
+  authDomain: "ksp-hackathon-2968d.firebaseapp.com",
+  projectId: "ksp-hackathon-2968d",
+  storageBucket: "ksp-hackathon-2968d.appspot.com",
+  messagingSenderId: "371659584706",
+  appId: "1:371659584706:web:e27051fb33c3a4437c775b",
+  measurementId: "G-6GV20CTBYN",
 };
 
 export const app: FirebaseApp = initializeApp(firebaseConfig);

@@ -6,4 +6,5 @@ interface WeaponType {
   owner_name?: string;
   owner_id?: string;
   owner_post?: string;
+  station_id: string;
 }

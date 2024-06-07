@@ -6,7 +6,7 @@ const HomeNavbar = () => {
   const url =
     "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
   return (
-    <div className=" w-full bg-[#002D71] flex justify-between items-center">
+    <header className="top-0 w-full flex items-center justify-between px-4 py-2 h-[60px] bg-cyan-600 transition-all duration-500 z-[1000] shadow-lg">
       <div className="flex justify-start items-center gap-2">
         <img
           // className="bg-white p-2 rounded-full"
@@ -26,7 +26,7 @@ const HomeNavbar = () => {
       <div>
         <Avatar src={url} />
       </div>
-    </div>
+    </header>
   );
 };
 

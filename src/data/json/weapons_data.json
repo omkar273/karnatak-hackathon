@@ -1,0 +1,5002 @@
+[
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "c387f8e7f6d54f13bfba75403fdeaa58",
+    "last_used_date": "5/2/2023",
+    "owner_id": "63ff7584a0e5481eab26699d25da076c",
+    "owner_name": "Sushma Menon",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "095da509e84b462dac9a309e703e9be3",
+    "last_used_date": "1/17/2023",
+    "owner_id": "4d4049220d754b8e93c9df158b97bcce",
+    "owner_name": "Dinesh Saini",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "ed7f12727a5b4a669843af00ca11a3ea",
+    "last_used_date": "7/16/2023",
+    "owner_id": "5ed47e73aa36438ea9eef528d88e2513",
+    "owner_name": "Darshwana Sharma",
+    "owner_post": "Head Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "c3f6ed2172b24b49b23896362c9e4934",
+    "last_used_date": "12/27/2023",
+    "owner_id": "cce97f63072848bb828b77750b24b86d",
+    "owner_name": "Deeptiman Rana",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "3706a16b390c4dd3a5054c6d9da8eb76",
+    "last_used_date": "2/15/2023",
+    "owner_id": "8ea55358c1a548d7b2c2ab25c1fd4c0f",
+    "owner_name": "Shanti Pandey",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "97159d7a99e54cb5893f37eaa045037d",
+    "last_used_date": "9/9/2023",
+    "owner_id": "275c81c51ccd47d4b9c9a2cc34a2c761",
+    "owner_name": "Yogendra Sethi",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "db92b942be6f41ac83fd786e9b8b57e5",
+    "last_used_date": "3/9/2023",
+    "owner_id": "fab1d5cd1ae14008a408c987fbdc4b48",
+    "owner_name": "Kashyapi Marar",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "dabb932cec1d489b97e44151b0300e1d",
+    "last_used_date": "4/1/2023",
+    "owner_id": "1a1c843c87074509b3dd863b1c001e79",
+    "owner_name": "Chetan Devar",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "d00bc4ad875c463b943b988aa88c08f6",
+    "last_used_date": "11/15/2023",
+    "owner_id": "1919d63c224347b28ec0f4f88609e06e",
+    "owner_name": "Buddhana Asan",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "bf1ca881f75440efaa263e1c2aa57eae",
+    "last_used_date": "1/8/2023",
+    "owner_id": "a620952daec54bd88ad9c3059d7b19be",
+    "owner_name": "Harit Desai",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "10fd0bbf9bb24ca5b4f3a33b554c2478",
+    "last_used_date": "10/2/2023",
+    "owner_id": "276d9ceb0b0544c4b14aba6d26778d26",
+    "owner_name": "Annapurna Naik",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "efef1500c6134680ad964dea746071d2",
+    "last_used_date": "8/5/2023",
+    "owner_id": "275e908818a641e795d2ba4b50c17140",
+    "owner_name": "Anang Dutta",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "7d63459ff54e43a687e8dab25723530f",
+    "last_used_date": "6/6/2023",
+    "owner_id": "45858a9b9eeb43b7989046713b77187f",
+    "owner_name": "Lila Shukla",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "19177e32dc3142539e36c67b3758e3b7",
+    "last_used_date": "6/4/2023",
+    "owner_id": "a1c1237ca8384eb880dabef43707f79f",
+    "owner_name": "Daevi Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "86018794914040cb922879a526fa7451",
+    "last_used_date": "1/27/2023",
+    "owner_id": "12ac45034d604f54948c794abfa652e9",
+    "owner_name": "Sushil Tandon",
+    "owner_post": "Head Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "c2609d31f2e443dbb9fe399ba3a456d6",
+    "last_used_date": "2/18/2023",
+    "owner_id": "fe98092189344e22abe0640166755852",
+    "owner_name": "Vaishno Butt",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "32bce22a19244487a96aa1d9f92e0058",
+    "last_used_date": "3/26/2023",
+    "owner_id": "fa03eae3ae194b218aadd8711909bc69",
+    "owner_name": "Brahmanandam Sharma",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "16bf83e96111428e9460f36717c00f20",
+    "last_used_date": "5/9/2023",
+    "owner_id": "705fa93ea50c4000b467c764759722c9",
+    "owner_name": "Vaishvi Patel-Jain",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "6db8254fdfd047d19aca3e2964d56043",
+    "last_used_date": "7/21/2023",
+    "owner_id": "f66a7b31a22a4354bd259723762678b2",
+    "owner_name": "Chandradev Verma",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "ce02ed9ae00b493eaf75a35a2bcae140",
+    "last_used_date": "4/14/2023",
+    "owner_id": "fa81212c901b4407a11b19f85e00aa3f",
+    "owner_name": "Deeptimayee Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "dddbaa82a7ec4110af1ec417f6651fb2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "2803dd3075814ab4842652da76a9852c",
+    "last_used_date": "2/27/2023",
+    "owner_id": "e7a036b0df0740e8b451572dc496897e",
+    "owner_name": "Anuja Desai",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "b065177e815e43efaaca64f85623c775",
+    "last_used_date": "12/8/2023",
+    "owner_id": "2e76b6458f9c4e5698a7e4c77816d8c3",
+    "owner_name": "Jagdeep Khatri",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "1876d93b32ec42d389c4a5c91e135f9e",
+    "last_used_date": "10/10/2023",
+    "owner_id": "6d7b586b9e7e489aabaeb7c78f42096e",
+    "owner_name": "Tara Banerjee",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "a1c2061c3d354269a5de9789dc159371",
+    "last_used_date": "3/31/2023",
+    "owner_id": "c58029a8d63c473d83d08745b49f2f4b",
+    "owner_name": "Minakshi Chaturvedi",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "1675d59b75b34d6d97e39f8a5f8a1612",
+    "last_used_date": "4/3/2023",
+    "owner_id": "aee01f0202f44da8b64f685cb2f41cc3",
+    "owner_name": "Bhagirathi Kaul",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "16fde366afd74019911f87d2114f75e4",
+    "last_used_date": "5/26/2023",
+    "owner_id": "d38982b77c9c405aac101f5314856331",
+    "owner_name": "Anaadi Patil",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "196164ac9d1443f6bc9052e6f6179270",
+    "last_used_date": "12/6/2023",
+    "owner_id": "2729009f8c244f839997987c5cfb57b2",
+    "owner_name": "Lalita Gowda",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "4d93210019c2414cb1781d19ed6dad84",
+    "last_used_date": "4/10/2023",
+    "owner_id": "93bc285a624145a0bad2bbf5c4e453f0",
+    "owner_name": "Indra Ganaka",
+    "owner_post": "Head Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "c7197979fc2041e1a4272695f430a8b0",
+    "last_used_date": "1/15/2023",
+    "owner_id": "66d80b6295cf4d59b1992971a6a2182b",
+    "owner_name": "Dandapaani Bhat",
+    "owner_post": "Head Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "0eb427556916493a95727febcfdfb604",
+    "last_used_date": "12/25/2023",
+    "owner_id": "45e6db7618f14483afa2451844041405",
+    "owner_name": "Jagmeet Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "21260d9331f64dccbd49096bc484643c",
+    "last_used_date": "8/18/2023",
+    "owner_id": "6d29ba9115c94d6e9764a6e46ec6d01e",
+    "owner_name": "Bhadrak Khanna",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "31428375f1b94c6f9df9f13dc7989fcf",
+    "last_used_date": "3/20/2023",
+    "owner_id": "92f96a8987d04813aa2ef3c82c8f7a1b",
+    "owner_name": "Atreyee Prajapat",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "1acceaadb8e54cdca997a4f9edbceed2",
+    "last_used_date": "5/31/2023",
+    "owner_id": "6d7b586b9e7e489aabaeb7c78f42096e",
+    "owner_name": "Tara Banerjee",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "cb43e3f0dfcf448992f1e0f3105dc081",
+    "last_used_date": "5/19/2023",
+    "owner_id": "3d1faa014c5e40c8ae3b84c4a5d224a8",
+    "owner_name": "Tej Dwivedi",
+    "owner_post": "Head Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "1686447fedf241aab542593530ce8de3",
+    "last_used_date": "4/14/2023",
+    "owner_id": "a83ed62ad05541e6981542b12f24efe3",
+    "owner_name": "Hiranmay Reddy",
+    "owner_post": "Sub Inpector",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "bcfd4db6e4b24281a31668fc9155fe4a",
+    "last_used_date": "3/20/2023",
+    "owner_id": "f2f6a66903404c75ad617d59a79b8a09",
+    "owner_name": "Chandrani Pillai",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "0c09e63a8b6e43efa08d30ef53e8d700",
+    "last_used_date": "10/2/2023",
+    "owner_id": "2e76b6458f9c4e5698a7e4c77816d8c3",
+    "owner_name": "Jagdeep Khatri",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "72d580cafb0e49c8b2dadf4f2ca93a6c",
+    "last_used_date": "4/2/2023",
+    "owner_id": "feca97f9be3f4f689f0957bd239387af",
+    "owner_name": "Akula Mukhopadhyay",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "5902c7f1b210403a99338ea7f7120bae",
+    "last_used_date": "12/24/2023",
+    "owner_id": "6bdc34b94abe4389bb2b7e24e792be55",
+    "owner_name": "Bilwa Panicker",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "5a44d30fa56e472f9e37ee0f3f721bba",
+    "last_used_date": "11/1/2023",
+    "owner_id": "6d82a03610ea4bf183e0f7eb89722dcf",
+    "owner_name": "Darshwana Ahuja",
+    "owner_post": "Constable",
+    "station_id": "1a10b4cb646440d1b6a104af137f3f4f"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "b737434ddf1b4b78a608bb481055c2ab",
+    "last_used_date": "12/1/2023",
+    "owner_id": "560d67874809429fb7fb87c08c577ac5",
+    "owner_name": "Anshula Kakkar",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "41545052252c48fb939e406d23d58897",
+    "last_used_date": "1/4/2023",
+    "owner_id": "32a240e20a0e4b24ade054aafee7d9db",
+    "owner_name": "Dhana Nehru",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "203f98c1a8d647d59dbfa07bc6665f2c",
+    "last_used_date": "8/11/2023",
+    "owner_id": "68e280ea815b4767b968dd7f049029fb",
+    "owner_name": "Shobhana Marar",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "e714f29a973e42488cb888d0ac01f48d",
+    "last_used_date": "10/20/2023",
+    "owner_id": "12f2380131bc417d99cfa8f3797f65d8",
+    "owner_name": "Anila Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "d59e4f8b50b14cda8faa1b8ddff1c41f",
+    "last_used_date": "3/7/2023",
+    "owner_id": "9a3fcb3ea1db426186a205f71b2430b0",
+    "owner_name": "Rohan Dubashi",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "86a31c2c1caf404aa79bdded53dd0fc4",
+    "last_used_date": "4/28/2023",
+    "owner_id": "20442a8099f64c2ca5fc566cd70049e8",
+    "owner_name": "Hamsini Pandey",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "777d310c47ee4a60a275b5f0bd63d517",
+    "last_used_date": "9/29/2023",
+    "owner_id": "2a97ef6739014b9792bdf7999869e0c3",
+    "owner_name": "Udit Chopra-Butt",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "92eb4020b09e49ebabcdf73681325d88",
+    "last_used_date": "2/12/2023",
+    "owner_id": "6dc2e09bcef44368ac72e9d4fbd1745d",
+    "owner_name": "Shridevi Shah",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "8513babe335241b5bbece2212ed738b4",
+    "last_used_date": "4/10/2023",
+    "owner_id": "f1c33b9e5e594f75b7a92ea1c87cee52",
+    "owner_name": "Anurag Panicker",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "96f1fff458e1490badc0710eab5a7fc9",
+    "last_used_date": "5/27/2023",
+    "owner_id": "7941b22b63ad4c73a92622f09b405f6d",
+    "owner_name": "Bhudeva Patel",
+    "owner_post": "Head Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "9d3279a92e6947a3b9bebb4b500e7800",
+    "last_used_date": "7/11/2023",
+    "owner_id": "0bf5a60519cb4ea0a1cff49c2b40846a",
+    "owner_name": "Aaditya Gupta",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "52ce9ef28feb4d3aac1c5f19668f5711",
+    "last_used_date": "11/5/2023",
+    "owner_id": "12f2380131bc417d99cfa8f3797f65d8",
+    "owner_name": "Anila Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "4dd8e3ccc45d4822b7e9af30712d0fa2",
+    "last_used_date": "2/14/2023",
+    "owner_id": "0863d754e912494295c2a20b26bbfdb3",
+    "owner_name": "Darshan Khan",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "099ffea7002146b28005e6999a77bc1a",
+    "last_used_date": "12/5/2023",
+    "owner_id": "4ce521db2379416daf55e3b1ddecfbe5",
+    "owner_name": "Chandrakala Johar",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "841fe774158542f1b7dda48c732d3aa8",
+    "last_used_date": "3/5/2023",
+    "owner_id": "5b7527254f7c4561a821ff9ad0bd5510",
+    "owner_name": "Vimal Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "42222c498e8349e5869bb12c68855c88",
+    "last_used_date": "6/6/2023",
+    "owner_id": "3a98313a1391465cacf0f4096c013bb6",
+    "owner_name": "Baalagopaal Mehra",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "efb383cf87414fb98632bbfc3ba5fcd6",
+    "last_used_date": "6/7/2023",
+    "owner_id": "9c64843275c8417ba416fa0739187475",
+    "owner_name": "Prem Panicker",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "daa6414d98614129839b8997ce7a6380",
+    "last_used_date": "8/9/2023",
+    "owner_id": "3a98313a1391465cacf0f4096c013bb6",
+    "owner_name": "Baalagopaal Mehra",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "885347e9c2c6429d8441eefb488ddcf5",
+    "last_used_date": "2/15/2023",
+    "owner_id": "fe99fcf3bcf3437abfd5979fdebde103",
+    "owner_name": "Param Iyengar",
+    "owner_post": "Sub Inpector",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "fa13ae0f43f2452095e0e1c315b6e752",
+    "last_used_date": "11/23/2023",
+    "owner_id": "2b830cf8fb8b42f1a87a97f065b486c5",
+    "owner_name": "Chandramauli Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "83f337f3f4c74d9ab6c30d1804e9dd97"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "6988b2f5afc5446196c092619a95a77a",
+    "last_used_date": "7/10/2023",
+    "owner_id": "9b1ba0cc18c94a40ab1de5c664eece94",
+    "owner_name": "Nikita Bandopadhyay",
+    "owner_post": "Head Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "739e11398c6f4f9abc1062e77c112b7e",
+    "last_used_date": "1/16/2023",
+    "owner_id": "9770d1b5f7c442f7a3989b080e3f0898",
+    "owner_name": "Eshana Khanna",
+    "owner_post": "Head Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "92a85b6767db474fbc878072cb3ed145",
+    "last_used_date": "10/30/2023",
+    "owner_id": "26de87acd7cb4d219df3019ed9b438be",
+    "owner_name": "Tanirika Dwivedi-Rana",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "837e4692fef04d9b9f2517397545e0b8",
+    "last_used_date": "7/19/2023",
+    "owner_id": "7e04d24200034800b985af70d11c9cf7",
+    "owner_name": "Kin Talwar",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "62816c984da14ceb9e19d6315fe81ba8",
+    "last_used_date": "1/20/2023",
+    "owner_id": "ec6d61dffe324b6d92095df98be657ea",
+    "owner_name": "Kumuda Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "184364ce5ac3402cbb63d1e67cfa25ec",
+    "last_used_date": "4/16/2023",
+    "owner_id": "4fe8c97d65a0483e9582437fa0bdd73b",
+    "owner_name": "Omana Gowda",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "125b0976f8514145854db5e42f85609e",
+    "last_used_date": "1/3/2023",
+    "owner_id": "c7a09e48596a4c26b450eb5e9c113f8f",
+    "owner_name": "Rajan Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "bda80bf061df46dfa65987b2edf3aeaa",
+    "last_used_date": "12/31/2023",
+    "owner_id": "c43138cb2a5d4ecf87aa5b8d84ce6991",
+    "owner_name": "Devajyoti Nayar",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "bce013912d414f96b9c7eec797f148f0",
+    "last_used_date": "3/19/2023",
+    "owner_id": "875db8cd1c4e4966ad9216f6ff302baa",
+    "owner_name": "Amritambu Somayaji",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "d5f4a7678269419ca8139e45420188c1",
+    "last_used_date": "12/25/2023",
+    "owner_id": "79ea3fbd0cee402b8c7f7b7c09b81db7",
+    "owner_name": "Sarla Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "f099f4c85e2e4d39847df299a8281fb6",
+    "last_used_date": "4/4/2023",
+    "owner_id": "c78055968d7e44f2816d31ae4d5a1245",
+    "owner_name": "Parvati Mishra",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "5680c34ffd1b4ec499fe3e8152bfaaf0",
+    "last_used_date": "4/25/2023",
+    "owner_id": "26de87acd7cb4d219df3019ed9b438be",
+    "owner_name": "Tanirika Dwivedi-Rana",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "9a4a2cb02594497eb07c0cc95f5302c6",
+    "last_used_date": "2/18/2023",
+    "owner_id": "f686d982c7c0450095b3aa87af0b51cb",
+    "owner_name": "Asha Nayar",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "65997972b8df496793ca90dfe220920c",
+    "last_used_date": "11/8/2023",
+    "owner_id": "0f1b5a65e3eb4bd2b0f64c896170f00b",
+    "owner_name": "Vyas Malik",
+    "owner_post": "Head Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "947552069e4b4ca18e8c3191fe0b0790",
+    "last_used_date": "2/8/2023",
+    "owner_id": "95076efda4cf49b5b34b568305200e2f",
+    "owner_name": "Anshula Mahajan",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "a1ba5e189fcc4d9e9cd63feb8e6189e7",
+    "last_used_date": "11/23/2023",
+    "owner_id": "b04f5aeea2e742779917c21d66d6e18f",
+    "owner_name": "Vasudev Nair",
+    "owner_post": "Head Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "77194115baf4461c8eefd9b39fc8f49c",
+    "last_used_date": "6/4/2023",
+    "owner_id": "f806cbeee7bc412e86a77ad615f2ceea",
+    "owner_name": "Lai Bandopadhyay",
+    "owner_post": "Head Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "ca15356379bb451fb114e3db6db2c144",
+    "last_used_date": "12/2/2023",
+    "owner_id": "a97950e880d7454c80e6df91d15e6edd",
+    "owner_name": "Chandrabhaga Singh",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "8dcb5b37965f4263918944b5ba425d93",
+    "last_used_date": "10/25/2023",
+    "owner_id": "30d310d44c22420dbeb0ab01df1e6b93",
+    "owner_name": "Hiranmaya Ahuja",
+    "owner_post": "Sub Inpector",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "d8c9f40dfccd4bd5b968061272c63919",
+    "last_used_date": "5/22/2023",
+    "owner_id": "8c1a1318b6f744ad9e359c25a8f729dd",
+    "owner_name": "Agrata Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "2daaaacd169144488d07cc636c543133"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "698b5e44e1194a2398cd2530ae4fce99",
+    "last_used_date": "7/18/2023",
+    "owner_id": "92607ff407dd4b90af4acc343db1d6f1",
+    "owner_name": "Yoginder Khan",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "3eac5e2afedb49ca8ffe6e3ea1f0dbae",
+    "last_used_date": "5/21/2023",
+    "owner_id": "37f5108f3aff462f9d5ddfb167635894",
+    "owner_name": "Trisha Shukla",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "2f9b290889c1489ca2a3e325c9e47af0",
+    "last_used_date": "10/22/2023",
+    "owner_id": "2ec730273f704ff8af88d774bc937d8f",
+    "owner_name": "Devi Iyer",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "cea2771c24f4430996f01abfa4e7c7e2",
+    "last_used_date": "6/23/2023",
+    "owner_id": "68252263fc654e97b4ece1fb24ff6262",
+    "owner_name": "Eshana Mukhopadhyay-Singh",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "6b5054db83a84a76a4e8f3869db521c3",
+    "last_used_date": "4/30/2023",
+    "owner_id": "1a09f7a77a0a49d291cc9263eb97b57b",
+    "owner_name": "Bhramar Jha",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "541d944bb919430a9923413a7e0a8f08",
+    "last_used_date": "7/31/2023",
+    "owner_id": "37f5108f3aff462f9d5ddfb167635894",
+    "owner_name": "Trisha Shukla",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "2fc3a55b47a14785a689feda033e8a21",
+    "last_used_date": "10/10/2023",
+    "owner_id": "7e1b5f93021441fd84c769468ffb7a9f",
+    "owner_name": "Bharadwaj Dutta",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "5ce86b5a1f424a779005e212e54321d5",
+    "last_used_date": "5/3/2023",
+    "owner_id": "8458e4a86dc94e15b5b39fcf4a5a60a7",
+    "owner_name": "Krishnadasa Banerjee",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "cae4006a3d47474a9000a89f17bb6c05",
+    "last_used_date": "6/17/2023",
+    "owner_id": "ab1e0e9f2d28410abf53533129a93298",
+    "owner_name": "Deeksha Gupta-Bhattacharya",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "983abd97bb7744be82b086d672154695",
+    "last_used_date": "4/23/2023",
+    "owner_id": "b4340ad44c5341e49ee468491f95f521",
+    "owner_name": "Aasha Jha",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "a0db9d24f8dd49a185a2f3be93394af3",
+    "last_used_date": "11/29/2023",
+    "owner_id": "980eb3a658cc493b8e647238e552a381",
+    "owner_name": "Akshayakeerti Embranthiri",
+    "owner_post": "Head Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "f73df47f10db41378bdd8d6d531f41f7",
+    "last_used_date": "5/15/2023",
+    "owner_id": "add0cf01206a43bb9e3f8f2ff4873cc4",
+    "owner_name": "Chidaatma Bhattacharya",
+    "owner_post": "Head Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "9fdcd04e9c3e4fefbab8aa98088f1bd4",
+    "last_used_date": "6/10/2023",
+    "owner_id": "0225c89035744aa3a7657f40bbfd99c7",
+    "owner_name": "Aaditya Pillai",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "6966d4c2520b4041b9a5a9c5f8a53ab3",
+    "last_used_date": "3/12/2023",
+    "owner_id": "1d6c7806133b407b8df989466490be31",
+    "owner_name": "Kamla Johar",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "8431d0f3258f4b53b677e82ce68301f7",
+    "last_used_date": "4/6/2023",
+    "owner_id": "e9057fce1eed455dbcb0b93c4820e332",
+    "owner_name": "Chandani Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "8229f7d93d9e4a85aaea922c2d528fc6",
+    "last_used_date": "1/22/2023",
+    "owner_id": "15724b6b54a64a5ebf4bb6af8b09c1a5",
+    "owner_name": "Jai Pandey",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "28eb9c97810b4cfdbd40b0a0acf47975",
+    "last_used_date": "8/3/2023",
+    "owner_id": "8ecc66b84a254392b8a13b339d6556b8",
+    "owner_name": "Anil Abbott",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "d67d1c30ed894529bc80c96520960b9b",
+    "last_used_date": "9/8/2023",
+    "owner_id": "92cb8aeae9ef424c9fd355e977211daf",
+    "owner_name": "Deeptimoyee Sethi",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "050c31133e8c4a7e94eabb1ce5ee1351",
+    "last_used_date": "1/10/2023",
+    "owner_id": "8a1c00fb9c224d9598e17dbdd8c49754",
+    "owner_name": "Chandran Mahajan",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "eceeea68267244078e8fc5424398e572",
+    "last_used_date": "5/5/2023",
+    "owner_id": "ed2f6412b15b4c139d116a29d9c88b4f",
+    "owner_name": "Anuja Suthar",
+    "owner_post": "Constable",
+    "station_id": "a65be294fc554de7b6b29ba456c2fbd0"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "8ce66ba4106942d1a6a7b01aa780291f",
+    "last_used_date": "1/14/2023",
+    "owner_id": "9bc6a1950f6b4198a69332baafb33a74",
+    "owner_name": "Gopaal Nehru",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "a6bf3923119c4b05b34ebb758219e759",
+    "last_used_date": "6/30/2023",
+    "owner_id": "cada5b1d40424e5d914abbf8a6bd305f",
+    "owner_name": "Deenabandhu Kakkar",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "3a1f9228f1434ecf9d5b11d899e6539a",
+    "last_used_date": "1/29/2023",
+    "owner_id": "80f717df03074ee282fedc72bfd9bbf6",
+    "owner_name": "Saraswati Embranthiri",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "01ec1ea110ec4479962b13010a51da09",
+    "last_used_date": "4/13/2023",
+    "owner_id": "5b5702655d2d43a3a836d5af146cbec5",
+    "owner_name": "Sushil Tagore",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "6f16b3cb2aea49acb1672996f954c47a",
+    "last_used_date": "12/22/2023",
+    "owner_id": "2fb32ef60b5d4da5a64361b9089948e6",
+    "owner_name": "Chandrani Patil",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "f69bd10d7fbe4ae9b77caae8284b7f88",
+    "last_used_date": "7/8/2023",
+    "owner_id": "3cacfb2abb314e3caa30a2fff5edba1a",
+    "owner_name": "Aalok Dwivedi",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "64444485730849ff93755d3d39f59335",
+    "last_used_date": "8/15/2023",
+    "owner_id": "dcbf40416c544bf8be4b2b4dd049b1a4",
+    "owner_name": "Balagopal Deshpande",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "4b6176bd9bc148e3b45ec4a37735d84f",
+    "last_used_date": "2/20/2023",
+    "owner_id": "9b71f315314f4f55983d5c8b600b5c42",
+    "owner_name": "Trilokesh Jangid",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "02b38f11763c410799882049c18d77d7",
+    "last_used_date": "11/13/2023",
+    "owner_id": "7cbe55e7518140d197d491c0f4e7c36e",
+    "owner_name": "Kalpana Mishra",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "983e0e1b4f584f068321177177b9d0bf",
+    "last_used_date": "4/3/2023",
+    "owner_id": "286b80199b5b42a8b452974f4a8006fa",
+    "owner_name": "Rahul Guneta-Embranthiri",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "e4d84adfe99f4011bfd4c5593cc652ba",
+    "last_used_date": "6/26/2023",
+    "owner_id": "b3835eb901434ba4bbf62e900064d00f",
+    "owner_name": "Gautama Embranthiri",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "83c9ed7319264f078179876bb0685014",
+    "last_used_date": "12/1/2023",
+    "owner_id": "987a5d8ad0604ce7905ec29a6c09c395",
+    "owner_name": "Aadinath Deshpande",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "9dba1ef6ee9a47a8b2514fe8d51a7c8d",
+    "last_used_date": "12/1/2023",
+    "owner_id": "cfacb5ef14b64c26b13b1593f3ec4095",
+    "owner_name": "Hiranya Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "c88f6e1791124b79bac72a1f32e3b1ec",
+    "last_used_date": "4/25/2023",
+    "owner_id": "cada5b1d40424e5d914abbf8a6bd305f",
+    "owner_name": "Deenabandhu Kakkar",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "b1396e92c5554a88b437a26f49e02835",
+    "last_used_date": "4/20/2023",
+    "owner_id": "b6f1e994260949baa976ed92d9d68419",
+    "owner_name": "Shashikala Kaur",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "389432cf170a46fd83b5acc1f3ec1839",
+    "last_used_date": "5/17/2023",
+    "owner_id": "4f970732bd114ca29018687f3491de19",
+    "owner_name": "Charvi Bhadresha",
+    "owner_post": "Head Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "e30e9e81df464888b4a78202eb138daa",
+    "last_used_date": "12/6/2023",
+    "owner_id": "3f5e78bec8834b06b586c2722ed009f0",
+    "owner_name": "Anuraag Acharya-Pilla",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "0baa9d8fb5ff4e2ea1194fb17c8bb4f0",
+    "last_used_date": "1/3/2023",
+    "owner_id": "0efafc2a6fdc4203839d5ba880e62a35",
+    "owner_name": "Amaranaath Achari",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "8c2e6170295e49f8898af570f93cf1a7",
+    "last_used_date": "9/23/2023",
+    "owner_id": "d4101b90995a43ba94a08abf3fe8ec53",
+    "owner_name": "Acharyanandana Kaniyar",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "5df6a6ffc28a43dd8030db7465031217",
+    "last_used_date": "7/8/2023",
+    "owner_id": "1f4d13623dd04ba5b4924ec777635342",
+    "owner_name": "Brijesh Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "55bf22882acd4a958d0789386b758f15"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "3a80f054c1c645278dcba52228ca85d6",
+    "last_used_date": "10/16/2023",
+    "owner_id": "689cf7b1f60744938503ed8f9395c239",
+    "owner_name": "Jyoti Iyer",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "2798d802cb084bf6a1ccfcdc5643688c",
+    "last_used_date": "7/16/2023",
+    "owner_id": "2f30a4a5bc0544e3bd9a302e296a06a2",
+    "owner_name": "Akshaj Mehra",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "cbfb05dacbfd421c85a38158e1c91111",
+    "last_used_date": "5/30/2023",
+    "owner_id": "0032f287a5004c0189cab74fb4589c56",
+    "owner_name": "Anshula Khatri",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "14525b38b3894ebdb161b0261e209a93",
+    "last_used_date": "8/23/2023",
+    "owner_id": "d5d889549fd64983a7d10c3d98cdc1f2",
+    "owner_name": "Chidaakaash Suthar",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "6f9b3bfeb94a41ff80a681bc8bc35277",
+    "last_used_date": "4/29/2023",
+    "owner_id": "6993cf476c8c4923b2c077bbd2f46253",
+    "owner_name": "Anilabh Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "50cca9ce7e6f4c989aa0c0f119bc7b26",
+    "last_used_date": "5/26/2023",
+    "owner_id": "21af82c21bfd43c58f8b2595fb71a721",
+    "owner_name": "Ganak Kapoor",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "9c9f616c29b44d52837a0c7c74e39093",
+    "last_used_date": "12/16/2023",
+    "owner_id": "87f276d512cd4012a17d63f5d8e67aa5",
+    "owner_name": "Sanya Nambeesan",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "cac905c270e64d7ca7b8b770b5dcffd5",
+    "last_used_date": "3/11/2023",
+    "owner_id": "900f602253944bf6946cb554e15e87df",
+    "owner_name": "Anang Jain",
+    "owner_post": "Head Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "c0ce9ea2c0fe42daa2333ee3d2f3c65b",
+    "last_used_date": "12/19/2023",
+    "owner_id": "101c8ffe6c184beb9c751191ed36e92c",
+    "owner_name": "Narinder Menon",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "0215b3187f6743e8b1102aa4f4a66495",
+    "last_used_date": "2/11/2023",
+    "owner_id": "1d1ee788ace34b01956fa5b8b0dabac6",
+    "owner_name": "Bhushan Kaul",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "9cdb41b4ebf1409c8960e32e6fe04af4",
+    "last_used_date": "5/18/2023",
+    "owner_id": "022d65ea7dd34f0e8df65c77cbbd90f3",
+    "owner_name": "Shresth Butt",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "a7698a384d074f9d9f746e31584b6a87",
+    "last_used_date": "12/14/2023",
+    "owner_id": "f568ce82153b47aa84a41b7aede68c51",
+    "owner_name": "Chakrika Kaur",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "c0e27a489de7402ba4c4bb63a843b029",
+    "last_used_date": "1/9/2023",
+    "owner_id": "7a33f8da93794d17a77172e9a6a68ccf",
+    "owner_name": "Shwet Abbott",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "c973e9cf635b4cf6894474346ef0176f",
+    "last_used_date": "1/24/2023",
+    "owner_id": "25bbd089ca204c0ea9f22f3812787fd2",
+    "owner_name": "Prema Jain",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "dd3637b01c114b1d93178bc9b5c53a6d",
+    "last_used_date": "3/30/2023",
+    "owner_id": "f2c04788df8346c9a849edd418f1183f",
+    "owner_name": "Kumuda Asan",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "16d7ef1bd1664d748a08c405ccfac6da",
+    "last_used_date": "9/20/2023",
+    "owner_id": "777f124aa1db4e7281b257c6be3df233",
+    "owner_name": "Chitrali Patel",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "85099f747a4a4040b3dacbb82b82315a",
+    "last_used_date": "10/17/2023",
+    "owner_id": "6993cf476c8c4923b2c077bbd2f46253",
+    "owner_name": "Anilabh Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "e5adc681bdb548f087f17d960227e53b",
+    "last_used_date": "7/29/2023",
+    "owner_id": "996f6ab8a116437ca0d3d35d29e9fe94",
+    "owner_name": "Shobhana Jha",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "ce8191e5b294438abdb2ae98e3304dcb",
+    "last_used_date": "8/24/2023",
+    "owner_id": "7be2c1e633594e3081467078340358ef",
+    "owner_name": "Deependra Jain",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "3d76dddfbfc74f268c109a45369a0b52",
+    "last_used_date": "2/27/2023",
+    "owner_id": "4fc455a07d1941b49f90c57c198c724d",
+    "owner_name": "Dipali Kocchar",
+    "owner_post": "Constable",
+    "station_id": "623ff51bf351434484f52b88de257e0d"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "97d13bfb267541618b52ab3fe31ef9e7",
+    "last_used_date": "6/9/2023",
+    "owner_id": "2f76c9ed2e754bc09d0ef6eba74748db",
+    "owner_name": "Shakuntala Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "2b73b63c87e14163ae9a503cbc72a986",
+    "last_used_date": "7/1/2023",
+    "owner_id": "f6f3ecd7daff447e98413983e8ce59e8",
+    "owner_name": "Chitraksh Patel",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "b95acd9aa259400c8fcdde5c1671b0e5",
+    "last_used_date": "8/14/2023",
+    "owner_id": "b79ba793fc32414da031e523478e6513",
+    "owner_name": "Anandamayi Talwar",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "ca6a89052cb24ec8882d39dcf7018b49",
+    "last_used_date": "6/2/2023",
+    "owner_id": "f750dc81b3734701a8d42b4f90181a7f",
+    "owner_name": "Shwet Jha",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "bed3a3bb4e9b46d0b32c34d878f3a295",
+    "last_used_date": "12/25/2023",
+    "owner_id": "b7a8bd9994f04c4ba3fc6b0c9d3a136f",
+    "owner_name": "Apsara Jangid",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "248971316b0c4134818ee4b5fb485159",
+    "last_used_date": "2/1/2023",
+    "owner_id": "ff7f085a8a9e4452afb148049d7f167e",
+    "owner_name": "Sarada Embranthiri",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "18e14e3feca94a21b2dfe6d8a30b743b",
+    "last_used_date": "7/3/2023",
+    "owner_id": "9e31f5be26fe41da96362df89cb706a6",
+    "owner_name": "Bhagvan Pilla",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "8c7f77edd025467f858866ec8651a8fb",
+    "last_used_date": "11/12/2023",
+    "owner_id": "89e1cdac00ac4faaa1fe06883c5315ff",
+    "owner_name": "Gopal Shah",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "b665620452db4eb781ac733fbce9850e",
+    "last_used_date": "8/26/2023",
+    "owner_id": "1ed09111a9874f0ebe509eefa69cb754",
+    "owner_name": "Vyas Dwivedi",
+    "owner_post": "Head Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "2afdfb19aca34b2d86268aec0c55a3c9",
+    "last_used_date": "7/25/2023",
+    "owner_id": "b102b12f1be5497898d15a2a3bdae484",
+    "owner_name": "Himadri Dutta",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "9b1f2e5b8f044edca9f308871cc49070",
+    "last_used_date": "7/3/2023",
+    "owner_id": "ce683d1a11d3439fba20b7d88d724773",
+    "owner_name": "Anang Varma",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "0c761b2e55524ffb8ba039d4c90fa745",
+    "last_used_date": "9/9/2023",
+    "owner_id": "cafb0e0971074993a77acd1633107a8f",
+    "owner_name": "Mukesh Mehrotra",
+    "owner_post": "Head Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "842dadeb387847d09381e743fcbc94b8",
+    "last_used_date": "10/2/2023",
+    "owner_id": "37e4ae5301d944efb7ae9c130ddc509e",
+    "owner_name": "Deepesh Banerjee",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "f994023b113943a283ee88ce1629bd40",
+    "last_used_date": "6/22/2023",
+    "owner_id": "dafebc6376e9481f928dde9110baa6f9",
+    "owner_name": "Balachandra Ganaka",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "7f770501845b469e883c6a7aabb8add7",
+    "last_used_date": "5/10/2023",
+    "owner_id": "9c609d613d134f8989cd80c679df0717",
+    "owner_name": "Jagathi Singh",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "e682927b681f442d92274625a44aaa81",
+    "last_used_date": "2/5/2023",
+    "owner_id": "9e31f5be26fe41da96362df89cb706a6",
+    "owner_name": "Bhagvan Pilla",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "bfed7d71d6594d3e8498b69f60731dda",
+    "last_used_date": "8/25/2023",
+    "owner_id": "91eb1cc0580d4d02812c58c13091a842",
+    "owner_name": "Chandrakala Varman",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "f145c595180a41c285c4bb264eb1ee4c",
+    "last_used_date": "6/26/2023",
+    "owner_id": "c8c41617afdc4b848a53b4fb8d38b672",
+    "owner_name": "Anagh Varma",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "57ecad7c6d5346fea37d422c64301d10",
+    "last_used_date": "12/28/2023",
+    "owner_id": "abdf8e77af9946e1b7ad5f5adc2f3d47",
+    "owner_name": "Dandak Tagore",
+    "owner_post": "Head Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "84b93fccf732409c9c5eb7da619b73e9",
+    "last_used_date": "3/12/2023",
+    "owner_id": "27613e0ea15942aa905064fe804b93e9",
+    "owner_name": "Subhashini Mehra",
+    "owner_post": "Constable",
+    "station_id": "fd3140ef38734f65a20ba39fdbf05fc2"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "81f418734bf94bc8b9d1c989a68753fd",
+    "last_used_date": "10/22/2023",
+    "owner_id": "4db1b10fe00e4f4092aca53f103028b5",
+    "owner_name": "Baijayanti Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "1f84474c36a54526b9940a3d272716bf",
+    "last_used_date": "10/13/2023",
+    "owner_id": "be1df44635804051abb5622afaa47d58",
+    "owner_name": "Sloka Mishra",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "7ed355fb837e4cb5a65740602a9847de",
+    "last_used_date": "7/12/2023",
+    "owner_id": "156497f21f24419c801dfafb0846aa72",
+    "owner_name": "Sujata Bandopadhyay",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "83c6af0acba9484fba9dea5df69c57d0",
+    "last_used_date": "5/6/2023",
+    "owner_id": "c5c809dbdb6144d88d15fc785e8bd874",
+    "owner_name": "Aslesha Achari",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "347424c51d0445ab9dbc77b3765e99a8",
+    "last_used_date": "11/29/2023",
+    "owner_id": "1612e784d72c41958a2db84e6e9b6686",
+    "owner_name": "Narayan Khan",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "40d05ef86ff9485b9a9dcd445cd59dc2",
+    "last_used_date": "9/7/2023",
+    "owner_id": "e4ec9250112942aba7b10ad33d89dfed",
+    "owner_name": "Tushar Somayaji",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "3f66df9ccc7a435486d0f2b34c1390d6",
+    "last_used_date": "5/17/2023",
+    "owner_id": "8ad45274470c495e931591632efe3bc6",
+    "owner_name": "Chidambaram Kakkar",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "20fd75b48099475f8f19bd6f8203a8e0",
+    "last_used_date": "2/12/2023",
+    "owner_id": "c34b51bced964eaea4461c0c4cffcaca",
+    "owner_name": "Geeta Sethi",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "b7306a26e7834196bf5074ce61ecb96b",
+    "last_used_date": "9/13/2023",
+    "owner_id": "a554fa221b2f48d6896bc491f145cc7d",
+    "owner_name": "Jitendra Abbott",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "342523fe3a0a4797b6fadc1ace60799e",
+    "last_used_date": "12/9/2023",
+    "owner_id": "715309ded5134350b89f8b7e587c85a3",
+    "owner_name": "Bhanumati Ahuja",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "07b48416c57f4d1c836f9d05e7090672",
+    "last_used_date": "2/3/2023",
+    "owner_id": "4198d6b487054c45ba5923b1e7909856",
+    "owner_name": "Laal Gandhi",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "bf97100ab1f349f6b9407d2d279ce572",
+    "last_used_date": "8/21/2023",
+    "owner_id": "fbe69d5a7a36463aafdb8c1db783cd23",
+    "owner_name": "Garud Kocchar",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "a8a54140028049b182fec3ac3138b6b8",
+    "last_used_date": "3/3/2023",
+    "owner_id": "1fdeb5c3bd4e42668f2f6fea1049a7d2",
+    "owner_name": "Mangalya Iyer",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "abfb92595f6249f69a5efb6979fde715",
+    "last_used_date": "8/23/2023",
+    "owner_id": "82a23e8d78084e67bf60358c07e0c375",
+    "owner_name": "Ekadant Jangid-Ganaka",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "7630d07750964a12b9b9ac91e4b13c65",
+    "last_used_date": "3/2/2023",
+    "owner_id": "79f72c7198664721bf913d28a94210c8",
+    "owner_name": "Shrishti Kakkar-Naik",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "ba6fae8eeebe4cb7a605778331439845",
+    "last_used_date": "7/14/2023",
+    "owner_id": "89978f13404d425c97b2f6d1243ccd33",
+    "owner_name": "Asha Mahajan",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "186369fd354043d7b3d0143acd8eb2d2",
+    "last_used_date": "1/6/2023",
+    "owner_id": "c176df99b1aa4b98a6f5371b5d7ad7bd",
+    "owner_name": "Aditeya Khatri",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "ebaba95410474b87950ceb0530070d8c",
+    "last_used_date": "9/13/2023",
+    "owner_id": "6467dfa0ee93454ab8d1da8d88f415f1",
+    "owner_name": "Kamla Ganaka",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "2399686925984175b2b43559105142d5",
+    "last_used_date": "12/1/2023",
+    "owner_id": "9e0aae5f29454a2d8288f6aafc3bca8c",
+    "owner_name": "Chakradhar Chopra",
+    "owner_post": "Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "764909d50d594c28b895a60e7684b199",
+    "last_used_date": "5/14/2023",
+    "owner_id": "8509ea7c83a1468184fa721f0ee61d1b",
+    "owner_name": "Ranjeet Bhat",
+    "owner_post": "Head Constable",
+    "station_id": "847373f94b0749c1a9d37d5e1dcc55c8"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "ade0d4c335a64f54aa50d19070c2f611",
+    "last_used_date": "1/28/2023",
+    "owner_id": "3b3ac83561a5452598cf26fd989e461d",
+    "owner_name": "Krishnadas Guha",
+    "owner_post": "Sub Inpector",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "adff4120b3264290b8a8030fe80f4284",
+    "last_used_date": "7/1/2023",
+    "owner_id": "aef1661b0ae14effbada310102a5c27a",
+    "owner_name": "Balagovind Johar",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "fe57255a71b144948ecbf071e055f4f3",
+    "last_used_date": "2/17/2023",
+    "owner_id": "76b372db8a22421f80eec5bc1639b487",
+    "owner_name": "Chaitan Pilla",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "b8afc57f76874791aaf5bf3719c8c660",
+    "last_used_date": "10/23/2023",
+    "owner_id": "f98a8068dc67479e8c02093974b39698",
+    "owner_name": "Suryakanta Trivedi",
+    "owner_post": "Head Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "d6415b4468c84f9193c2c4ff66e30e3e",
+    "last_used_date": "12/14/2023",
+    "owner_id": "aca4aa0d0755421694f558fce28190d5",
+    "owner_name": "Chetanaanand Varman",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "928d0323cdb64d758a18a06b410ac329",
+    "last_used_date": "5/11/2023",
+    "owner_id": "fcd9280834b04a329a9c48000084ed27",
+    "owner_name": "Bhagirathi Nair",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "9f8816f281124883bdc4882ce2c30165",
+    "last_used_date": "8/8/2023",
+    "owner_id": "d54438577a664c8799fcbc2e0c475f09",
+    "owner_name": "Shivakari Joshi",
+    "owner_post": "Sub Inpector",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "42dfdd96cc3e4c5ab11e10899afaca22",
+    "last_used_date": "7/31/2023",
+    "owner_id": "2c6317f5ef804544b6a1c2cb270cebad",
+    "owner_name": "Gopi Reddy",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "6710802b1a114c009a66d36afeeacb5d",
+    "last_used_date": "7/12/2023",
+    "owner_id": "e0042d79bbca4fdb9b5d45ac6dea33d6",
+    "owner_name": "Chanda Varma",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "8ae480159f3147bd85c4faab64b00100",
+    "last_used_date": "11/29/2023",
+    "owner_id": "fc8b21d79e234129b02ea6c76dd39c1d",
+    "owner_name": "Deeptimoyee Chattopadhyay",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "5753cb45fb0c4870a5c7c587da400ed6",
+    "last_used_date": "1/20/2023",
+    "owner_id": "fc8b21d79e234129b02ea6c76dd39c1d",
+    "owner_name": "Deeptimoyee Chattopadhyay",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "ec2675d82412443883f79d4b37534fe4",
+    "last_used_date": "9/19/2023",
+    "owner_id": "193a637d8e154d129244f9b84b5de34c",
+    "owner_name": "Rageswari Chopra",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "58186cd1f2164492934d4572b0e1e338",
+    "last_used_date": "12/22/2023",
+    "owner_id": "62db8605239c4bcf8ffeb62d4342d7dd",
+    "owner_name": "Devika Gill",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "86a62e19a33a4c67b558c26b29cebbb2",
+    "last_used_date": "6/3/2023",
+    "owner_id": "a93348a77fa44e2f97528fdaca0aa29c",
+    "owner_name": "Bhaumik Chaturvedi",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "bb0f9ad1cd1f41a29e4c525b8b88f967",
+    "last_used_date": "2/13/2023",
+    "owner_id": "ba803f3aace248f9b83d597314a584d6",
+    "owner_name": "Swami Jain",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "b0ece1ac78464070aaa059bf3c8c9e6a",
+    "last_used_date": "4/24/2023",
+    "owner_id": "c86be81d31f247b0866ade527ed35093",
+    "owner_name": "Dhatri Patil",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "411df6acd0d042148d74eb2064b57998",
+    "last_used_date": "8/6/2023",
+    "owner_id": "78925761d2784b258aac19891d2dc662",
+    "owner_name": "Raj Bharadwaj",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "bb6fcb1e724c4adfa640e70266a10fb4",
+    "last_used_date": "12/10/2023",
+    "owner_id": "04a98d02ade64398aa71331ada50360f",
+    "owner_name": "Lal Varma",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "e1d9ad9be0ec4b048ac7645a70d46585",
+    "last_used_date": "10/24/2023",
+    "owner_id": "e66ff915e721460fb19e0d9a9cb55128",
+    "owner_name": "Anasuya Shah",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "85cbf11f56484e5a8b8d81728b7fcabc",
+    "last_used_date": "8/23/2023",
+    "owner_id": "8b49fb0bc89a467395f93d7cb11c41bd",
+    "owner_name": "Bhagwati Gowda",
+    "owner_post": "Constable",
+    "station_id": "95c25cdc19e74e8491ce1cf8a18c7121"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "4d2e3ed3b9bd4d64a22ae68b9a237e18",
+    "last_used_date": "5/26/2023",
+    "owner_id": "a79f4e463d4a4af1949645717c53e345",
+    "owner_name": "Dandak Pilla",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "cb31f323711d43b69661d68cb3dcb50e",
+    "last_used_date": "6/5/2023",
+    "owner_id": "f75cb33139dc4ac091f6523032839934",
+    "owner_name": "Pran Khanna",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "2bea39146e40477aaf3d2dbedd806ba9",
+    "last_used_date": "6/19/2023",
+    "owner_id": "22198534efd8406883e6a2ec87e75996",
+    "owner_name": "Ravi Gandhi",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "6077810c156549fc8c3fb98ce0fe553f",
+    "last_used_date": "9/26/2023",
+    "owner_id": "b6c8d5af93ff4e2894305b306c75b00b",
+    "owner_name": "Preity Khatri",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "ba5e967c96d44456b1a17eccbd62ccbc",
+    "last_used_date": "9/18/2023",
+    "owner_id": "2f217af537394a0a828ca2c83372c146",
+    "owner_name": "Vishnu Khan",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "0db989d227f64bfab38d992768458a01",
+    "last_used_date": "8/13/2023",
+    "owner_id": "09ec8ead83d44642afe70bd9547a0ab7",
+    "owner_name": "Leela Bhat",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "412abf8470eb41609123c8c121981437",
+    "last_used_date": "10/14/2023",
+    "owner_id": "25a0475e955c4286b23c1d2db5a11910",
+    "owner_name": "Damodara Varman",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "8d2458ed72f7445cac2c1081b9ffdf53",
+    "last_used_date": "7/25/2023",
+    "owner_id": "1eca1a2dc1324b5e9a05aa169852df19",
+    "owner_name": "Shashikala Butt",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "ed55a51023144ffeb6a59e3a317ddc40",
+    "last_used_date": "8/17/2023",
+    "owner_id": "16ed3785a8c44594a071cf7f33568725",
+    "owner_name": "Jagadish Sinha",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "0751770b2dc5460eb4ff1a2c3b3d79d2",
+    "last_used_date": "11/22/2023",
+    "owner_id": "9d5d7256c65f44deb5be6e9ade99d2a8",
+    "owner_name": "Ayushmati Nambeesan",
+    "owner_post": "Sub Inpector",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "afed1566b0b64d2bad9a49c0a434fec3",
+    "last_used_date": "9/20/2023",
+    "owner_id": "f75cb33139dc4ac091f6523032839934",
+    "owner_name": "Pran Khanna",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "e19ff509776d4bf6a0d0d503e64e7016",
+    "last_used_date": "11/23/2023",
+    "owner_id": "802d6ad3ed5b4f9691304e197ee83764",
+    "owner_name": "Chandrabhaga Iyer",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "88afa3b974964addbd1d8e96e8135c5e",
+    "last_used_date": "12/28/2023",
+    "owner_id": "f426af5fb177400ebfee8b77540a3914",
+    "owner_name": "Adheesh Reddy",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "4fd7847f09c9448284d38d9c0a9ee97d",
+    "last_used_date": "7/12/2023",
+    "owner_id": "b16e1a7f64e8439094c60da64d52c0ba",
+    "owner_name": "Chandramani Varma",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "211d607650654e3f93ce95464f2af93b",
+    "last_used_date": "12/16/2023",
+    "owner_id": "4d4388634931426fbe0217d2e57eed31",
+    "owner_name": "Chandni Joshi",
+    "owner_post": "Sub Inpector",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "64a7265208da433880f1b27e71cadee3",
+    "last_used_date": "8/13/2023",
+    "owner_id": "2b8168a582c94416a20985be041cc674",
+    "owner_name": "Deeksha Bhat",
+    "owner_post": "Head Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "1fb4569de00a4063b69274fc38e96fd8",
+    "last_used_date": "8/25/2023",
+    "owner_id": "a081ac4ad022476a8b67ad2c8afde2f7",
+    "owner_name": "Dipankar Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "21a226f22c9549bbbf29c921c2616df0",
+    "last_used_date": "10/6/2023",
+    "owner_id": "afe31c66df024f68a838d5da0bb81a50",
+    "owner_name": "Kin Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "86b99ba6c09e483c808c463e7f93fe13",
+    "last_used_date": "10/27/2023",
+    "owner_id": "f09e455006914d8e81a901206505b7c6",
+    "owner_name": "Rageshwari Jain",
+    "owner_post": "Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "b3774101b6b4424591fce1c7ace9e0e6",
+    "last_used_date": "10/4/2023",
+    "owner_id": "f574d7c2bb5d4f448a3ab2f7979b32b8",
+    "owner_name": "Kumuda Gandhi",
+    "owner_post": "Head Constable",
+    "station_id": "af5060aef8bc4a76abbeed78ea3c5f98"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "120fd8ac1f234d3d81f2e6b57a410256",
+    "last_used_date": "3/3/2023",
+    "owner_id": "4741f133367343f689800302352e57d8",
+    "owner_name": "Sarla Devar",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "4637ec8dc00446d0a76a9b105523e958",
+    "last_used_date": "10/19/2023",
+    "owner_id": "64d2b7161b0a48d2922af28a300baff1",
+    "owner_name": "Shashi Devar",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "5292338eba684b61af5537e67ffba6dd",
+    "last_used_date": "3/5/2023",
+    "owner_id": "a9c7a04db21e4f709756b202dd9f6316",
+    "owner_name": "Kamalesh Verma",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "e11a4a8058864fb2a646caad49958e83",
+    "last_used_date": "4/26/2023",
+    "owner_id": "2d9e6e1efb254a39a25d8fe47e384817",
+    "owner_name": "Deeptimayee Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "8f18d88b083e425ba3e767aed4242891",
+    "last_used_date": "11/17/2023",
+    "owner_id": "4d1c87f7b3fa4294ab3eae71de230d5f",
+    "owner_name": "Chaitan Khanna",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "ff353392d2f64e66bd794f5dab2b159f",
+    "last_used_date": "9/17/2023",
+    "owner_id": "002341dc20364d6da90afdb73d1b082f",
+    "owner_name": "Trilok Sinha",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "c326d969dad54d3ba6bf2930ccf7b9e7",
+    "last_used_date": "7/8/2023",
+    "owner_id": "a9dd4395eb504fbca4d8b4cc11def871",
+    "owner_name": "Dipankar Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "545c40f4fd4f40f795690383e4e554c5",
+    "last_used_date": "2/18/2023",
+    "owner_id": "4134dca22e844cb799ba37e095fe250e",
+    "owner_name": "Yogesh Tandon",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "5b76632b19964f6ea1c7357c9fc80089",
+    "last_used_date": "10/20/2023",
+    "owner_id": "65159039757441eda3892236f1a79fa2",
+    "owner_name": "Bandhu Arora",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "b7b9939720f54e67b0197edbc2445caf",
+    "last_used_date": "10/26/2023",
+    "owner_id": "ef62e950e3404128bad3264d298a2349",
+    "owner_name": "Chandini Khatri",
+    "owner_post": "Sub Inpector",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "bf4c126d83cd4761a99f2f5fd8946ad6",
+    "last_used_date": "1/25/2023",
+    "owner_id": "0d764e8fe9f745399fd3b659d5587df8",
+    "owner_name": "Dhanesh Bandopadhyay",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "d13533f059574e21bbab79d856a9b6f7",
+    "last_used_date": "7/30/2023",
+    "owner_id": "3fa09e4b24404115a337fd5d97d450bf",
+    "owner_name": "Dinakar Somayaji",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "bca0b19c08414c1ebb4cdc3c8fd85ca1",
+    "last_used_date": "2/20/2023",
+    "owner_id": "f3ef613ac529449eb75659fe4d70e946",
+    "owner_name": "Deeptimoyee Tandon",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "cb63620ad9d74a8c8fe154f071f694a1",
+    "last_used_date": "8/7/2023",
+    "owner_id": "242a11547e5d427f9b85875f57b4230b",
+    "owner_name": "Abhirath Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "6e0fc803202b4ae5b0aec77f0dec6490",
+    "last_used_date": "12/9/2023",
+    "owner_id": "54123f079a1f4d4f87605e095fe7e6d7",
+    "owner_name": "Jagathi Panicker",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "718ac15d6a464f6db72b922a09c985b9",
+    "last_used_date": "9/12/2023",
+    "owner_id": "a76613a2de634ce3a4b0fe2978218285",
+    "owner_name": "Deepali Marar",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "a63604b36a154fd5acf2ad5765719127",
+    "last_used_date": "6/5/2023",
+    "owner_id": "4048723c6f5b42cabac6f948d19bc793",
+    "owner_name": "Heema Rana",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "c5833e27e9624672b80a43a930ab5bf2",
+    "last_used_date": "12/2/2023",
+    "owner_id": "f07f8b45567f4c74b651193686808fa1",
+    "owner_name": "Deb Tandon",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "f87c390efc16470a8bc13f938c5f7e6f",
+    "last_used_date": "3/23/2023",
+    "owner_id": "ffd64ac0cace4cd9891563a4145eccc7",
+    "owner_name": "Geetanjali Panicker",
+    "owner_post": "Head Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "7e10f3d7b73f4d44949fb17e18f3597c",
+    "last_used_date": "7/19/2023",
+    "owner_id": "222cd68d6ece4bcc86369051709ce069",
+    "owner_name": "Suresh Jain",
+    "owner_post": "Constable",
+    "station_id": "63b86e707ddf4585928cf49f99cc384e"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "11e9e101c97349d5b8e6a3f980522f84",
+    "last_used_date": "7/25/2023",
+    "owner_id": "6795d60e49ca470c8cca6c08150b4195",
+    "owner_name": "Vaishnavi Khatri",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "9afe1dc4febc49ed9c134915ff253045",
+    "last_used_date": "5/28/2023",
+    "owner_id": "6bc1f196b12d4c3cb38831c83811f44e",
+    "owner_name": "Hiranmay Kakkar",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "12c09ca888f0464bb75b259a6c722b92",
+    "last_used_date": "12/10/2023",
+    "owner_id": "cfb9e8ddf3774cb3aea2e0b1dd382dc8",
+    "owner_name": "Ojaswini Mukhopadhyay",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "1afdaa3441834d55ad894d5f0fb40b96",
+    "last_used_date": "7/7/2023",
+    "owner_id": "e6d78d739c784be289e254c6a182cd09",
+    "owner_name": "Geeta Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "407f2ebe23b94bae91ae17151edbbd9f",
+    "last_used_date": "1/29/2023",
+    "owner_id": "cd2e262e32ac483985aee73c56d0e094",
+    "owner_name": "Ojaswini Arora",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "bcfa7bdd479349f294d743e3b176cdb1",
+    "last_used_date": "11/17/2023",
+    "owner_id": "be25827729f147388dce1808e088bdbd",
+    "owner_name": "Udai Shah",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "58b9d684ee40422d9e23903141db9d82",
+    "last_used_date": "9/30/2023",
+    "owner_id": "e95ffdb03d6e4fb98b3e71343a1e8afd",
+    "owner_name": "Aryan Banerjee",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "f3c15b99be804ee5869e32c9624bd67f",
+    "last_used_date": "2/26/2023",
+    "owner_id": "91fafb393f2b4d31aac99f73d3114500",
+    "owner_name": "Trisha Jha",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "8442358682054598b9760af2a6410506",
+    "last_used_date": "9/29/2023",
+    "owner_id": "5ebdc909d8b644e0bda4f0df8fdcfc53",
+    "owner_name": "Hiranya Achari",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "4440e26c632e48e6a0041bf4640533eb",
+    "last_used_date": "10/14/2023",
+    "owner_id": "5a4419158ccd493c896cd28d20c9f879",
+    "owner_name": "Chidambar Jha",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "eb98e27ebc16433f8d93c5255b18a729",
+    "last_used_date": "1/9/2023",
+    "owner_id": "b8fd2cf811ae437ca9d4adea7b7861f5",
+    "owner_name": "Rajan Kaur",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "416e8add093342ba9adf3f93fe3df758",
+    "last_used_date": "3/27/2023",
+    "owner_id": "7657d23b38ee4a8cb3710c8c8ce3f1b7",
+    "owner_name": "Chandravati Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "599c6ce1454e4289bbad532cb5177b91",
+    "last_used_date": "2/15/2023",
+    "owner_id": "30a358eba34a46e3a37c004aee8ed973",
+    "owner_name": "Urmila Dutta",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "24817203e18d4804a65767ffd0c0351d",
+    "last_used_date": "12/6/2023",
+    "owner_id": "b78d8311283248bb8a5af79d7f6231ba",
+    "owner_name": "Shakuntala Johar",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "c1005a272ce04f3e8232adc7ad3e1f4b",
+    "last_used_date": "10/12/2023",
+    "owner_id": "0bfcd140269344478d4e2ba3850a5e84",
+    "owner_name": "Amaranaath Khanna",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "1934c22ee3684a6fac6bf8b3111332e2",
+    "last_used_date": "8/31/2023",
+    "owner_id": "5c1569bd6dcb4dd0a3a6f0ce855dc405",
+    "owner_name": "Shivakari Sharma",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "9b6898ff1f4b43fdac1e5cc3556a1320",
+    "last_used_date": "3/20/2023",
+    "owner_id": "cfb9e8ddf3774cb3aea2e0b1dd382dc8",
+    "owner_name": "Ojaswini Mukhopadhyay",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "04bd252111434f4cb5131777df9812f2",
+    "last_used_date": "8/8/2023",
+    "owner_id": "b0fb8a04e0fa48f3aa7382d0f2796131",
+    "owner_name": "Avadhesh Mahajan",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "a44ecef157b44192807ffd0d704fc8e7",
+    "last_used_date": "9/12/2023",
+    "owner_id": "f7772ec4b8eb4f1c95736cd23445beda",
+    "owner_name": "Manisha Nair",
+    "owner_post": "Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "9a2926df1fc14431894649bc66057121",
+    "last_used_date": "10/13/2023",
+    "owner_id": "1d39fdf8acad49a385d27a836457faf0",
+    "owner_name": "Lai Dutta",
+    "owner_post": "Head Constable",
+    "station_id": "5ac0f9a0498240b1a2fe740fd0a4930f"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "0c6e7eae44444b7f8f474099c114ec02",
+    "last_used_date": "5/28/2023",
+    "owner_id": "300698d92cf84dc4a979fb16eaf3bb7a",
+    "owner_name": "Tanya Banerjee",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "1ebed1096bb64cc69a17082e8466684c",
+    "last_used_date": "12/12/2023",
+    "owner_id": "ad9ec3afd7a548c587b4d363fe4cd439",
+    "owner_name": "Akshata Pillai",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "a1abce83423f4e8ca4523257f0f424b7",
+    "last_used_date": "4/20/2023",
+    "owner_id": "09924a8a6817415aa1c9959a393ebc06",
+    "owner_name": "Padma Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "98500ba48c3d4293858067021758e9cb",
+    "last_used_date": "12/5/2023",
+    "owner_id": "372fdd6b53414199bc6106e6164e9c4e",
+    "owner_name": "Shobhana Chopra",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "559175fc3ae14d9aa9f05a0523dc5639",
+    "last_used_date": "2/2/2023",
+    "owner_id": "3ea70455b6c04ea582b1ef2f4c708559",
+    "owner_name": "Deb Kakkar",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "c3e4945bf6304175870ae9edc6f0da67",
+    "last_used_date": "10/9/2023",
+    "owner_id": "7fb41626ef004be79dce4be3183ab780",
+    "owner_name": "Adhiraj Khanna",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "1c361c677af54ffeaf1b8fdac67f8dfc",
+    "last_used_date": "11/20/2023",
+    "owner_id": "98eb2c1e2f4141028407953209d77216",
+    "owner_name": "Kalinda Agarwal",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "40cbdd15ca954ac8ac9dc8a6b482980f",
+    "last_used_date": "3/20/2023",
+    "owner_id": "cb09f21a87f840cfb9f3ba97d53c7b32",
+    "owner_name": "Agneya Nayar",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "a0bed60de1ff46d98c6e001751c0cb27",
+    "last_used_date": "4/9/2023",
+    "owner_id": "66018ed750d84e76af6279c8f8a49323",
+    "owner_name": "Chandraayan Verma-Suthar",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "84541efd74034ec9b12bc80ae48944cc",
+    "last_used_date": "6/10/2023",
+    "owner_id": "a9a9ab60886a4ad4905d8ae151668476",
+    "owner_name": "Akshayakeerti Dutta",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "8f0431fb4316441aa722e0b266b13d91",
+    "last_used_date": "6/10/2023",
+    "owner_id": "971de3dbf4a54cb8b7af475be1bef5f1",
+    "owner_name": "Kamala Saini",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "699104104e1e400db92e4180f4b5513b",
+    "last_used_date": "1/10/2023",
+    "owner_id": "300698d92cf84dc4a979fb16eaf3bb7a",
+    "owner_name": "Tanya Banerjee",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "2ff9556ee67446cf91c97b011d48a641",
+    "last_used_date": "8/1/2023",
+    "owner_id": "725c02d439194abf94d3a766fa7bcb46",
+    "owner_name": "Rahul Bharadwaj",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "0592f5bf7cdd4dba844c7861b597ae03",
+    "last_used_date": "3/6/2023",
+    "owner_id": "4b7539c6cc9e4605bc4b22446298d27e",
+    "owner_name": "Tushar Abbott",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "b7230961f6854b698e444a84e721166a",
+    "last_used_date": "3/2/2023",
+    "owner_id": "65a499615bab48e99cd14b5b305249c9",
+    "owner_name": "Gotum Dhawan",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "6d026a04fc864de8af8f3778498c2bd4",
+    "last_used_date": "7/12/2023",
+    "owner_id": "3829eb9012de496dbda3fbff24fb81ce",
+    "owner_name": "Chandrakala Gandhi",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "02ab259bd1df40dd8fa981030739f082",
+    "last_used_date": "1/10/2023",
+    "owner_id": "b7aad34d3dc043a3a6b54f28acfb51f6",
+    "owner_name": "Bandhul Bhat",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "9bd46c1ebc614ad58407b6d559c7468b",
+    "last_used_date": "11/5/2023",
+    "owner_id": "6a8466aad01a4c7bbb47cd765c780767",
+    "owner_name": "Chinmayananda Gill",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "f07229f3153b4094b4c3f3d8beacb646",
+    "last_used_date": "11/19/2023",
+    "owner_id": "e4ce6093413e4ba2b162256a45e50ff7",
+    "owner_name": "Chatura Khatri",
+    "owner_post": "Head Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "0bda3ac1702b439c8a2a9d995b85af9a",
+    "last_used_date": "4/8/2023",
+    "owner_id": "839aa74cd82145e283bec13af36611d9",
+    "owner_name": "Avantika Dwivedi",
+    "owner_post": "Constable",
+    "station_id": "7c48c083abfd49c3b571d62f99d8efb0"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "424c9e17b7354a0da6daffb7e60248e1",
+    "last_used_date": "1/13/2023",
+    "owner_id": "fa3bd362917e459c9edcef40b21585d2",
+    "owner_name": "Aadi Kaul-Butt",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "10f7de38317f46df93679f24fb239c0e",
+    "last_used_date": "1/1/2023",
+    "owner_id": "8207cdc3513245998b7fd00226e0ecde",
+    "owner_name": "Purnima Bhat",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "b07e2ff88c3141cb96cf1a1abdb88243",
+    "last_used_date": "1/17/2023",
+    "owner_id": "11eaba49183e4f2ca1d3571820c221e3",
+    "owner_name": "Bahula Chaturvedi",
+    "owner_post": "Sub Inpector",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "c2501d0d3f3a42858ea64f6ef8440a4c",
+    "last_used_date": "8/24/2023",
+    "owner_id": "62fdd744c671430e9b17031795dbf668",
+    "owner_name": "Aslesha Marar",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "85a2090d2e9b482a84684b01f95f8870",
+    "last_used_date": "9/3/2023",
+    "owner_id": "fe5e3c4009db432d9eb0188aaffdbae8",
+    "owner_name": "Lila Joshi",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "3e88dae79d1c4b70ace7001e4c802ee3",
+    "last_used_date": "1/1/2023",
+    "owner_id": "47c6ce0a7cbf4aa5b0ca88dcee5e90a3",
+    "owner_name": "Anjushri Varrier",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "a467e0eb9c8c4fe4a474a71698f3ca78",
+    "last_used_date": "11/14/2023",
+    "owner_id": "77c1d6b4611245bb990db53ddb4a9921",
+    "owner_name": "Sucheta Butt",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "caab7f574e24459088eff2fc82e202bc",
+    "last_used_date": "11/16/2023",
+    "owner_id": "c9dd97b1fac541e285d7cffe353f648f",
+    "owner_name": "Aatreya Naik",
+    "owner_post": "Head Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "91087479e552434888a114df49f1654d",
+    "last_used_date": "11/15/2023",
+    "owner_id": "6fb378fbc4d44c4bae162ce5b07d2cce",
+    "owner_name": "Suryakant Bhattacharya",
+    "owner_post": "Head Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "a340abfc22b346c7bc580742f7c60fd7",
+    "last_used_date": "12/27/2023",
+    "owner_id": "112c71cd5cee4ce4adb545ce1332e6a0",
+    "owner_name": "Apsara Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "6d6b38f122ec44c6b7d671a53d377c8c",
+    "last_used_date": "9/18/2023",
+    "owner_id": "deff441ad04d4b78939c3033dd4705bc",
+    "owner_name": "Jagadisha Varrier",
+    "owner_post": "Head Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "f5e26236b849498cbcb5e8d26b955f63",
+    "last_used_date": "12/1/2023",
+    "owner_id": "f40040bf119f45bbba8293e96aefb986",
+    "owner_name": "Baalaaditya Bhattacharya",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "c0e52a9207a2415f994e30ae80cf3295",
+    "last_used_date": "5/21/2023",
+    "owner_id": "6779a2ec157945279d9feac5de772100",
+    "owner_name": "Dayaananda Kaur",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "b997bd67d7844efab65d80b86644a7cb",
+    "last_used_date": "12/3/2023",
+    "owner_id": "f40040bf119f45bbba8293e96aefb986",
+    "owner_name": "Baalaaditya Bhattacharya",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "999b81390b174de1a5e5d986119b2170",
+    "last_used_date": "4/19/2023",
+    "owner_id": "350fa12556344ed9870979f7aebad3a2",
+    "owner_name": "Devadatt Rana",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "907545a6c25b4447a7bcfe88f071fd13",
+    "last_used_date": "4/7/2023",
+    "owner_id": "24499f4d63f6417c983e64663b8dd592",
+    "owner_name": "Sarisha Agarwal",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "a84e46ad4f464c0ebee2d2c07786e095",
+    "last_used_date": "5/21/2023",
+    "owner_id": "02de9729aaff446f98417a5a080a5169",
+    "owner_name": "Sarisha Tagore",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "9ef382ae575a469188a2d1bdb2d97ade",
+    "last_used_date": "5/23/2023",
+    "owner_id": "00fc94f66af64b8eb5cc80a2085405b8",
+    "owner_name": "Deepali Mahajan",
+    "owner_post": "Head Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "0a28ae9a41254966b1a635b8cf938d5f",
+    "last_used_date": "2/2/2023",
+    "owner_id": "9bdd8e81b9ad4d29925ff5193a1fa49e",
+    "owner_name": "Aishani Dhawan",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "4ed0aad3e1454faa849d9af71ca252ea",
+    "last_used_date": "1/6/2023",
+    "owner_id": "3915fd5c48fd414aa699373db4859877",
+    "owner_name": "Kalpana Sharma",
+    "owner_post": "Constable",
+    "station_id": "df8bd5c9e1a84ef2ab0772ef3afd4b2b"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "551cddd522d74f58a457d8ba5035703b",
+    "last_used_date": "3/25/2023",
+    "owner_id": "d6f31e2a4bce454e9b6c770b7bb50a53",
+    "owner_name": "Ramesh Desai",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "640eb7f0c08047019779db6bbdc4cfb6",
+    "last_used_date": "6/4/2023",
+    "owner_id": "2752106f02094107a7a8ab5c9a7866bd",
+    "owner_name": "Ahilya Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "4e8c8ae743f34dabb6c20ec390e12c3c",
+    "last_used_date": "12/4/2023",
+    "owner_id": "6cc3c4350dcb436eadd74a5c06fc0feb",
+    "owner_name": "Shreyashi Gill",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "aa9b38d64c644945a7fc921ef85c7e20",
+    "last_used_date": "5/28/2023",
+    "owner_id": "3603eebce2ea4a868dc52c77cab7e646",
+    "owner_name": "Aslesha Somayaji",
+    "owner_post": "Head Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "04517e9c5d9b4a31980da632f78f31e7",
+    "last_used_date": "12/8/2023",
+    "owner_id": "81a952588fbb4b07bbb1055d7279f3df",
+    "owner_name": "Sushma Mishra",
+    "owner_post": "Head Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "d658326c22244142b44d14db2e627c64",
+    "last_used_date": "9/9/2023",
+    "owner_id": "2752106f02094107a7a8ab5c9a7866bd",
+    "owner_name": "Ahilya Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "6fc48803b588418980d0cf1868360dad",
+    "last_used_date": "12/2/2023",
+    "owner_id": "423e8129a8e54b699644fff13f9dc32d",
+    "owner_name": "Dron Khanna",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "b81fdd5c4d9c41e295d1b893e966cddd",
+    "last_used_date": "6/14/2023",
+    "owner_id": "63ce66310a754c9e884e3daae4482cb1",
+    "owner_name": "Anwesha Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "83c028d718e547c89dbd71a2c875a734",
+    "last_used_date": "6/19/2023",
+    "owner_id": "8205f72c37d64fe588b6b3242dbfb779",
+    "owner_name": "Prathamesh Pillai",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "a1fa63c24aaf40299f9a97580c02b08a",
+    "last_used_date": "12/3/2023",
+    "owner_id": "b00f15f1adf5479ba037db6b091acdb7",
+    "owner_name": "Anasooya Jangid",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "e05659e9d21746b2a7d3cdb9c5ab5ad2",
+    "last_used_date": "6/5/2023",
+    "owner_id": "489da9b0d3c9431ebad422579556d3e9",
+    "owner_name": "Chaturaanan Guha",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "3af873ae5f9e4247a9355d5aad8087e0",
+    "last_used_date": "3/4/2023",
+    "owner_id": "423e8129a8e54b699644fff13f9dc32d",
+    "owner_name": "Dron Khanna",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "bb5bb42860e74a82b68c0a2537dbcf7d",
+    "last_used_date": "7/13/2023",
+    "owner_id": "edc9e2fd2ab54c0eae7639ada70565c0",
+    "owner_name": "Anang Asan",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "6bc68c8d085647cb99db4c9dd8cd681d",
+    "last_used_date": "11/8/2023",
+    "owner_id": "90331fee52ee48e488564c2d7b732538",
+    "owner_name": "Amrita Dhawan",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "c91d3db05cb54041b3092be1f2941972",
+    "last_used_date": "3/23/2023",
+    "owner_id": "9f247c05965c46be9ebabe6d3094c80c",
+    "owner_name": "Chinmayanand Dhawan",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "c62c3e314b8c4597bd9a86d645baf9c9",
+    "last_used_date": "12/18/2023",
+    "owner_id": "5024ec0646764455bf86e460a5b2ee1d",
+    "owner_name": "Vrund Namboothiri",
+    "owner_post": "Head Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "1026e750cf5a440f88142886b3a02db2",
+    "last_used_date": "9/13/2023",
+    "owner_id": "eb552d5c340041af89a829d62ed9aefe",
+    "owner_name": "Amrita Bhat",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "0b337715d7334f9a87384cf5f2aa61e7",
+    "last_used_date": "2/21/2023",
+    "owner_id": "dc3ecd0c804744698610598e5c5c24f1",
+    "owner_name": "Jai Agarwal",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "3e6912e367df4a58bd9c7d0ff2e274b1",
+    "last_used_date": "12/13/2023",
+    "owner_id": "a6d13dbdf5b4454eb294fed80f326e55",
+    "owner_name": "Dakshayani Sethi",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "3bad50d74f1c4fc7bab4726103a5cf47",
+    "last_used_date": "3/11/2023",
+    "owner_id": "8a72f0d1f23647dba082a937f4a3324b",
+    "owner_name": "Dhatri Khan",
+    "owner_post": "Constable",
+    "station_id": "d7010ec0abb74196aa1fcd617fb61930"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "9e793ba740854a8f8ded1df21647943a",
+    "last_used_date": "10/12/2023",
+    "owner_id": "6bbd9741ce454bbbbc08dbb14afd7d21",
+    "owner_name": "Bhagirathi Ganaka",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "5b12bbbfc25f4128883d80496f89d41c",
+    "last_used_date": "5/25/2023",
+    "owner_id": "d0cc589f262649f593a65835d66d8864",
+    "owner_name": "Arnesh Menon",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "f255910b196c4c54982b81baf5490caa",
+    "last_used_date": "11/8/2023",
+    "owner_id": "a7c8bbb0a8f348c6ae1778e03c7fd158",
+    "owner_name": "Tanya Achari",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "8370d5be57e14bc58869c084a451f03b",
+    "last_used_date": "6/1/2023",
+    "owner_id": "bd47f5fdad1f41debe4d5ad457c19ff2",
+    "owner_name": "Chapala Khanna",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "70319d804c5d43cf8b0045b023a0558e",
+    "last_used_date": "3/25/2023",
+    "owner_id": "2d31a3ba1588415994e62f17dba8fc79",
+    "owner_name": "Devika Dutta",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "7e7d91c9b66047be9e617693a726999a",
+    "last_used_date": "11/30/2023",
+    "owner_id": "402ee10d888b4cb696294eb9d6c48a39",
+    "owner_name": "Enakshi Tandon",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "4aa26b597ea1452294b90f1494cfa903",
+    "last_used_date": "10/3/2023",
+    "owner_id": "d2c93988e9e142d8b88a0758a08de67a",
+    "owner_name": "Acaryatanaya Malik",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "8890e7cdf30249469c6f4758eceeaea2",
+    "last_used_date": "8/23/2023",
+    "owner_id": "a7c8bbb0a8f348c6ae1778e03c7fd158",
+    "owner_name": "Tanya Achari",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "011c79b954954b63918a72e29afe3ead",
+    "last_used_date": "12/28/2023",
+    "owner_id": "f42b160653db4c0fb3ca0639918dc71a",
+    "owner_name": "Vyas Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "1b1d9cbdd8a14f19b84568bddb12c6ff",
+    "last_used_date": "10/28/2023",
+    "owner_id": "d56a23b0da314dd5bee991a590afe68e",
+    "owner_name": "Anasuya Tagore",
+    "owner_post": "Head Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "7dbcaeb675a142ba88e3afef41f6aa4f",
+    "last_used_date": "7/22/2023",
+    "owner_id": "b03da87306404d98addeab0259065edd",
+    "owner_name": "Tanirika Shukla",
+    "owner_post": "Sub Inpector",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "0ca623029df34649be2ad009a8ee1450",
+    "last_used_date": "1/15/2023",
+    "owner_id": "83e4328e7cb74ebd9c9107f09739d596",
+    "owner_name": "Indira Agarwal",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "cb5129a8c1d246ee81cf03631ee7b3f8",
+    "last_used_date": "1/17/2023",
+    "owner_id": "cab60e57d86e4c29afcde815616f45bd",
+    "owner_name": "Manisha Reddy",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "a5756f79876e44ecb148c004293d1de8",
+    "last_used_date": "9/25/2023",
+    "owner_id": "d9590c8029ab4d25bf77edbe49ceabd0",
+    "owner_name": "Kanishka Chattopadhyay",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "0751d4f0fac54639b9cab3bb3c5183ac",
+    "last_used_date": "4/25/2023",
+    "owner_id": "dd58efd030534e1aa0b240815b829c4b",
+    "owner_name": "Darshwana Shukla",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "3f84103c953a404c9674f336caa3c2a1",
+    "last_used_date": "6/5/2023",
+    "owner_id": "6bbd9741ce454bbbbc08dbb14afd7d21",
+    "owner_name": "Bhagirathi Ganaka",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "a15a2bc298de46d788dac8f974f48f8c",
+    "last_used_date": "12/8/2023",
+    "owner_id": "f184a91043104f149b692adf97b32abd",
+    "owner_name": "Gobinda Gowda",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "d34f52eb72664a4a8944f2e67e5f9d08",
+    "last_used_date": "3/21/2023",
+    "owner_id": "56680aac377c4a33941b2efee9f5ee2d",
+    "owner_name": "Ganaka Devar",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "a4f9a7ece2fb4647b9e3477bc1fb42ad",
+    "last_used_date": "4/9/2023",
+    "owner_id": "4148f4c174fe4302814bb57c16787824",
+    "owner_name": "Diksha Gowda",
+    "owner_post": "Head Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "0e35fef644c841af84079f447c5e49dc",
+    "last_used_date": "5/9/2023",
+    "owner_id": "526448e658be4694b80f30945892cb35",
+    "owner_name": "Gatik Embranthiri",
+    "owner_post": "Constable",
+    "station_id": "3ed492981fbb406fa093efaf58c71442"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "0f17cb5269084a469af8a6c7d6b4114c",
+    "last_used_date": "4/10/2023",
+    "owner_id": "69763e1bac824cb4922b152325a226ea",
+    "owner_name": "Krishnadas Singh",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "42469b147dcd4d25a64a1268bf075171",
+    "last_used_date": "9/5/2023",
+    "owner_id": "034b5e2852164ebbb32787d8383b8356",
+    "owner_name": "Chetan Pandey",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "06899ebf0fc44e7da2cf134738b32a35",
+    "last_used_date": "10/6/2023",
+    "owner_id": "afe45184580d4729a58770bec237a4e3",
+    "owner_name": "Samir Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "5ebad3efd489404184d6ac08289094bf",
+    "last_used_date": "12/22/2023",
+    "owner_id": "de3c4d7a0c784e2b8c3fa6a20453f725",
+    "owner_name": "Chakravartee Jain",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "82aaea254cb2406096a6f623c87459ee",
+    "last_used_date": "12/30/2023",
+    "owner_id": "3dfba77949f34395af8bf21b6ad7f466",
+    "owner_name": "Dhanpati Iyengar",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "da8a5927c73b41788bfec92595586c7f",
+    "last_used_date": "8/10/2023",
+    "owner_id": "8320e31bffcf4a74aba88d80b2c3df32",
+    "owner_name": "Vedang Nehru",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "bce25829612f45cc86ab71f599c3cd27",
+    "last_used_date": "1/8/2023",
+    "owner_id": "8e65af3fde48495ebe100700cda45fe5",
+    "owner_name": "Chitramala Agarwal",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "c0546e2ad18945aabdd60d3a88f1b641",
+    "last_used_date": "6/23/2023",
+    "owner_id": "e31c0f114657479ab419e8a3aa49966a",
+    "owner_name": "Ankal Khanna",
+    "owner_post": "Sub Inpector",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "56043e0cde46410d8489c385d559a24e",
+    "last_used_date": "9/4/2023",
+    "owner_id": "be268da7041e42629d90c1762ff5e550",
+    "owner_name": "Ghanshyam Prajapat",
+    "owner_post": "Head Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "4b5ca36595a94449ba1aed4262079fa8",
+    "last_used_date": "7/6/2023",
+    "owner_id": "6a65dcf09a744cd29a08538c49357fe7",
+    "owner_name": "Dharani Dutta",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "e649772ee74848ada959600cd5834e59",
+    "last_used_date": "9/26/2023",
+    "owner_id": "a0101a66f2024b77875e34f245bf3920",
+    "owner_name": "Daksha Khanna",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "df325cca9a1d43fc9649b75673180271",
+    "last_used_date": "5/2/2023",
+    "owner_id": "819da0ece1064e109aedfd4ba6917249",
+    "owner_name": "Chandraketu Pandey",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "aeb801bd96474b729bd83c5956cf11b8",
+    "last_used_date": "1/25/2023",
+    "owner_id": "4d63a34e244f478ba628648e9bb6139a",
+    "owner_name": "Opalina Guneta",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "535961d7d36b424da866c281b52d9efa",
+    "last_used_date": "9/18/2023",
+    "owner_id": "ef1b5b5c79114d87b64269c7d5cc3b57",
+    "owner_name": "Jaya Nair",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "e5ed84dcff184dd89d94621160b6f981",
+    "last_used_date": "9/8/2023",
+    "owner_id": "f7768ce8ffa04dde87714e2774989f24",
+    "owner_name": "Laal Nehru",
+    "owner_post": "Head Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "2525400e6a514705a7711beeeaaa7028",
+    "last_used_date": "8/31/2023",
+    "owner_id": "9c0ceaa7f1af4a14a78c00251400f972",
+    "owner_name": "Ananta Tandon",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "3b93e38958ed446abb7fa54d64ded9c8",
+    "last_used_date": "9/15/2023",
+    "owner_id": "17fdd1999fd544a386fe9ce988fcd1da",
+    "owner_name": "Apsara Mehrotra",
+    "owner_post": "Sub Inpector",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "94a7998c60bd491385bea40b9a3cb4de",
+    "last_used_date": "9/13/2023",
+    "owner_id": "6e8e26a1bebc44888a54e197c968c178",
+    "owner_name": "Rudra Khatri",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "c3a66772dee1489eb0664b84b8c4a0f6",
+    "last_used_date": "8/22/2023",
+    "owner_id": "5fa0fa6f8d55410f9409a4594633020e",
+    "owner_name": "Lalita Abbott",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "466c0fcebcba4b60b2307b4de5f7e8b9",
+    "last_used_date": "7/23/2023",
+    "owner_id": "84a5f859767f451f96775dd25033c6a5",
+    "owner_name": "Vedang Jha",
+    "owner_post": "Constable",
+    "station_id": "1114c8d471b1482ea30db0a8e28ea3de"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "a0b53685f82148bd998c0f9e0e6540a4",
+    "last_used_date": "8/26/2023",
+    "owner_id": "8ecbd0a2fcd64ec5a6568bffc2b7be80",
+    "owner_name": "Bilwa Jha",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "dd86999cef1e40a2b9cf11895b93a5b6",
+    "last_used_date": "2/21/2023",
+    "owner_id": "a48e823e658a422b98805b74f878affa",
+    "owner_name": "Bhramar Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "8f0402abb04443a6a4d872d37a2541b3",
+    "last_used_date": "1/30/2023",
+    "owner_id": "34a69b5d38d245bb8170c2179e3bc08b",
+    "owner_name": "Daiwik Iyer",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "05a7ea85a60c4fa1a9647e33bc7b0a62",
+    "last_used_date": "11/27/2023",
+    "owner_id": "ea30fc8f1273476786294becf13439f2",
+    "owner_name": "Kali Somayaji",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "6f0624b648c141e1961d49ff2949d9f4",
+    "last_used_date": "4/12/2023",
+    "owner_id": "e8fcbca999814c5492da3d3fa80de69e",
+    "owner_name": "Chanakya Bhadresha",
+    "owner_post": "Head Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "d842363fea4c410e94d5fd07234934a2",
+    "last_used_date": "1/31/2023",
+    "owner_id": "684ab12c05104b7f8cc94e59d76cf50e",
+    "owner_name": "Paramartha Khan",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "5fdde2770115458b929436e31d71eb0e",
+    "last_used_date": "10/1/2023",
+    "owner_id": "3db4a9300d0f444c9b496856c69e7ca3",
+    "owner_name": "Dayaanidhi Abbott",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "cf638b8b3d314d9396edfc88ed9a97ca",
+    "last_used_date": "9/30/2023",
+    "owner_id": "553dc0265f6b41eabfce216d8730482d",
+    "owner_name": "Rita Jangid",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "3cafb909213d44a68af70e19446d3359",
+    "last_used_date": "5/20/2023",
+    "owner_id": "105c57050f3b4341b5f301f1d528ee82",
+    "owner_name": "Alok Kaul",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "3afc8c7721a24c0f997979609dbf45eb",
+    "last_used_date": "7/27/2023",
+    "owner_id": "fe2c9ce9c32847529cd29d431d147b50",
+    "owner_name": "Vasundhara Sharma",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "7d212ad91f6c4d7d81e489dbef59bd8c",
+    "last_used_date": "3/14/2023",
+    "owner_id": "98d47a6338974fbfb924d7f566f2784c",
+    "owner_name": "Opaline Pandey-Johar",
+    "owner_post": "Head Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "24a34ebcf9e7407888654b644ed7c558",
+    "last_used_date": "6/7/2023",
+    "owner_id": "b306845696a14339bd27fdac31699651",
+    "owner_name": "Balgopal Nair",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "db2a65da19c5482c8330c77accd20885",
+    "last_used_date": "1/5/2023",
+    "owner_id": "64470293cdd443d1b54f38991023c3ca",
+    "owner_name": "Pushti Saini",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "58ea53a5bf0848ceafa0ae439e44c6df",
+    "last_used_date": "12/31/2023",
+    "owner_id": "73cfc44b035346aca611dd1b9a847f05",
+    "owner_name": "Sarisha Mukhopadhyay",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "20eda915840742cb8c5849d919aed81e",
+    "last_used_date": "6/5/2023",
+    "owner_id": "5cb461a61aca4344ad309e53adb9d0fe",
+    "owner_name": "Aagney Saini",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "9f3a54fc0d65430bbbf2ca4cef45f488",
+    "last_used_date": "9/30/2023",
+    "owner_id": "fe2c9ce9c32847529cd29d431d147b50",
+    "owner_name": "Vasundhara Sharma",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "561a30b2401946b1a0f9e5a9628d07d0",
+    "last_used_date": "6/3/2023",
+    "owner_id": "255d24439e9f4ea1b98d6c65a4e6015d",
+    "owner_name": "Deepan Ahuja",
+    "owner_post": "Sub Inpector",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "d234a5b66eb24c97a3817a223e7ea12e",
+    "last_used_date": "12/30/2023",
+    "owner_id": "f10795f7145649b597927655993d7451",
+    "owner_name": "Omana Adiga",
+    "owner_post": "Head Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "7e5e9813be60468e9e822329cba89be5",
+    "last_used_date": "10/14/2023",
+    "owner_id": "eebb701350cd47ebb83b4b9ab1a0fede",
+    "owner_name": "Chaten Marar",
+    "owner_post": "Head Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "1a5edb5034b34f5b8c6921db66f56728",
+    "last_used_date": "10/11/2023",
+    "owner_id": "53aef4f4b0f149918d570dea4ec9650d",
+    "owner_name": "Saroja Patil",
+    "owner_post": "Constable",
+    "station_id": "b5677dd90f744418897648a1e6e834f0"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "1204249c5b7d449ba30235fc7aa019b4",
+    "last_used_date": "9/23/2023",
+    "owner_id": "9887a0d8f762464ea289634133591aa0",
+    "owner_name": "Karan Iyer",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "c484a6ee12254406b134ee3e9ed88fcd",
+    "last_used_date": "10/25/2023",
+    "owner_id": "01d540bb451b498d8cceb74913a6b940",
+    "owner_name": "Anandamayi Iyengar",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "944c9594758744eaa0497ff8733f26c6",
+    "last_used_date": "1/8/2023",
+    "owner_id": "ed179e336a0543329163c846ef0250fa",
+    "owner_name": "Chaitan Arora",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "14d7762647134f988f76347198b3ba57",
+    "last_used_date": "8/27/2023",
+    "owner_id": "190603cbb5b54bdabcab5d5c327bc597",
+    "owner_name": "Anaadi Varrier",
+    "owner_post": "Head Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "7c11aa9983844605a836cd96827f2d37",
+    "last_used_date": "2/10/2023",
+    "owner_id": "8a5546e0e2b344de88b596087e74cd7c",
+    "owner_name": "Girja Chattopadhyay",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "06033a3ea1494f34b859ba9d7382b728",
+    "last_used_date": "9/21/2023",
+    "owner_id": "99208f8a33054b3d8150bdda69842f82",
+    "owner_name": "Basanti Devar",
+    "owner_post": "Head Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "204a7621108f43f684df0700d506fff0",
+    "last_used_date": "7/15/2023",
+    "owner_id": "2db870f474a14fa185ae3b435b2b9271",
+    "owner_name": "Ravi Devar",
+    "owner_post": "Sub Inpector",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "f95f22b8f8a147d6bb7b738103f3cd9a",
+    "last_used_date": "8/11/2023",
+    "owner_id": "ae4e0a45022a4c16ad0e75012bf5c244",
+    "owner_name": "Lakshman Trivedi",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "1c0e30f434664bffbe684ac6d78256a3",
+    "last_used_date": "4/3/2023",
+    "owner_id": "114793e4ad774f20a763c6c86c006ca5",
+    "owner_name": "Aanandaswarup Shukla",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "7f0482791e04476c806eb0af8615dfa4",
+    "last_used_date": "2/13/2023",
+    "owner_id": "81a13245926f4a33aeb85bff4f6ff9ed",
+    "owner_name": "Jyoti Joshi",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "2ae137265d4b4d7f93dfe9b3ebcd0c25",
+    "last_used_date": "2/23/2023",
+    "owner_id": "df53fe44108d485389c5d284445a7f5e",
+    "owner_name": "Aishani Achari",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "8e4d6b7aa3844260bb8080943c2bb99f",
+    "last_used_date": "6/24/2023",
+    "owner_id": "561119969ebe4d09b119fe0f93c0cf0f",
+    "owner_name": "Ashlesh Kakkar",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "27d22dd3412c43b3bdb8112a323afa69",
+    "last_used_date": "12/20/2023",
+    "owner_id": "c5eaf11340d545658d204d67f77cd955",
+    "owner_name": "Amodini Abbott",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "09e81dae54ef4115a779a682dbc9dbe6",
+    "last_used_date": "1/15/2023",
+    "owner_id": "d0d50c5bfd7e41bea3894e28be108b06",
+    "owner_name": "Omana Kapoor",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "d639e414449c4208b7bf31e3b5658886",
+    "last_used_date": "3/16/2023",
+    "owner_id": "422005272274414ea39b774dab9e1492",
+    "owner_name": "Chanda Iyengar",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "0a6bd23e8edb4d5e8f11050b5384ae35",
+    "last_used_date": "6/21/2023",
+    "owner_id": "aceb4911c7ac41ed9e669e3fb9912ac0",
+    "owner_name": "Aarya Mishra",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "505a1e61b7064575b3672ffbb25eca95",
+    "last_used_date": "9/22/2023",
+    "owner_id": "b88e17f344084acca128eb9b7b677e9b",
+    "owner_name": "Brijesh Nayar",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "94b713818d0e467f92fe19d57327d76f",
+    "last_used_date": "3/28/2023",
+    "owner_id": "81231a72febb4cbf94f354dc01457f88",
+    "owner_name": "Kashyap Sharma",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "548034ffba5b4c5c930549027c62dc7b",
+    "last_used_date": "3/12/2023",
+    "owner_id": "dc59c8388a764953ba93f99cd7b6eed6",
+    "owner_name": "Kannan Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "eb8d2b753f644fe3b5f1b7e1f916fc0f",
+    "last_used_date": "11/5/2023",
+    "owner_id": "d54001f2376b4a8d85b0997630d2a96e",
+    "owner_name": "Jaya Marar",
+    "owner_post": "Constable",
+    "station_id": "801c392944be432f8026557ed6082aba"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "cb50487960b944f38372797e7fc3d446",
+    "last_used_date": "9/28/2023",
+    "owner_id": "24c9bbcaad504cbdb5d908602d686f4d",
+    "owner_name": "Omana Bhat",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "03a0b1fef0a0439cadec0779351bc89a",
+    "last_used_date": "12/14/2023",
+    "owner_id": "db50524f486f4ca4b4683c7b4f790a89",
+    "owner_name": "Ujjawal Jangid",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "abc1a6dea5554d1e93d0393b4d8ad098",
+    "last_used_date": "9/19/2023",
+    "owner_id": "751c54f085824a5aac7aedffec748acd",
+    "owner_name": "Gayatri Trivedi",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "bbd21af9026f496ba0979d9879e1b562",
+    "last_used_date": "12/28/2023",
+    "owner_id": "400d0b8db5a842fb8f2ff4cb099b2b6d",
+    "owner_name": "Soma Trivedi-Guneta",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "b5c0e300e2f14b6c9474112c7200608a",
+    "last_used_date": "6/25/2023",
+    "owner_id": "f16dcfe1005d4be898988e361d08765a",
+    "owner_name": "Mahendra Khanna",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "6d1c832c3717439a981c9d8e3baa78af",
+    "last_used_date": "4/2/2023",
+    "owner_id": "2e4e8bd28d7a4a4fb106e850c5d74eeb",
+    "owner_name": "Vasanti Jha",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "095652beeedf4c59ace2fff00071ef92",
+    "last_used_date": "12/10/2023",
+    "owner_id": "b395ba05ac9542b99397990f6e666bef",
+    "owner_name": "Brajendra Achari",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "9ca01706be3a40b4a65af4d3ed7c4abd",
+    "last_used_date": "3/3/2023",
+    "owner_id": "8cf3186921ec44b69a69db2ce9ec26f6",
+    "owner_name": "Meena Suthar",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "fb2b683cf38a46f5ae42ae03b543b44a",
+    "last_used_date": "10/10/2023",
+    "owner_id": "751c54f085824a5aac7aedffec748acd",
+    "owner_name": "Gayatri Trivedi",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "9e38a99cf8084f239314f86ae2f5b0c9",
+    "last_used_date": "7/7/2023",
+    "owner_id": "d981f49e57f34aac824a552531b8deae",
+    "owner_name": "Brahmaanand Kaur",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "26c8d1ca109c407daccd5e66b405969d",
+    "last_used_date": "4/16/2023",
+    "owner_id": "ca5becb6eff744888cfd669130806a44",
+    "owner_name": "Gandharv Jangid",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "44c73d4ef26840fba916db9263ef8ce2",
+    "last_used_date": "2/26/2023",
+    "owner_id": "512c638d4b914a5eb032e91c96e4cffa",
+    "owner_name": "Arnesh Sethi",
+    "owner_post": "Head Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "f90da6de78b643fda2c47df1497d9ad0",
+    "last_used_date": "1/3/2023",
+    "owner_id": "34339ff9f1f94eeea473fe13eb9704f8",
+    "owner_name": "Tarun Prajapat",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "9771d17de6bb4f21a0f0ce01ed6c4fc2",
+    "last_used_date": "8/24/2023",
+    "owner_id": "e1368b1d165f491eab7a314ceb120089",
+    "owner_name": "Mahendra Desai",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "df9ab8bfbc83473b9b60540171395535",
+    "last_used_date": "1/8/2023",
+    "owner_id": "f61b49d1a51b43eaa99fee69ee901c09",
+    "owner_name": "Mani Nehru",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "0e28e6a693424a54a92417a533a5e7f6",
+    "last_used_date": "12/12/2023",
+    "owner_id": "c2d74a5e5a88410e8cdc25fa076e9cc1",
+    "owner_name": "Kamala Pilla",
+    "owner_post": "Sub Inpector",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "d93cabebab8a44c99cba6e8e4fc15f06",
+    "last_used_date": "10/20/2023",
+    "owner_id": "d801587004c645789e6a40f66d1a811e",
+    "owner_name": "Jaya Prajapat",
+    "owner_post": "Inspector",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "55c79171c01f4dada8f4bbf7ce9fa766",
+    "last_used_date": "6/26/2023",
+    "owner_id": "e17a7b4b566d4843878e815d1d62f783",
+    "owner_name": "Suman Marar",
+    "owner_post": "Sub Inpector",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "7a89a4d4824146b5b6a0153cc3d460c0",
+    "last_used_date": "6/23/2023",
+    "owner_id": "f61b49d1a51b43eaa99fee69ee901c09",
+    "owner_name": "Mani Nehru",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "2afed2c4dd83471e9cd1e169b63369c5",
+    "last_used_date": "1/31/2023",
+    "owner_id": "c364fdacf269427992f3a67beda75a5d",
+    "owner_name": "Rudra Tagore",
+    "owner_post": "Constable",
+    "station_id": "968de3711c1b4103ac13c7ce7fd17c5b"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "fc6562a0d0784c518a693d8fe31cef11",
+    "last_used_date": "4/8/2023",
+    "owner_id": "86b698909c9d441a8d023d7b3386822b",
+    "owner_name": "Bhargavi Khatri",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "0499b9c8b7d943bd8e054deab7887cd5",
+    "last_used_date": "7/26/2023",
+    "owner_id": "543db65e90b14bf69d0305951b3a2259",
+    "owner_name": "Menka Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "85793d46c9aa477bbe1d1d10f120d7cc",
+    "last_used_date": "3/3/2023",
+    "owner_id": "5d41b1a29bab4fdd8b9071f6254450b7",
+    "owner_name": "Kanak Kapoor",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Standard Issue Pistol",
+    "weapon_type": "Glock 17",
+    "id": "38895be341594fbe873ebfb616cf6e2d",
+    "last_used_date": "6/8/2023",
+    "owner_id": "6473929867f146558612e6a056986ff5",
+    "owner_name": "Chandradev Malik",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "928bbc07dbf64c728915319ccd080f58",
+    "last_used_date": "2/5/2023",
+    "owner_id": "6014d684b54e44d893b9dce3574167d4",
+    "owner_name": "Manik Jain",
+    "owner_post": "Head Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "10b6108f88ac4a09828bdea99a7bb5b2",
+    "last_used_date": "10/9/2023",
+    "owner_id": "7abc5e3d5cd44979958a4b3f41256137",
+    "owner_name": "Suma Desai",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "4e25d110a0764330a7e8ef93cf6ab2cf",
+    "last_used_date": "5/15/2023",
+    "owner_id": "49a0f2144474432199f919cd1f1b7cae",
+    "owner_name": "Kannan Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "4f5e7fff9f624760aceb1408c9987fac",
+    "last_used_date": "10/23/2023",
+    "owner_id": "6e372722e2ae4e1f8537bc566daf6ebb",
+    "owner_name": "Nikita Acharya",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "195c738761a14225b01a8375594d255b",
+    "last_used_date": "5/27/2023",
+    "owner_id": "ffc1926973644a4aada5b5e1f84221a7",
+    "owner_name": "Kailash Bharadwaj",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "c9b5725c11ec415db5a3fa9187ee6437",
+    "last_used_date": "3/19/2023",
+    "owner_id": "083dbc35f647465d87c18d7ab990642c",
+    "owner_name": "Kiran Chattopadhyay",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "ac1a098fb4c0455e9eb8ecac743d23e5",
+    "last_used_date": "3/13/2023",
+    "owner_id": "6014d684b54e44d893b9dce3574167d4",
+    "owner_name": "Manik Jain",
+    "owner_post": "Head Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "0847dee532e4443cac60193ad8ea6e91",
+    "last_used_date": "8/22/2023",
+    "owner_id": "f34b42ec9c984f3e82572dd7cb83e68e",
+    "owner_name": "Bhima Khan",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "60bd3ecc01174036a20e2029dc1503d7",
+    "last_used_date": "2/11/2023",
+    "owner_id": "2e20c27d86a64aa6bc8b580146e1e30c",
+    "owner_name": "Harinakshi Marar",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "9c04c15ff5b94bfe940c50b31eeb1b71",
+    "last_used_date": "6/18/2023",
+    "owner_id": "1c11a427d69049df9d776fba44b48428",
+    "owner_name": "Oormila Dhawan",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "b57fb0be71cf4269906d47f496c36466",
+    "last_used_date": "2/1/2023",
+    "owner_id": "799e271d400a43e0aa91614ea7356ddc",
+    "owner_name": "Vrund Dubashi",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "4252a3ba88a64090a4cd6a0f6b9ec95b",
+    "last_used_date": "3/14/2023",
+    "owner_id": "604681d9093a43f48befa12d35737498",
+    "owner_name": "Sushma Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "1f13817161c947a3af16886715147b00",
+    "last_used_date": "1/19/2023",
+    "owner_id": "25d340b8a32f4a749f9ced1b1d4927ca",
+    "owner_name": "Sharmila Bandopadhyay",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "c789efa02314491eb24bc7de08b33a72",
+    "last_used_date": "9/20/2023",
+    "owner_id": "6cbe6d44a3cd4b15b1d1b34c89410469",
+    "owner_name": "Vaidehi Kaniyar",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "ab3d89bd7f154d08a422e2b8d721f451",
+    "last_used_date": "2/5/2023",
+    "owner_id": "74bc79115f0c4036b365056c5d11bf0c",
+    "owner_name": "Abhaya Khanna",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "50681998b1bf4e99a8afdb2241249cff",
+    "last_used_date": "1/11/2023",
+    "owner_id": "e9fcb53870f34171907ddeb270f819eb",
+    "owner_name": "Vasudev Pothuvaal",
+    "owner_post": "Constable",
+    "station_id": "42aaddd6e0cd4531a24be5b6f2e1ef4a"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "0d5ef3f34dae4fe18fec9a23f81f7bac",
+    "last_used_date": "1/6/2023",
+    "owner_id": "3cb495435c784e5bad7b787064c82fa3",
+    "owner_name": "Avani Varman",
+    "owner_post": "Head Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "49c055db8dc049c59f1697d73e7fa9a8",
+    "last_used_date": "3/30/2023",
+    "owner_id": "f1445c9c49a34405968b0f8e0ea78584",
+    "owner_name": "Aadrika Achari",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "79cc3c7ddbe94fa9bbbeff367008cda4",
+    "last_used_date": "3/19/2023",
+    "owner_id": "192ace3d87c74747bc33fd60c476dc99",
+    "owner_name": "Vaishno Desai",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "fed6e32783614666bb62128b3081e038",
+    "last_used_date": "2/11/2023",
+    "owner_id": "ea0547f7dd5e4069b35cf6215f13be92",
+    "owner_name": "Devvrat Devar",
+    "owner_post": "Sub Inpector",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "26b47d5eaf14483eaa973dc25a66fc5d",
+    "last_used_date": "10/3/2023",
+    "owner_id": "6f9d73927ab04550947480fc03bce05e",
+    "owner_name": "Aishani Dhawan",
+    "owner_post": "Head Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "M1 Garand",
+    "id": "7855f022010f4415b06068cf8a905e83",
+    "last_used_date": "5/20/2023",
+    "owner_id": "bba50516a35c4cef83d037fceebece8e",
+    "owner_name": "Swara Butt",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "0ee50d20166e429cbedaebd1851bf3ef",
+    "last_used_date": "4/25/2023",
+    "owner_id": "0812709e50f84ba18734aae45e81ca27",
+    "owner_name": "Ekaaksh Joshi",
+    "owner_post": "Head Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "a249ff0e218f4742b7fb84167ca2a410",
+    "last_used_date": "8/6/2023",
+    "owner_id": "11b3bc32e7d148988cb135bd91c7ed35",
+    "owner_name": "Chanda Panicker",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "c32983d004e54c1f9d0d26a14f9ddbfd",
+    "last_used_date": "5/28/2023",
+    "owner_id": "2e23fff9105b44c5aed1aca52dfa598d",
+    "owner_name": "Brahmdev Acharya",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "e25758685dd14da3a40b13c5415eef54",
+    "last_used_date": "12/22/2023",
+    "owner_id": "ec34de51ef734223822380bf2a8772d1",
+    "owner_name": "Dandak Asan",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "394f49f982f948fa967573a0153ed575",
+    "last_used_date": "10/26/2023",
+    "owner_id": "3e4c69c29a844450a682cd42f9cab110",
+    "owner_name": "Kanchan Gill",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "14fd4d13c32347e5b0580c01d3cdf42e",
+    "last_used_date": "7/12/2023",
+    "owner_id": "34379eaf71fe47bb89f88b8208960b71",
+    "owner_name": "Sarada Joshi",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "0542253347a34f8581285e66f2eace9b",
+    "last_used_date": "6/12/2023",
+    "owner_id": "d759563098da438bb93d2f10d1945ca9",
+    "owner_name": "Balgopal Varrier",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "544a69a0bff242a6931d2a507c845e59",
+    "last_used_date": "1/14/2023",
+    "owner_id": "462dadd295e946bab87d2a7fcb070e4c",
+    "owner_name": "Akshita Sethi",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "6b053fa567dc494a8e046282ffb26454",
+    "last_used_date": "5/29/2023",
+    "owner_id": "2eb164f5d8db44dd8e5f3d2412d716c1",
+    "owner_name": "Garuda Varrier-Pandey",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "d9661392ba5b4008a52d65956b3ff2ba",
+    "last_used_date": "7/13/2023",
+    "owner_id": "a03867904e954fa7acc1bd324d5bc6b3",
+    "owner_name": "Gorakhnath Guha",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "bbf1ad4ed84e4baf8e1578b527410914",
+    "last_used_date": "7/28/2023",
+    "owner_id": "1faee581dcb142e6b22837ac5db045ff",
+    "owner_name": "Subodh Kaul",
+    "owner_post": "Head Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Duty Revolver",
+    "weapon_type": "Colt Python",
+    "id": "8953a36b17ee485380bcc2b3c7b937c9",
+    "last_used_date": "8/2/2023",
+    "owner_id": "37c346328bdf4b8b870a0a86b4f6ec60",
+    "owner_name": "Narendra Varrier",
+    "owner_post": "Head Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "5f29a3c085ee4503ab937dfbeaa80ec8",
+    "last_used_date": "2/15/2023",
+    "owner_id": "67bad125db6246149198422228e10f68",
+    "owner_name": "Madhuri Bhadresha-Guha",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "07b698330f804fc1b72f2d690eb27494",
+    "last_used_date": "10/18/2023",
+    "owner_id": "0174653bc3094b06854a38b1aae0f42d",
+    "owner_name": "Adinath Suthar",
+    "owner_post": "Constable",
+    "station_id": "5e0792f8451745f684b463ef5c044f68"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "c095b39598db4f68921aae25128267fb",
+    "last_used_date": "4/12/2023",
+    "owner_id": "5b20bc4646044266be40406adc432543",
+    "owner_name": "Devangana Menon-Arora",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "2cca8d5a3e2245c9a71850366c5e8e92",
+    "last_used_date": "1/13/2023",
+    "owner_id": "69874c6aed80401ca5f3ad67d1c2517e",
+    "owner_name": "Ramesh Kaur",
+    "owner_post": "Head Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "d085f8359e464380a0699fa2f8b6b0bb",
+    "last_used_date": "12/29/2023",
+    "owner_id": "f06369afcacc4154adaaca7c81d70569",
+    "owner_name": "Vimala Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "98a7832d677c49cfb0c7846f06537cec",
+    "last_used_date": "7/15/2023",
+    "owner_id": "ad212029879e4a2687c6458aac77b289",
+    "owner_name": "Manjusha Patel",
+    "owner_post": "Head Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "7545544b2bd24f7d8261d34a7bab713b",
+    "last_used_date": "1/9/2023",
+    "owner_id": "d20f7d34a7e640d0bce9049e527c46f3",
+    "owner_name": "Himadri Kaur",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "3bce16a2e60840fd8e2d6691679eacf7",
+    "last_used_date": "11/1/2023",
+    "owner_id": "f05abf7ff5df49a5b2fce020f49c9f4c",
+    "owner_name": "Lavanya Johar",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "63d550b7e21d437e965a3f345745947a",
+    "last_used_date": "6/2/2023",
+    "owner_id": "076fd9c0e45841deb231a88cb2644d2d",
+    "owner_name": "Menaka Chaturvedi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "763a9ba8b8c94100a5b6726404bf6247",
+    "last_used_date": "9/18/2023",
+    "owner_id": "1bdb69e43d6b4b1f9f5242acb7bc4ddf",
+    "owner_name": "Rajendra Nehru",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "b62db60d5a08474db1ef95eaf85e7a9a",
+    "last_used_date": "9/1/2023",
+    "owner_id": "f06369afcacc4154adaaca7c81d70569",
+    "owner_name": "Vimala Bhadresha",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "8ff93e1be138427ca7171e5074029a50",
+    "last_used_date": "12/30/2023",
+    "owner_id": "59887afb16924cdc82101377f6172ce1",
+    "owner_name": "Dharmaketu Abbott",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "b48a5798685248f5a923c7134cd6f997",
+    "last_used_date": "5/31/2023",
+    "owner_id": "d20f7d34a7e640d0bce9049e527c46f3",
+    "owner_name": "Himadri Kaur",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "ed5ba9ffd2d54a37852683fa82c8862a",
+    "last_used_date": "9/17/2023",
+    "owner_id": "ca9d878fd39b4413a9256f6396d0f345",
+    "owner_name": "Chandrabhaga Dwivedi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "c4743fe827544256b0ff6aa9b8d9f472",
+    "last_used_date": "11/2/2023",
+    "owner_id": "5917a37e82824de0a6f35bd9a180064b",
+    "owner_name": "Bhishma Panicker",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "9ff0a663b7bb4196ab8524a5f269b6fb",
+    "last_used_date": "7/25/2023",
+    "owner_id": "32c1c750b0734609970dc65c36620df1",
+    "owner_name": "Ameyatma Joshi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "ed98d861abd845a9a92df8283e6c7cd7",
+    "last_used_date": "3/18/2023",
+    "owner_id": "754e80a7e453476dab15c402362f1a41",
+    "owner_name": "Triloki Chaturvedi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "06e03f83d43a4daf80331ec2faefddcb",
+    "last_used_date": "1/8/2023",
+    "owner_id": "f911b20c53a540c8834b7e034a8fcf90",
+    "owner_name": "Anila Dubashi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "bdbd7e23af764bf2a0972dacae5c5229",
+    "last_used_date": "3/21/2023",
+    "owner_id": "d7f892ce0c044c3db1a65ea9bb9d78ee",
+    "owner_name": "Vasanti Nair",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Marksman Rifle",
+    "weapon_type": "Lee-Enfield",
+    "id": "6f5d3d960db1472a9406e184fadc853e",
+    "last_used_date": "1/8/2023",
+    "owner_id": "ca9d878fd39b4413a9256f6396d0f345",
+    "owner_name": "Chandrabhaga Dwivedi",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "976800e2638847569623af72dfd46ca9",
+    "last_used_date": "8/27/2023",
+    "owner_id": "f0acf57b620f45e0ad17b286a1f5ce3e",
+    "owner_name": "Abani Arora",
+    "owner_post": "Sub Inpector",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Remington 870",
+    "id": "ee497b5b8fd945aa8610261455068871",
+    "last_used_date": "5/28/2023",
+    "owner_id": "6db2ff8523a64016a371b82bf6a2d4e1",
+    "owner_name": "Vaijayanti Sinha",
+    "owner_post": "Constable",
+    "station_id": "f39fc2550a3647b49675f594cc5beb0d"
+  },
+  {
+    "name": "Sidearm Pistol",
+    "weapon_type": "H&K USP",
+    "id": "bdc4254163c748a6a8d08e58c6b9a05f",
+    "last_used_date": "7/13/2023",
+    "owner_id": "4ddb1853d3dd4e60a14ea9c77ca65b1a",
+    "owner_name": "Devangana Rana",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "0c5a5c5a6a4d42d99a38f7850895fa92",
+    "last_used_date": "12/2/2023",
+    "owner_id": "4e3bfcd9616f49a4a0ed8fbaa374e5e7",
+    "owner_name": "Aasha Khatri",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "a6733a382712417394efdce150f43675",
+    "last_used_date": "11/4/2023",
+    "owner_id": "f03dadc5613c4a0b81dc85e05a0d8c90",
+    "owner_name": "Gati Bharadwaj",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "CZ 75",
+    "id": "51ce3de5ed3942cda09c6484003d3e81",
+    "last_used_date": "11/9/2023",
+    "owner_id": "cb656c81387a4cdc83d216a660c3ecba",
+    "owner_name": "Vaidehi Kapoor",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "23b16221f8eb444d87cf226920557848",
+    "last_used_date": "11/8/2023",
+    "owner_id": "3662f67f9901457f84a3e96116534fdc",
+    "owner_name": "Shanti Ahluwalia",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Magnum Revolver",
+    "weapon_type": "S&W Model 29",
+    "id": "e8963b5ab5394a31947ab6cce93668a6",
+    "last_used_date": "8/12/2023",
+    "owner_id": "c4c572e790a64f84848084d1b506c6dc",
+    "owner_name": "Chandramohan Somayaji",
+    "owner_post": "Sub Inpector",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "3ab30fc4eb3f4d3cb71f94b37d9c75df",
+    "last_used_date": "8/12/2023",
+    "owner_id": "2e3732f6a89a469ab83c86e4c23f1b19",
+    "owner_name": "Dhanvin Adiga",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Standard Issue Revolver",
+    "weapon_type": "Ruger Blackhawk",
+    "id": "b9dc6e9221b74bcfa7ee9fa08db20935",
+    "last_used_date": "1/23/2023",
+    "owner_id": "665d64bdf32243e89bf7cc5374f300a6",
+    "owner_name": "Chandravati Mehrotra",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Police Shotgun",
+    "weapon_type": "Winchester Model 1897",
+    "id": "db3dbba8ce8041beb43dc0659c2d6003",
+    "last_used_date": "7/26/2023",
+    "owner_id": "19218b3bb86041eeaf54b27beeabc0a6",
+    "owner_name": "Kumari Tandon",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Backup Revolver",
+    "weapon_type": "Taurus Judge",
+    "id": "6f17f9b8ccbd4f669898cc78b4eb04c9",
+    "last_used_date": "3/19/2023",
+    "owner_id": "5599ef7b5ca8474bba80e98ba8c89bf4",
+    "owner_name": "Bhilangana Khan",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Compact Pistol",
+    "weapon_type": "Beretta 92",
+    "id": "6b557d4ccd6b4065bffd8092d3b02568",
+    "last_used_date": "6/14/2023",
+    "owner_id": "5454cc335a5f40dbab8b06b41469127b",
+    "owner_name": "Chakrika Khatri",
+    "owner_post": "Head Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Law Enforcement Rifle",
+    "weapon_type": "AR-15",
+    "id": "e19fc8d2f4ff41f1a1a011b814f5284a",
+    "last_used_date": "8/11/2023",
+    "owner_id": "8c3788c9ceed4a47b2e31a3bd7d0e9f1",
+    "owner_name": "Aagney Bhattathiri",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Service Revolver",
+    "weapon_type": "Smith & Wesson Model 10",
+    "id": "888e495db41f458b995d3c8ab9ce4aee",
+    "last_used_date": "6/3/2023",
+    "owner_id": "c04c6d157a864d4a88b748cc241dbb60",
+    "owner_name": "Sheela Kocchar",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "c0fb0f34d4c34763b4d1272831f77674",
+    "last_used_date": "5/19/2023",
+    "owner_id": "63aa46f4cbd34ff49d692b8dfdde0193",
+    "owner_name": "Indira Patel",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "4f75794cf46f4440a54b9f50b110cce0",
+    "last_used_date": "5/6/2023",
+    "owner_id": "c350164f89614b02a4299dbcba179d66",
+    "owner_name": "Chaanakya Agarwal",
+    "owner_post": "Head Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "58043b5166704792aeaa1a7b14c6437d",
+    "last_used_date": "5/12/2023",
+    "owner_id": "316a9c536cc243ef8ee9d2a7e0a8061a",
+    "owner_name": "Deeptimayee Khatri",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Assault Rifle",
+    "weapon_type": "AK-47",
+    "id": "422f92844c0f40cd84af53f9b1aece28",
+    "last_used_date": "9/25/2023",
+    "owner_id": "c73c6b83a2294780a026eda8fa8ff315",
+    "owner_name": "Purushottam Nehru",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Mossberg 500",
+    "id": "a4ebf19580214012a70a26ec9f7f5b79",
+    "last_used_date": "2/9/2023",
+    "owner_id": "fbe054bd306e4b1c9b055d523bb11ce4",
+    "owner_name": "Kalinda Prajapat",
+    "owner_post": "Sub Inpector",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Tactical Shotgun",
+    "weapon_type": "Benelli M4",
+    "id": "eee31f5b71db4b8ca5e4e4f7c592dda1",
+    "last_used_date": "12/30/2023",
+    "owner_id": "93ba49cf8eb749c0bad35e6733ca053c",
+    "owner_name": "Sweta Asan",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  },
+  {
+    "name": "Patrol Pistol",
+    "weapon_type": "Sig Sauer P226",
+    "id": "89bcc386f5d246a0abe5cb5d17015cca",
+    "last_used_date": "9/2/2023",
+    "owner_id": "087e313a62374fa58a9987735ed0cc3b",
+    "owner_name": "Achyut Abbott",
+    "owner_post": "Constable",
+    "station_id": "73fbc7cf97ed42d68f58a9ddf5841da1"
+  }
+]

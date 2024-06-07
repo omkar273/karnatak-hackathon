@@ -35,7 +35,7 @@ const authInitalState: authstate = {
     open_cases: 0,
     closed_cases: 0,
     stationCode: "",
-    superiors: [],
+    superiors_list: [],
   },
 };
 

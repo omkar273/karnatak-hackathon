@@ -29,7 +29,7 @@ export const generate_station_data = ({
   });
 
   const temp: StationModel = {
-    id: customFaker.string.uuid(),
+    id: customFaker.string.uuid().replace(/-/g, ""),
     station_name: customFaker.location.city(),
     email: customFaker.internet.email(),
     phone: customFaker.phone.number(),

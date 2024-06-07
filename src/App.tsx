@@ -25,6 +25,7 @@ import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
 import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
+import AdminDashboardPage from "./pages/admin/admin_dashboard_page";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(
@@ -79,7 +80,7 @@ const App = () => {
             />
           </Route>
 
-          
+
 
           <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
 
@@ -97,6 +98,7 @@ const App = () => {
 
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
 
+
         </Route>
 
         {/* auth route */}
@@ -107,6 +109,10 @@ const App = () => {
 
         {/* video page link */}
         <Route path="video" element={<VideoPage />} />
+
+
+        {/* admin route */}
+        <Route path="/admin" element={<AdminDashboardPage />} />
 
         {/* error route */}
         <Route path="*" element={<ErrorPage />} />

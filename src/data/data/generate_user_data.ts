@@ -26,10 +26,14 @@ export const generateRandomUserData = ({
   post,
   reporting_officer_id,
   reporting_officer_name,
+  stationId,
+  superiors_list,
 }: {
   post: string;
+  stationId?: string;
   reporting_officer_name?: string;
   reporting_officer_id?: string;
+  superiors_list?: string[];
 }) => {
   const skills: string[] = [];
   const awards: string[] = [];
@@ -40,10 +44,10 @@ export const generateRandomUserData = ({
   }
 
   const user_full_name = customFaker.person.fullName();
-  const username = generateUniqueUsername(user_full_name.replace(" ", ""));
+  const username = generateUniqueUsername(user_full_name.replace(/-/g, ""));
 
   const temp: UserModel = {
-    id: customFaker.string.uuid().replace("-", ""),
+    id: customFaker.string.uuid().replace(/-/g, ""),
 
     // personal details
     name: user_full_name,
@@ -72,8 +76,10 @@ export const generateRandomUserData = ({
     email: `${username}@gmail.com`,
     password: "23456789",
     username: username,
-    reporting_officer_name: reporting_officer_name,
-    reporting_officer_id: reporting_officer_id,
+    reporting_officer_name: reporting_officer_name ?? null,
+    reporting_officer_id: reporting_officer_id ?? null,
+    stationId: stationId ?? "",
+    superiors_list: superiors_list ?? [],
   };
 
   return temp;

@@ -18,10 +18,10 @@ export type UserModel = {
   previousPosting?: string;
   skills?: string[];
   awards?: string[];
-  superiors?: string[];
+  superiors_list?: string[];
   underlyings?: string[];
-  reporting_officer_name?: string;
-  reporting_officer_id?: string;
+  reporting_officer_name?: string | null;
+  reporting_officer_id?: string | null;
 
   open_cases?: number;
   closed_cases?: number;

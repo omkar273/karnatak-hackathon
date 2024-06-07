@@ -59,9 +59,13 @@ export interface FIRRecord {
   Unit_ID: string;
   Crime_No: string;
   status?: string;
-  allotedTo?: string[];
   Intern_l__O?: string;
   Internal_IO?: string;
   timestamp?: Timestamp;
   stationId?: string;
+  allotedTo?: {
+    name: string;
+    id: string;
+    post: string;
+  }[];
 }

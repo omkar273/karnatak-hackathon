@@ -10,9 +10,6 @@ import { EyeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import useGetAllStations from "@/fragments/station/hooks/use_get_all_stations";
 import { Select } from "antd";
-import SaveFile from "@/data/data/dummy_data";
-// import { fir_dataset } from "@/fragments/fir/data/fir_data";
-// import { doSaveFIR2 } from "@/fragments/fir/utils/do_save_fir";
 
 const DashboardPage = () => {
     const { userdata } = useSelector((s: RootState) => s.auth)
@@ -45,9 +42,9 @@ const DashboardPage = () => {
             },
             ...stations.documents.map((station) => {
                 return {
-                    stationId: station.stationId,
-                    label: station.stationName,
-                    value: station.stationId
+                    stationId: station.id,
+                    label: station.station_name,
+                    value: station.id
                 }
             })
         ])
@@ -87,10 +84,9 @@ const DashboardPage = () => {
                 <div className="flex-grow md:flex-[85%] px-4 overflow-y-auto max-h-[calc(100vh-138px)]">
                     {/* left container content */}
                     <div>
-                        <SaveFile />
-                        <DashboardStationCards stationId={stationId} />
-                        <StationRatesGraph stationId={stationId} />
-                        <DashboardCasesPieCharts stationId={stationId} />
+                        <DashboardStationCards stationId={stationId ?? ''} />
+                        <StationRatesGraph stationId={stationId ?? ''} />
+                        <DashboardCasesPieCharts stationId={stationId ?? ''} />
 
 
                         {/* <button type="button" className="p-3 bg-blue-500 m-5"

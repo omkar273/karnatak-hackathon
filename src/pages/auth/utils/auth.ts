@@ -127,21 +127,23 @@ export const doSignUp = async ({
       const userRef = doc(firestore, "users", creds.user.uid);
       await setDoc(userRef, data);
 
-      if (data.superiors && data.superiors.length > 0) {
-        for (const superiorId of data.superiors) {
-          const superiorRef = doc(firestore, "users", superiorId);
-          const underlyingRef = collection(superiorRef, "underlying");
-          await addDoc(underlyingRef, {
-            underlyingId: creds.user.uid,
-            name: data.name,
-            post: data.post,
-            stationId: data.stationId,
-            openCases: data.open_cases || 0,
-          });
-        }
-      }
+      // if (data.superiors_list && data.superiors_list.length > 0) {
+      //   for (const superiorId of data.superiors_list) {
+      //     const superiorRef = doc(firestore, "users", superiorId);
+      //     const underlyingRef = collection(superiorRef, "underlying");
+      //     await addDoc(underlyingRef, {
+      //       underlyingId: creds.user.uid,
+      //       name: data.name,
+      //       post: data.post,
+      //       stationId: data.stationId,
+      //       openCases: data.open_cases || 0,
+      //     });
+      //   }
+      // }
     }
   } catch (error) {
     throw new Error(`Error signing up: ${error}`);
   }
 };
+
+

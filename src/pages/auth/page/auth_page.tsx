@@ -78,13 +78,28 @@ const AuthPage = () => {
               <td className="px-4 py-2 border">123456789</td>
             </tr>
             <tr>
+              <td className="px-4 py-2 border">Assistant commissioner</td>
+              <td className="px-4 py-2 border">assistant-commissioner</td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+            <tr>
               <td className="px-4 py-2 border">Inspector</td>
               <td className="px-4 py-2 border">inspector</td>
               <td className="px-4 py-2 border">123456789</td>
             </tr>
             <tr>
+              <td className="px-4 py-2 border">Sub Inspector</td>
+              <td className="px-4 py-2 border">sub-inspector</td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+            <tr>
               <td className="px-4 py-2 border">head constable</td>
-              <td className="px-4 py-2 border">headconstable</td>
+              <td className="px-4 py-2 border"> head-constable </td>
+              <td className="px-4 py-2 border">123456789</td>
+            </tr>
+            <tr>
+              <td className="px-4 py-2 border">constable</td>
+              <td className="px-4 py-2 border"> constable </td>
               <td className="px-4 py-2 border">123456789</td>
             </tr>
           </tbody>

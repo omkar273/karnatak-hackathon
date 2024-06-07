@@ -1,5 +1,5 @@
 interface VehicleType {
-  vehicle_id?: string;
+  id?: string;
   name: string;
   color: string;
   fuel_type: string;
