@@ -1,5 +1,22 @@
 import { Menu } from "antd";
-import { BarChartBig, ClipboardList, FileStack, FileText, Home, Landmark, Mic, NotebookPen, NotepadText, Scale, ScrollText, University, User, UserCog, UserRoundPlus, Users } from "lucide-react";
+import {
+  BarChartBig,
+  ClipboardList,
+  FileStack,
+  FileText,
+  Home,
+  Landmark,
+  Mic,
+  NotebookPen,
+  NotepadText,
+  Scale,
+  ScrollText,
+  University,
+  User,
+  UserCog,
+  UserRoundPlus,
+  Users,
+} from "lucide-react";
 import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
@@ -7,19 +24,19 @@ import Sidebar from "../components/sidebar";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const [drawerOpen, setdrawerOpen] = useState<boolean>(false)
+  const [drawerOpen, setdrawerOpen] = useState<boolean>(false);
 
   const navigateAndCloseDrawer = (path: string) => {
     setdrawerOpen(false);
     navigate(path);
-  }
+  };
 
   const sidebarItems = [
     {
       key: "Dashboard",
       label: "Dashboard",
       onClick: () => navigateAndCloseDrawer("/"),
-      icon: <BarChartBig />
+      icon: <BarChartBig />,
     },
     {
       key: "Station Management",
@@ -94,7 +111,7 @@ const HomePage = () => {
 
           onClick: () => navigateAndCloseDrawer("/CourtTwo"),
         },
-      ]
+      ],
     },
     {
       key: "Fir Management",
@@ -144,12 +161,11 @@ const HomePage = () => {
 
   return (
     <div className="pg max-h-screen overflow-hidden">
-
       <Navbar
         sidebarItems={sidebarItems}
         drawerOpen={drawerOpen}
-        setdrawerOpen={setdrawerOpen} />
-
+        setdrawerOpen={setdrawerOpen}
+      />
 
       <div className="flex max-h-screen mt-16 overflow-hidden">
         <Sidebar>
@@ -166,9 +182,13 @@ const HomePage = () => {
         </Sidebar>
 
         <main className="flex-grow overflow-hidden">
-          <div className="max-h-screen overflow-y-auto">
+          <div className="max-h-screen hidden sm:block overflow-y-auto">
             {/* {page} */}
             <Outlet />
+          </div>
+          <div className="max-h-screen sm:hidden overflow-y-auto">
+            {/* {page} */}
+            <h1>You can only View this website on Landscap Mode</h1>
           </div>
         </main>
       </div>
