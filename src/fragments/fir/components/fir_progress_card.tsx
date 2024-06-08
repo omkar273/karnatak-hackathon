@@ -78,7 +78,7 @@ const ProgressCard = () => {
 
             <VSpacer height={15} />
 
-            <form onSubmit={handleSubmit(onSubmit)} className={`p-4 border transition-all duration-200 ease-in-out ${toggleAddProgress ? '' : 'h-0 p-0 overflow-hidden border-none'}`}>
+            <form onSubmit={handleSubmit(onSubmit)} className={`p-4 border transition-all duration-200 ease-in-out ${toggleAddProgress ? '' : 'h-0 p-0 hidden overflow-hidden border-none'}`}>
                 <div>
                     <p className="text-base my-2">Select the date at which this progress happened</p>
                     <DatePicker

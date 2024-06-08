@@ -15,7 +15,7 @@ import FirDetailsTable from "../components/fir_table";
 import { FIRModal } from "../modals/fir_modal";
 import { doSaveFIR } from "../utils/do_save_fir";
 
-const FIRPage = () => {
+const AllFirPage = () => {
   const { control, register, handleSubmit, setValue, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
   const { currentUser, userdata } = useSelector((state: RootState) => state.auth);
 
@@ -231,4 +231,4 @@ const FIRPage = () => {
   );
 };
 
-export default FIRPage;
+export default AllFirPage;

@@ -28,7 +28,7 @@ const EvidencesCard = () => {
     const id = queryParams.get('id');
     const [reload, setreload] = useState<boolean>(true);
     const { error, loading, evidenceList } = useFetchFirEvidences(id, reload);
-    const [toggleAddProgress, setToggleAddProgress] = useState<boolean>(false);
+    const [toggleAddEvidence, setToggleAddEvidence] = useState<boolean>(false);
     const { saveEvidence, evidenceError, savingLoading } = useSaveFirEvidence();
     const {
         handleSubmit,
@@ -102,7 +102,7 @@ const EvidencesCard = () => {
         <div className="card ">
             <div className="flex justify-between items-center">
                 <p className="font-semibold text-xl">Case Evidences</p>
-                <span className="tap flex gap-2 bg-blue-500 p-3 rounded-md shadow-md text-white" onClick={() => setToggleAddProgress(prev => !prev)}>
+                <span className="tap flex gap-2 bg-blue-500 p-3 rounded-md shadow-md text-white" onClick={() => setToggleAddEvidence(prev => !prev)}>
                     <FilePlus2 />
                     Add Evidence
                 </span>
@@ -110,7 +110,7 @@ const EvidencesCard = () => {
 
             <VSpacer height={15} />
 
-            <form onSubmit={handleSubmit(onSubmit)} className={`p-4 border transition-all duration-200 ease-in-out ${toggleAddProgress ? '' : 'h-0 p-0 overflow-hidden border-none'}`}>
+            <form onSubmit={handleSubmit(onSubmit)} className={`p-4 border transition-all duration-200 ease-in-out ${toggleAddEvidence ? '' : 'h-0 hidden p-0 overflow-hidden border-none'}`}>
                 <div>
                     <p className="text-base my-2">Select the date at which this evidence was collected</p>
                     <DatePicker

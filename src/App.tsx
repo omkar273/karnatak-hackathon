@@ -9,9 +9,8 @@ import CourtTwo from "./fragments/court/cout_two";
 import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
 import DashboardPage from "./fragments/dashboard/pages/dashboard_page";
-import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
-import FIRPage from "./fragments/fir/page/fir_page";
+import AllFirPage from "./fragments/fir/page/fir_page";
 import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import ProfilePage from "./fragments/profile/page/profile_page";
 import AddStationPage from "./fragments/station/pages/add_station_page";
@@ -48,7 +47,7 @@ const App = () => {
           <Route index element={getProtectedRoute(<DashboardPage />)} />
 
           {/* fir route */}
-          <Route path="fir" element={getProtectedRoute(<FIRPage />)} />
+          <Route path="fir" element={getProtectedRoute(<AllFirPage />)} />
           <Route path="fir/all" element={getProtectedRoute(<AllFirPage />)}></Route>
 
           <Route
