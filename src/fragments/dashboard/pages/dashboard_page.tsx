@@ -10,7 +10,6 @@ import { StationModel } from "@/fragments/station/models/station_model";
 import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/firestore";
 import { firestore } from "@/firebase/firebase_config";
 import { RanksEnum } from "@/common/post/ranks";
-import React from 'react';
 import * as Select from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 
@@ -147,6 +146,8 @@ const DashboardPage = () => {
                         </h1>
                     )
                 }
+
+                {loading && (<div></div>)}
 
             </div>
 

@@ -102,7 +102,7 @@ const FirDetailsPage = () => {
                             <VSpacer height={15} />
                             <ul>
                                 {data?.allotedTo?.map((person, index) => (
-                                    <li key={index}>{person}</li>
+                                    <li key={index}>{person.name}</li>
                                 ))}
                             </ul>
                         </div>

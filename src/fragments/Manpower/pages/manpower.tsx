@@ -3,7 +3,6 @@ import Map from "../components/map";
 import { useEffect, useState } from "react";
 import { RootState } from "@/common/redux/store";
 import useGetAllStations from "@/fragments/station/hooks/use_get_all_stations";
-import { Select } from "antd";
 import StationDataCard from "../components/station_data_card";
 
 const Manpower = () => {
@@ -38,8 +37,8 @@ const Manpower = () => {
       },
       ...stations.documents.map((station) => {
         return {
-          stationId: station.stationId,
-          label: station.stationName,
+          stationId: station.id,
+          label: station.station_name,
           value: station.id ?? ''
         }
       })
@@ -51,11 +50,11 @@ const Manpower = () => {
 
   console.log(`sending station id ${stationId}`);
 
-  const handleChange = (value: { value: string; label: React.ReactNode }) => {
-    console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
-    setstationId(value.value)
+  // const handleChange = (value: { value: string; label: React.ReactNode }) => {
+  //   console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+  //   setstationId(value.value)
 
-  };
+  // };
 
   return (
     <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
@@ -63,17 +62,19 @@ const Manpower = () => {
         <p className="font-open-sans font-semibold ">
           {"Dashboard"}
         </p>
-        <Select
+        {/* <Select
           labelInValue
           defaultValue={stationsData[0]}
           style={{ width: 'max-content' }}
           onChange={handleChange}
           options={stationsData}
-        />
+        /> */}
+        {stationsData && (<div></div>)}
+
       </div>
       <div className="p-4 w-full h-full overflow-clip relative">
-        <Map stationId={stationId} />
-        <StationDataCard stationId={stationId} />
+        <Map stationId={stationId ?? ''} />
+        <StationDataCard stationId={stationId ?? ''} />
       </div>
     </div>
   );

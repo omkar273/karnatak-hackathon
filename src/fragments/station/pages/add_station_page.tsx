@@ -1,5 +1,5 @@
 import { VSpacer } from "@/common/components/spacer";
-import InputField from "@/pages/auth/components/input_field";
+// import InputField from "@/pages/auth/components/input_field";
 import { useState } from "react";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
@@ -37,23 +37,19 @@ const AddStationPage = () => {
     const stationDetails: {
         label: string,
         error: string | undefined,
-        name: "stationName" | "email" | "stationId" | "district" | "station_incharge" | "crimeRate" | "address" | 'phone' | 'zone_name' | 'zoneCode'
+        name: "station_incharge_name" | "email" | "stationId" | "district" | "station_incharge" | "crimeRate" | "address" | 'phone' | 'zone_name' | 'zone_code' | 'station_name'
     }[] = [
             {
                 label: 'Station Name',
-                error: errors.stationName?.message,
-                name: 'stationName'
+                error: errors.station_name?.message,
+                name: 'station_name'
             },
             {
                 label: 'Zone code',
-                error: errors.zoneCode?.message,
-                name: 'zoneCode'
+                error: errors.zone_code?.message,
+                name: 'zone_code'
             },
-            {
-                label: 'Zone Code', 
-                error: errors.zoneCode?.message,
-                name: 'zoneCode'
-            },
+
             {
                 label: 'email',
                 error: errors.email?.message,
@@ -66,8 +62,8 @@ const AddStationPage = () => {
             },
             {
                 label: 'station_incharge',
-                error: errors.station_incharge?.message,
-                name: 'station_incharge'
+                error: errors.station_incharge_name?.message,
+                name: 'station_incharge_name'
             },
             {
                 label: 'phone',
@@ -89,18 +85,17 @@ const AddStationPage = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="card w-full  p-5 bg-white">
                     <p className="font-semibold text-2xl ">Add Station</p>
                     <div className="md:grid md:grid-cols-2 justify-center items-start gap-x-10 ">
-                        {
-                            stationDetails.map((station, index) => {
-                                return (<InputField<StationModel>
-                                    key={index}
-                                    validateOptions={validationOptions}
-                                    register={register}
-                                    label={station.label}
-                                    error={errors[station.name]?.message}
-                                    name={station.name}
-                                />)
-                            })
-                        }
+                        {/* {
+                            stationDetails.map((station, index) => (<InputField<StationModel>
+                                key={index}
+                                validateOptions={validationOptions}
+                                register={register}
+                                label={station.label}
+                                error={errors[station.name]?.message}
+                                name={station.name} />))
+                        } */}
+
+                        {stationDetails && (<div></div>)}
                     </div>
                     <TextArea<StationModel>
                         validateOptions={validationOptions}
