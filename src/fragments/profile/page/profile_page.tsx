@@ -1,6 +1,5 @@
 import { VSpacer } from "@/common/components/spacer";
 import { RootState } from "@/common/redux/store";
-import dummyuserdata from "@/data/underlying_data";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Rate } from "antd";
 import {
@@ -15,39 +14,12 @@ import {
     Weight,
 } from "lucide-react";
 import { useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
 
-const getUserDetails = (userEmail: string) => {
-    for (let index = 0; index < dummyuserdata.length; index++) {
-        const element = dummyuserdata[index];
-        if (userEmail === element.email) {
-            return {
-                ...element,
-            };
-        }
-    }
-    return null;
-};
+
 
 const ProfilePage = () => {
 
     const { userdata } = useSelector((s: RootState) => s.auth)
-
-
-    const [queryParams] = useSearchParams();
-    let id = queryParams.get("id");
-
-    if (!id) {
-        id = "omkarsonawane622@gmail.com";
-    }
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         toast.success('New task alloted to you', {
-    //             toastId: 'update'
-    //         })
-    //     }, 5000);
-    // }, [])
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
