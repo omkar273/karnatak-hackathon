@@ -7,9 +7,10 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, Badge, Drawer, Dropdown, Menu, MenuProps, Popconfirm } from "antd";
 import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Searchbar from "./nav_searchbar";
 import { Link } from "react-router-dom";
+import { RootState } from "@/common/redux/store";
 
 type Props = {
     drawerOpen: boolean,
@@ -19,6 +20,8 @@ type Props = {
 
 const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) => {
     const dispatch = useDispatch();
+    const { userdata } = useSelector((s: RootState) => s.auth)
+
     const items: MenuProps['items'] = [
         {
             label: 'loading...',
@@ -52,8 +55,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
         },
     ];
 
-    const url =
-        "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
+    // const url = "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg";
     return (
         <header className="fixed top-0 w-full flex items-center justify-between px-4 py-2 h-[60px] bg-cyan-600 transition-all duration-500 z-[1000] shadow-lg">
             <div className="hidden md:flex justify-start items-center gap-2">
@@ -108,7 +110,9 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
                     placement="bottomRight"
                     trigger={['click']}
                     arrow={true}>
-                    <Avatar src={url} />
+                    <Avatar className={`overflow-hidden font-normal border  text-xl  p-4 transition-all bg-blue-500 `}>
+                        {userdata?.name.substring(0, 1)}
+                    </Avatar>
                 </Dropdown>
             </div>
 

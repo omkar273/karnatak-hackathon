@@ -47,6 +47,9 @@ const useStationRates = (
 
   useEffect(() => {
     const fetchData = async () => {
+      if (stationId.length === 0) {
+        return;
+      }
       setLoading(true);
       setError(null);
       console.log(stationId);

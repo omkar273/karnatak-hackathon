@@ -2,12 +2,17 @@ import { RootState } from "@/common/redux/store";
 import { useSelector } from "react-redux";
 import useUserCounts from "../utils/use_user_counts";
 import DataCard from "./data_card";
+import { RanksEnum } from "@/common/post/ranks";
 
 
 const DashboardUserDataCards = () => {
-    const { currentUser } = useSelector((s: RootState) => s.auth)
+    const { currentUser, userdata } = useSelector((s: RootState) => s.auth)
 
     const { data, error, loading } = useUserCounts(currentUser?.user.uid);
+
+    if (userdata.post === RanksEnum.AssistantCommisioner || userdata.post === RanksEnum.Commisioner) {
+        return;
+    }
 
 
     return (

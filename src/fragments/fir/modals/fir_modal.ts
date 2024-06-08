@@ -58,7 +58,7 @@ export interface FIRRecord {
   FIR_ID: string;
   Unit_ID: string;
   Crime_No: string;
-  status?: string;
+  fir_status?: string;
   Intern_l__O?: string;
   Internal_IO?: string;
   timestamp?: Timestamp;

@@ -219,6 +219,7 @@ export const main = () => {
 
           const fir: FIRRecord = {
             ...temp,
+            id: customFaker.string.uuid().replace(/-/g, ""),
             stationId: station.id,
             allotedTo: [
               {

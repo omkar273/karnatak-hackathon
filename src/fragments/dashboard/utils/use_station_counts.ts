@@ -56,6 +56,10 @@ const useStationCounts = (
       setLoading(true);
       setError(null);
 
+      if (stationId.length === 0) {
+        return;
+      }
+
       const docRef = doc(
         firestore,
         `stations/${stationId}/counts/${monthYear}`

@@ -6,3 +6,12 @@ export const Ranks = {
   "Head Constable": 5,
   Constable: 6,
 };
+
+export enum RanksEnum {
+  "Commisioner" = "Commisioner",
+  "AssistantCommisioner" = "Assistant Commisioner",
+  Inspector = "Inspector",
+  SubInpector = "Sub Inpector",
+  HeadConstable = "Head Constable",
+  Constable = "Constable",
+}

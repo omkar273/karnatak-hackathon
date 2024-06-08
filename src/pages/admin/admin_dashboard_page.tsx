@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import HomeNavbar from '../home/components/home_navbar';
-import { main } from '@/data/data/dummy_data';
+import { customFaker, main } from '@/data/data/dummy_data';
 import { saveAs } from 'file-saver';
 import { toast } from 'react-toastify';
 
@@ -16,10 +16,13 @@ import stations_data from '@/data/json/stations_data.json';
 import fir_data from '@/data/json/fir_data.json';
 import weapons_data from '@/data/json/weapons_data.json';
 import station_crime_data from '@/data/json/station_crime_data.json';
-import station_dept_data from '@/data/json/station_dept_data.json';
+// import station_dept_data from '@/data/json/station_dept_data.json';
 
 import { doSignUp } from '../auth/utils/auth';
 import { saveAllDocs } from './utils/save_docs';
+import { StationDeptCountType } from '@/types/station_departments_type';
+import { serverTimestamp } from 'firebase/firestore';
+import { getRandomElementFromArray } from '@/data/data/generate_user_data';
 
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -44,7 +47,6 @@ const AdminDashboardPage = () => {
             station_dept_data
         } = main();
 
-        console.log(fir_data);
         let doc_count = 0;
         const data_files = [
             {
@@ -102,7 +104,6 @@ const AdminDashboardPage = () => {
         ];
 
         for (let index = 0; index < data_files.length; index++) {
-            console.log(`saving json of ${data_files[index].filename} and it is ${data_files[index].data.length !== 0} with index ${index}`);
 
             const element = data_files[index];
             doc_count += element.data.length;
@@ -185,7 +186,6 @@ const AdminDashboardPage = () => {
 
         } catch (error) {
             toast.error(`${error}`);
-            console.log(error);
         }
     };
 
@@ -193,20 +193,162 @@ const AdminDashboardPage = () => {
         try {
             for (let index = 1; index < commisioner_data.length; index++) {
                 const element = commisioner_data[index];
-                console.log('commissioner started uploading');
                 await saveAllDocs(`users/${element.id}`, element)
-                console.log('commissioner saved', element);
 
                 toast.success('commisioner data saved')
                 sleep(1000);
             }
 
-            
+            for (let index = 1; index < assistant_commisioner_data.length; index++) {
+                const element = assistant_commisioner_data[index];
+                await saveAllDocs(`users/${element.id}`, element)
+
+                toast.success('assistant commisioner data saved')
+                sleep(1000);
+            }
+            for (let index = 1; index < inspector_data.length; index++) {
+                const element = inspector_data[index];
+                await saveAllDocs(`users/${element.id}`, element)
+
+                toast.success('inspector_data data saved')
+                sleep(1000);
+            }
+            for (let index = 1; index < head_constable_data.length; index++) {
+                const element = head_constable_data[index];
+                await saveAllDocs(`users/${element.id}`, element)
+
+                toast.success('head_constable_data data saved')
+                sleep(1000);
+            }
+            for (let index = 1; index < constable_data.length; index++) {
+                const element = constable_data[index];
+                await saveAllDocs(`users/${element.id}`, element)
+
+                toast.success('constable_data data saved')
+                sleep(1000);
+            }
+
         } catch (error) {
             toast.error(`${error}`);
-            console.log(error);
         }
     }
+
+    const saveStations = async () => {
+        try {
+            toast.success(`no of stations ${stations_data.length}`);
+            for (let index = 0; index < stations_data.length; index++) {
+                const element = stations_data[index];
+                await saveAllDocs(`stations/${element.id}`, { ...element, timestamp: serverTimestamp() })
+                toast.success('station data saved')
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
+    const saveZones = async () => {
+        try {
+            toast.success(`no of stations ${zones_data.length}`);
+            for (let index = 0; index < zones_data.length; index++) {
+                const element = zones_data[index];
+                await saveAllDocs(`zones/${element.id}`, element)
+                toast.success(`zones data saved ${index + 1}`)
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+    const saveCounts = async () => {
+        try {
+            toast.success(`no of counts ${station_crime_data.length}`);
+            for (let index = 0; index < station_crime_data.length; index++) {
+                const element = station_crime_data[index];
+                await saveAllDocs(`crime_count/${element.id}`, element)
+                toast.success(`zones data saved ${index + 1}`)
+                sleep(1000);
+            }
+            for (let index = 0; index < stations_data.length; index++) {
+                const element = stations_data[index];
+                const temp: StationDeptCountType = {
+                    id: customFaker.string.uuid().replace(/-/g, ''),
+                    TrafficPolice: customFaker.number.int({ min: 0, max: 10 }),
+                    CrimeBranch: customFaker.number.int({ min: 0, max: 10 }),
+                    CyberCrimeCell: customFaker.number.int({ min: 0, max: 10 }),
+                    AntiTerrorismSquad: customFaker.number.int({ min: 0, max: 10 }),
+                    SpecialBranch: customFaker.number.int({ min: 0, max: 10 }),
+                    WomensPoliceStations: customFaker.number.int({ min: 0, max: 10 }),
+                    AntiNarcoticsCell: customFaker.number.int({ min: 0, max: 10 }),
+                    ForensicScienceLaboratory: customFaker.number.int({ min: 0, max: 10 }),
+                    PoliceTrainingAcademies: customFaker.number.int({ min: 0, max: 10 }),
+                    BombDisposalSquad: customFaker.number.int({ min: 0, max: 10 }),
+                    HumanRightsCell: customFaker.number.int({ min: 0, max: 10 }),
+                    PublicRelationsDepartment: customFaker.number.int({ min: 0, max: 10 }),
+                }
+
+                await saveAllDocs(`station_dept_count/${element.id}`, temp)
+                toast.success(`zones data saved ${index + 1}`)
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
+
+    const saveWeapons = async () => {
+        try {
+            toast.success(`no of stations ${weapons_data.length}`);
+            for (let index = 0; index < weapons_data.length; index++) {
+                const element = weapons_data[index];
+                await saveAllDocs(`weapons/${element.id}`, element)
+                toast.success('station data saved')
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
+    const saveFir = async () => {
+        try {
+            toast.success(`no of stations ${fir_data.length}`);
+            for (let index = 0; index < fir_data.length; index++) {
+                const element = fir_data[index];
+                await saveAllDocs(`fir_details/${customFaker.string.uuid().replace(/-/g, "")}`, {
+                    ...element,
+                    timestamp: serverTimestamp(),
+                    fir_status: getRandomElementFromArray(['open', 'closed'])
+                })
+                toast.success(`zones data saved ${index + 1}`)
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
+    const saveVehicles = async () => {
+        try {
+            toast.success(`no of stations ${vehicle_data.length}`);
+            for (let index = 0; index < vehicle_data.length; index++) {
+                const element = vehicle_data[index];
+                await saveAllDocs(`vehicle_details/${element.id}`, element)
+                toast.success(`zones data saved ${index + 1}`)
+                sleep(1000);
+            }
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
 
     return (
         <div className="pg max-h-screen overflow-hidden relative">
@@ -236,34 +378,40 @@ const AdminDashboardPage = () => {
                         Save all users
                     </button>
                     <button
-                        onClick={saveUsers}
+                        onClick={saveStations}
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
                         save stations
                     </button>
                     <button
-                        onClick={saveUsers}
+                        onClick={saveWeapons}
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
-                        save stations
+                        save weapons
                     </button>
                     <button
-                        onClick={saveUsers}
+                        onClick={saveZones}
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
-                        save stations
+                        save zones
                     </button>
                     <button
-                        onClick={saveUsers}
+                        onClick={saveFir}
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
-                        save stations
+                        save fir
                     </button>
                     <button
-                        onClick={saveUsers}
+                        onClick={saveVehicles}
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
-                        save stations
+                        save vehicles
+                    </button>
+                    <button
+                        onClick={saveCounts}
+                        className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
+                        type="button">
+                        save counts
                     </button>
                 </div>
             </div>
