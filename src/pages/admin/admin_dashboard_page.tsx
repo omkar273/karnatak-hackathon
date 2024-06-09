@@ -55,6 +55,11 @@ export const loginData: {
         {
             email: 'nikyalokhande@gmail.com',
             data: commisioner_data[0],
+            username: 'admin'
+        },
+        {
+            email: 'nikyalokhande@gmail.com',
+            data: commisioner_data[0],
             username: 'commisioner1'
         },
         {
@@ -81,27 +86,27 @@ export const loginData: {
         {
             email: 'nisargalokhande@gmail.com',
             data: sub_inspector_data[1],
-            username: 'sub_inspector1'
-        },
-        {
-            email: 'desno.pvt.ltd@gmail.com',
-            data: sub_inspector_data[0],
             username: 'sub_inspector'
         },
+        // {
+        //     email: 'desno.pvt.ltd@gmail.com',
+        //     data: sub_inspector_data[0],
+        //     username: 'sub_inspector'
+        // },
         {
             email: 'omkarsonawane.comp@siem.org.in',
             data: head_constable_data[0],
             username: 'head_constable1'
         },
-        {
-            email: 'jiteshjawale123@gmail.com',
-            data: head_constable_data[1],
-            username: 'head_constable2'
-        },
+        // {
+        //     email: 'jiteshjawale123@gmail.com',
+        //     data: head_constable_data[1],
+        //     username: 'head_constable2'
+        // },
         {
             email: 'omkarsonawane622@gmail.com',
             data: constable_data[0],
-            username: 'constable1'
+            username: 'constable'
         },
 
 
@@ -235,7 +240,7 @@ const AdminDashboardPage = () => {
                 const element = assistant_commisioner_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success('assistant commisioner data saved')
+                toast.success(`assistant commisioner ${index} data saved`)
                 sleep(1000);
             }
             for (let index = 1; index < inspector_data.length; index++) {
@@ -269,6 +274,8 @@ const AdminDashboardPage = () => {
 
         } catch (error) {
             toast.error(`${error}`);
+            console.log(error);
+
         }
     }
 

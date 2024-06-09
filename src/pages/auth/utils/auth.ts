@@ -14,6 +14,7 @@ import {
   doc,
   getDoc,
   getDocs,
+  increment,
   query,
   setDoc,
   updateDoc,
@@ -83,21 +84,15 @@ export const saveUserData = async (
       "station_user_department_counts",
       data.stationId
     );
+
     const stationDoc = await getDoc(stationRef);
 
-    if (!stationDoc.exists()) {
-      await setDoc(stationRef, { stationId: data.stationId });
-    }
-
-    const deptCountRef = doc(stationRef, data.department);
-    const deptCountDoc = await getDoc(deptCountRef);
-
-    if (deptCountDoc.exists()) {
-      await updateDoc(deptCountRef, {
-        [data.department]: (deptCountDoc.data()[data.department] || 0) + 1,
+    if (stationDoc.exists()) {
+      await updateDoc(stationRef, {
+        [data.department]: increment(1),
       });
     } else {
-      await setDoc(deptCountRef, {
+      await setDoc(stationRef, {
         [data.department]: 1,
       });
     }

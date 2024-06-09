@@ -10,6 +10,7 @@ import InputField from "../components/input_field";
 import { doLogin } from "../utils/auth";
 import { useState } from "react";
 import { Button, Modal } from "antd";
+import { loginData } from "@/pages/admin/admin_dashboard_page";
 
 type LoginData = {
   username: string,
@@ -72,36 +73,15 @@ const AuthPage = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="px-4 py-2 border">Commissioner</td>
-              <td className="px-4 py-2 border">commissioner</td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border">Assistant commissioner</td>
-              <td className="px-4 py-2 border">assistant-commissioner</td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border">Inspector</td>
-              <td className="px-4 py-2 border">inspector</td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border">Sub Inspector</td>
-              <td className="px-4 py-2 border">sub-inspector</td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border">head constable</td>
-              <td className="px-4 py-2 border"> head-constable </td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2 border">constable</td>
-              <td className="px-4 py-2 border"> constable </td>
-              <td className="px-4 py-2 border">123456789</td>
-            </tr>
+            {
+              loginData.map((cred, index) => (
+                <tr key={index}>
+                  <td className="px-4 py-2 border">{cred.username}</td>
+                  <td className="px-4 py-2 border">{cred.username}</td>
+                  <td className="px-4 py-2 border">123456789</td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </Modal>
