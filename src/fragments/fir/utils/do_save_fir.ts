@@ -28,7 +28,7 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
     });
 
     const firId = firDocRef.id;
-
+ 
     if (firData.stationId) {
       const stationDocRef = doc(firestore, "stations", firData.stationId);
       const currentMonth = getCurrentMonth();

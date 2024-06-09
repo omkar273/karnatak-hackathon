@@ -181,7 +181,7 @@ const AdminDashboardPage = () => {
     const saveUsers = async () => {
 
         try {
-            for (let index = 1; index < commisioner_data.length; index++) {
+            for (let index = 0; index < commisioner_data.length; index++) {
                 const element = commisioner_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -190,7 +190,7 @@ const AdminDashboardPage = () => {
                 sleep(1000);
             }
 
-            for (let index = 2; index < assistant_commisioner_data.length; index++) {
+            for (let index = 0; index < assistant_commisioner_data.length; index++) {
                 const element = assistant_commisioner_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -198,7 +198,7 @@ const AdminDashboardPage = () => {
                 console.log(`assistant_commisioner_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 2; index < inspector_data.length; index++) {
+            for (let index = 0; index < inspector_data.length; index++) {
                 const element = inspector_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -206,7 +206,7 @@ const AdminDashboardPage = () => {
                 console.log(`inspector_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 2; index < sub_inspector_data.length; index++) {
+            for (let index = 0; index < sub_inspector_data.length; index++) {
                 const element = sub_inspector_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -214,7 +214,7 @@ const AdminDashboardPage = () => {
                 console.log(`sub_inspector_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 2; index < head_constable_data.length; index++) {
+            for (let index = 0; index < head_constable_data.length; index++) {
                 const element = head_constable_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -223,7 +223,7 @@ const AdminDashboardPage = () => {
                 sleep(1000);
             }
 
-            for (let index = 2; index < constable_data.length; index++) {
+            for (let index = 0; index < constable_data.length; index++) {
                 const element = constable_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
@@ -343,7 +343,26 @@ const AdminDashboardPage = () => {
                 // })
                 await doSaveFIR({
                     ...element,
-                    fir_status: getRandomElementFromArray(['open', 'closed'])
+                    fir_status: getRandomElementFromArray(['open', 'closed']),
+                    fir_type: getRandomElementFromArray([
+                        'Theft',
+                        'Robbery',
+                        'Assault',
+                        'Burglary',
+                        'Fraud',
+                        'Murder',
+                        'SexualAssault',
+                        'DrugTrafficking',
+                        'Cybercrime',
+                        'Kidnapping',
+                        'Bribery',
+                        'Stalking',
+                        'DomesticViolence',
+                        'IdentityTheft',
+                        'Counterfeiting',
+                        'Harassment',
+                    ]),
+
                 })
                 toast.success(`zones data saved ${index + 1}`)
                 sleep(1000);
