@@ -22,6 +22,49 @@ export function getRandomInteger(startValue: number, endValue: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const policeTrainingPrograms: string[] = [
+  "Basic Police Training",
+  "Firearms Training",
+  "Criminal Investigation Techniques",
+  "Community Policing Strategies",
+  "Self-Defense and Physical Training",
+  "Traffic Management and Accident Investigation",
+  "Cybercrime Investigation",
+  "Counter-Terrorism Training",
+  "Forensic Science Training",
+  "Crisis Negotiation and Hostage Rescue",
+  "Drug Enforcement Training",
+  "Anti-Human Trafficking Training",
+  "First Aid and Emergency Response",
+  "Leadership and Management Training",
+  "Mental Health Crisis Intervention",
+  "Cultural Sensitivity and Diversity Training",
+  "Public Order and Riot Control",
+  "Intelligence Gathering and Analysis",
+  "Victim Assistance and Support",
+  "Undercover Operations Training",
+  "K-9 Handling and Training",
+  "Bomb Disposal and Explosive Handling",
+  "Legal and Ethical Training",
+  "Surveillance and Reconnaissance",
+  "Emergency Vehicle Operations",
+  "Search and Rescue Operations",
+  "Maritime Law Enforcement Training",
+  "Advanced Driving Techniques",
+  "Interview and Interrogation Techniques",
+  "Patrol Procedures and Tactics",
+  "Incident Command System Training",
+  "Public Relations and Media Handling",
+];
+
+const getTraining = () => {
+  const temp = [];
+  for (let index = 0; index < 5; index++) {
+    temp.push(getRandomElementFromArray(policeTrainingPrograms));
+  }
+  return temp;
+};
+
 export const generateRandomUserData = ({
   post,
   reporting_officer_id,
@@ -44,7 +87,9 @@ export const generateRandomUserData = ({
   }
 
   const user_full_name = customFaker.person.fullName();
-  const username = generateUniqueUsername(user_full_name.replace(/-/g, ""));
+  const username = generateUniqueUsername(
+    user_full_name.replace(/-/g, "").replace(/\s/g, "")
+  );
 
   const temp: UserModel = {
     id: customFaker.string.uuid().replace(/-/g, ""),
@@ -52,7 +97,7 @@ export const generateRandomUserData = ({
     // personal details
     name: user_full_name,
     post: post,
-    dateOfJoining: customFaker.date
+    date_of_joining: customFaker.date
       .between({ from: "2002-01-01", to: "2012-01-01" })
       .toLocaleDateString(),
     batch: "dummy batch",
@@ -80,6 +125,29 @@ export const generateRandomUserData = ({
     reporting_officer_id: reporting_officer_id ?? null,
     stationId: stationId ?? "",
     superiors_list: superiors_list ?? [],
+
+    bmi:
+      Math.round(customFaker.number.float({ min: 18.5, max: 24.9 }) * 100) /
+      100,
+    phone_no: customFaker.phone.number(),
+    blood_group: getRandomElementFromArray(["A", "B", "O", "AB"]),
+    certifications: [],
+    department: getRandomElementFromArray([
+      "TrafficPolice",
+      "CrimeBranch",
+      "CyberCrimeCell",
+      "AntiTerrorismSquad",
+      "SpecialBranch",
+      "WomensPoliceStations",
+      "AntiNarcoticsCell",
+      "ForensicScienceLaboratory",
+      "PoliceTrainingAcademies",
+      "BombDisposalSquad",
+      "HumanRightsCell",
+      "PublicRelationsDepartment",
+    ]),
+    training: getTraining(),
+    specialization: "NA",
   };
 
   return temp;

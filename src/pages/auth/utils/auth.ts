@@ -12,9 +12,11 @@ import {
   addDoc,
   collection,
   doc,
+  getDoc,
   getDocs,
   query,
   setDoc,
+  updateDoc,
   where,
 } from "firebase/firestore";
 
@@ -24,41 +26,6 @@ type SignUpData = {
   password: string;
   data: UserModel;
 };
-
-// export const doSignUp = async ({
-//   username,
-//   email,
-//   password,
-//   data,
-// }: SignUpData): Promise<void> => {
-//   try {
-//     const q = query(
-//       collection(firestore, "usernames"),
-//       where("username", "==", username)
-//     );
-//     const querySnapshot = await getDocs(q);
-
-//     if (!querySnapshot.empty) {
-//       throw new Error("Username already taken");
-//     }
-
-//     const creds: UserCredential = await createUserWithEmailAndPassword(
-//       auth,
-//       email,
-//       password
-//     );
-//     if (creds) {
-//       await addDoc(collection(firestore, "usernames"), {
-//         email,
-//         username,
-//       });
-
-//       await setDoc(doc(firestore, "users", creds.user.uid), data);
-//     }
-//   } catch (error) {
-//     throw new Error(`Error signing up: ${error}`);
-//   }
-// };
 
 export const doLogout = async () => {
   try {
@@ -99,6 +66,44 @@ export const doLogin = async (
   }
 };
 
+export const saveUserData = async (
+  userId: string,
+  email: string,
+  username: string,
+  data: UserModel
+): Promise<void> => {
+  await addDoc(collection(firestore, "usernames"), { email, username });
+
+  const userRef = doc(firestore, "users", userId);
+  await setDoc(userRef, data);
+
+  if (data.stationId && data.department) {
+    const stationRef = doc(
+      firestore,
+      "station_user_department_counts",
+      data.stationId
+    );
+    const stationDoc = await getDoc(stationRef);
+
+    if (!stationDoc.exists()) {
+      await setDoc(stationRef, { stationId: data.stationId });
+    }
+
+    const deptCountRef = doc(stationRef, data.department);
+    const deptCountDoc = await getDoc(deptCountRef);
+
+    if (deptCountDoc.exists()) {
+      await updateDoc(deptCountRef, {
+        [data.department]: (deptCountDoc.data()[data.department] || 0) + 1,
+      });
+    } else {
+      await setDoc(deptCountRef, {
+        [data.department]: 1,
+      });
+    }
+  }
+};
+
 export const doSignUp = async ({
   username,
   email,
@@ -122,28 +127,9 @@ export const doSignUp = async ({
       password
     );
     if (creds) {
-      await addDoc(collection(firestore, "usernames"), { email, username });
-
-      const userRef = doc(firestore, "users", creds.user.uid);
-      await setDoc(userRef, data);
-
-      // if (data.superiors_list && data.superiors_list.length > 0) {
-      //   for (const superiorId of data.superiors_list) {
-      //     const superiorRef = doc(firestore, "users", superiorId);
-      //     const underlyingRef = collection(superiorRef, "underlying");
-      //     await addDoc(underlyingRef, {
-      //       underlyingId: creds.user.uid,
-      //       name: data.name,
-      //       post: data.post,
-      //       stationId: data.stationId,
-      //       openCases: data.open_cases || 0,
-      //     });
-      //   }
-      // }
+      await saveUserData(creds.user.uid, email, username, data);
     }
   } catch (error) {
     throw new Error(`Error signing up: ${error}`);
   }
 };
-
-

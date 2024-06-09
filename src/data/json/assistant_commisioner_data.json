@@ -1,206 +1,271 @@
 [
   {
-    "id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "name": "Gopaal Jha",
+    "id": "3ce00594ec024c2da4e3741b58886284",
+    "name": "Sameer Somayaji",
     "post": "Assistant Commisioner",
-    "dateOfJoining": "9/24/2011",
+    "date_of_joining": "5/18/2002",
     "batch": "dummy batch",
-    "height": 170,
-    "weight": 80,
+    "height": 162,
+    "weight": 74,
+    "workExperience": 8,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 15,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Negotiation",
+      "Leadership",
+      "Rescue",
+      "Investigation"
+    ],
+    "awards": [
+      "Exceptional Duty Award",
+      "Medal of Valor",
+      "Exemplary Service Medal",
+      "Riot Control Medal"
+    ],
+    "open_cases": 7,
+    "closed_cases": 9,
+    "email": "SameerSomayaji1@gmail.com",
+    "password": "23456789",
+    "username": "SameerSomayaji1",
+    "reporting_officer_name": "Aditeya Singh",
+    "reporting_officer_id": "930ccb5ee2884a9c989d344869ef1be9",
+    "stationId": "",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9"
+    ],
+    "bmi": 18.61,
+    "phone_no": "+918679008072",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Victim Assistance and Support",
+      "Patrol Procedures and Tactics",
+      "Victim Assistance and Support",
+      "Counter-Terrorism Training",
+      "Emergency Vehicle Operations"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "name": "Gopaal Namboothiri",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "3/9/2010",
+    "batch": "dummy batch",
+    "height": 174,
+    "weight": 76,
     "workExperience": 7,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 34,
+    "solvedCases": 13,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Ethics",
-      "Discipline",
-      "CrisisManagement",
-      "Rescue"
+      "Surveillance",
+      "Patrolling",
+      "Firearms",
+      "Firearms"
     ],
     "awards": [
-      "Community Protection Award",
-      "Police Chief's Commendation",
-      "Riot Control Medal",
-      "Exceptional Duty Award"
+      "Exceptional Duty Award",
+      "Crisis Management Medal",
+      "Exceptional Duty Award",
+      "Public Safety Officer Medal of Valor"
     ],
-    "open_cases": 6,
-    "closed_cases": 8,
-    "email": "Gopaal Jha1@gmail.com",
+    "open_cases": 7,
+    "closed_cases": 6,
+    "email": "GopaalNamboothiri1@gmail.com",
     "password": "23456789",
-    "username": "Gopaal Jha1",
-    "reporting_officer_name": "Chandrabhaga Nair",
-    "reporting_officer_id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
+    "username": "GopaalNamboothiri1",
+    "reporting_officer_name": "Aditeya Singh",
+    "reporting_officer_id": "930ccb5ee2884a9c989d344869ef1be9",
     "stationId": "",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2"
+      "930ccb5ee2884a9c989d344869ef1be9"
     ],
+    "bmi": 21.02,
+    "phone_no": "+91-888-4599507",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Community Policing Strategies",
+      "Firearms Training",
+      "Firearms Training",
+      "Legal and Ethical Training",
+      "Drug Enforcement Training"
+    ],
+    "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
     "zone_name": "East"
   },
   {
-    "id": "99a7c8cb23f7472597978dbef93d747f",
-    "name": "Gautam Bhattacharya",
+    "id": "fd70ecc8be864b07baded6a179e3c38d",
+    "name": "Bandhu Guha",
     "post": "Assistant Commisioner",
-    "dateOfJoining": "6/25/2002",
+    "date_of_joining": "8/4/2005",
     "batch": "dummy batch",
-    "height": 180,
-    "weight": 75,
-    "workExperience": 9,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 35,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Negotiation",
-      "Negotiation",
-      "Forensics",
-      "Forensics"
-    ],
-    "awards": [
-      "Service Above Self Award",
-      "Silver Star for Bravery",
-      "Distinguished Service Medal",
-      "Meritorious Service Medal"
-    ],
-    "open_cases": 4,
-    "closed_cases": 3,
-    "email": "Gautam Bhattacharya2@gmail.com",
-    "password": "23456789",
-    "username": "Gautam Bhattacharya2",
-    "reporting_officer_name": "Chandrabhaga Nair",
-    "reporting_officer_id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-    "stationId": "",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2"
-    ],
-    "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
-  },
-  {
-    "id": "b61751a2402246c9b541b4a97cdf2c09",
-    "name": "Subhash Naik",
-    "post": "Assistant Commisioner",
-    "dateOfJoining": "10/15/2009",
-    "batch": "dummy batch",
-    "height": 165,
-    "weight": 75,
+    "height": 170,
+    "weight": 74,
     "workExperience": 1,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 21,
+    "solvedCases": 30,
     "previousPosting": "dummy previous posting",
     "skills": [
+      "ConflictResolution",
       "Firearms",
-      "Coordination",
-      "Dedication",
-      "Negotiation"
+      "Tactics",
+      "CrisisManagement"
     ],
     "awards": [
-      "Service Above Self Award",
-      "Courage in Crisis Award",
       "Frontline Hero Award",
-      "Riot Control Medal"
+      "Courageous Service Medal",
+      "Exceptional Duty Award",
+      "Police Chief's Commendation"
     ],
-    "open_cases": 6,
-    "closed_cases": 7,
-    "email": "Subhash Naik1@gmail.com",
+    "open_cases": 8,
+    "closed_cases": 10,
+    "email": "BandhuGuha1@gmail.com",
     "password": "23456789",
-    "username": "Subhash Naik1",
-    "reporting_officer_name": "Chandrabhaga Nair",
-    "reporting_officer_id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
+    "username": "BandhuGuha1",
+    "reporting_officer_name": "Aditeya Singh",
+    "reporting_officer_id": "930ccb5ee2884a9c989d344869ef1be9",
     "stationId": "",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2"
+      "930ccb5ee2884a9c989d344869ef1be9"
     ],
+    "bmi": 23.26,
+    "phone_no": "+91-654-8285095",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "CrimeBranch",
+    "training": [
+      "Public Order and Riot Control",
+      "Basic Police Training",
+      "Advanced Driving Techniques",
+      "Maritime Law Enforcement Training",
+      "Drug Enforcement Training"
+    ],
+    "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
     "zone_name": "East"
   },
   {
-    "id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "name": "Chaturbhuj Chattopadhyay",
+    "id": "2d49f7019c12448395c520093ea90df8",
+    "name": "Gopi Dwivedi",
     "post": "Assistant Commisioner",
-    "dateOfJoining": "5/23/2005",
+    "date_of_joining": "11/4/2004",
     "batch": "dummy batch",
-    "height": 172,
-    "weight": 75,
+    "height": 169,
+    "weight": 65,
     "workExperience": 4,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 2,
+    "solvedCases": 8,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "CrisisManagement",
-      "Strategy",
-      "Surveillance",
-      "Surveillance"
+      "ConflictResolution",
+      "Criminology",
+      "Resilience",
+      "ConflictResolution"
     ],
     "awards": [
-      "Gallantry Award",
-      "Honor for Public Service",
       "Riot Control Medal",
-      "Public Safety Officer Medal of Valor"
+      "Bravery in Action Award",
+      "Lifesaving Medal",
+      "Exceptional Duty Award"
     ],
-    "open_cases": 4,
-    "closed_cases": 10,
-    "email": "Chaturbhuj Chattopadhyay1@gmail.com",
+    "open_cases": 8,
+    "closed_cases": 9,
+    "email": "GopiDwivedi1@gmail.com",
     "password": "23456789",
-    "username": "Chaturbhuj Chattopadhyay1",
-    "reporting_officer_name": "Chandrabhaga Nair",
-    "reporting_officer_id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
+    "username": "GopiDwivedi1",
+    "reporting_officer_name": "Aditeya Singh",
+    "reporting_officer_id": "930ccb5ee2884a9c989d344869ef1be9",
     "stationId": "",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2"
+      "930ccb5ee2884a9c989d344869ef1be9"
     ],
+    "bmi": 23.3,
+    "phone_no": "+91-603-2537306",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Bomb Disposal and Explosive Handling",
+      "Cultural Sensitivity and Diversity Training",
+      "Mental Health Crisis Intervention",
+      "Basic Police Training",
+      "Maritime Law Enforcement Training"
+    ],
+    "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
     "zone_name": "East"
   },
   {
-    "id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "name": "Amrit Mahajan-Kocchar",
+    "id": "6a3914f1126e4f009a68c8612438c04e",
+    "name": "Gajaadhar Namboothiri",
     "post": "Assistant Commisioner",
-    "dateOfJoining": "5/25/2008",
+    "date_of_joining": "5/30/2007",
     "batch": "dummy batch",
-    "height": 167,
-    "weight": 74,
-    "workExperience": 2,
+    "height": 175,
+    "weight": 72,
+    "workExperience": 9,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 46,
+    "solvedCases": 14,
     "previousPosting": "dummy previous posting",
     "skills": [
+      "Resilience",
+      "Dedication",
       "FirstAid",
-      "Firearms",
-      "FirstAid",
-      "Fitness"
+      "Coordination"
     ],
     "awards": [
-      "Police Chief's Commendation",
-      "Leadership in Action Award",
-      "Commitment to Public Safety Award",
-      "Riot Control Medal"
+      "Commendation for Valor",
+      "Crisis Management Medal",
+      "Frontline Hero Award",
+      "Service Above Self Award"
     ],
-    "open_cases": 2,
+    "open_cases": 5,
     "closed_cases": 7,
-    "email": "Amrit MahajanKocchar1@gmail.com",
+    "email": "GajaadharNamboothiri1@gmail.com",
     "password": "23456789",
-    "username": "Amrit MahajanKocchar1",
-    "reporting_officer_name": "Chandrabhaga Nair",
-    "reporting_officer_id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
+    "username": "GajaadharNamboothiri1",
+    "reporting_officer_name": "Aditeya Singh",
+    "reporting_officer_id": "930ccb5ee2884a9c989d344869ef1be9",
     "stationId": "",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2"
+      "930ccb5ee2884a9c989d344869ef1be9"
     ],
+    "bmi": 19.03,
+    "phone_no": "+91-969-4338819",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Incident Command System Training",
+      "Intelligence Gathering and Analysis",
+      "Forensic Science Training",
+      "Criminal Investigation Techniques",
+      "Firearms Training"
+    ],
+    "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
     "zone_name": "East"
   }

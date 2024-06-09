@@ -1,0 +1,57 @@
+[
+    {
+        "id": "z8iRwPrPqehBr8fiAZO5dKIeDrr1",
+        "name": "Omkar sonawane",
+        "post": "Admin",
+        "date_of_joining": "11/2/2004",
+        "batch": "dummy batch",
+        "height": 179,
+        "weight": 69,
+        "workExperience": 9,
+        "certification": [
+            "dummy certifications"
+        ],
+        "qualification": "graduated",
+        "solvedCases": 48,
+        "previousPosting": "dummy previous posting",
+        "skills": [
+            "ReportWriting",
+            "FirstAid",
+            "SelfDefense",
+            "Communication"
+        ],
+        "awards": [
+            "Exceptional Duty Award",
+            "Public Safety Officer Medal of Valor",
+            "Silver Star for Bravery",
+            "Valor in the Line of Duty Medal"
+        ],
+        "open_cases": 9,
+        "closed_cases": 5,
+        "email": "nikyalokhande@gmail.com",
+        "password": "23456789",
+        "username": "AnilaAhluwalia1",
+        "reporting_officer_name": "Amrita Naik",
+        "reporting_officer_id": "01eccd9257b544d5abb5d29538bbc677",
+        "superiors_list": [
+            "GiJzLRiVl3PeKb8RCLjwa6pG3go1",
+            "zY5y3eNWi4fXEX0TalJcqH0X3A12",
+            "NpoZprouwcNlnA0ZrDcwhBOzAxH3",
+            "c7653d0b7de04ed3b87ea0b10ef85676",
+            "01eccd9257b544d5abb5d29538bbc677"
+        ],
+        "bmi": 20.8,
+        "phone_no": "+91961-370-4210",
+        "blood_group": "O",
+        "certifications": [],
+        "department": "CrimeBranch",
+        "training": [
+            "Basic Police Training",
+            "Cultural Sensitivity and Diversity Training",
+            "Cultural Sensitivity and Diversity Training",
+            "Firearms Training",
+            "Surveillance and Reconnaissance"
+        ],
+        "specialization": "NA"
+    }
+]

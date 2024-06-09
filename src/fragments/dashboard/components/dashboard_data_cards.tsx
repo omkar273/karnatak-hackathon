@@ -10,10 +10,9 @@ const DashboardUserDataCards = () => {
 
     const { data, error, loading } = useUserCounts(currentUser?.user.uid);
 
-    if (userdata.post === RanksEnum.AssistantCommisioner || userdata.post === RanksEnum.Commisioner) {
+    if (userdata?.post === RanksEnum.AssistantCommisioner || userdata?.post === RanksEnum.Commisioner) {
         return;
     }
-
 
     return (
         <div

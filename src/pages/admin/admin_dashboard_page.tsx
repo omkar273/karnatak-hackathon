@@ -15,18 +15,99 @@ import vehicle_data from '@/data/json/vehicle_data.json';
 import stations_data from '@/data/json/stations_data.json';
 import fir_data from '@/data/json/fir_data.json';
 import weapons_data from '@/data/json/weapons_data.json';
-import station_crime_data from '@/data/json/station_crime_data.json';
+import admin_data from '@/data/json/admin.json';
+
 // import station_dept_data from '@/data/json/station_dept_data.json';
 
-import { doSignUp } from '../auth/utils/auth';
+// const commisioner_data: UserModel[] = []
+// const assistant_commisioner_data: UserModel[] = []
+// const inspector_data: UserModel[] = []
+// const sub_inspector_data: UserModel[] = []
+// const head_constable_data: UserModel[] = []
+// const constable_data: UserModel[] = []
+// const vehicle_data: VehicleType[] = []
+// const stations_data: StationModel[] = []
+// const fir_data: FIRRecord[] = []
+// const zones_data: ZoneModel[] = []
+// const weapons_data: WeaponType[] = []
+// import { ZoneModel } from '@/fragments/station/models/zone_model';
+// import VehicleType from '@/types/vehicle_type';
+// import { StationModel } from '@/fragments/station/models/station_model';
+// import { FIRRecord } from '@/fragments/fir/modals/fir_modal';
+// import { WeaponType } from '@/types/weapon_type';
+
+import { doSignUp, saveUserData } from '../auth/utils/auth';
 import { saveAllDocs } from './utils/save_docs';
-import { StationDeptCountType } from '@/types/station_departments_type';
 import { serverTimestamp } from 'firebase/firestore';
 import { getRandomElementFromArray } from '@/data/data/generate_user_data';
+import { UserModel } from '@/fragments/user_management/models/user_model';
 
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+
+export const loginData: {
+    email: string,
+    data: UserModel,
+    username: string
+}[] = [
+        {
+            email: 'nikyalokhande@gmail.com',
+            data: commisioner_data[0],
+            username: 'commisioner1'
+        },
+        {
+            email: 'itzsramlok@gmail.com',
+            data: assistant_commisioner_data[0],
+            username: 'assistant_commisioner1'
+        },
+        {
+            email: 'nisargalokhande09@gmail.com',
+            data: assistant_commisioner_data[1],
+            username: 'assistant_commisioner2'
+        },
+
+        {
+            email: 'jeetjawale.99@gmail.com',
+            data: inspector_data[0],
+            username: 'inspector1'
+        },
+        {
+            email: 'omkarsonawane.dev@gmail.com',
+            data: inspector_data[1],
+            username: 'inspector2'
+        },
+        {
+            email: 'nisargalokhande@gmail.com',
+            data: sub_inspector_data[1],
+            username: 'sub_inspector1'
+        },
+        {
+            email: 'desno.pvt.ltd@gmail.com',
+            data: sub_inspector_data[0],
+            username: 'sub_inspector'
+        },
+        {
+            email: 'omkarsonawane.comp@siem.org.in',
+            data: head_constable_data[0],
+            username: 'head_constable1'
+        },
+        {
+            email: 'jiteshjawale123@gmail.com',
+            data: head_constable_data[1],
+            username: 'head_constable2'
+        },
+        {
+            email: 'omkarsonawane622@gmail.com',
+            data: constable_data[0],
+            username: 'constable1'
+        },
+
+
+    ]
+
+
 
 const AdminDashboardPage = () => {
 
@@ -112,6 +193,7 @@ const AdminDashboardPage = () => {
                 [str],
                 { type: "application/json" }
             );
+            toast.info(`Documents of type ${element.filename} ${element.data.length} `)
             saveAs(blob, `${element.filename}.json`);
             await sleep(1000); // Use await to ensure the loop waits for sleep to complete
         }
@@ -123,77 +205,27 @@ const AdminDashboardPage = () => {
 
     const registerUsers = async (): Promise<void> => {
         try {
-            await doSignUp({
-                email: 'omkarsonawane622@gmail.com',
-                password: '123456789',
-                username: 'commissioner',
-                data: commisioner_data[0]
-            })
-            toast.success('commissioner successfully registered');
-            sleep(1000);
-
-
-            await doSignUp({
-                email: 'jiteshjawale123@gmail.com',
-                password: '123456789',
-                username: 'assistant-commissioner',
-                data: assistant_commisioner_data[0]
-            })
-            toast.success('assistant commissioner successfully registered');
-            sleep(1000);
-
-
-            await doSignUp({
-                email: 'omkarsonawane.comp@siem.org.in',
-                password: '123456789',
-                username: 'inspector',
-                data: inspector_data[0]
-            })
-            toast.success('inspector successfully registered');
-            sleep(1000);
-
-
-            await doSignUp({
-                email: 'omkarsonawane.dev@gmail.com',
-                password: '123456789',
-                username: 'sub-inspector',
-                data: sub_inspector_data[0]
-            })
-            toast.success('sub inspector successfully registered');
-            sleep(1000);
-
-
-            await doSignUp({
-                email: 'jeetjawale.99@gmail.com',
-                password: '123456789',
-                username: 'head-constable',
-                data: head_constable_data[0]
-            })
-            toast.success('head constable successfully registered');
-            sleep(1000);
-
-
-            await doSignUp({
-                email: 'desno.pvt.ltd@gmail.com',
-                password: '123456789',
-                username: 'constable',
-                data: constable_data[0]
-            })
-            toast.success('constable successfully registered');
-            sleep(1000);
-
-
-
+            for (const user of loginData) {
+                await doSignUp({
+                    email: user.email,
+                    password: '123456789',
+                    username: user.username,
+                    data: user.data,
+                })
+                toast.success(`user ${user.username} registered successfully`);
+                sleep(1000);
+            }
         } catch (error) {
             toast.error(`${error}`);
         }
     };
 
     const saveUsers = async () => {
+
         try {
             for (let index = 1; index < commisioner_data.length; index++) {
                 const element = commisioner_data[index];
-                await saveAllDocs(`users/${element.id}`, element)
+                await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('commisioner data saved')
                 sleep(1000);
@@ -201,37 +233,46 @@ const AdminDashboardPage = () => {
 
             for (let index = 1; index < assistant_commisioner_data.length; index++) {
                 const element = assistant_commisioner_data[index];
-                await saveAllDocs(`users/${element.id}`, element)
+                await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('assistant commisioner data saved')
                 sleep(1000);
             }
             for (let index = 1; index < inspector_data.length; index++) {
                 const element = inspector_data[index];
-                await saveAllDocs(`users/${element.id}`, element)
+                await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('inspector_data data saved')
                 sleep(1000);
             }
             for (let index = 1; index < head_constable_data.length; index++) {
                 const element = head_constable_data[index];
-                await saveAllDocs(`users/${element.id}`, element)
+                await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('head_constable_data data saved')
                 sleep(1000);
             }
             for (let index = 1; index < constable_data.length; index++) {
                 const element = constable_data[index];
-                await saveAllDocs(`users/${element.id}`, element)
+                await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('constable_data data saved')
                 sleep(1000);
             }
 
+            const element = admin_data[0];
+            await saveUserData(element.id, element.email, element.username, element)
+
+            toast.success('constable_data data saved')
+            sleep(1000);
+
+
         } catch (error) {
             toast.error(`${error}`);
         }
     }
+
+
 
     const saveStations = async () => {
         try {
@@ -262,42 +303,42 @@ const AdminDashboardPage = () => {
             toast.error(`${error}`);
         }
     }
-    const saveCounts = async () => {
-        try {
-            toast.success(`no of counts ${station_crime_data.length}`);
-            for (let index = 0; index < station_crime_data.length; index++) {
-                const element = station_crime_data[index];
-                await saveAllDocs(`crime_count/${element.id}`, element)
-                toast.success(`zones data saved ${index + 1}`)
-                sleep(1000);
-            }
-            for (let index = 0; index < stations_data.length; index++) {
-                const element = stations_data[index];
-                const temp: StationDeptCountType = {
-                    id: customFaker.string.uuid().replace(/-/g, ''),
-                    TrafficPolice: customFaker.number.int({ min: 0, max: 10 }),
-                    CrimeBranch: customFaker.number.int({ min: 0, max: 10 }),
-                    CyberCrimeCell: customFaker.number.int({ min: 0, max: 10 }),
-                    AntiTerrorismSquad: customFaker.number.int({ min: 0, max: 10 }),
-                    SpecialBranch: customFaker.number.int({ min: 0, max: 10 }),
-                    WomensPoliceStations: customFaker.number.int({ min: 0, max: 10 }),
-                    AntiNarcoticsCell: customFaker.number.int({ min: 0, max: 10 }),
-                    ForensicScienceLaboratory: customFaker.number.int({ min: 0, max: 10 }),
-                    PoliceTrainingAcademies: customFaker.number.int({ min: 0, max: 10 }),
-                    BombDisposalSquad: customFaker.number.int({ min: 0, max: 10 }),
-                    HumanRightsCell: customFaker.number.int({ min: 0, max: 10 }),
-                    PublicRelationsDepartment: customFaker.number.int({ min: 0, max: 10 }),
-                }
+    // const saveCounts = async () => {
+    //     try {
+    //         toast.success(`no of counts ${station_crime_data.length}`);
+    //         for (let index = 0; index < station_crime_data.length; index++) {
+    //             const element = station_crime_data[index];
+    //             await saveAllDocs(`crime_count/${element.id}`, element)
+    //             toast.success(`zones data saved ${index + 1}`)
+    //             sleep(1000);
+    //         }
+    //         for (let index = 0; index < stations_data.length; index++) {
+    //             const element = stations_data[index];
+    //             const temp: StationDeptCountType = {
+    //                 id: customFaker.string.uuid().replace(/-/g, ''),
+    //                 TrafficPolice: customFaker.number.int({ min: 0, max: 10 }),
+    //                 CrimeBranch: customFaker.number.int({ min: 0, max: 10 }),
+    //                 CyberCrimeCell: customFaker.number.int({ min: 0, max: 10 }),
+    //                 AntiTerrorismSquad: customFaker.number.int({ min: 0, max: 10 }),
+    //                 SpecialBranch: customFaker.number.int({ min: 0, max: 10 }),
+    //                 WomensPoliceStations: customFaker.number.int({ min: 0, max: 10 }),
+    //                 AntiNarcoticsCell: customFaker.number.int({ min: 0, max: 10 }),
+    //                 ForensicScienceLaboratory: customFaker.number.int({ min: 0, max: 10 }),
+    //                 PoliceTrainingAcademies: customFaker.number.int({ min: 0, max: 10 }),
+    //                 BombDisposalSquad: customFaker.number.int({ min: 0, max: 10 }),
+    //                 HumanRightsCell: customFaker.number.int({ min: 0, max: 10 }),
+    //                 PublicRelationsDepartment: customFaker.number.int({ min: 0, max: 10 }),
+    //             }
 
-                await saveAllDocs(`station_dept_count/${element.id}`, temp)
-                toast.success(`zones data saved ${index + 1}`)
-                sleep(1000);
-            }
+    //             await saveAllDocs(`station_dept_count/${element.id}`, temp)
+    //             toast.success(`zones data saved ${index + 1}`)
+    //             sleep(1000);
+    //         }
 
-        } catch (error) {
-            toast.error(`${error}`);
-        }
-    }
+    //     } catch (error) {
+    //         toast.error(`${error}`);
+    //     }
+    // }
 
 
     const saveWeapons = async () => {
@@ -407,12 +448,7 @@ const AdminDashboardPage = () => {
                         type="button">
                         save vehicles
                     </button>
-                    <button
-                        onClick={saveCounts}
-                        className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
-                        type="button">
-                        save counts
-                    </button>
+
                 </div>
             </div>
         </div>

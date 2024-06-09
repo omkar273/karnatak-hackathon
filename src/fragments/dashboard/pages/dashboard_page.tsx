@@ -12,6 +12,7 @@ import { firestore } from "@/firebase/firebase_config";
 import { RanksEnum } from "@/common/post/ranks";
 import * as Select from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
+import DashboardUserDataCards from "../components/dashboard_data_cards";
 
 const DashboardPage = () => {
     const { userdata, currentUser } = useSelector((s: RootState) => s.auth)
@@ -153,6 +154,8 @@ const DashboardPage = () => {
 
             {/* zonal data for commissioner */}
             <ZonalData />
+            <DashboardUserDataCards />
+
             {/* <DashboardUserDataCards /> */}
             <p className="font-bold text-3xl px-4 pb-4">
                 Station Data
@@ -170,21 +173,6 @@ const DashboardPage = () => {
                         <StationRatesGraph stationId={stationId ?? ''} />
                         <DashboardCasesPieCharts stationId={stationId ?? ''} />
 
-
-                        {/* <button type="button" className="p-3 bg-blue-500 m-5"
-                            onClick={async () => {
-                                try {
-                                    for (const fir of fir_dataset) {
-                                        await doSaveFIR2(fir);
-                                        console.log(`saved fir no ${fir.stationId} `);
-
-                                    }
-                                } catch (error) {
-                                    console.log(error);
-                                }
-                            }}>
-                            Submit
-                        </button> */}
                         <div className="min-h-96" />
                     </div>
                 </div>

@@ -1,573 +1,13 @@
 [
   {
-    "id": "rTF7FGrzZjU7kZFpLBEnyEWZIvz1",
-    "name": "Rita Adiga",
+    "id": "24e93590f813466a9622f6ee1554a3cb",
+    "name": "Darshan Joshi",
     "post": "Inspector",
-    "dateOfJoining": "7/7/2003",
+    "date_of_joining": "6/25/2006",
     "batch": "dummy batch",
-    "height": 177,
-    "weight": 76,
-    "workExperience": 3,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 26,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Negotiation",
-      "Analysis",
-      "Tactics",
-      "SelfDefense"
-    ],
-    "awards": [
-      "Public Safety Officer Medal of Valor",
-      "Bravery in Action Award",
-      "Civic Duty Award",
-      "Riot Control Medal"
-    ],
-    "open_cases": 5,
-    "closed_cases": 9,
-    "email": "Rita Adiga1@gmail.com",
-    "password": "23456789",
-    "username": "Rita Adiga1",
-    "reporting_officer_name": "Gopaal Jha",
-    "reporting_officer_id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "stationId": "dddbaa82a7ec4110af1ec417f6651fb2",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "kSyvxmGVZJSAvruuf9nVtVVmndC3"
-    ]
-  },
-  {
-    "id": "c9467b6a3dc14b84957b5c74d7af0ec8",
-    "name": "Ashlesh Acharya",
-    "post": "Inspector",
-    "dateOfJoining": "6/25/2005",
-    "batch": "dummy batch",
-    "height": 172,
-    "weight": 77,
-    "workExperience": 2,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 3,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "ConflictResolution",
-      "Communication",
-      "ConflictResolution",
-      "ConflictResolution"
-    ],
-    "awards": [
-      "Heroic Conduct Medal",
-      "Exemplary Service Medal",
-      "Meritorious Service Medal",
-      "Exceptional Duty Award"
-    ],
-    "open_cases": 5,
-    "closed_cases": 1,
-    "email": "Ashlesh Acharya1@gmail.com",
-    "password": "23456789",
-    "username": "Ashlesh Acharya1",
-    "reporting_officer_name": "Gopaal Jha",
-    "reporting_officer_id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "stationId": "1a10b4cb646440d1b6a104af137f3f4f",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "kSyvxmGVZJSAvruuf9nVtVVmndC3"
-    ]
-  },
-  {
-    "id": "c075541fc04e4544bf5ce185474041d1",
-    "name": "Swarnalata Namboothiri",
-    "post": "Inspector",
-    "dateOfJoining": "10/18/2003",
-    "batch": "dummy batch",
-    "height": 179,
-    "weight": 79,
-    "workExperience": 8,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 16,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Coordination",
-      "Fitness",
-      "Teamwork",
-      "ReportWriting"
-    ],
-    "awards": [
-      "Frontline Hero Award",
-      "Public Safety Officer Medal of Valor",
-      "Commendation for Valor",
-      "Frontline Hero Award"
-    ],
-    "open_cases": 8,
-    "closed_cases": 10,
-    "email": "Swarnalata Namboothiri1@gmail.com",
-    "password": "23456789",
-    "username": "Swarnalata Namboothiri1",
-    "reporting_officer_name": "Gopaal Jha",
-    "reporting_officer_id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "stationId": "83f337f3f4c74d9ab6c30d1804e9dd97",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "kSyvxmGVZJSAvruuf9nVtVVmndC3"
-    ]
-  },
-  {
-    "id": "9a269184f7f5471a84399798431e04f0",
-    "name": "Vrund Dwivedi",
-    "post": "Inspector",
-    "dateOfJoining": "12/13/2002",
-    "batch": "dummy batch",
-    "height": 171,
-    "weight": 75,
-    "workExperience": 5,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 51,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Dedication",
-      "Leadership",
-      "Analysis",
-      "Discipline"
-    ],
-    "awards": [
-      "Community Protection Award",
-      "Gallantry Award",
-      "Leadership in Action Award",
-      "Meritorious Service Medal"
-    ],
-    "open_cases": 10,
-    "closed_cases": 8,
-    "email": "Vrund Dwivedi1@gmail.com",
-    "password": "23456789",
-    "username": "Vrund Dwivedi1",
-    "reporting_officer_name": "Gopaal Jha",
-    "reporting_officer_id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "stationId": "2daaaacd169144488d07cc636c543133",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "kSyvxmGVZJSAvruuf9nVtVVmndC3"
-    ]
-  },
-  {
-    "id": "fbf5c1ab19b54e31b8092553e7d83d74",
-    "name": "Sharda Panicker",
-    "post": "Inspector",
-    "dateOfJoining": "2/26/2008",
-    "batch": "dummy batch",
-    "height": 177,
-    "weight": 79,
-    "workExperience": 2,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 46,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Integrity",
-      "Resilience",
-      "Coordination",
-      "Leadership"
-    ],
-    "awards": [
-      "Outstanding Performance Award",
-      "Public Safety Officer Medal of Valor",
-      "Meritorious Service Medal",
-      "Meritorious Service Medal"
-    ],
-    "open_cases": 1,
-    "closed_cases": 10,
-    "email": "Sharda Panicker1@gmail.com",
-    "password": "23456789",
-    "username": "Sharda Panicker1",
-    "reporting_officer_name": "Gopaal Jha",
-    "reporting_officer_id": "kSyvxmGVZJSAvruuf9nVtVVmndC3",
-    "stationId": "a65be294fc554de7b6b29ba456c2fbd0",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "kSyvxmGVZJSAvruuf9nVtVVmndC3"
-    ]
-  },
-  {
-    "id": "486f8cfe95c8419bae7e7235279854da",
-    "name": "Sarala Mehrotra",
-    "post": "Inspector",
-    "dateOfJoining": "9/7/2004",
-    "batch": "dummy batch",
-    "height": 171,
-    "weight": 74,
-    "workExperience": 6,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 41,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Intelligence",
-      "Patrolling",
-      "Strategy",
-      "Observation"
-    ],
-    "awards": [
-      "Commendation for Valor",
-      "Medal of Honor",
-      "Frontline Hero Award",
-      "Police Chief's Commendation"
-    ],
-    "open_cases": 5,
-    "closed_cases": 7,
-    "email": "Sarala Mehrotra1@gmail.com",
-    "password": "23456789",
-    "username": "Sarala Mehrotra1",
-    "reporting_officer_name": "Gautam Bhattacharya",
-    "reporting_officer_id": "99a7c8cb23f7472597978dbef93d747f",
-    "stationId": "55bf22882acd4a958d0789386b758f15",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "99a7c8cb23f7472597978dbef93d747f"
-    ]
-  },
-  {
-    "id": "4f9f4dff88a642d5a712cd737b24ccf6",
-    "name": "Rohan Deshpande",
-    "post": "Inspector",
-    "dateOfJoining": "12/11/2011",
-    "batch": "dummy batch",
-    "height": 165,
+    "height": 167,
     "weight": 80,
-    "workExperience": 3,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 28,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Forensics",
-      "Dedication",
-      "Firearms",
-      "ReportWriting"
-    ],
-    "awards": [
-      "Medal of Honor",
-      "Public Safety Officer Medal of Valor",
-      "Commendation for Valor",
-      "Leadership in Action Award"
-    ],
-    "open_cases": 5,
-    "closed_cases": 10,
-    "email": "Rohan Deshpande1@gmail.com",
-    "password": "23456789",
-    "username": "Rohan Deshpande1",
-    "reporting_officer_name": "Gautam Bhattacharya",
-    "reporting_officer_id": "99a7c8cb23f7472597978dbef93d747f",
-    "stationId": "623ff51bf351434484f52b88de257e0d",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "99a7c8cb23f7472597978dbef93d747f"
-    ]
-  },
-  {
-    "id": "decbc0aef71d4ea58a7c4d54c993142a",
-    "name": "Dhyaneshwar Bhat",
-    "post": "Inspector",
-    "dateOfJoining": "5/5/2009",
-    "batch": "dummy batch",
-    "height": 175,
-    "weight": 80,
-    "workExperience": 2,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 56,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Negotiation",
-      "Dedication",
-      "Rescue",
-      "Driving"
-    ],
-    "awards": [
-      "Courageous Service Medal",
-      "Exceptional Duty Award",
-      "Gallantry Award",
-      "Gallantry Award"
-    ],
-    "open_cases": 6,
-    "closed_cases": 9,
-    "email": "Dhyaneshwar Bhat1@gmail.com",
-    "password": "23456789",
-    "username": "Dhyaneshwar Bhat1",
-    "reporting_officer_name": "Gautam Bhattacharya",
-    "reporting_officer_id": "99a7c8cb23f7472597978dbef93d747f",
-    "stationId": "fd3140ef38734f65a20ba39fdbf05fc2",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "99a7c8cb23f7472597978dbef93d747f"
-    ]
-  },
-  {
-    "id": "2d9d1d5f05b94cd392f76f887c53c73f",
-    "name": "Dhananjay Guha",
-    "post": "Inspector",
-    "dateOfJoining": "10/14/2009",
-    "batch": "dummy batch",
-    "height": 172,
-    "weight": 72,
-    "workExperience": 9,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 56,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Driving",
-      "Teamwork",
-      "Discipline",
-      "Resilience"
-    ],
-    "awards": [
-      "Medal of Honor",
-      "Service Above Self Award",
-      "Commendation for Valor",
-      "Distinguished Service Medal"
-    ],
-    "open_cases": 6,
-    "closed_cases": 3,
-    "email": "Dhananjay Guha1@gmail.com",
-    "password": "23456789",
-    "username": "Dhananjay Guha1",
-    "reporting_officer_name": "Gautam Bhattacharya",
-    "reporting_officer_id": "99a7c8cb23f7472597978dbef93d747f",
-    "stationId": "847373f94b0749c1a9d37d5e1dcc55c8",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "99a7c8cb23f7472597978dbef93d747f"
-    ]
-  },
-  {
-    "id": "384abce1a91e4c1c94be345f76843471",
-    "name": "Dhanalakshmi Dubashi",
-    "post": "Inspector",
-    "dateOfJoining": "12/31/2007",
-    "batch": "dummy batch",
-    "height": 173,
-    "weight": 76,
-    "workExperience": 6,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 57,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Investigation",
-      "Discipline",
-      "Cybersecurity",
-      "Communication"
-    ],
-    "awards": [
-      "Distinguished Service Medal",
-      "Gallantry Award",
-      "Commendation for Valor",
-      "Service Above Self Award"
-    ],
-    "open_cases": 9,
-    "closed_cases": 4,
-    "email": "Dhanalakshmi Dubashi1@gmail.com",
-    "password": "23456789",
-    "username": "Dhanalakshmi Dubashi1",
-    "reporting_officer_name": "Gautam Bhattacharya",
-    "reporting_officer_id": "99a7c8cb23f7472597978dbef93d747f",
-    "stationId": "95c25cdc19e74e8491ce1cf8a18c7121",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "99a7c8cb23f7472597978dbef93d747f"
-    ]
-  },
-  {
-    "id": "4c3923a8a28f44f990838894f9c670e2",
-    "name": "Bhilangana Adiga",
-    "post": "Inspector",
-    "dateOfJoining": "7/1/2011",
-    "batch": "dummy batch",
-    "height": 175,
-    "weight": 78,
-    "workExperience": 9,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 35,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Coordination",
-      "SelfDefense",
-      "Resilience",
-      "Intelligence"
-    ],
-    "awards": [
-      "Lifesaving Medal",
-      "Distinguished Conduct Medal",
-      "Lifesaving Medal",
-      "Lifesaving Medal"
-    ],
-    "open_cases": 1,
-    "closed_cases": 7,
-    "email": "Bhilangana Adiga1@gmail.com",
-    "password": "23456789",
-    "username": "Bhilangana Adiga1",
-    "reporting_officer_name": "Subhash Naik",
-    "reporting_officer_id": "b61751a2402246c9b541b4a97cdf2c09",
-    "stationId": "af5060aef8bc4a76abbeed78ea3c5f98",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "b61751a2402246c9b541b4a97cdf2c09"
-    ]
-  },
-  {
-    "id": "4fd81c4d88d24570bf34d585f9763d7c",
-    "name": "Ambar Mehra-Gowda",
-    "post": "Inspector",
-    "dateOfJoining": "8/31/2008",
-    "batch": "dummy batch",
-    "height": 165,
-    "weight": 69,
-    "workExperience": 8,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 14,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "SelfDefense",
-      "Investigation",
-      "Investigation",
-      "Criminology"
-    ],
-    "awards": [
-      "Gallantry Award",
-      "Medal of Honor",
-      "Gallantry Award",
-      "Riot Control Medal"
-    ],
-    "open_cases": 1,
-    "closed_cases": 6,
-    "email": "Ambar MehraGowda1@gmail.com",
-    "password": "23456789",
-    "username": "Ambar MehraGowda1",
-    "reporting_officer_name": "Subhash Naik",
-    "reporting_officer_id": "b61751a2402246c9b541b4a97cdf2c09",
-    "stationId": "63b86e707ddf4585928cf49f99cc384e",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "b61751a2402246c9b541b4a97cdf2c09"
-    ]
-  },
-  {
-    "id": "eec20fb00eec44ff9eaebbc0ba1fc0e3",
-    "name": "Rohan Deshpande",
-    "post": "Inspector",
-    "dateOfJoining": "4/8/2002",
-    "batch": "dummy batch",
-    "height": 177,
-    "weight": 77,
     "workExperience": 7,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 44,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Investigation",
-      "Negotiation",
-      "Criminology",
-      "Patrolling"
-    ],
-    "awards": [
-      "Riot Control Medal",
-      "Honor for Public Service",
-      "Distinguished Service Medal",
-      "Distinguished Service Medal"
-    ],
-    "open_cases": 4,
-    "closed_cases": 10,
-    "email": "Rohan Deshpande2@gmail.com",
-    "password": "23456789",
-    "username": "Rohan Deshpande2",
-    "reporting_officer_name": "Subhash Naik",
-    "reporting_officer_id": "b61751a2402246c9b541b4a97cdf2c09",
-    "stationId": "5ac0f9a0498240b1a2fe740fd0a4930f",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "b61751a2402246c9b541b4a97cdf2c09"
-    ]
-  },
-  {
-    "id": "ec51c9f2b7144c96a6c0b0d130d09020",
-    "name": "Aanandaswarup Mishra-Rana",
-    "post": "Inspector",
-    "dateOfJoining": "2/18/2009",
-    "batch": "dummy batch",
-    "height": 171,
-    "weight": 71,
-    "workExperience": 9,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 23,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Forensics",
-      "Patrolling",
-      "FirstAid",
-      "Forensics"
-    ],
-    "awards": [
-      "Meritorious Service Medal",
-      "Frontline Hero Award",
-      "Silver Star for Bravery",
-      "Distinguished Conduct Medal"
-    ],
-    "open_cases": 2,
-    "closed_cases": 5,
-    "email": "Aanandaswarup MishraRana1@gmail.com",
-    "password": "23456789",
-    "username": "Aanandaswarup MishraRana1",
-    "reporting_officer_name": "Subhash Naik",
-    "reporting_officer_id": "b61751a2402246c9b541b4a97cdf2c09",
-    "stationId": "7c48c083abfd49c3b571d62f99d8efb0",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "b61751a2402246c9b541b4a97cdf2c09"
-    ]
-  },
-  {
-    "id": "9514f2536a514599a0857fd7e06acb1d",
-    "name": "Mandaakin Kaul",
-    "post": "Inspector",
-    "dateOfJoining": "4/25/2009",
-    "batch": "dummy batch",
-    "height": 178,
-    "weight": 71,
-    "workExperience": 10,
     "certification": [
       "dummy certifications"
     ],
@@ -575,39 +15,52 @@
     "solvedCases": 9,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Teamwork",
-      "Intelligence",
-      "Forensics",
-      "Observation"
+      "Fitness",
+      "Firearms",
+      "Criminology",
+      "Investigation"
     ],
     "awards": [
+      "Exceptional Duty Award",
+      "Courage in Crisis Award",
       "Distinguished Service Medal",
-      "Distinguished Conduct Medal",
-      "Community Protection Award",
-      "Dedication to Duty Award"
+      "Valor in the Line of Duty Medal"
     ],
-    "open_cases": 9,
-    "closed_cases": 3,
-    "email": "Mandaakin Kaul1@gmail.com",
+    "open_cases": 6,
+    "closed_cases": 4,
+    "email": "DarshanJoshi1@gmail.com",
     "password": "23456789",
-    "username": "Mandaakin Kaul1",
-    "reporting_officer_name": "Subhash Naik",
-    "reporting_officer_id": "b61751a2402246c9b541b4a97cdf2c09",
-    "stationId": "df8bd5c9e1a84ef2ab0772ef3afd4b2b",
+    "username": "DarshanJoshi1",
+    "reporting_officer_name": "Sameer Somayaji",
+    "reporting_officer_id": "3ce00594ec024c2da4e3741b58886284",
+    "stationId": "a9f517bca9744ddfbd4e13491f88eed2",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "b61751a2402246c9b541b4a97cdf2c09"
-    ]
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "3ce00594ec024c2da4e3741b58886284"
+    ],
+    "bmi": 21.36,
+    "phone_no": "+91-635-6978577",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "HumanRightsCell",
+    "training": [
+      "Drug Enforcement Training",
+      "Maritime Law Enforcement Training",
+      "Crisis Negotiation and Hostage Rescue",
+      "Interview and Interrogation Techniques",
+      "Counter-Terrorism Training"
+    ],
+    "specialization": "NA"
   },
   {
-    "id": "f08799e7a6834f479342af22c687c4ca",
-    "name": "Datta Mukhopadhyay",
+    "id": "aa8ff252c17146309c42fc1a1ef32931",
+    "name": "Damayanti Kaul",
     "post": "Inspector",
-    "dateOfJoining": "1/27/2005",
+    "date_of_joining": "10/31/2011",
     "batch": "dummy batch",
-    "height": 168,
-    "weight": 72,
-    "workExperience": 3,
+    "height": 165,
+    "weight": 67,
+    "workExperience": 7,
     "certification": [
       "dummy certifications"
     ],
@@ -615,38 +68,740 @@
     "solvedCases": 26,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Negotiation",
-      "Teamwork",
+      "Driving",
+      "Intelligence",
+      "Patrolling",
+      "Firearms"
+    ],
+    "awards": [
+      "Gallantry Award",
+      "Lifesaving Medal",
+      "Commendation for Valor",
+      "Valor in the Line of Duty Medal"
+    ],
+    "open_cases": 7,
+    "closed_cases": 7,
+    "email": "DamayantiKaul1@gmail.com",
+    "password": "23456789",
+    "username": "DamayantiKaul1",
+    "reporting_officer_name": "Sameer Somayaji",
+    "reporting_officer_id": "3ce00594ec024c2da4e3741b58886284",
+    "stationId": "0de9aa6d9ee843b7888d868f13e3e697",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "3ce00594ec024c2da4e3741b58886284"
+    ],
+    "bmi": 24.02,
+    "phone_no": "+91-839-5118668",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Maritime Law Enforcement Training",
+      "Drug Enforcement Training",
+      "Public Relations and Media Handling",
+      "Criminal Investigation Techniques",
+      "Surveillance and Reconnaissance"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "845b46bbfeb94258aef07e247c5d1051",
+    "name": "Swarnalata Kocchar",
+    "post": "Inspector",
+    "date_of_joining": "9/5/2011",
+    "batch": "dummy batch",
+    "height": 179,
+    "weight": 80,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 59,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Driving",
+      "Strategy",
+      "Communication",
+      "SelfDefense"
+    ],
+    "awards": [
+      "Distinguished Service Medal",
+      "Medal of Valor",
+      "Frontline Hero Award",
+      "Distinguished Conduct Medal"
+    ],
+    "open_cases": 8,
+    "closed_cases": 6,
+    "email": "SwarnalataKocchar1@gmail.com",
+    "password": "23456789",
+    "username": "SwarnalataKocchar1",
+    "reporting_officer_name": "Sameer Somayaji",
+    "reporting_officer_id": "3ce00594ec024c2da4e3741b58886284",
+    "stationId": "a5ee2190339448a7b4a2ea0764552352",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "3ce00594ec024c2da4e3741b58886284"
+    ],
+    "bmi": 20.23,
+    "phone_no": "+91-904-7340029",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Surveillance and Reconnaissance",
+      "First Aid and Emergency Response",
+      "Traffic Management and Accident Investigation",
+      "Bomb Disposal and Explosive Handling",
+      "Emergency Vehicle Operations"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "9f4fdd5c883e476a8bc5b424ac3440d9",
+    "name": "Menaka Talwar",
+    "post": "Inspector",
+    "date_of_joining": "10/30/2005",
+    "batch": "dummy batch",
+    "height": 169,
+    "weight": 72,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 57,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Leadership",
       "Cybersecurity",
-      "Resilience"
+      "Strategy",
+      "CrisisManagement"
+    ],
+    "awards": [
+      "Crisis Management Medal",
+      "Honor for Public Service",
+      "Medal of Valor",
+      "Heroic Conduct Medal"
+    ],
+    "open_cases": 9,
+    "closed_cases": 9,
+    "email": "MenakaTalwar1@gmail.com",
+    "password": "23456789",
+    "username": "MenakaTalwar1",
+    "reporting_officer_name": "Sameer Somayaji",
+    "reporting_officer_id": "3ce00594ec024c2da4e3741b58886284",
+    "stationId": "21b6cef4e24a4a168ec2861bb079f3c8",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "3ce00594ec024c2da4e3741b58886284"
+    ],
+    "bmi": 19.65,
+    "phone_no": "+919390080075",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Surveillance and Reconnaissance",
+      "Traffic Management and Accident Investigation",
+      "Undercover Operations Training",
+      "Cybercrime Investigation",
+      "First Aid and Emergency Response"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "88aab5bd3a864445a4ede63a4a3992db",
+    "name": "Prema Saini",
+    "post": "Inspector",
+    "date_of_joining": "7/14/2008",
+    "batch": "dummy batch",
+    "height": 166,
+    "weight": 73,
+    "workExperience": 7,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 45,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Negotiation",
+      "Driving",
+      "Driving",
+      "ConflictResolution"
+    ],
+    "awards": [
+      "Medal of Honor",
+      "Honor for Public Service",
+      "Service Above Self Award",
+      "Commitment to Public Safety Award"
+    ],
+    "open_cases": 8,
+    "closed_cases": 7,
+    "email": "PremaSaini1@gmail.com",
+    "password": "23456789",
+    "username": "PremaSaini1",
+    "reporting_officer_name": "Sameer Somayaji",
+    "reporting_officer_id": "3ce00594ec024c2da4e3741b58886284",
+    "stationId": "51335495957e4e4fad2a91784e9135b3",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "3ce00594ec024c2da4e3741b58886284"
+    ],
+    "bmi": 22.59,
+    "phone_no": "+917560840337",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "WomensPoliceStations",
+    "training": [
+      "Advanced Driving Techniques",
+      "Forensic Science Training",
+      "Public Order and Riot Control",
+      "Search and Rescue Operations",
+      "Intelligence Gathering and Analysis"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "93ebc01510b741358bc244fb6ba5c239",
+    "name": "Bheeshma Kaur",
+    "post": "Inspector",
+    "date_of_joining": "6/9/2009",
+    "batch": "dummy batch",
+    "height": 178,
+    "weight": 78,
+    "workExperience": 9,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 48,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Tactics",
+      "CrisisManagement",
+      "Discipline",
+      "Analysis"
+    ],
+    "awards": [
+      "Bravery in Action Award",
+      "Exemplary Service Medal",
+      "Service Above Self Award",
+      "Dedication to Duty Award"
+    ],
+    "open_cases": 4,
+    "closed_cases": 1,
+    "email": "BheeshmaKaur1@gmail.com",
+    "password": "23456789",
+    "username": "BheeshmaKaur1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "b589be55ea854531ac55006e4d84e8b1",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 22.49,
+    "phone_no": "+91-728-8123215",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "AntiNarcoticsCell",
+    "training": [
+      "Basic Police Training",
+      "Maritime Law Enforcement Training",
+      "Surveillance and Reconnaissance",
+      "Mental Health Crisis Intervention",
+      "Public Order and Riot Control"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "39c1ec9217cd421aa91b636842f5c94d",
+    "name": "Dakshayani Kakkar",
+    "post": "Inspector",
+    "date_of_joining": "8/23/2007",
+    "batch": "dummy batch",
+    "height": 167,
+    "weight": 77,
+    "workExperience": 6,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 42,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "CrisisManagement",
+      "Communication",
+      "ConflictResolution",
+      "Criminology"
+    ],
+    "awards": [
+      "Lifesaving Medal",
+      "Community Protection Award",
+      "Leadership in Action Award",
+      "Dedication to Duty Award"
+    ],
+    "open_cases": 1,
+    "closed_cases": 2,
+    "email": "DakshayaniKakkar1@gmail.com",
+    "password": "23456789",
+    "username": "DakshayaniKakkar1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "93a90a02f61f43a28af7ab415342ab2b",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 23.61,
+    "phone_no": "+917878808674",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "AntiNarcoticsCell",
+    "training": [
+      "Search and Rescue Operations",
+      "Search and Rescue Operations",
+      "Drug Enforcement Training",
+      "Search and Rescue Operations",
+      "Drug Enforcement Training"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "7509ae7cf42945ae9567b28b2f433611",
+    "name": "Chandraketu Achari",
+    "post": "Inspector",
+    "date_of_joining": "5/1/2011",
+    "batch": "dummy batch",
+    "height": 162,
+    "weight": 73,
+    "workExperience": 2,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 16,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Cybersecurity",
+      "Fitness",
+      "SelfDefense",
+      "Coordination"
+    ],
+    "awards": [
+      "Dedication to Duty Award",
+      "Medal of Valor",
+      "Meritorious Service Medal",
+      "Service Above Self Award"
+    ],
+    "open_cases": 8,
+    "closed_cases": 6,
+    "email": "ChandraketuAchari1@gmail.com",
+    "password": "23456789",
+    "username": "ChandraketuAchari1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "f45d8744ea2d4de08b01a80ab0784f7f",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 23,
+    "phone_no": "+91-911-7207802",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "BombDisposalSquad",
+    "training": [
+      "Emergency Vehicle Operations",
+      "Basic Police Training",
+      "Criminal Investigation Techniques",
+      "Legal and Ethical Training",
+      "Victim Assistance and Support"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "19dffe627a874ee493f30243d774288a",
+    "name": "Aatmaja Iyer",
+    "post": "Inspector",
+    "date_of_joining": "11/6/2002",
+    "batch": "dummy batch",
+    "height": 161,
+    "weight": 80,
+    "workExperience": 9,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 22,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Discipline",
+      "Discipline",
+      "Surveillance",
+      "Criminology"
+    ],
+    "awards": [
+      "Community Protection Award",
+      "Public Safety Officer Medal of Valor",
+      "Public Safety Officer Medal of Valor",
+      "Crisis Management Medal"
+    ],
+    "open_cases": 2,
+    "closed_cases": 3,
+    "email": "AatmajaIyer1@gmail.com",
+    "password": "23456789",
+    "username": "AatmajaIyer1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "8d7e7f7dde134c7eb2f00c01e0f1fb6e",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 22.08,
+    "phone_no": "+91-611-0437844",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "SpecialBranch",
+    "training": [
+      "Firearms Training",
+      "Interview and Interrogation Techniques",
+      "Criminal Investigation Techniques",
+      "First Aid and Emergency Response",
+      "Drug Enforcement Training"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "8e4c851ce8904c09b0abf0efb3c30291",
+    "name": "Chandrakin Kakkar",
+    "post": "Inspector",
+    "date_of_joining": "6/20/2010",
+    "batch": "dummy batch",
+    "height": 177,
+    "weight": 65,
+    "workExperience": 2,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 4,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Driving",
+      "ReportWriting",
+      "Negotiation",
+      "ConflictResolution"
+    ],
+    "awards": [
+      "Distinguished Service Medal",
+      "Distinguished Conduct Medal",
+      "Lifesaving Medal",
+      "Gallantry Award"
+    ],
+    "open_cases": 6,
+    "closed_cases": 3,
+    "email": "ChandrakinKakkar1@gmail.com",
+    "password": "23456789",
+    "username": "ChandrakinKakkar1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "3ba5b8cb4b17475fb32568610254a85d",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 22.84,
+    "phone_no": "+91916-960-6114",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "TrafficPolice",
+    "training": [
+      "Undercover Operations Training",
+      "Maritime Law Enforcement Training",
+      "Criminal Investigation Techniques",
+      "Incident Command System Training",
+      "Emergency Vehicle Operations"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "29e474ce88dc4cc7acb074b421029244",
+    "name": "Akshat Chopra",
+    "post": "Inspector",
+    "date_of_joining": "11/11/2008",
+    "batch": "dummy batch",
+    "height": 179,
+    "weight": 80,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 16,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Communication",
+      "Observation",
+      "Firearms",
+      "Intelligence"
+    ],
+    "awards": [
+      "Commitment to Public Safety Award",
+      "Riot Control Medal",
+      "Riot Control Medal",
+      "Lifesaving Medal"
+    ],
+    "open_cases": 7,
+    "closed_cases": 5,
+    "email": "AkshatChopra1@gmail.com",
+    "password": "23456789",
+    "username": "AkshatChopra1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "cb87532df7074aa4aa7f9310ce7c4aea",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 18.8,
+    "phone_no": "+916517846618",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "HumanRightsCell",
+    "training": [
+      "Maritime Law Enforcement Training",
+      "Community Policing Strategies",
+      "First Aid and Emergency Response",
+      "Advanced Driving Techniques",
+      "Advanced Driving Techniques"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "6155898c510349278170d9437ae9b454",
+    "name": "Nagabhushanam Bharadwaj",
+    "post": "Inspector",
+    "date_of_joining": "1/26/2007",
+    "batch": "dummy batch",
+    "height": 167,
+    "weight": 73,
+    "workExperience": 3,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 46,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Ethics",
+      "Forensics",
+      "Resilience",
+      "Tactics"
     ],
     "awards": [
       "Courage in Crisis Award",
-      "Community Protection Award",
-      "Lifesaving Medal",
-      "Public Safety Officer Medal of Valor"
+      "Exceptional Duty Award",
+      "Commitment to Public Safety Award",
+      "Medal of Honor"
     ],
-    "open_cases": 7,
-    "closed_cases": 10,
-    "email": "Datta Mukhopadhyay1@gmail.com",
+    "open_cases": 2,
+    "closed_cases": 6,
+    "email": "NagabhushanamBharadwaj1@gmail.com",
     "password": "23456789",
-    "username": "Datta Mukhopadhyay1",
-    "reporting_officer_name": "Chaturbhuj Chattopadhyay",
-    "reporting_officer_id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "stationId": "d7010ec0abb74196aa1fcd617fb61930",
+    "username": "NagabhushanamBharadwaj1",
+    "reporting_officer_name": "Gopaal Namboothiri",
+    "reporting_officer_id": "01ea770cd95748e5bb3782b58ef4ccec",
+    "stationId": "19d0e75fcbc249db9269a268e9aa9895",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "5684f974ce1c4d37ad2a39c6e7bfe324"
-    ]
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "01ea770cd95748e5bb3782b58ef4ccec"
+    ],
+    "bmi": 23.62,
+    "phone_no": "+91-739-5441327",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Emergency Vehicle Operations",
+      "Leadership and Management Training",
+      "Leadership and Management Training",
+      "Bomb Disposal and Explosive Handling",
+      "Legal and Ethical Training"
+    ],
+    "specialization": "NA"
   },
   {
-    "id": "dbf06eb3b18f40c594ad9da86de38d9a",
-    "name": "Dhatri Iyengar",
+    "id": "49f569cce9b9415c86d44801f611d337",
+    "name": "Manisha Sethi",
     "post": "Inspector",
-    "dateOfJoining": "3/12/2006",
+    "date_of_joining": "6/1/2011",
     "batch": "dummy batch",
-    "height": 160,
-    "weight": 65,
+    "height": 164,
+    "weight": 71,
+    "workExperience": 4,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 30,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Ethics",
+      "Discipline",
+      "Driving",
+      "ConflictResolution"
+    ],
+    "awards": [
+      "Community Protection Award",
+      "Courage in Crisis Award",
+      "Outstanding Performance Award",
+      "Silver Star for Bravery"
+    ],
+    "open_cases": 9,
+    "closed_cases": 3,
+    "email": "ManishaSethi1@gmail.com",
+    "password": "23456789",
+    "username": "ManishaSethi1",
+    "reporting_officer_name": "Bandhu Guha",
+    "reporting_officer_id": "fd70ecc8be864b07baded6a179e3c38d",
+    "stationId": "81a8ea7d17cb49a6bc9d43868f32bfc5",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "fd70ecc8be864b07baded6a179e3c38d"
+    ],
+    "bmi": 22.37,
+    "phone_no": "+917079207920",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Basic Police Training",
+      "Public Order and Riot Control",
+      "Community Policing Strategies",
+      "Counter-Terrorism Training",
+      "Mental Health Crisis Intervention"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "3db7aef93d5d4750864b02cdd72752c7",
+    "name": "Parvati Jangid-Acharya",
+    "post": "Inspector",
+    "date_of_joining": "8/14/2007",
+    "batch": "dummy batch",
+    "height": 169,
+    "weight": 78,
+    "workExperience": 5,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 30,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "CrisisManagement",
+      "Integrity",
+      "Observation",
+      "Rescue"
+    ],
+    "awards": [
+      "Distinguished Service Medal",
+      "Heroic Conduct Medal",
+      "Outstanding Performance Award",
+      "Courage in Crisis Award"
+    ],
+    "open_cases": 6,
+    "closed_cases": 6,
+    "email": "ParvatiJangidAcharya1@gmail.com",
+    "password": "23456789",
+    "username": "ParvatiJangidAcharya1",
+    "reporting_officer_name": "Bandhu Guha",
+    "reporting_officer_id": "fd70ecc8be864b07baded6a179e3c38d",
+    "stationId": "1996ccc907c5450cafbbb58807a759c3",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "fd70ecc8be864b07baded6a179e3c38d"
+    ],
+    "bmi": 19.64,
+    "phone_no": "+918382759926",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "BombDisposalSquad",
+    "training": [
+      "Bomb Disposal and Explosive Handling",
+      "Patrol Procedures and Tactics",
+      "Undercover Operations Training",
+      "K-9 Handling and Training",
+      "Drug Enforcement Training"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "790fd1ebea64444aa1ba536d89b787b1",
+    "name": "Chandani Nambeesan",
+    "post": "Inspector",
+    "date_of_joining": "3/30/2004",
+    "batch": "dummy batch",
+    "height": 175,
+    "weight": 77,
+    "workExperience": 2,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 43,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Integrity",
+      "SelfDefense",
+      "ConflictResolution",
+      "Strategy"
+    ],
+    "awards": [
+      "Dedication to Duty Award",
+      "Community Protection Award",
+      "Heroic Conduct Medal",
+      "Honor for Public Service"
+    ],
+    "open_cases": 10,
+    "closed_cases": 8,
+    "email": "ChandaniNambeesan1@gmail.com",
+    "password": "23456789",
+    "username": "ChandaniNambeesan1",
+    "reporting_officer_name": "Bandhu Guha",
+    "reporting_officer_id": "fd70ecc8be864b07baded6a179e3c38d",
+    "stationId": "2560c71e1915476e91a7ccbc79b1fd85",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "fd70ecc8be864b07baded6a179e3c38d"
+    ],
+    "bmi": 23.39,
+    "phone_no": "+91-977-6623614",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Traffic Management and Accident Investigation",
+      "Forensic Science Training",
+      "Surveillance and Reconnaissance",
+      "Mental Health Crisis Intervention",
+      "Forensic Science Training"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "51830890ff084a54b00a28552dcfa1b0",
+    "name": "Kartik Deshpande",
+    "post": "Inspector",
+    "date_of_joining": "1/27/2008",
+    "batch": "dummy batch",
+    "height": 165,
+    "weight": 76,
     "workExperience": 8,
     "certification": [
       "dummy certifications"
@@ -655,348 +810,730 @@
     "solvedCases": 45,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Tactics",
-      "CrisisManagement",
-      "Dedication",
-      "Criminology"
-    ],
-    "awards": [
-      "Gallantry Award",
-      "Community Protection Award",
-      "Honor for Public Service",
-      "Valor in the Line of Duty Medal"
-    ],
-    "open_cases": 7,
-    "closed_cases": 7,
-    "email": "Dhatri Iyengar1@gmail.com",
-    "password": "23456789",
-    "username": "Dhatri Iyengar1",
-    "reporting_officer_name": "Chaturbhuj Chattopadhyay",
-    "reporting_officer_id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "stationId": "3ed492981fbb406fa093efaf58c71442",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "5684f974ce1c4d37ad2a39c6e7bfe324"
-    ]
-  },
-  {
-    "id": "5fd4568645844078b83c6ad2ba774dbc",
-    "name": "Dhara Saini",
-    "post": "Inspector",
-    "dateOfJoining": "7/27/2009",
-    "batch": "dummy batch",
-    "height": 172,
-    "weight": 68,
-    "workExperience": 1,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 31,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Observation",
-      "Criminology",
-      "Resilience",
-      "Integrity"
-    ],
-    "awards": [
-      "Lifesaving Medal",
-      "Riot Control Medal",
-      "Meritorious Service Medal",
-      "Medal of Honor"
-    ],
-    "open_cases": 5,
-    "closed_cases": 9,
-    "email": "Dhara Saini2@gmail.com",
-    "password": "23456789",
-    "username": "Dhara Saini2",
-    "reporting_officer_name": "Chaturbhuj Chattopadhyay",
-    "reporting_officer_id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "stationId": "1114c8d471b1482ea30db0a8e28ea3de",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "5684f974ce1c4d37ad2a39c6e7bfe324"
-    ]
-  },
-  {
-    "id": "4316cefc809842db810a836db4e5c468",
-    "name": "Narendra Mehrotra",
-    "post": "Inspector",
-    "dateOfJoining": "11/21/2006",
-    "batch": "dummy batch",
-    "height": 162,
-    "weight": 73,
-    "workExperience": 3,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 8,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Strategy",
-      "Observation",
-      "Observation",
-      "Integrity"
-    ],
-    "awards": [
-      "Public Safety Officer Medal of Valor",
-      "Distinguished Service Medal",
-      "Meritorious Service Medal",
-      "Dedication to Duty Award"
-    ],
-    "open_cases": 9,
-    "closed_cases": 7,
-    "email": "Narendra Mehrotra2@gmail.com",
-    "password": "23456789",
-    "username": "Narendra Mehrotra2",
-    "reporting_officer_name": "Chaturbhuj Chattopadhyay",
-    "reporting_officer_id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "stationId": "b5677dd90f744418897648a1e6e834f0",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "5684f974ce1c4d37ad2a39c6e7bfe324"
-    ]
-  },
-  {
-    "id": "eccc02ecc20d40e29e3d1a7b3c219b06",
-    "name": "Aamod Bandopadhyay",
-    "post": "Inspector",
-    "dateOfJoining": "5/13/2003",
-    "batch": "dummy batch",
-    "height": 174,
-    "weight": 70,
-    "workExperience": 1,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 44,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "FirstAid",
-      "Discipline",
-      "CrisisManagement",
-      "Investigation"
-    ],
-    "awards": [
-      "Crisis Management Medal",
-      "Leadership in Action Award",
-      "Community Protection Award",
-      "Service Above Self Award"
-    ],
-    "open_cases": 10,
-    "closed_cases": 3,
-    "email": "Aamod Bandopadhyay1@gmail.com",
-    "password": "23456789",
-    "username": "Aamod Bandopadhyay1",
-    "reporting_officer_name": "Chaturbhuj Chattopadhyay",
-    "reporting_officer_id": "5684f974ce1c4d37ad2a39c6e7bfe324",
-    "stationId": "801c392944be432f8026557ed6082aba",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "5684f974ce1c4d37ad2a39c6e7bfe324"
-    ]
-  },
-  {
-    "id": "d801587004c645789e6a40f66d1a811e",
-    "name": "Jaya Prajapat",
-    "post": "Inspector",
-    "dateOfJoining": "7/26/2002",
-    "batch": "dummy batch",
-    "height": 178,
-    "weight": 75,
-    "workExperience": 6,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 20,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Communication",
-      "SelfDefense",
-      "Communication",
-      "ReportWriting"
-    ],
-    "awards": [
-      "Exceptional Duty Award",
-      "Public Safety Officer Medal of Valor",
-      "Valor in the Line of Duty Medal",
-      "Riot Control Medal"
-    ],
-    "open_cases": 9,
-    "closed_cases": 2,
-    "email": "Jaya Prajapat1@gmail.com",
-    "password": "23456789",
-    "username": "Jaya Prajapat1",
-    "reporting_officer_name": "Amrit Mahajan-Kocchar",
-    "reporting_officer_id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "stationId": "968de3711c1b4103ac13c7ce7fd17c5b",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "334894fb7d2c489fa442b9fa4d1135f2"
-    ]
-  },
-  {
-    "id": "d90f7e4564a24953b6bf3f1a1b7f5028",
-    "name": "Kashyapi Bhadresha",
-    "post": "Inspector",
-    "dateOfJoining": "10/4/2003",
-    "batch": "dummy batch",
-    "height": 170,
-    "weight": 69,
-    "workExperience": 3,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 34,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "SelfDefense",
+      "Cybersecurity",
       "Surveillance",
-      "Rescue",
-      "Patrolling"
+      "Observation",
+      "Strategy"
     ],
     "awards": [
       "Exceptional Duty Award",
-      "Distinguished Conduct Medal",
-      "Crisis Management Medal",
-      "Bravery in Action Award"
+      "Courageous Service Medal",
+      "Meritorious Service Medal",
+      "Silver Star for Bravery"
     ],
     "open_cases": 1,
-    "closed_cases": 8,
-    "email": "Kashyapi Bhadresha1@gmail.com",
+    "closed_cases": 9,
+    "email": "KartikDeshpande1@gmail.com",
     "password": "23456789",
-    "username": "Kashyapi Bhadresha1",
-    "reporting_officer_name": "Amrit Mahajan-Kocchar",
-    "reporting_officer_id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "stationId": "42aaddd6e0cd4531a24be5b6f2e1ef4a",
+    "username": "KartikDeshpande1",
+    "reporting_officer_name": "Bandhu Guha",
+    "reporting_officer_id": "fd70ecc8be864b07baded6a179e3c38d",
+    "stationId": "4fda5f5f117b47a297d3c6f239f2d810",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "334894fb7d2c489fa442b9fa4d1135f2"
-    ]
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "fd70ecc8be864b07baded6a179e3c38d"
+    ],
+    "bmi": 23.54,
+    "phone_no": "+91692-824-0393",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "TrafficPolice",
+    "training": [
+      "Search and Rescue Operations",
+      "Forensic Science Training",
+      "Emergency Vehicle Operations",
+      "Victim Assistance and Support",
+      "Cybercrime Investigation"
+    ],
+    "specialization": "NA"
   },
   {
-    "id": "6412aabca55a45809d8a2b7a5c2510d2",
-    "name": "Kalinda Patel",
+    "id": "412731796830457ab4cdcc181f861671",
+    "name": "Rudra Mishra-Varrier",
     "post": "Inspector",
-    "dateOfJoining": "11/24/2011",
+    "date_of_joining": "7/2/2007",
     "batch": "dummy batch",
-    "height": 165,
-    "weight": 72,
+    "height": 174,
+    "weight": 66,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 4,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "SelfDefense",
+      "SelfDefense",
+      "Fitness",
+      "ConflictResolution"
+    ],
+    "awards": [
+      "Leadership in Action Award",
+      "Valor in the Line of Duty Medal",
+      "Distinguished Service Medal",
+      "Commendation for Valor"
+    ],
+    "open_cases": 2,
+    "closed_cases": 3,
+    "email": "RudraMishraVarrier1@gmail.com",
+    "password": "23456789",
+    "username": "RudraMishraVarrier1",
+    "reporting_officer_name": "Bandhu Guha",
+    "reporting_officer_id": "fd70ecc8be864b07baded6a179e3c38d",
+    "stationId": "5abc79c792c343c2a032b2d0c19ec2c6",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "fd70ecc8be864b07baded6a179e3c38d"
+    ],
+    "bmi": 22.4,
+    "phone_no": "+91642-763-8847",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Advanced Driving Techniques",
+      "Cybercrime Investigation",
+      "Basic Police Training",
+      "Basic Police Training",
+      "First Aid and Emergency Response"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "a0597a5934c4428897b5d3f238dc16ee",
+    "name": "Padma Malik",
+    "post": "Inspector",
+    "date_of_joining": "9/28/2004",
+    "batch": "dummy batch",
+    "height": 163,
+    "weight": 65,
     "workExperience": 8,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 49,
+    "solvedCases": 11,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Negotiation",
-      "Integrity",
-      "Rescue",
-      "Ethics"
+      "Strategy",
+      "Resilience",
+      "SelfDefense",
+      "Analysis"
     ],
     "awards": [
-      "Crisis Management Medal",
-      "Dedication to Duty Award",
-      "Crisis Management Medal",
-      "Riot Control Medal"
+      "Medal of Honor",
+      "Riot Control Medal",
+      "Commitment to Public Safety Award",
+      "Commitment to Public Safety Award"
     ],
-    "open_cases": 4,
+    "open_cases": 6,
     "closed_cases": 4,
-    "email": "Kalinda Patel2@gmail.com",
+    "email": "PadmaMalik1@gmail.com",
     "password": "23456789",
-    "username": "Kalinda Patel2",
-    "reporting_officer_name": "Amrit Mahajan-Kocchar",
-    "reporting_officer_id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "stationId": "5e0792f8451745f684b463ef5c044f68",
+    "username": "PadmaMalik1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "bcb3c3367ce24eb6af447e15c88cf0fc",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "334894fb7d2c489fa442b9fa4d1135f2"
-    ]
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 19.74,
+    "phone_no": "+91871-447-6504",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "AntiTerrorismSquad",
+    "training": [
+      "Counter-Terrorism Training",
+      "Crisis Negotiation and Hostage Rescue",
+      "Legal and Ethical Training",
+      "Legal and Ethical Training",
+      "Advanced Driving Techniques"
+    ],
+    "specialization": "NA"
   },
   {
-    "id": "8cf8c8ba7c5043a88a4ffaa1c3de9649",
-    "name": "Kannan Pothuvaal",
+    "id": "49331413aa9a4511a79394b1228dcbca",
+    "name": "Aasha Sinha",
     "post": "Inspector",
-    "dateOfJoining": "8/7/2004",
+    "date_of_joining": "12/22/2004",
     "batch": "dummy batch",
-    "height": 161,
-    "weight": 77,
-    "workExperience": 2,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 35,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Negotiation",
-      "Criminology",
-      "Integrity",
-      "Teamwork"
-    ],
-    "awards": [
-      "Heroic Conduct Medal",
-      "Distinguished Service Medal",
-      "Medal of Valor",
-      "Community Protection Award"
-    ],
-    "open_cases": 7,
-    "closed_cases": 10,
-    "email": "Kannan Pothuvaal1@gmail.com",
-    "password": "23456789",
-    "username": "Kannan Pothuvaal1",
-    "reporting_officer_name": "Amrit Mahajan-Kocchar",
-    "reporting_officer_id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "stationId": "f39fc2550a3647b49675f594cc5beb0d",
-    "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "334894fb7d2c489fa442b9fa4d1135f2"
-    ]
-  },
-  {
-    "id": "45d5c1a3ae894913bf2a8865dbecb0ca",
-    "name": "Yoginder Johar",
-    "post": "Inspector",
-    "dateOfJoining": "3/15/2004",
-    "batch": "dummy batch",
-    "height": 161,
-    "weight": 74,
+    "height": 180,
+    "weight": 73,
     "workExperience": 9,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 21,
+    "solvedCases": 30,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Analysis",
-      "Criminology",
-      "Analysis",
-      "Leadership"
+      "Surveillance",
+      "ReportWriting",
+      "Firearms",
+      "ReportWriting"
     ],
     "awards": [
+      "Honor for Public Service",
+      "Honor for Public Service",
+      "Heroic Conduct Medal",
+      "Riot Control Medal"
+    ],
+    "open_cases": 1,
+    "closed_cases": 5,
+    "email": "AashaSinha1@gmail.com",
+    "password": "23456789",
+    "username": "AashaSinha1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "372398cd4dc64eb287514586346ee403",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 24.06,
+    "phone_no": "+917601651009",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Bomb Disposal and Explosive Handling",
+      "Cybercrime Investigation",
+      "Interview and Interrogation Techniques",
+      "Patrol Procedures and Tactics",
+      "Community Policing Strategies"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "bcab12f43b434f6babe192d482f1b61f",
+    "name": "Geetanjali Dwivedi",
+    "post": "Inspector",
+    "date_of_joining": "11/11/2010",
+    "batch": "dummy batch",
+    "height": 178,
+    "weight": 77,
+    "workExperience": 9,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 53,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "SelfDefense",
+      "FirstAid",
+      "Discipline",
+      "CrisisManagement"
+    ],
+    "awards": [
+      "Gallantry Award",
+      "Exceptional Duty Award",
+      "Crisis Management Medal",
+      "Lifesaving Medal"
+    ],
+    "open_cases": 2,
+    "closed_cases": 4,
+    "email": "GeetanjaliDwivedi1@gmail.com",
+    "password": "23456789",
+    "username": "GeetanjaliDwivedi1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "ae313879ccef4807a45527cd131a918e",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 22.71,
+    "phone_no": "+919931008923",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "TrafficPolice",
+    "training": [
+      "Cultural Sensitivity and Diversity Training",
+      "Self-Defense and Physical Training",
+      "Criminal Investigation Techniques",
+      "Community Policing Strategies",
+      "Mental Health Crisis Intervention"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "48be49dae24c44259efef361d93d19d7",
+    "name": "Charak Sharma",
+    "post": "Inspector",
+    "date_of_joining": "1/16/2002",
+    "batch": "dummy batch",
+    "height": 160,
+    "weight": 77,
+    "workExperience": 3,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 30,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "SelfDefense",
+      "Ethics",
+      "Criminology",
+      "Patrolling"
+    ],
+    "awards": [
+      "Commendation for Valor",
+      "Exceptional Bravery Award",
+      "Courage in Crisis Award",
+      "Commitment to Public Safety Award"
+    ],
+    "open_cases": 7,
+    "closed_cases": 2,
+    "email": "CharakSharma1@gmail.com",
+    "password": "23456789",
+    "username": "CharakSharma1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "6d0456ea7f4b4f35a1f13479915d1082",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 21.08,
+    "phone_no": "+91649-710-7468",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Emergency Vehicle Operations",
+      "Emergency Vehicle Operations",
+      "Crisis Negotiation and Hostage Rescue",
+      "Advanced Driving Techniques",
+      "Community Policing Strategies"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "42c36048780a40dfb43a9e5995acff7b",
+    "name": "Abhaidev Bhattacharya",
+    "post": "Inspector",
+    "date_of_joining": "7/11/2011",
+    "batch": "dummy batch",
+    "height": 161,
+    "weight": 67,
+    "workExperience": 4,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 38,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Rescue",
+      "Tactics",
+      "Intelligence",
+      "Tactics"
+    ],
+    "awards": [
+      "Service Above Self Award",
+      "Distinguished Service Medal",
+      "Gallantry Award",
+      "Medal of Valor"
+    ],
+    "open_cases": 1,
+    "closed_cases": 6,
+    "email": "AbhaidevBhattacharya1@gmail.com",
+    "password": "23456789",
+    "username": "AbhaidevBhattacharya1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "14023ff9f74a4181b85fd15d22dd0584",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 19.9,
+    "phone_no": "+917765949503",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "TrafficPolice",
+    "training": [
+      "Bomb Disposal and Explosive Handling",
+      "K-9 Handling and Training",
+      "Leadership and Management Training",
+      "Anti-Human Trafficking Training",
+      "Cultural Sensitivity and Diversity Training"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "7bca75abfe824a98b886cc49aa8a6796",
+    "name": "Damodara Marar",
+    "post": "Inspector",
+    "date_of_joining": "1/21/2010",
+    "batch": "dummy batch",
+    "height": 175,
+    "weight": 69,
+    "workExperience": 10,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 28,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Investigation",
+      "Patrolling",
+      "Driving",
+      "CrisisManagement"
+    ],
+    "awards": [
+      "Gallantry Award",
       "Meritorious Service Medal",
+      "Service Above Self Award",
+      "Honor for Public Service"
+    ],
+    "open_cases": 6,
+    "closed_cases": 5,
+    "email": "DamodaraMarar1@gmail.com",
+    "password": "23456789",
+    "username": "DamodaraMarar1",
+    "reporting_officer_name": "Gopi Dwivedi",
+    "reporting_officer_id": "2d49f7019c12448395c520093ea90df8",
+    "stationId": "a990461c1cbc41559e2fde770a7bf968",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "2d49f7019c12448395c520093ea90df8"
+    ],
+    "bmi": 24.19,
+    "phone_no": "+91907-583-7199",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "CyberCrimeCell",
+    "training": [
+      "Legal and Ethical Training",
+      "Bomb Disposal and Explosive Handling",
+      "Crisis Negotiation and Hostage Rescue",
+      "Counter-Terrorism Training",
+      "Cybercrime Investigation"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "a010553b43404c2286f9161e2211d6b7",
+    "name": "Abhirath Tagore",
+    "post": "Inspector",
+    "date_of_joining": "8/9/2003",
+    "batch": "dummy batch",
+    "height": 164,
+    "weight": 74,
+    "workExperience": 6,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 48,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Ethics",
+      "Coordination",
+      "Ethics",
+      "Firearms"
+    ],
+    "awards": [
+      "Commendation for Valor",
       "Outstanding Performance Award",
-      "Meritorious Service Medal",
+      "Distinguished Service Medal",
+      "Riot Control Medal"
+    ],
+    "open_cases": 10,
+    "closed_cases": 2,
+    "email": "AbhirathTagore1@gmail.com",
+    "password": "23456789",
+    "username": "AbhirathTagore1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "6df2193974624477bf5a9083f410e8e3",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 24.46,
+    "phone_no": "+91978-177-1177",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Firearms Training",
+      "Counter-Terrorism Training",
+      "Search and Rescue Operations",
+      "Cybercrime Investigation",
+      "Mental Health Crisis Intervention"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "6ea44e7d32d145f3bde09f7bbca6dd11",
+    "name": "Narayan Mahajan",
+    "post": "Inspector",
+    "date_of_joining": "8/10/2007",
+    "batch": "dummy batch",
+    "height": 169,
+    "weight": 68,
+    "workExperience": 3,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 27,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "FirstAid",
+      "Discipline",
+      "Integrity",
+      "Driving"
+    ],
+    "awards": [
+      "Exemplary Service Medal",
+      "Bravery in Action Award",
+      "Commendation for Valor",
+      "Service Above Self Award"
+    ],
+    "open_cases": 2,
+    "closed_cases": 1,
+    "email": "NarayanMahajan1@gmail.com",
+    "password": "23456789",
+    "username": "NarayanMahajan1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "8734e8cd189a4bddb06a93560d9e84cc",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 23.98,
+    "phone_no": "+91666-649-0709",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "HumanRightsCell",
+    "training": [
+      "Firearms Training",
+      "Firearms Training",
+      "Bomb Disposal and Explosive Handling",
+      "Leadership and Management Training",
+      "Interview and Interrogation Techniques"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "1f37d1637d8648389008e6eb56ec86fc",
+    "name": "Devak Nambeesan",
+    "post": "Inspector",
+    "date_of_joining": "6/21/2011",
+    "batch": "dummy batch",
+    "height": 176,
+    "weight": 66,
+    "workExperience": 4,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 39,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Communication",
+      "CrisisManagement",
+      "Resilience",
+      "SelfDefense"
+    ],
+    "awards": [
+      "Frontline Hero Award",
+      "Frontline Hero Award",
+      "Lifesaving Medal",
       "Public Safety Officer Medal of Valor"
     ],
-    "open_cases": 4,
-    "closed_cases": 8,
-    "email": "Yoginder Johar1@gmail.com",
+    "open_cases": 10,
+    "closed_cases": 3,
+    "email": "DevakNambeesan1@gmail.com",
     "password": "23456789",
-    "username": "Yoginder Johar1",
-    "reporting_officer_name": "Amrit Mahajan-Kocchar",
-    "reporting_officer_id": "334894fb7d2c489fa442b9fa4d1135f2",
-    "stationId": "73fbc7cf97ed42d68f58a9ddf5841da1",
+    "username": "DevakNambeesan1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "6da3a66be721460797735feb911f0b5a",
     "superiors_list": [
-      "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-      "334894fb7d2c489fa442b9fa4d1135f2"
-    ]
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 23.7,
+    "phone_no": "+91-713-8036365",
+    "blood_group": "B",
+    "certifications": [],
+    "department": "CrimeBranch",
+    "training": [
+      "K-9 Handling and Training",
+      "First Aid and Emergency Response",
+      "Undercover Operations Training",
+      "First Aid and Emergency Response",
+      "First Aid and Emergency Response"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "9578d875e4844fe0a9c46915c11f977c",
+    "name": "Shashi Iyengar",
+    "post": "Inspector",
+    "date_of_joining": "4/27/2003",
+    "batch": "dummy batch",
+    "height": 165,
+    "weight": 69,
+    "workExperience": 7,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 13,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Firearms",
+      "Surveillance",
+      "SelfDefense",
+      "Teamwork"
+    ],
+    "awards": [
+      "Exceptional Bravery Award",
+      "Civic Duty Award",
+      "Service Above Self Award",
+      "Gallantry Award"
+    ],
+    "open_cases": 8,
+    "closed_cases": 7,
+    "email": "ShashiIyengar1@gmail.com",
+    "password": "23456789",
+    "username": "ShashiIyengar1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "cfa6280b64594ac4bb7d482318d57de0",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 18.65,
+    "phone_no": "+91703-876-7585",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "ForensicScienceLaboratory",
+    "training": [
+      "Victim Assistance and Support",
+      "Public Relations and Media Handling",
+      "Bomb Disposal and Explosive Handling",
+      "Mental Health Crisis Intervention",
+      "Crisis Negotiation and Hostage Rescue"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "fe16ffb393e34c0cbdb1af1fcad704cd",
+    "name": "Rukhmani Malik",
+    "post": "Inspector",
+    "date_of_joining": "9/2/2008",
+    "batch": "dummy batch",
+    "height": 169,
+    "weight": 66,
+    "workExperience": 4,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 60,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Strategy",
+      "CrisisManagement",
+      "ConflictResolution",
+      "Intelligence"
+    ],
+    "awards": [
+      "Frontline Hero Award",
+      "Service Above Self Award",
+      "Courage in Crisis Award",
+      "Commendation for Valor"
+    ],
+    "open_cases": 1,
+    "closed_cases": 7,
+    "email": "RukhmaniMalik1@gmail.com",
+    "password": "23456789",
+    "username": "RukhmaniMalik1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "054b036d389e4a25a478bb5d32c69299",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 20.54,
+    "phone_no": "+919061112794",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "TrafficPolice",
+    "training": [
+      "Incident Command System Training",
+      "Counter-Terrorism Training",
+      "Public Order and Riot Control",
+      "Advanced Driving Techniques",
+      "Emergency Vehicle Operations"
+    ],
+    "specialization": "NA"
+  },
+  {
+    "id": "5b5f624ce12e4816ae4721bb90edffa3",
+    "name": "Ekaaksh Naik",
+    "post": "Inspector",
+    "date_of_joining": "12/21/2011",
+    "batch": "dummy batch",
+    "height": 170,
+    "weight": 75,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 16,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "FirstAid",
+      "Tactics",
+      "CrisisManagement",
+      "Criminology"
+    ],
+    "awards": [
+      "Civic Duty Award",
+      "Lifesaving Medal",
+      "Exceptional Duty Award",
+      "Commendation for Valor"
+    ],
+    "open_cases": 1,
+    "closed_cases": 3,
+    "email": "EkaakshNaik1@gmail.com",
+    "password": "23456789",
+    "username": "EkaakshNaik1",
+    "reporting_officer_name": "Gajaadhar Namboothiri",
+    "reporting_officer_id": "6a3914f1126e4f009a68c8612438c04e",
+    "stationId": "024030d0b6ad484189b14414b9b905eb",
+    "superiors_list": [
+      "930ccb5ee2884a9c989d344869ef1be9",
+      "6a3914f1126e4f009a68c8612438c04e"
+    ],
+    "bmi": 19.12,
+    "phone_no": "+91-988-9047270",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "PoliceTrainingAcademies",
+    "training": [
+      "Emergency Vehicle Operations",
+      "Maritime Law Enforcement Training",
+      "Victim Assistance and Support",
+      "Drug Enforcement Training",
+      "Basic Police Training"
+    ],
+    "specialization": "NA"
   }
 ]

@@ -6,13 +6,15 @@ import { base, de, de_CH, en, en_AU, en_IN, Faker } from "@faker-js/faker";
 import {
   generateRandomUserData,
   getRandomElementFromArray,
+  getRandomInteger,
 } from "./generate_user_data";
 import { generate_station_data } from "./generate_station_data";
 import VehicleType from "@/types/vehicle_type";
 import { weaponData } from "./weapon_data";
 import { FIRRecord } from "@/fragments/fir/modals/fir_modal";
 import { fir_dataset } from "../fir_data";
-import { StationCrimeCountType } from "@/types/station_crime_count_type";
+import { FirTypeCount } from "@/types/station_crime_count_type";
+import { WeaponType } from "@/types/weapon_type";
 
 export const customFaker = new Faker({
   locale: [en_IN, en_AU, de_CH, de, en, base],
@@ -33,8 +35,8 @@ export const main = () => {
   const weapons_data: WeaponType[] = [];
 
   const fir_data: FIRRecord[] = [];
-  const station_dept_data: StationCrimeCountType[] = [];
-  const station_crime_data: StationCrimeCountType[] = [];
+  const station_dept_data: FirTypeCount[] = [];
+  const station_crime_data: FirTypeCount[] = [];
 
   //   station data
   const stations_data: StationModel[] = [];
@@ -58,7 +60,7 @@ export const main = () => {
     commisioner_data.push(commisioner);
 
     // updating assitant commisioner with the zone data
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < getRandomInteger(5, 10); i++) {
       const assistant_commisioner: UserModel = generateRandomUserData({
         post: "Assistant Commisioner",
         reporting_officer_id: commisioner.id ?? "",
@@ -72,7 +74,7 @@ export const main = () => {
 
       // creating stations 5 per assistant commisioner
 
-      for (let j = 0; j < 5; j++) {
+      for (let j = 0; j < getRandomInteger(5, 7); j++) {
         const tempStationStafflist: UserModel[] = [];
 
         const inspector: UserModel = generateRandomUserData({
@@ -97,7 +99,7 @@ export const main = () => {
           station_incharge_name: inspector.name,
         });
 
-        const crime_count: StationCrimeCountType = {
+        const crime_count: FirTypeCount = {
           stationId: station.id ?? "",
           id: customFaker.string.uuid().replace(/-/g, ""),
           Theft: customFaker.number.int({ min: 0, max: 10 }),
@@ -127,7 +129,7 @@ export const main = () => {
         stations_data.push(station);
 
         // generating 10 vehicles per station
-        for (let k = 0; k < 20; k++) {
+        for (let k = 0; k < getRandomInteger(15, 20); k++) {
           const vehicle: VehicleType = {
             color: customFaker.vehicle.color(),
             chasis_no: customFaker.vehicle.vin(),
@@ -145,7 +147,7 @@ export const main = () => {
         }
 
         // generate sub inspectors data
-        for (let l = 0; l < 5; l++) {
+        for (let l = 0; l < getRandomInteger(3, 7); l++) {
           const sub_inspector: UserModel = generateRandomUserData({
             post: "Sub Inpector",
             reporting_officer_id: inspector.id ?? "",
@@ -157,7 +159,7 @@ export const main = () => {
           sub_inspector_data.push(sub_inspector);
           tempStationStafflist.push(sub_inspector);
 
-          for (let m = 0; m < 5; m++) {
+          for (let m = 0; m < getRandomInteger(2, 4); m++) {
             const head_constable = generateRandomUserData({
               post: "Head Constable",
               reporting_officer_id: sub_inspector.id,
@@ -172,7 +174,7 @@ export const main = () => {
             head_constable_data.push(head_constable);
             tempStationStafflist.push(head_constable);
 
-            for (let n = 0; n < 5; n++) {
+            for (let n = 0; n < getRandomInteger(2,3); n++) {
               const constable = generateRandomUserData({
                 post: "Constable",
                 reporting_officer_id: head_constable.id,
@@ -190,7 +192,7 @@ export const main = () => {
         }
 
         // generating weapons data
-        for (let o = 0; o < 20; o++) {
+        for (let o = 0; o < getRandomInteger(15, 22); o++) {
           const temp = getRandomElementFromArray(weaponData);
           const user = getRandomElementFromArray(tempStationStafflist);
 
@@ -210,7 +212,7 @@ export const main = () => {
         }
 
         // fir data
-        for (let p = 0; p < 30; p++) {
+        for (let p = 0; p < getRandomInteger(30, 40); p++) {
           const user1 = getRandomElementFromArray(tempStationStafflist);
           const user2 = getRandomElementFromArray(tempStationStafflist);
           const user3 = getRandomElementFromArray(tempStationStafflist);

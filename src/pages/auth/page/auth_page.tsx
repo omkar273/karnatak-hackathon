@@ -31,7 +31,7 @@ const AuthPage = () => {
 
     try {
 
-      const user = await doLogin(data.username, data.password);
+      const user = await doLogin(data.username.trim(), data.password.trim());
       dispatch(setLogin({ user }));
 
     } catch (error) {
@@ -109,12 +109,12 @@ const AuthPage = () => {
 
       <div className="md:w-[45%] hidden  bg-cyan-500 md:h-screen md:flex flex-col justify-center items-center text-white text-xl">
         <img src={karntankPoliceLogo} alt="" className="w-[50%]" />
-        <p>
-          Default username : omkar273
+        {/* <p>
+          Default username : commmissioner
         </p>
         <p>
           password : 123456789
-        </p>
+        </p> */}
 
       </div>
 

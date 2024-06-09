@@ -1,40 +1,53 @@
 [
   {
-    "id": "ODZyJ68K8xPjuuTytzbMWbNumfY2",
-    "name": "Chandrabhaga Nair",
+    "id": "930ccb5ee2884a9c989d344869ef1be9",
+    "name": "Aditeya Singh",
     "post": "Commisioner",
-    "dateOfJoining": "11/10/2005",
+    "date_of_joining": "2/6/2009",
     "batch": "dummy batch",
-    "height": 179,
-    "weight": 78,
-    "workExperience": 7,
+    "height": 169,
+    "weight": 73,
+    "workExperience": 8,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 3,
+    "solvedCases": 5,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Negotiation",
-      "CrisisManagement",
-      "Teamwork",
-      "Tactics"
+      "Cybersecurity",
+      "Leadership",
+      "Communication",
+      "Strategy"
     ],
     "awards": [
-      "Police Chief's Commendation",
-      "Frontline Hero Award",
-      "Civic Duty Award",
-      "Meritorious Service Medal"
+      "Courage in Crisis Award",
+      "Outstanding Performance Award",
+      "Honor for Public Service",
+      "Heroic Conduct Medal"
     ],
-    "open_cases": 3,
+    "open_cases": 1,
     "closed_cases": 6,
-    "email": "Chandrabhaga Nair1@gmail.com",
+    "email": "AditeyaSingh1@gmail.com",
     "password": "23456789",
-    "username": "Chandrabhaga Nair1",
+    "username": "AditeyaSingh1",
     "reporting_officer_name": null,
     "reporting_officer_id": null,
     "stationId": "",
     "superiors_list": [],
+    "bmi": 21.47,
+    "phone_no": "+918940580689",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "BombDisposalSquad",
+    "training": [
+      "Traffic Management and Accident Investigation",
+      "K-9 Handling and Training",
+      "Forensic Science Training",
+      "Legal and Ethical Training",
+      "K-9 Handling and Training"
+    ],
+    "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
     "zone_name": "East"
   }

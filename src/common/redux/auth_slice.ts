@@ -1,3 +1,4 @@
+import { StationModel } from "@/fragments/station/models/station_model";
 import { UserModel } from "@/fragments/user_management/models/user_model";
 import { createSlice } from "@reduxjs/toolkit";
 import { UserCredential } from "firebase/auth";
@@ -6,41 +7,16 @@ type authstate = {
   currentUser: UserCredential | null;
   isUserLoggedIn: boolean;
   authStateLoading: boolean;
-  userdata: UserModel;
+  userdata: UserModel | null;
+  stationList: StationModel[];
 };
 
 const authInitalState: authstate = {
   currentUser: null,
+  stationList: [],
   isUserLoggedIn: false,
   authStateLoading: false,
-  userdata: {
-    id: "",
-    name: "",
-    post: "",
-    dateOfJoining: "",
-    batch: "",
-    height: 0,
-    weight: 0,
-    certification: [],
-    qualification: "",
-    solvedCases: 0,
-    previousPosting: "",
-    skills: [],
-    awards: [],
-    superiors_list: [""],
-    underlyings: [""],
-    open_cases: 0,
-    closed_cases: 0,
-    stationList: [],
-    email: "",
-    password: "",
-    username: "",
-    zone_id: "",
-    zone_name: "",
-    stationId: "",
-    stationCode: "",
-    currentPosting: "",
-  },
+  userdata: null,
 };
 
 const authSlice = createSlice({
@@ -52,11 +28,17 @@ const authSlice = createSlice({
       state.isUserLoggedIn = true;
     },
     setLogout: (state) => {
-      state.currentUser = null;
-      state.isUserLoggedIn = false;
+      state.currentUser = authInitalState.currentUser;
+      state.isUserLoggedIn = authInitalState.isUserLoggedIn;
+      state.authStateLoading = authInitalState.authStateLoading;
+      state.stationList = authInitalState.stationList;
+      state.userdata = authInitalState.userdata;
     },
     setUserdata: (state, action) => {
       state.userdata = action.payload;
+    },
+    setStationList: (state, action) => {
+      state.stationList = action.payload;
     },
   },
 });

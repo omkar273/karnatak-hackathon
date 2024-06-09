@@ -186,9 +186,9 @@ const HomePage = () => {
             {/* {page} */}
             <Outlet />
           </div>
-          <div className="max-h-screen sm:hidden overflow-y-auto">
+          <div className="h-screen w-full flex justify-center items-center p-4 text-center text-xl sm:hidden overflow-y-auto">
             {/* {page} */}
-            <h1>You can only View this website on Landscap Mode</h1>
+            <h1>You can only View this website on Landscape Mode or desktop</h1>
           </div>
         </main>
       </div>

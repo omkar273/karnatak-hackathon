@@ -1,21 +1,5 @@
 import { Timestamp } from "firebase/firestore";
 
-export type FIRModal = {
-  name: string;
-  fatherName: string;
-  mobileNo: string;
-  emailAddress: string;
-  presentAddress: string;
-  dateOfIncident: string;
-  timeOfIncident: string;
-  placeOfIncident: string;
-  detailsOfIncident: string;
-  timestamp?: Timestamp;
-  status: "registered" | "pending" | "in court" | "closed";
-  allotedTo: string[];
-  title: string;
-};
-
 export interface FIRRecord {
   id?: string;
   District_Name: string;
@@ -58,14 +42,17 @@ export interface FIRRecord {
   FIR_ID: string;
   Unit_ID: string;
   Crime_No: string;
-  fir_status?: string;
   Intern_l__O?: string;
   Internal_IO?: string;
   timestamp?: Timestamp;
+
+  // meta data
   stationId?: string;
   allotedTo?: {
     name: string;
     id: string;
     post: string;
   }[];
+  fir_status?: string;
+  fir_type?: string;
 }

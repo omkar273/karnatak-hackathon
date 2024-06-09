@@ -64,6 +64,9 @@ const useStationCounts = (
         firestore,
         `stations/${stationId}/counts/${monthYear}`
       );
+
+      
+
       try {
         const docSnap = await getDoc(docRef);
 

@@ -1,4 +1,5 @@
 export const Ranks = {
+  Admin: 0,
   Commisioner: 1,
   "Assistant Commisioner": 2,
   Inspector: 3,
@@ -8,7 +9,8 @@ export const Ranks = {
 };
 
 export enum RanksEnum {
-  "Commisioner" = "Commisioner",
+  Admin = "admin",
+  Commisioner = "Commisioner",
   "AssistantCommisioner" = "Assistant Commisioner",
   Inspector = "Inspector",
   SubInpector = "Sub Inpector",

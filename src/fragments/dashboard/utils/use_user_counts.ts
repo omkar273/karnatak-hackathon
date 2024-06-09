@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { firestore } from "@/firebase/firebase_config";
 import { FirebaseError } from "firebase/app";
+import { getRandomInteger } from "@/utils/random_no";
 
 interface UserCounts {
   cases_registered: number;
@@ -48,10 +49,10 @@ const useUserCounts = (
           setData(docSnap.data() as UserCounts);
         } else {
           const initialData: UserCounts = {
-            cases_registered: 0,
-            pending_cases: 0,
-            closed_cases: 0,
-            cases_alloted_to_me: 0,
+            cases_registered: getRandomInteger(0, 23),
+            pending_cases: getRandomInteger(5, 12),
+            closed_cases: getRandomInteger(6, 20),
+            cases_alloted_to_me: getRandomInteger(3, 20),
           };
           await setDoc(docRef, initialData);
           setData(initialData);

@@ -1,4 +1,4 @@
-export interface StationCrimeCountType {
+export interface FirTypeCount {
   id?: string;
   stationId: string;
   Theft: number;
@@ -19,3 +19,10 @@ export interface StationCrimeCountType {
   Counterfeiting: number;
   Harassment: number;
 }
+
+export interface FIRCountsType {
+  cases_registered: number;
+  cases_open: number;
+  cases_closed: number;
+}
+
