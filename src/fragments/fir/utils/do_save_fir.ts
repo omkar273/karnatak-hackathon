@@ -71,6 +71,8 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
 
     // Iterate over the allotedTo field and update each user's task list and task count
     if (firData.allotedTo) {
+      console.log("fir alloted section detected");
+
       for (const allocation of firData.allotedTo) {
         const userDocRef = doc(firestore, "users", allocation.id);
 
@@ -78,6 +80,7 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
         await addDoc(collection(userDocRef, "tasks"), {
           ...firData,
           firId,
+          task_type: "fir",
         });
 
         // Update task count in the task_count subcollection
@@ -86,7 +89,6 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
           getCurrentMonth()
         );
 
-        
         const taskCountSnapshot = await getDoc(taskCountDocRef);
         if (!taskCountSnapshot.exists()) {
           await setDoc(taskCountDocRef, {

@@ -104,7 +104,7 @@ export const doSignUp = async ({
   email,
   password,
   data,
-}: SignUpData): Promise<void> => {
+}: SignUpData): Promise<string> => {
   try {
     const q = query(
       collection(firestore, "usernames"),
@@ -124,6 +124,7 @@ export const doSignUp = async ({
     if (creds) {
       await saveUserData(creds.user.uid, email, username, data);
     }
+    return creds?.user?.uid ?? "";
   } catch (error) {
     throw new Error(`Error signing up: ${error}`);
   }

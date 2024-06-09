@@ -44,16 +44,21 @@ const loginData: {
     data: commisioner_data[0],
     username: "commisioner",
   },
+  // {
+  //   email: "jiteshjawale1234@gmail.com",
+  //   data: commisioner_data[1],
+  //   username: "commisioner1",
+  // },
   {
     email: "itzsramlok@gmail.com",
     data: assistant_commisioner_data[0],
     username: "assistant_commisioner",
   },
-  // {
-  //   email: "nisargalokhande09@gmail.com",
-  //   data: assistant_commisioner_data[1],
-  //   username: "assistant_commisioner2",
-  // },
+  {
+    email: "nisargalokhande09@gmail.com",
+    data: assistant_commisioner_data[1],
+    username: "assistant_commisioner2",
+  },
 
   {
     email: "jeetjawale.99@gmail.com",
@@ -67,28 +72,33 @@ const loginData: {
   },
   {
     email: "nisargalokhande@gmail.com",
-    data: sub_inspector_data[1],
-    username: "sub_inspector",
+    data: sub_inspector_data[0],
+    username: "sub_inspector1",
   },
-  // {
-  //   email: "desno.pvt.ltd@gmail.com",
-  //   data: sub_inspector_data[0],
-  //   username: "sub_inspector",
-  // },
+  {
+    email: "desno.pvt.ltd@gmail.com",
+    data: sub_inspector_data[1],
+    username: "sub_inspector2",
+  },
   {
     email: "omkarsonawane.comp@siem.org.in",
     data: head_constable_data[0],
     username: "head_constable1",
   },
-  // {
-  //   email: "jiteshjawale123@gmail.com",
-  //   data: head_constable_data[1],
-  //   username: "head_constable2",
-  // },
+  {
+    email: "jiteshjawale1235@gmail.com",
+    data: head_constable_data[1],
+    username: "head_constable2",
+  },
+  {
+    email: "omkarsonawane6221@gmail.com",
+    data: constable_data[0],
+    username: "constable1",
+  },
   {
     email: "omkarsonawane622@gmail.com",
-    data: constable_data[0],
-    username: "constable",
+    data: constable_data[1],
+    username: "constable2",
   },
 ];
 

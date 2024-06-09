@@ -11,5 +11,5 @@ export interface TaskCounts {
   evidence_collection: number;
   case_investigation: number;
   forensic: number;
-  
 }
+

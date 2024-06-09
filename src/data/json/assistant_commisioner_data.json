@@ -1,269 +1,377 @@
 [
   {
-    "id": "smzioUsrlAeuxuxDB3gCF3xNmqV2",
-    "name": "Sameer Somayaji",
+    "id": "e1c02a0711ca48cab505a467f9e58b9d",
+    "name": "Yoginder Nambeesan",
     "post": "Assistant Commisioner",
-    "date_of_joining": "5/18/2002",
+    "date_of_joining": "10/18/2011",
     "batch": "dummy batch",
-    "height": 162,
-    "weight": 74,
-    "workExperience": 8,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 15,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Negotiation",
-      "Leadership",
-      "Rescue",
-      "Investigation"
-    ],
-    "awards": [
-      "Exceptional Duty Award",
-      "Medal of Valor",
-      "Exemplary Service Medal",
-      "Riot Control Medal"
-    ],
-    "open_cases": 7,
-    "closed_cases": 9,
-    "email": "jeetjawale.99@gmail.com",
-    "password": "23456789",
-    "username": "assistant_commisioner",
-    "reporting_officer_name": "Aditeya Singh",
-    "reporting_officer_id": "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
-    "stationId": "",
-    "superiors_list": [
-      "TRFCFZ0lgMhhg0y23QdRzgUDhZF2"
-    ],
-    "bmi": 18.61,
-    "phone_no": "+918679008072",
-    "blood_group": "A",
-    "certifications": [],
-    "department": "PublicRelationsDepartment",
-    "training": [
-      "Victim Assistance and Support",
-      "Patrol Procedures and Tactics",
-      "Victim Assistance and Support",
-      "Counter-Terrorism Training",
-      "Emergency Vehicle Operations"
-    ],
-    "specialization": "NA",
-    "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
-  },
-  {
-    "id": "NpoZprouwcNlnA0ZrDcwhBOzAxH3",
-    "name": "Gopaal Namboothiri",
-    "post": "Assistant Commisioner",
-    "date_of_joining": "3/9/2010",
-    "batch": "dummy batch",
-    "height": 174,
-    "weight": 76,
-    "workExperience": 7,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 13,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "Surveillance",
-      "Patrolling",
-      "Firearms",
-      "Firearms"
-    ],
-    "awards": [
-      "Exceptional Duty Award",
-      "Crisis Management Medal",
-      "Exceptional Duty Award",
-      "Public Safety Officer Medal of Valor"
-    ],
-    "open_cases": 7,
-    "closed_cases": 6,
-    "email": "desno.pvt.ltd@gmail.com",
-    "password": "23456789",
-    "username": "assistant_commisioner2",
-    "reporting_officer_name": "Aditeya Singh",
-    "reporting_officer_id": "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
-    "stationId": "",
-    "superiors_list": [
-      "TRFCFZ0lgMhhg0y23QdRzgUDhZF2"
-    ],
-    "bmi": 21.02,
-    "phone_no": "+91-888-4599507",
-    "blood_group": "A",
-    "certifications": [],
-    "department": "PoliceTrainingAcademies",
-    "training": [
-      "Community Policing Strategies",
-      "Firearms Training",
-      "Firearms Training",
-      "Legal and Ethical Training",
-      "Drug Enforcement Training"
-    ],
-    "specialization": "NA",
-    "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
-  },
-  {
-    "id": "fd70ecc8be864b07baded6a179e3c38d",
-    "name": "Bandhu Guha",
-    "post": "Assistant Commisioner",
-    "date_of_joining": "8/4/2005",
-    "batch": "dummy batch",
-    "height": 170,
-    "weight": 74,
-    "workExperience": 1,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 30,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "ConflictResolution",
-      "Firearms",
-      "Tactics",
-      "CrisisManagement"
-    ],
-    "awards": [
-      "Frontline Hero Award",
-      "Courageous Service Medal",
-      "Exceptional Duty Award",
-      "Police Chief's Commendation"
-    ],
-    "open_cases": 8,
-    "closed_cases": 10,
-    "email": "BandhuGuha1@gmail.com",
-    "password": "23456789",
-    "username": "BandhuGuha1",
-    "reporting_officer_name": "Aditeya Singh",
-    "reporting_officer_id": "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
-    "stationId": "",
-    "superiors_list": [
-      "TRFCFZ0lgMhhg0y23QdRzgUDhZF2"
-    ],
-    "bmi": 23.26,
-    "phone_no": "+91-654-8285095",
-    "blood_group": "B",
-    "certifications": [],
-    "department": "CrimeBranch",
-    "training": [
-      "Public Order and Riot Control",
-      "Basic Police Training",
-      "Advanced Driving Techniques",
-      "Maritime Law Enforcement Training",
-      "Drug Enforcement Training"
-    ],
-    "specialization": "NA",
-    "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
-  },
-  {
-    "id": "2d49f7019c12448395c520093ea90df8",
-    "name": "Gopi Dwivedi",
-    "post": "Assistant Commisioner",
-    "date_of_joining": "11/4/2004",
-    "batch": "dummy batch",
-    "height": 169,
-    "weight": 65,
-    "workExperience": 4,
-    "certification": [
-      "dummy certifications"
-    ],
-    "qualification": "graduated",
-    "solvedCases": 8,
-    "previousPosting": "dummy previous posting",
-    "skills": [
-      "ConflictResolution",
-      "Criminology",
-      "Resilience",
-      "ConflictResolution"
-    ],
-    "awards": [
-      "Riot Control Medal",
-      "Bravery in Action Award",
-      "Lifesaving Medal",
-      "Exceptional Duty Award"
-    ],
-    "open_cases": 8,
-    "closed_cases": 9,
-    "email": "GopiDwivedi1@gmail.com",
-    "password": "23456789",
-    "username": "GopiDwivedi1",
-    "reporting_officer_name": "Aditeya Singh",
-    "reporting_officer_id": "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
-    "stationId": "",
-    "superiors_list": [
-      "TRFCFZ0lgMhhg0y23QdRzgUDhZF2"
-    ],
-    "bmi": 23.3,
-    "phone_no": "+91-603-2537306",
-    "blood_group": "A",
-    "certifications": [],
-    "department": "ForensicScienceLaboratory",
-    "training": [
-      "Bomb Disposal and Explosive Handling",
-      "Cultural Sensitivity and Diversity Training",
-      "Mental Health Crisis Intervention",
-      "Basic Police Training",
-      "Maritime Law Enforcement Training"
-    ],
-    "specialization": "NA",
-    "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
-  },
-  {
-    "id": "6a3914f1126e4f009a68c8612438c04e",
-    "name": "Gajaadhar Namboothiri",
-    "post": "Assistant Commisioner",
-    "date_of_joining": "5/30/2007",
-    "batch": "dummy batch",
-    "height": 175,
-    "weight": 72,
+    "height": 166,
+    "weight": 73,
     "workExperience": 9,
     "certification": [
       "dummy certifications"
     ],
     "qualification": "graduated",
-    "solvedCases": 14,
+    "solvedCases": 20,
     "previousPosting": "dummy previous posting",
     "skills": [
-      "Resilience",
-      "Dedication",
-      "FirstAid",
-      "Coordination"
+      "Strategy",
+      "Teamwork",
+      "Observation",
+      "Patrolling"
     ],
     "awards": [
-      "Commendation for Valor",
-      "Crisis Management Medal",
-      "Frontline Hero Award",
-      "Service Above Self Award"
+      "Silver Star for Bravery",
+      "Silver Star for Bravery",
+      "Heroic Conduct Medal",
+      "Exceptional Duty Award"
     ],
-    "open_cases": 5,
-    "closed_cases": 7,
-    "email": "GajaadharNamboothiri1@gmail.com",
+    "open_cases": 3,
+    "closed_cases": 3,
+    "email": "YoginderNambeesan1@gmail.com",
     "password": "23456789",
-    "username": "GajaadharNamboothiri1",
-    "reporting_officer_name": "Aditeya Singh",
-    "reporting_officer_id": "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
+    "username": "YoginderNambeesan1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
     "stationId": "",
     "superiors_list": [
-      "TRFCFZ0lgMhhg0y23QdRzgUDhZF2"
+      "1d478ff6c40045a9841b9bd3e2c443e2"
     ],
-    "bmi": 19.03,
-    "phone_no": "+91-969-4338819",
+    "bmi": 22.04,
+    "phone_no": "+919877000307",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Surveillance and Reconnaissance",
+      "Patrol Procedures and Tactics",
+      "Advanced Driving Techniques",
+      "Surveillance and Reconnaissance",
+      "Firearms Training"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "7451764c9e174ab1a21ecbcb6c77a119",
+    "name": "Shridevi Sethi",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "2/15/2003",
+    "batch": "dummy batch",
+    "height": 171,
+    "weight": 67,
+    "workExperience": 5,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 41,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Strategy",
+      "Leadership",
+      "Observation",
+      "Leadership"
+    ],
+    "awards": [
+      "Commitment to Public Safety Award",
+      "Distinguished Service Medal",
+      "Valor in the Line of Duty Medal",
+      "Exceptional Duty Award"
+    ],
+    "open_cases": 2,
+    "closed_cases": 2,
+    "email": "ShrideviSethi1@gmail.com",
+    "password": "23456789",
+    "username": "ShrideviSethi1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 18.78,
+    "phone_no": "+91-961-9917190",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "CrimeBranch",
+    "training": [
+      "Traffic Management and Accident Investigation",
+      "Intelligence Gathering and Analysis",
+      "Bomb Disposal and Explosive Handling",
+      "Basic Police Training",
+      "Leadership and Management Training"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "b6e0e78c41594be18a5ab574c5857c28",
+    "name": "Devani Johar",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "11/30/2007",
+    "batch": "dummy batch",
+    "height": 169,
+    "weight": 75,
+    "workExperience": 1,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 26,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Observation",
+      "Surveillance",
+      "Integrity",
+      "ConflictResolution"
+    ],
+    "awards": [
+      "Riot Control Medal",
+      "Exceptional Bravery Award",
+      "Courage in Crisis Award",
+      "Heroic Conduct Medal"
+    ],
+    "open_cases": 1,
+    "closed_cases": 8,
+    "email": "DevaniJohar1@gmail.com",
+    "password": "23456789",
+    "username": "DevaniJohar1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 22,
+    "phone_no": "+918976375299",
+    "blood_group": "A",
+    "certifications": [],
+    "department": "HumanRightsCell",
+    "training": [
+      "Surveillance and Reconnaissance",
+      "Intelligence Gathering and Analysis",
+      "Victim Assistance and Support",
+      "Firearms Training",
+      "Undercover Operations Training"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "41273f7d4c1f4d3fa870b84af833919f",
+    "name": "Gopee Mahajan-Varman",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "3/13/2010",
+    "batch": "dummy batch",
+    "height": 174,
+    "weight": 72,
+    "workExperience": 10,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 23,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Patrolling",
+      "Analysis",
+      "ConflictResolution",
+      "FirstAid"
+    ],
+    "awards": [
+      "Crisis Management Medal",
+      "Police Chief's Commendation",
+      "Courageous Service Medal",
+      "Commendation for Valor"
+    ],
+    "open_cases": 5,
+    "closed_cases": 9,
+    "email": "GopeeMahajanVarman1@gmail.com",
+    "password": "23456789",
+    "username": "GopeeMahajanVarman1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 19.42,
+    "phone_no": "+91-605-2329530",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "CyberCrimeCell",
+    "training": [
+      "Basic Police Training",
+      "K-9 Handling and Training",
+      "Surveillance and Reconnaissance",
+      "Bomb Disposal and Explosive Handling",
+      "Intelligence Gathering and Analysis"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "2a1e50863d3d4bc38edbb9f4fb584483",
+    "name": "Chitrali Kaul",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "7/4/2002",
+    "batch": "dummy batch",
+    "height": 160,
+    "weight": 70,
+    "workExperience": 3,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 24,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "ReportWriting",
+      "FirstAid",
+      "CrisisManagement",
+      "CrisisManagement"
+    ],
+    "awards": [
+      "Crisis Management Medal",
+      "Frontline Hero Award",
+      "Riot Control Medal",
+      "Medal of Honor"
+    ],
+    "open_cases": 7,
+    "closed_cases": 9,
+    "email": "ChitraliKaul1@gmail.com",
+    "password": "23456789",
+    "username": "ChitraliKaul1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 21.92,
+    "phone_no": "+916494396518",
+    "blood_group": "AB",
+    "certifications": [],
+    "department": "PublicRelationsDepartment",
+    "training": [
+      "Undercover Operations Training",
+      "Incident Command System Training",
+      "Public Relations and Media Handling",
+      "Drug Enforcement Training",
+      "Advanced Driving Techniques"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "f8fc4317bebb4e2492424b2722654ae4",
+    "name": "Jay Pilla",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "2/16/2010",
+    "batch": "dummy batch",
+    "height": 163,
+    "weight": 67,
+    "workExperience": 6,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 39,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Intelligence",
+      "Intelligence",
+      "Communication",
+      "Leadership"
+    ],
+    "awards": [
+      "Courageous Service Medal",
+      "Commendation for Valor",
+      "Valor in the Line of Duty Medal",
+      "Frontline Hero Award"
+    ],
+    "open_cases": 4,
+    "closed_cases": 9,
+    "email": "JayPilla1@gmail.com",
+    "password": "23456789",
+    "username": "JayPilla1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 22.16,
+    "phone_no": "+919198804419",
     "blood_group": "AB",
     "certifications": [],
     "department": "PoliceTrainingAcademies",
     "training": [
-      "Incident Command System Training",
-      "Intelligence Gathering and Analysis",
-      "Forensic Science Training",
-      "Criminal Investigation Techniques",
-      "Firearms Training"
+      "K-9 Handling and Training",
+      "Victim Assistance and Support",
+      "Cybercrime Investigation",
+      "K-9 Handling and Training",
+      "Interview and Interrogation Techniques"
+    ],
+    "specialization": "NA",
+    "zone_id": "etnSDAj88tulU7Fwe5hB",
+    "zone_name": "East"
+  },
+  {
+    "id": "e2ac35dbf8f44e6f8159c04c2ec82602",
+    "name": "Mohinder Pilla",
+    "post": "Assistant Commisioner",
+    "date_of_joining": "1/15/2009",
+    "batch": "dummy batch",
+    "height": 173,
+    "weight": 75,
+    "workExperience": 5,
+    "certification": [
+      "dummy certifications"
+    ],
+    "qualification": "graduated",
+    "solvedCases": 52,
+    "previousPosting": "dummy previous posting",
+    "skills": [
+      "Tactics",
+      "Dedication",
+      "Strategy",
+      "Driving"
+    ],
+    "awards": [
+      "Outstanding Performance Award",
+      "Courage in Crisis Award",
+      "Service Above Self Award",
+      "Police Chief's Commendation"
+    ],
+    "open_cases": 9,
+    "closed_cases": 7,
+    "email": "MohinderPilla1@gmail.com",
+    "password": "23456789",
+    "username": "MohinderPilla1",
+    "reporting_officer_name": "Vaishnavi Jha",
+    "reporting_officer_id": "1d478ff6c40045a9841b9bd3e2c443e2",
+    "stationId": "",
+    "superiors_list": [
+      "1d478ff6c40045a9841b9bd3e2c443e2"
+    ],
+    "bmi": 20.67,
+    "phone_no": "+91720-019-2160",
+    "blood_group": "O",
+    "certifications": [],
+    "department": "AntiNarcoticsCell",
+    "training": [
+      "Undercover Operations Training",
+      "Victim Assistance and Support",
+      "Advanced Driving Techniques",
+      "Leadership and Management Training",
+      "Advanced Driving Techniques"
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",

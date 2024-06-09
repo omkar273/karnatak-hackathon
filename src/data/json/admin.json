@@ -1,56 +1,50 @@
 [
     {
-        "id": "ARdKbyjToGg4Rgy3iVtiImualPo1",
+        "id": "611eb166cf6541d79a99e8eb742d8723",
         "name": "Omkar sonawane",
         "post": "Admin",
-        "date_of_joining": "11/2/2004",
+        "date_of_joining": "11/17/2003",
         "batch": "dummy batch",
-        "height": 179,
-        "weight": 69,
-        "workExperience": 9,
+        "height": 165,
+        "weight": 70,
+        "workExperience": 10,
         "certification": [
             "dummy certifications"
         ],
         "qualification": "graduated",
-        "solvedCases": 48,
+        "solvedCases": 5,
         "previousPosting": "dummy previous posting",
         "skills": [
-            "ReportWriting",
-            "FirstAid",
-            "SelfDefense",
-            "Communication"
+            "Cybersecurity",
+            "Coordination",
+            "ConflictResolution",
+            "Rescue"
         ],
         "awards": [
-            "Exceptional Duty Award",
-            "Public Safety Officer Medal of Valor",
-            "Silver Star for Bravery",
+            "Bravery in Action Award",
+            "Meritorious Service Medal",
+            "Exceptional Bravery Award",
             "Valor in the Line of Duty Medal"
         ],
-        "open_cases": 9,
+        "open_cases": 7,
         "closed_cases": 5,
-        "email": "nisargalokhande@gmail.com",
+        "email": "VidyaAgarwal1@gmail.com",
         "password": "23456789",
-        "username": "AnilaAhluwalia1",
-        "reporting_officer_name": "Amrita Naik",
-        "reporting_officer_id": "01eccd9257b544d5abb5d29538bbc677",
-        "superiors_list": [
-            "ARdKbyjToGg4Rgy3iVtiImualPo1",
-            "TRFCFZ0lgMhhg0y23QdRzgUDhZF2",
-            "NpoZprouwcNlnA0ZrDcwhBOzAxH3",
-            "c7653d0b7de04ed3b87ea0b10ef85676",
-            "01eccd9257b544d5abb5d29538bbc677"
-        ],
-        "bmi": 20.8,
-        "phone_no": "+91961-370-4210",
-        "blood_group": "O",
+        "username": "VidyaAgarwal1",
+        "reporting_officer_name": "Daevi Iyengar",
+        "reporting_officer_id": "bbba0174acf94536ace4b8edddeee3eb",
+        
+        "bmi": 22.04,
+        "phone_no": "+91-711-2904160",
+        "blood_group": "AB",
         "certifications": [],
-        "department": "CrimeBranch",
+        "department": "SpecialBranch",
         "training": [
+            "Traffic Management and Accident Investigation",
+            "Cultural Sensitivity and Diversity Training",
+            "Incident Command System Training",
             "Basic Police Training",
-            "Cultural Sensitivity and Diversity Training",
-            "Cultural Sensitivity and Diversity Training",
-            "Firearms Training",
-            "Surveillance and Reconnaissance"
+            "Traffic Management and Accident Investigation"
         ],
         "specialization": "NA"
     }

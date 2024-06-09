@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import HomeNavbar from '../home/components/home_navbar';
-import { customFaker, main } from '@/data/data/dummy_data';
+import { main } from '@/data/data/dummy_data';
 import { saveAs } from 'file-saver';
 import { toast } from 'react-toastify';
 
@@ -41,6 +41,7 @@ import { saveAllDocs } from './utils/save_docs';
 import { serverTimestamp } from 'firebase/firestore';
 import { getRandomElementFromArray } from '@/data/data/generate_user_data';
 import loginData from './utils/loginData';
+import { doSaveFIR } from '@/fragments/fir/utils/do_save_fir';
 
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -145,16 +146,33 @@ const AdminDashboardPage = () => {
 
     const registerUsers = async (): Promise<void> => {
         try {
+
+            const replacement_id: { from: string, to: string }[] = []
+
             for (const user of loginData) {
-                await doSignUp({
+
+                const uuid = await doSignUp({
                     email: user.email,
                     password: '123456789',
                     username: user.username,
                     data: user.data,
                 })
+
+                replacement_id.push({
+                    from: user.data.id ?? '',
+                    to: uuid
+                })
                 toast.success(`user ${user.username} registered successfully`);
                 sleep(1000);
             }
+
+            const str = JSON.stringify(replacement_id, null, 2);
+            const blob = new Blob(
+                [str],
+                { type: "application/json" }
+            );
+            saveAs(blob, `replacement_id.json`);
+
         } catch (error) {
             toast.error(`${error}`);
         }
@@ -168,44 +186,58 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('commisioner data saved')
+                console.log('commisioner data saved')
                 sleep(1000);
             }
 
-            for (let index = 1; index < assistant_commisioner_data.length; index++) {
+            for (let index = 2; index < assistant_commisioner_data.length; index++) {
                 const element = assistant_commisioner_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`assistant commisioner ${index} data saved`)
+                toast.success(`assistant_commisioner_data ${element.username} data saved`)
+                console.log(`assistant_commisioner_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 1; index < inspector_data.length; index++) {
+            for (let index = 2; index < inspector_data.length; index++) {
                 const element = inspector_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success('inspector_data data saved')
+                toast.success(`inspector_data ${element.username} data saved`)
+                console.log(`inspector_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 1; index < head_constable_data.length; index++) {
+            for (let index = 2; index < sub_inspector_data.length; index++) {
+                const element = sub_inspector_data[index];
+                await saveUserData(element.id, element.email, element.username, element)
+
+                toast.success(`sub_inspector_data ${element.username} data saved`)
+                console.log(`sub_inspector_data ${element.username} data saved`)
+                sleep(1000);
+            }
+            for (let index = 2; index < head_constable_data.length; index++) {
                 const element = head_constable_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success('head_constable_data data saved')
+                toast.success(`head_constable_data ${element.username} data saved`)
+                console.log(`head_constable_data ${element.username} data saved`)
                 sleep(1000);
             }
-            for (let index = 1; index < constable_data.length; index++) {
+
+            for (let index = 2; index < constable_data.length; index++) {
                 const element = constable_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success('constable_data data saved')
+                toast.success(`constable_data ${element.username} data saved`)
+                console.log(`constable_data ${element.username} data saved`)
                 sleep(1000);
             }
 
             const element = admin_data[0];
             await saveUserData(element.id, element.email, element.username, element)
 
-            toast.success('constable_data data saved')
+            toast.success('admin_data data saved')
+            console.log('admin_data data saved')
             sleep(1000);
-
 
         } catch (error) {
             toast.error(`${error}`);
@@ -219,6 +251,7 @@ const AdminDashboardPage = () => {
     const saveStations = async () => {
         try {
             toast.success(`no of stations ${stations_data.length}`);
+            console.log(`no of stations ${stations_data.length}`);
             for (let index = 0; index < stations_data.length; index++) {
                 const element = stations_data[index];
                 await saveAllDocs(`stations/${element.id}`, { ...element, timestamp: serverTimestamp() })
@@ -303,9 +336,13 @@ const AdminDashboardPage = () => {
             toast.success(`no of stations ${fir_data.length}`);
             for (let index = 0; index < fir_data.length; index++) {
                 const element = fir_data[index];
-                await saveAllDocs(`fir_details/${customFaker.string.uuid().replace(/-/g, "")}`, {
+                // await saveAllDocs(`fir_details/${customFaker.string.uuid().replace(/-/g, "")}`, {
+                //     ...element,
+                //     timestamp: serverTimestamp(),
+                //     fir_status: getRandomElementFromArray(['open', 'closed'])
+                // })
+                await doSaveFIR({
                     ...element,
-                    timestamp: serverTimestamp(),
                     fir_status: getRandomElementFromArray(['open', 'closed'])
                 })
                 toast.success(`zones data saved ${index + 1}`)
