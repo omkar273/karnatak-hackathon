@@ -162,7 +162,7 @@ const AdminDashboardPage = () => {
                     from: user.data.id ?? '',
                     to: uuid
                 })
-                toast.success(`user ${user.username} registered successfully`);
+                toast.success(`user ${user.username}  registered successfully`);
                 sleep(1000);
             }
 
@@ -181,54 +181,54 @@ const AdminDashboardPage = () => {
     const saveUsers = async () => {
 
         try {
-            for (let index = 0; index < commisioner_data.length; index++) {
-                const element = commisioner_data[index];
-                await saveUserData(element.id, element.email, element.username, element)
+            // for (let index = 0; index < commisioner_data.length; index++) {
+            //     const element = commisioner_data[index];
+            //     await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success('commisioner data saved')
-                console.log('commisioner data saved')
-                sleep(1000);
-            }
+            //     toast.success('commisioner data saved')
+            //     console.log('commisioner data saved')
+            //     sleep(1000);
+            // }
 
-            for (let index = 0; index < assistant_commisioner_data.length; index++) {
-                const element = assistant_commisioner_data[index];
-                await saveUserData(element.id, element.email, element.username, element)
+            // for (let index = 0; index < assistant_commisioner_data.length; index++) {
+            //     const element = assistant_commisioner_data[index];
+            //     await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`assistant_commisioner_data ${element.username} data saved`)
-                console.log(`assistant_commisioner_data ${element.username} data saved`)
-                sleep(1000);
-            }
-            for (let index = 0; index < inspector_data.length; index++) {
-                const element = inspector_data[index];
-                await saveUserData(element.id, element.email, element.username, element)
+            //     toast.success(`assistant_commisioner_data ${element.username} with index ${index} data saved`)
+            //     console.log(`assistant_commisioner_data ${element.username} with index ${index} data saved`)
+            //     sleep(1000);
+            // }
+            // for (let index = 0; index < inspector_data.length; index++) {
+            //     const element = inspector_data[index];
+            //     await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`inspector_data ${element.username} data saved`)
-                console.log(`inspector_data ${element.username} data saved`)
-                sleep(1000);
-            }
-            for (let index = 0; index < sub_inspector_data.length; index++) {
-                const element = sub_inspector_data[index];
-                await saveUserData(element.id, element.email, element.username, element)
+            //     toast.success(`inspector_data ${element.username} with index ${index} data saved`)
+            //     console.log(`inspector_data ${element.username} with index ${index} data saved`)
+            //     sleep(1000);
+            // }
+            // for (let index = 0; index < sub_inspector_data.length; index++) {
+            //     const element = sub_inspector_data[index];
+            //     await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`sub_inspector_data ${element.username} data saved`)
-                console.log(`sub_inspector_data ${element.username} data saved`)
-                sleep(1000);
-            }
-            for (let index = 0; index < head_constable_data.length; index++) {
-                const element = head_constable_data[index];
-                await saveUserData(element.id, element.email, element.username, element)
+            //     toast.success(`sub_inspector_data ${element.username} with index ${index} data saved`)
+            //     console.log(`sub_inspector_data ${element.username} with index ${index} data saved`)
+            //     sleep(1000);
+            // }
+            // for (let index = 0; index < head_constable_data.length; index++) {
+            //     const element = head_constable_data[index];
+            //     await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`head_constable_data ${element.username} data saved`)
-                console.log(`head_constable_data ${element.username} data saved`)
-                sleep(1000);
-            }
+            //     toast.success(`head_constable_data ${element.username} with index ${index} data saved`)
+            //     console.log(`head_constable_data ${element.username} with index ${index} data saved`)
+            //     sleep(1000);
+            // }
 
-            for (let index = 0; index < constable_data.length; index++) {
+            for (let index = 737; index < constable_data.length; index++) {
                 const element = constable_data[index];
                 await saveUserData(element.id, element.email, element.username, element)
 
-                toast.success(`constable_data ${element.username} data saved`)
-                console.log(`constable_data ${element.username} data saved`)
+                toast.success(`constable_data ${element.username} with index ${index} data saved`)
+                console.log(`constable_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
 
@@ -322,7 +322,7 @@ const AdminDashboardPage = () => {
             for (let index = 0; index < weapons_data.length; index++) {
                 const element = weapons_data[index];
                 await saveAllDocs(`weapons/${element.id}`, element)
-                toast.success('station data saved')
+                toast.success(`weapons data saved ${index}`)
                 sleep(1000);
             }
 
@@ -336,11 +336,7 @@ const AdminDashboardPage = () => {
             toast.success(`no of stations ${fir_data.length}`);
             for (let index = 0; index < fir_data.length; index++) {
                 const element = fir_data[index];
-                // await saveAllDocs(`fir_details/${customFaker.string.uuid().replace(/-/g, "")}`, {
-                //     ...element,
-                //     timestamp: serverTimestamp(),
-                //     fir_status: getRandomElementFromArray(['open', 'closed'])
-                // })
+
                 await doSaveFIR({
                     ...element,
                     fir_status: getRandomElementFromArray(['open', 'closed']),
@@ -362,9 +358,8 @@ const AdminDashboardPage = () => {
                         'Counterfeiting',
                         'Harassment',
                     ]),
-
                 })
-                toast.success(`zones data saved ${index + 1}`)
+                toast.success(`fir data saved ${index}`);
                 sleep(1000);
             }
 
@@ -379,7 +374,7 @@ const AdminDashboardPage = () => {
             for (let index = 0; index < vehicle_data.length; index++) {
                 const element = vehicle_data[index];
                 await saveAllDocs(`vehicle_details/${element.id}`, element)
-                toast.success(`zones data saved ${index + 1}`)
+                toast.success(`vehicles data saved ${index }`)
                 sleep(1000);
             }
 
