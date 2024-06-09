@@ -40,77 +40,12 @@ import { doSignUp, saveUserData } from '../auth/utils/auth';
 import { saveAllDocs } from './utils/save_docs';
 import { serverTimestamp } from 'firebase/firestore';
 import { getRandomElementFromArray } from '@/data/data/generate_user_data';
-import { UserModel } from '@/fragments/user_management/models/user_model';
+import loginData from './utils/loginData';
 
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
-export const loginData: {
-    email: string,
-    data: UserModel,
-    username: string
-}[] = [
-        {
-            email: 'nikyalokhande@gmail.com',
-            data: commisioner_data[0],
-            username: 'admin'
-        },
-        {
-            email: 'nikyalokhande@gmail.com',
-            data: commisioner_data[0],
-            username: 'commisioner1'
-        },
-        {
-            email: 'itzsramlok@gmail.com',
-            data: assistant_commisioner_data[0],
-            username: 'assistant_commisioner1'
-        },
-        {
-            email: 'nisargalokhande09@gmail.com',
-            data: assistant_commisioner_data[1],
-            username: 'assistant_commisioner2'
-        },
-
-        {
-            email: 'jeetjawale.99@gmail.com',
-            data: inspector_data[0],
-            username: 'inspector1'
-        },
-        {
-            email: 'omkarsonawane.dev@gmail.com',
-            data: inspector_data[1],
-            username: 'inspector2'
-        },
-        {
-            email: 'nisargalokhande@gmail.com',
-            data: sub_inspector_data[1],
-            username: 'sub_inspector'
-        },
-        // {
-        //     email: 'desno.pvt.ltd@gmail.com',
-        //     data: sub_inspector_data[0],
-        //     username: 'sub_inspector'
-        // },
-        {
-            email: 'omkarsonawane.comp@siem.org.in',
-            data: head_constable_data[0],
-            username: 'head_constable1'
-        },
-        // {
-        //     email: 'jiteshjawale123@gmail.com',
-        //     data: head_constable_data[1],
-        //     username: 'head_constable2'
-        // },
-        {
-            email: 'omkarsonawane622@gmail.com',
-            data: constable_data[0],
-            username: 'constable'
-        },
-
-
-    ]
 
 
 

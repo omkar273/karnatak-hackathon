@@ -1,22 +1,23 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { VSpacer } from "@/common/components/spacer";
-import TextArea from "@/common/components/text_area";
+// import TextArea from "@/common/components/text_area";
 import { RootState } from '@/common/redux/store';
 import useUnderlyingData from "@/fragments/user_management/hooks/useUnderlyingData ";
-import InputField from "@/pages/auth/components/input_field";
+// import InputField from "@/pages/auth/components/input_field";
 import { FileTextOutlined } from "@ant-design/icons";
-import { Select, SelectProps, Space } from "antd";
+import { SelectProps } from "antd";
 import { DefaultOptionType } from "antd/es/select";
 import { useEffect, useState } from "react";
-import { Controller, RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useSelector } from 'react-redux';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import FirDetailsTable from "../components/fir_table";
-import { FIRModal } from "../modals/fir_modal";
-import { doSaveFIR } from "../utils/do_save_fir";
+// import { doSaveFIR } from "../utils/do_save_fir";
+import { FIRRecord } from "../modals/fir_modal";
 
 const AllFirPage = () => {
-  const { control, register, handleSubmit, setValue, formState: { isSubmitting, errors }, reset } = useForm<FIRModal>()
+  const { handleSubmit, formState: { isSubmitting }, reset } = useForm<FIRRecord>()
   const { currentUser, userdata } = useSelector((state: RootState) => state.auth);
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
@@ -26,7 +27,7 @@ const AllFirPage = () => {
   const [underlyingData, setunderlyingData] = useState<DefaultOptionType[]>([]);
 
   useEffect(() => {
-
+    underlyingData;
     const optionsData: SelectProps['options'] = [{
       label: userdata?.name,
       value: userdata?.name,
@@ -53,13 +54,14 @@ const AllFirPage = () => {
     setunderlyingData(optionsData);
   }, [loading])
 
-  const onSubmit: SubmitHandler<FIRModal> = async (data) => {
+  const onSubmit: SubmitHandler<FIRRecord> = async (data) => {
     try {
       if (isSubmitting) {
         return;
       }
 
-      await doSaveFIR({ ...data, status: 'registered' });
+      data
+      // await doSaveFIR({ ...data, status: 'registered' });
       toast.success('fir saved sucessfully')
       setreload((prev) => !prev)
       reset()
@@ -68,14 +70,16 @@ const AllFirPage = () => {
     }
   }
 
-  const handleChange = (value: string[]) => {
-    setValue('allotedTo', value);
-  };
+  // const handleChange = (value: string[]) => {
+  //   setValue('allotedTo', value);
+  // };
 
 
-  const validationOptions: RegisterOptions = {
-    required: 'required',
-  }
+  // const validationOptions: RegisterOptions = {
+  //   required: 'required',
+  // }
+
+
   return (
     <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-200">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
@@ -93,7 +97,7 @@ const AllFirPage = () => {
                 Please fill the form very carefully
               </p>
               <div className="my-3">
-                <InputField<FIRModal>
+                {/* <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Name"
@@ -101,7 +105,7 @@ const AllFirPage = () => {
                   name="name"
                 />
 
-                <InputField<FIRModal>
+                <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Father name"
@@ -109,7 +113,7 @@ const AllFirPage = () => {
                   name="fatherName"
                 />
 
-                <InputField<FIRModal>
+                <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Mobile No*"
@@ -117,7 +121,7 @@ const AllFirPage = () => {
                   name="mobileNo"
                 />
 
-                <InputField<FIRModal>
+                <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Email Address*"
@@ -133,10 +137,10 @@ const AllFirPage = () => {
                   name="presentAddress"
                   label="Present Address*"
                   validateOptions={validationOptions}
-                />
+                /> */}
 
 
-                <div className="my-3">
+                {/* <div className="my-3">
                   <Controller
                     name="allotedTo"
                     control={control}
@@ -163,7 +167,7 @@ const AllFirPage = () => {
                     )}
                   />
                   <p className="mb-3 text-xs text-red-600">{errors.allotedTo?.message}</p>
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -175,7 +179,7 @@ const AllFirPage = () => {
                 {"Report Information"}
               </p>
               <div className="mt-[2.75rem]">
-                <InputField<FIRModal>
+                {/* <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Date of incident"
@@ -183,7 +187,7 @@ const AllFirPage = () => {
                   name="dateOfIncident"
                 />
 
-                <InputField<FIRModal>
+                <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Time of incident"
@@ -191,7 +195,7 @@ const AllFirPage = () => {
                   name="timeOfIncident"
                 />
 
-                <InputField<FIRModal>
+                <InputField<FIRRecord>
                   validateOptions={validationOptions}
                   register={register}
                   label="Place if incident"
@@ -205,7 +209,7 @@ const AllFirPage = () => {
                   name="detailsOfIncident"
                   validateOptions={validationOptions}
                   error={errors.detailsOfIncident?.message}
-                />
+                /> */}
               </div>
             </div>
           </div>

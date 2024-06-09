@@ -56,7 +56,7 @@ const EvidencesCard = () => {
             await saveEvidence(id, {
                 ...data,
                 reportedById: currentUser?.user.uid,
-                reportedBy: userdata.name
+                reportedBy: userdata?.name
             })
 
             if (!savingLoading && evidenceError) {

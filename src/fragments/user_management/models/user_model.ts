@@ -57,4 +57,11 @@ export type UserModel = {
 
   stationCode?: string;
   currentPosting?: string;
+
+  // extra data
+  phoneNo?: string;
+  gender?: string;
+  dateOfBirth?: string;
+  mobileNo?: string;
+  address?: string;
 };

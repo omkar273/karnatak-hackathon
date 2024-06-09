@@ -1,7 +1,6 @@
 import { VSpacer } from "@/common/components/spacer";
-import InputField from "@/pages/auth/components/input_field";
 import { doSignUp } from "@/pages/auth/utils/auth";
-import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import MultiStep from 'react-multistep';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
@@ -17,7 +16,7 @@ type detailsType = {
 
 const RegisterFragment = () => {
     const { register, handleSubmit, formState: { isSubmitting, errors }, reset } = useForm<UserModel>()
-
+    register;
     const onSubmit: SubmitHandler<UserModel> = async (data) => {
         try {
             if (isSubmitting) {
@@ -51,7 +50,7 @@ const RegisterFragment = () => {
         },
         {
             label: 'Date of joning',
-            error: errors.dateOfJoining?.message,
+            error: errors.date_of_joining?.message,
             name: 'dateOfJoining'
         },
         {
@@ -82,6 +81,8 @@ const RegisterFragment = () => {
             name: 'awards'
         },
     ]
+
+    personalDetails;
 
     const workDetails: detailsType[] = [
 
@@ -118,29 +119,31 @@ const RegisterFragment = () => {
         },
     ]
 
-    const registrationDetails: detailsType[] = [
-        {
-            label: 'username',
-            error: errors.username?.message,
-            name: 'username'
-        },
-        {
-            label: 'Email',
-            error: errors.email?.message,
-            name: 'email'
-        },
+    workDetails;
 
-        {
-            label: 'Password',
-            error: errors.password?.message,
-            name: 'password'
-        },
+    // const registrationDetails: detailsType[] = [
+    //     {
+    //         label: 'username',
+    //         error: errors.username?.message,
+    //         name: 'username'
+    //     },
+    //     {
+    //         label: 'Email',
+    //         error: errors.email?.message,
+    //         name: 'email'
+    //     },
 
-    ]
+    //     {
+    //         label: 'Password',
+    //         error: errors.password?.message,
+    //         name: 'password'
+    //     },
 
-    const validationOptions: RegisterOptions = {
-        required: 'Required'
-    }
+    // ]
+
+    // const validationOptions: RegisterOptions = {
+    //     required: 'Required'
+    // }
 
     return (
         <div className="">
@@ -175,7 +178,7 @@ const RegisterFragment = () => {
                         }}
                     >
                         <div title="Personal details" className="md:grid grid-cols-2 items-start gap-10">
-                            {
+                            {/* {
                                 personalDetails.map((item, index) => {
                                     return (
                                         <InputField<UserModel>
@@ -187,10 +190,10 @@ const RegisterFragment = () => {
                                             name={item.name}
                                         />
                                     )
-                                })}
+                                })} */}
                         </div>
                         <div title="Personal details" className="md:grid grid-cols-2 items-start gap-10">
-                            {
+                            {/* {
                                 workDetails.map((item, index) => {
                                     return (
                                         <InputField<UserModel> key={index}
@@ -201,10 +204,10 @@ const RegisterFragment = () => {
                                             name={item.name}
                                         />
                                     )
-                                })}
+                                })} */}
                         </div>
                         <div title="Registration details" className="md:grid grid-cols-1 items-start gap-10">
-                            {
+                            {/* {
                                 registrationDetails.map((item, index) => {
                                     return (
                                         <InputField<UserModel> key={index}
@@ -215,7 +218,7 @@ const RegisterFragment = () => {
                                             name={item.name}
                                         />
                                     )
-                                })}
+                                })} */}
                         </div>
 
                     </MultiStep>

@@ -10,7 +10,7 @@ import InputField from "../components/input_field";
 import { doLogin } from "../utils/auth";
 import { useState } from "react";
 import { Button, Modal } from "antd";
-import { loginData } from "@/pages/admin/admin_dashboard_page";
+import loginData from "@/pages/admin/utils/loginData";
 
 type LoginData = {
   username: string,

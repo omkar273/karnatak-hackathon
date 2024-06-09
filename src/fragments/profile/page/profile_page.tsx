@@ -1,30 +1,16 @@
 import { VSpacer } from "@/common/components/spacer";
-import dummyUserData from "@/data/underlying_data";
+import { RootState } from "@/common/redux/store";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Rate } from "antd";
 import { ShieldEllipsis } from "lucide-react";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const getUserDetails = (userEmail) => {
-  for (let index = 0; index < dummyUserData.length; index++) {
-    const element = dummyUserData[index];
-    if (userEmail === element.email) {
-      return { ...element };
-    }
-  }
-  return null;
-};
 
 const ProfilePage = () => {
-  const [queryParams] = useSearchParams();
-  let id = queryParams.get("id");
 
-  if (!id) {
-    id = "omkarsonawane622@gmail.com";
-  }
 
-  const userData = getUserDetails(id);
+  const { userdata } = useSelector((s: RootState) => s.auth)
 
   const [activeTab, setActiveTab] = useState("professionalDetails");
 
@@ -52,27 +38,27 @@ const ProfilePage = () => {
                 "Ideal station",
               ]}
             />
-            <b>Name: {userData?.name}</b>
+            <b>Name: {userdata?.name}</b>
             <p className="font-medium text-base">Awarded with</p>
             <p className="text-wrap text-base font-semibold">
-              {userData?.awards}{" "}
+              {userdata?.awards}{" "}
             </p>
           </div>
           <div className="p-4 space-y-4">
             {/* First Row - User Profile */}
             <div className="border-l-2 p-4">
               <p className="font-bold text-2xl flex gap-2 items-center">
-                <ShieldEllipsis /> Name: {userData?.name} ({userData?.post})
+                <ShieldEllipsis /> Name: {userdata?.name} ({userdata?.post})
               </p>
               <div className="flex gap-8">
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Gender: {userData?.gender}
+                  Gender: {userdata?.gender}
                 </p>
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Date of Birth: {userData?.dateOfBirth}
+                  Date of Birth: {userdata?.dateOfBirth}
                 </p>
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Phone No.: {userData?.phoneNo}
+                  Phone No.: {userdata?.phoneNo}
                 </p>
               </div>
             </div>
@@ -83,13 +69,13 @@ const ProfilePage = () => {
               <p className="font-bold text-2xl">Health Information</p>
               <div className="flex gap-8">
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Blood Group: {userData?.bloodGroup}
+                  Blood Group: {userdata?.blood_group}
                 </p>
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Height: {userData?.height}
+                  Height: {userdata?.height}
                 </p>
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Weight: {userData?.weight}
+                  Weight: {userdata?.weight}
                 </p>
               </div>
             </div>
@@ -100,14 +86,12 @@ const ProfilePage = () => {
               <p className="font-bold text-2xl">Contact Information</p>
               <div className="flex gap-8">
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Mobile No.: {userData?.mobileNo}
+                  Mobile No.: {userdata?.mobileNo}
                 </p>
                 <p className="font-semibold my-2 flex gap-2 items-center">
-                  Email ID: {userData?.emailId}
+                  Email ID: {userdata?.email}
                 </p>
-                <p className="font-semibold my-2 flex gap-2 items-center">
-                  Telephone No.: {userData?.telephoneNo}
-                </p>
+
               </div>
             </div>
           </div>
@@ -119,41 +103,37 @@ const ProfilePage = () => {
         <div className="card bg-white">
           <div className="flex border-b">
             <button
-              className={`p-4 ${
-                activeTab === "professionalDetails"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : ""
-              }`}
+              className={`p-4 ${activeTab === "professionalDetails"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : ""
+                }`}
               onClick={() => setActiveTab("professionalDetails")}
             >
               Professional Details
             </button>
             <button
-              className={`p-4 ${
-                activeTab === "healthInformation"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : ""
-              }`}
+              className={`p-4 ${activeTab === "healthInformation"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : ""
+                }`}
               onClick={() => setActiveTab("healthInformation")}
             >
               Health Information
             </button>
             <button
-              className={`p-4 ${
-                activeTab === "contactInformation"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : ""
-              }`}
+              className={`p-4 ${activeTab === "contactInformation"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : ""
+                }`}
               onClick={() => setActiveTab("contactInformation")}
             >
               Contact Information
             </button>
             <button
-              className={`p-4 ${
-                activeTab === "shiftschdule"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : ""
-              }`}
+              className={`p-4 ${activeTab === "shiftschdule"
+                ? "border-b-2 border-blue-500 text-blue-500"
+                : ""
+                }`}
               onClick={() => setActiveTab("shiftschdule")}
             >
               Shift Schdule
@@ -166,40 +146,40 @@ const ProfilePage = () => {
               <div className="border-l-2 p-4">
                 <div className="grid grid-cols-3 gap-8">
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Date Of Joining:- {userData?.dateOfJoining}
+                    Date Of Joining:- {userdata?.dateOfBirth}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Specializations:- {userData?.specializations}
+                    Specializations:- {userdata?.specialization?.at(0)}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Training Certifications:- {userData?.trainingCertifications}
-                  </p>
-                  <hr className="col-span-3" />
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Award And Commendations:- {userData?.awards}
-                  </p>
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Current Posting:- {userData?.currentPosting}
-                  </p>
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Previous Posting:- {userData?.previousPosting}
+                    Training Certifications:- {userdata?.training?.at(0)}
                   </p>
                   <hr className="col-span-3" />
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Skills:- {userData?.skills}
+                    Award And Commendations:- {userdata?.awards}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Qualification:- {userData?.qualification}
+                    Current Posting:- {userdata?.currentPosting}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Solved Cases:- {userData?.solvedCases}
+                    Previous Posting:- {userdata?.previousPosting}
                   </p>
                   <hr className="col-span-3" />
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Work Experience:- {userData?.workExperience}
+                    Skills:- {userdata?.skills}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Batch:- {userData?.batch}
+                    Qualification:- {userdata?.qualification}
+                  </p>
+                  <p className="font-semibold my-2 flex gap-2 items-center">
+                    Solved Cases:- {userdata?.solvedCases}
+                  </p>
+                  <hr className="col-span-3" />
+                  <p className="font-semibold my-2 flex gap-2 items-center">
+                    Work Experience:- {userdata?.workExperience}
+                  </p>
+                  <p className="font-semibold my-2 flex gap-2 items-center">
+                    Batch:- {userdata?.batch}
                   </p>
                 </div>
               </div>
@@ -208,18 +188,18 @@ const ProfilePage = () => {
               <div className="border-l-2 p-4">
                 <div className="grid grid-cols-3 gap-8">
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Blood Type:- {userData?.bloodGroup}
+                    Blood Type:- {userdata?.blood_group}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Height:- {userData?.height}
+                    Height:- {userdata?.height}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Weight:- {userData?.weight}
+                    Weight:- {userdata?.weight}
                   </p>
                   <hr className="col-span-3" />
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Physical Fitness:- {userData?.physicalFitness}
-                  </p>
+                  {/* <p className="font-semibold my-2 flex gap-2 items-center">
+                    Physical Fitness:- {userdata?.physicalFitness}
+                  </p> */}
                   <p className="font-semibold my-2 flex gap-2 items-center"></p>
                 </div>
               </div>
@@ -228,17 +208,17 @@ const ProfilePage = () => {
               <div className="border-l-2 p-4">
                 <div className="grid grid-cols-3 gap-8">
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Name:- {userData?.name}
+                    Name:- {userdata?.name}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Phone No:- {userData?.phoneNo}
+                    Phone No:- {userdata?.phoneNo}
                   </p>
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Telephone No:- {userData?.telephoneNo}
-                  </p>
+                  {/* <p className="font-semibold my-2 flex gap-2 items-center">
+                    Telephone No:- {userdata?.telephoneNo}
+                  </p> */}
                   <hr className="col-span-3" />
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Address:- {userData?.address}
+                    Address:- {userdata?.address}
                   </p>
                 </div>
               </div>
