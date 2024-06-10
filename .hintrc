@@ -18,6 +18,7 @@
           "iframe[allow]"
         ]
       }
-    ]
+    ],
+    "axe/text-alternatives": "off"
   }
 }

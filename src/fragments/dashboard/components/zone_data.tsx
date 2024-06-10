@@ -6,6 +6,7 @@ import { ZoneModel } from "@/fragments/station/models/zone_model";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "@/firebase/firebase_config";
+import { GridLoader } from "react-spinners";
 
 const ZonalData = () => {
     const { userdata } = useSelector((s: RootState) => s.auth);
@@ -36,7 +37,7 @@ const ZonalData = () => {
                 console.error("Error fetching user data:", error);
                 setZoneData(null);
             } finally {
-                setLoading(false); // Set loading to false regardless of success or error
+                setLoading(false);
             }
         };
 
@@ -48,6 +49,17 @@ const ZonalData = () => {
         return null;
     }
 
+    
+    if (loading) {
+        return (
+            <div className="p-12 w-full flex justify-center items-center">
+                <GridLoader
+                    color="#0891B2"
+                    size={25}
+                />
+            </div>
+        )
+    }
     return (
         <div>
             <h1 className="font-bold text-3xl px-4 py-1">

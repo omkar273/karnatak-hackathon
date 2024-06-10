@@ -89,13 +89,6 @@ const AuthPage = () => {
 
       <div className="md:w-[45%] hidden  bg-cyan-500 md:h-screen md:flex flex-col justify-center items-center text-white text-xl">
         <img src={karntankPoliceLogo} alt="" className="w-[50%]" />
-        {/* <p>
-          Default username : commmissioner
-        </p>
-        <p>
-          password : 123456789
-        </p> */}
-
       </div>
 
       <div className="bg-cyan-500 py-3 px-6 shadow-lg z-10 md:hidden flex justify-between items-center">
@@ -132,9 +125,6 @@ const AuthPage = () => {
               validateOptions={validationOptions}
               label="Username"
             />
-            <p>
-              Default username : omkar273
-            </p>
 
             <VSpacer height={35} />
 
@@ -146,9 +136,7 @@ const AuthPage = () => {
               label="Password"
               type="password"
             />
-            <p>
-              Default password : 123456789
-            </p>
+
             <VSpacer height={25} />
 
             <button className="btn font-ubuntu cursor-pointer" type="submit">

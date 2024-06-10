@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Menu } from "antd";
 import {
   BarChartBig,
@@ -17,10 +18,17 @@ import {
   UserRoundPlus,
   Users,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/common/redux/store";
+import { StationModel } from "@/fragments/station/models/station_model";
+import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/firestore";
+import { firestore } from "@/firebase/firebase_config";
+import { RanksEnum } from "@/common/post/ranks";
+import { setStationList } from "@/common/redux/auth_slice";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -30,6 +38,72 @@ const HomePage = () => {
     setdrawerOpen(false);
     navigate(path);
   };
+
+  const { userdata, currentUser } = useSelector((s: RootState) => s.auth)
+
+  const [loading, setLoading] = useState<boolean>(false);
+  const dispatch = useDispatch();
+
+  loading;
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!userdata) return;
+
+      setLoading(true);
+
+      try {
+        if (userdata.stationId) {
+          // Fetch specific station details for inspectors and constables
+
+          const stationDoc = await getDoc(doc(firestore, "stations", userdata.stationId));
+          if (stationDoc.exists()) {
+            const stationData = stationDoc.data() as StationModel;
+            dispatch(setStationList([{
+              ...stationData,
+              timestamp: stationData.timestamp ? stationData.timestamp.seconds * 1000 : null
+            }]));
+            console.log(stationData);
+          }
+        } else if (userdata.post === RanksEnum.Commisioner || userdata.post === RanksEnum.AssistantCommisioner) {
+
+          const search_field = userdata.post === RanksEnum.Commisioner ? 'commissioner_id' : 'assistant_commissioner_id'
+
+          console.log('user is a commisioner');
+          console.log(currentUser?.user.uid);
+
+          const q = query(
+            collection(firestore, "stations"),
+            where(search_field, "==", currentUser?.user.uid),
+            limit(3),
+          );
+
+          console.log('starting to get stations');
+
+          const querySnapshot = await getDocs(q);
+          console.log('finished to get stations');
+
+          const stations: StationModel[] = [];
+          querySnapshot.forEach((doc) => {
+            stations.push(doc.data() as StationModel);
+          });
+
+          dispatch(setStationList(stations.map((station) => ({
+            ...station,
+            timestamp: station.timestamp ? station.timestamp.seconds * 1000 : null,
+          }))));
+          console.log('added all stations');
+
+        }
+      } catch (error) {
+        console.error("Error fetching station data:", error);
+      } finally {
+
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [userdata, currentUser]);
 
   const sidebarItems = [
     {

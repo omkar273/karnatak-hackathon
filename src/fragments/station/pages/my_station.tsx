@@ -1,13 +1,21 @@
 import { VSpacer } from "@/common/components/spacer";
-import { UserOutlined } from "@ant-design/icons";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PieChart } from '@mui/x-charts/PieChart';
-import { Avatar, Collapse, Rate, Table } from "antd";
-import { Landmark, Mail, MapPinned, Phone, ShieldPlus, University } from "lucide-react";
-import React from "react";
+import { Collapse, Rate, Table } from "antd";
+import { Landmark, Mail, MapPinned, Phone, ShieldPlus } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import CrimeLineChart from "../components/chart";
 import { stationData } from "../data/station";
+import { useSelector } from "react-redux";
+import { RootState } from "@/common/redux/store";
+import * as Select from '@radix-ui/react-select';
+import { CheckIcon, ChevronDownIcon } from "@radix-ui/react-icons";
+import useGetDocument from "@/common/hooks/use_get_document";
+import { GridLoader } from "react-spinners";
+import { StationModel } from "../models/station_model";
+import StaticMap from "@/common/components/static_map";
+import StationStaffList from "../components/staff_list";
 export interface CaseData {
     month_year: string;
     theft_cases: number;
@@ -16,6 +24,25 @@ export interface CaseData {
 }
 
 const MyStationPage: React.FC = () => {
+    const { stationList } = useSelector((s: RootState) => s.auth)
+
+    const [stationId, setStationId] = useState<string | null>(null);
+
+    useEffect(() => {
+        setStationId(stationList?.at(0)?.id ?? '')
+    }, [stationList])
+
+    const stationDetails = useGetDocument<StationModel>({
+        docId: stationId,
+        path: 'stations',
+    })
+
+
+    const getStationNameById = (id: string | undefined) => {
+        const station = stationList.find((station) => station.id === id);
+        return station ? station.station_name : "Select a station";
+    };
+
 
     const patrollingColumns = [
         {
@@ -130,13 +157,85 @@ const MyStationPage: React.FC = () => {
         { id: 2, value: 32, label: 'Car stealing' },
     ];
 
+
+    if (stationDetails?.loading) {
+        return (
+            <div className="h-screen w-full flex justify-center items-center">
+                <GridLoader
+                    color="#0891B2"
+                    size={25}
+                />
+            </div>
+        )
+    }
+
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden">
-            <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
-                {"My Station"}
-            </p>
+            <div className="w-full bg-white p-3 border-b-2 flex justify-between items-center text-base sticky top-0 z-[100]">
+                <p className="font-open-sans font-semibold ">
+                    {"Station"}
+                </p>
+
+                {/* station dropdown */}
+                {
+                    stationList.length > 1 && (
+                        <Select.Root value={stationId ?? ''} onValueChange={(s) => setStationId(s)}>
+                            <Select.Trigger
+                                className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
+                                aria-label="Station"
+                            >
+                                <Select.Value>
+                                    {getStationNameById(stationId ?? '')}
+                                </Select.Value>
+                                <Select.Icon className="text-violet11">
+                                    <ChevronDownIcon />
+                                </Select.Icon>
+                            </Select.Trigger>
+
+                            <Select.Portal >
+                                <Select.Content
+                                    className="overflow-hidden bg-white rounded-md shadow-lg z-[110]"
+                                    position="popper"
+                                >
+                                    <Select.Viewport className="p-[5px]">
+                                        {stationList.map((station, index) => (
+                                            <div key={station.id}>
+                                                <Select.Item
+                                                    value={station.id ?? ''}
+                                                    className="text-[13px] py-3 leading-none text-violet11 rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
+                                                >
+                                                    <Select.ItemText>
+                                                        <p className="text-base py-4 xl:text-lg">
+                                                            {station.station_name}
+                                                        </p>
+                                                    </Select.ItemText>
+                                                    <Select.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
+                                                        <CheckIcon />
+                                                    </Select.ItemIndicator>
+                                                </Select.Item>
+                                                {index < stationList.length - 1 && <div className="border-b border-gray-200 my-2" />}
+                                            </div>
+                                        ))}
+                                    </Select.Viewport>
+                                </Select.Content>
+                            </Select.Portal>
+                        </Select.Root>
+                    )
+                }
+
+                {/* station name  */}
+                {
+                    stationList.length === 1 && (
+                        <h1>
+                            {stationList[0].station_name}{' station'}
+                        </h1>
+                    )
+                }
+
+
+            </div>
             <div className="p-4 bg-gray-100 ">
-                {/* <iframe className="w-full min-h-screen" src="https://maps.google.com/maps?q=14.51475,75.80687&amp;hl=es;z=14&amp;output=embed"></iframe> */}
+
                 <div className="bg-gray-100 min-h-screen">
 
                     {/* basic station details */}
@@ -144,30 +243,43 @@ const MyStationPage: React.FC = () => {
                         <div className="flex-[70%] flex-grow">
                             <p className="text-2xl font-semibold flex gap-2 items-center">
                                 <ShieldPlus />
-                                {stationData.name}
+                                {stationDetails.data?.station_name}
+                                {` ( ${stationDetails.data?.zone_name} zone )`}
                             </p>
-                            <p className="text-base font-bold">Station Incharge : {stationData.station_incharge}</p>
+                            <p className="text-base font-bold">Station Incharge : {stationDetails.data?.station_incharge_name}</p>
                             <VSpacer height={25} />
                             <div className="md:flex flex-wrap gap-x-12 gap-y-4 ">
                                 <span className="flex gap-2 my-1 items-center">
-                                    <MapPinned />{stationData.district}
+                                    <MapPinned />{stationDetails.data?.district}
                                 </span>
 
                                 <span className="flex gap-2 my-1 items-center">
-                                    <Landmark />{stationData.address}
+                                    <Landmark />{stationDetails.data?.address}
                                 </span>
                                 <span className="flex gap-2 my-1 items-center">
-                                    <Phone />{stationData.phone}
+                                    <Phone />{stationDetails.data?.phone}
                                 </span>
                                 <span className="flex gap-2 my-1 items-center">
-                                    <Mail />{stationData.email}
+                                    <Mail />{stationDetails.data?.email}
                                 </span>
 
                             </div>
                             <VSpacer height={25} />
-                            <span className="flex gap-2 my-1 items-center">
-                                <University />{stationData.address}
-                            </span>
+                            {/* <span className="flex gap-2 my-1 items-center">
+                                <University />{stationDetails.data?.address}
+                            </span> */}
+
+                            <div>
+                                <span className="flex gap-2 my-1 items-center">
+                                    Zonal incharge : {stationDetails.data?.commissioner_name}
+                                </span>
+
+                                <span className="flex gap-2 my-1 items-center">
+                                    Subzone incharge : {stationDetails.data?.assistant_commissioner_name}
+                                </span>
+
+
+                            </div>
                         </div>
                         <div className="flex-[30%] w-full flex-grow  flex shadow-md bg-cyan-100 justify-center flex-col items-center border-2 rounded-md">
                             <ShieldPlus className="text-center  size-28 mb-2" />
@@ -188,33 +300,17 @@ const MyStationPage: React.FC = () => {
                             {
                                 key: '1',
                                 label: 'Show on map',
-                                children: (<iframe className="w-full min-h-screen" src="https://maps.google.com/maps?q=14.51475,75.80687&amp;hl=es;z=14&amp;output=embed" title="" ></iframe>)
+                                children: (
+                                    <StaticMap
+                                        lat={stationDetails.data?.lat || 0}
+                                        lng={stationDetails.data?.lng || 0}
+                                        station_name={stationDetails.data?.station_name}
+                                    />)
                             }
                         ]}
                         />
                     </div>
-
-                    <VSpacer height={25} />
-                    <p className="text-3xl p-4 font-semibold">Staff list</p>
-                    <div className="card p-12 bg-white">
-
-                        <div className="flex flex-wrap text-wrap gap-16 justify-evenly " >
-                            {stationData.staff.slice(0, 10).map((staff, index) => (
-                                <div key={index} className="flex flex-1 flex-col items-center p-4 rounded-lg shadow-md bg-cyan-100 border-2">
-                                    <Avatar size={100} icon={<UserOutlined />} />
-                                    <p className="font-bold text-center my-2">
-                                        {staff.name}
-                                    </p>
-                                    <p className="text-center">{staff.post}</p>
-                                </div>
-                            ))}
-
-                        </div>
-                    </div>
-                    <VSpacer height={25} />
-
-
-
+                    <StationStaffList stationId={stationId} />
 
                     <div className="card bg-white grid grid-cols-1 gap-y-16">
                         <CrimeLineChart />

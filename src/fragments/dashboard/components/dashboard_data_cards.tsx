@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import useUserCounts from "../utils/use_user_counts";
 import DataCard from "./data_card";
 import { RanksEnum } from "@/common/post/ranks";
+import { GridLoader } from "react-spinners";
 
 
 const DashboardUserDataCards = () => {
@@ -12,6 +13,17 @@ const DashboardUserDataCards = () => {
 
     if (userdata?.post === RanksEnum.AssistantCommisioner || userdata?.post === RanksEnum.Commisioner) {
         return;
+    }
+
+    if (loading) {
+        return (
+            <div className="p-12 w-full flex justify-center items-center">
+                <GridLoader
+                    color="#0891B2"
+                    size={25}
+                />
+            </div>
+        )
     }
 
     return (

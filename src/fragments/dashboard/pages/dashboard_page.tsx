@@ -6,78 +6,19 @@ import { RootState } from "@/common/redux/store";
 import DashboardCasesPieCharts from "../components/dashboard_cases_piecharts";
 import { useEffect, useState } from "react";
 import ZonalData from "../components/zone_data";
-import { StationModel } from "@/fragments/station/models/station_model";
-import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/firestore";
-import { firestore } from "@/firebase/firebase_config";
-import { RanksEnum } from "@/common/post/ranks";
 import * as Select from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 import DashboardUserDataCards from "../components/dashboard_data_cards";
 
 const DashboardPage = () => {
-    const { userdata, currentUser } = useSelector((s: RootState) => s.auth)
-
-
+    const { stationList } = useSelector((s: RootState) => s.auth)
 
     const [stationId, setStationId] = useState<string | null>(null);
-    const [stationList, setStationList] = useState<StationModel[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
-        const fetchData = async () => {
-            if (!userdata) return;
+        setStationId(stationList?.at(0)?.id ?? '')
+    }, [stationList])
 
-            setLoading(true);
-
-            try {
-                if (userdata.stationId) {
-                    // Fetch specific station details for inspectors and constables
-                    setStationId(userdata.stationId);
-
-                    const stationDoc = await getDoc(doc(firestore, "stations", userdata.stationId));
-                    if (stationDoc.exists()) {
-                        const stationData = stationDoc.data() as StationModel;
-                        setStationList([stationData]); // Assuming you need it in an array
-                        console.log(stationData);
-                    }
-                } else if (userdata.post === RanksEnum.Commisioner || userdata.post === RanksEnum.AssistantCommisioner) {
-
-                    const search_field = userdata.post === RanksEnum.Commisioner ? 'commissioner_id' : 'assistant_commissioner_id'
-
-                    console.log('user is a commisioner');
-                    console.log(currentUser?.user.uid);
-
-
-                    const q = query(
-                        collection(firestore, "stations"),
-                        where(search_field, "==", currentUser?.user.uid),
-                        limit(6),
-                    );
-
-                    console.log('starting to get stations');
-
-                    const querySnapshot = await getDocs(q);
-                    console.log('finished to get stations');
-
-                    const stations: StationModel[] = [];
-                    querySnapshot.forEach((doc) => {
-                        stations.push(doc.data() as StationModel);
-                    });
-
-                    console.log(stationList);
-                    setStationList(stations);
-                    setStationId(stations[0].id ?? '')
-                }
-            } catch (error) {
-                console.error("Error fetching station data:", error);
-            } finally {
-
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-    }, [userdata, currentUser]);
 
 
     const getStationNameById = (id: string | undefined) => {
@@ -148,7 +89,6 @@ const DashboardPage = () => {
                     )
                 }
 
-                {loading && (<div></div>)}
 
             </div>
 
@@ -181,8 +121,6 @@ const DashboardPage = () => {
                 <div className="flex-grow md:flex-[25%] p-4 overflow-y-auto max-h-[calc(100vh-138px)]">
                     {/* right container content */}
                     <div>
-                        {/* Right container content goes here */}
-
 
                         {/* recent cases */}
                         <div className="p-3 rounded-lg border border-gray-200 bg-white">

@@ -1,4 +1,4 @@
-import { FieldValue } from "firebase/firestore";
+import {  Timestamp } from "firebase/firestore";
 
 export type StationModel = {
   id?: string;
@@ -28,5 +28,5 @@ export type StationModel = {
   commissioner_name?: string;
   commissioner_id?: string;
 
-  timestamp?: FieldValue;
+  timestamp?: Timestamp;
 };

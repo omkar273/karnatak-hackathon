@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { firestore } from "@/firebase/firebase_config";
 import {
   collection,
