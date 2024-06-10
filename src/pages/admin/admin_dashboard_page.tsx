@@ -4,11 +4,11 @@ import { main } from '@/data/data/dummy_data';
 import { saveAs } from 'file-saver';
 import { toast } from 'react-toastify';
 
-import commisioner_data from '@/data/json/commisioner_data.json';
-import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
-import inspector_data from '@/data/json/inspector_data.json';
-import sub_inspector_data from '@/data/json/sub_inspector_data.json';
-import head_constable_data from '@/data/json/head_constable_data.json';
+// import commisioner_data from '@/data/json/commisioner_data.json';
+// import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
+// import inspector_data from '@/data/json/inspector_data.json';
+// import sub_inspector_data from '@/data/json/sub_inspector_data.json';
+// import head_constable_data from '@/data/json/head_constable_data.json';
 import constable_data from '@/data/json/constable_data.json';
 import zones_data from '@/data/json/zones_data.json';
 import vehicle_data from '@/data/json/vehicle_data.json';
