@@ -23,6 +23,8 @@
     "@radix-ui/react-select": "^2.0.0",
     "@reduxjs/toolkit": "^2.2.1",
     "antd": "^5.15.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "file-saver": "^2.0.5",
     "firebase": "^10.9.0",
     "fs": "^0.0.1-security",
@@ -47,6 +49,9 @@
     "react-vertical-timeline-component": "^3.6.0",
     "reactflow": "^11.11.3",
     "redux-persist": "^6.0.0",
+    "shadcn-ui": "^0.8.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },
   "devDependencies": {
