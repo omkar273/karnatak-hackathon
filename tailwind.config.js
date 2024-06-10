@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import * as colors from 'tailwindcss/colors';
+// import * as colors from 'tailwindcss/colors';
 import { defineConfig } from 'vite-plugin-windicss';
 import tailwindcssAnimate from 'tailwindcss-animate';
 
@@ -27,16 +27,16 @@ export default defineConfig({
       },
 
       colors: {
-        primary: colors.purple,
+        // primary: colors.purple,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        // primary: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

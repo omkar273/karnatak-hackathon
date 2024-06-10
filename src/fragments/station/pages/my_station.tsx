@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PieChart } from '@mui/x-charts/PieChart';
 import { Collapse, Rate, Table } from "antd";
 import { Landmark, Mail, MapPinned, Phone, ShieldPlus } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import CrimeLineChart from "../components/chart";
 import { stationData } from "../data/station";
 import { useSelector } from "react-redux";
@@ -16,6 +16,7 @@ import { GridLoader } from "react-spinners";
 import { StationModel } from "../models/station_model";
 import StaticMap from "@/common/components/static_map";
 import StationStaffList from "../components/staff_list";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export interface CaseData {
     month_year: string;
     theft_cases: number;
@@ -24,6 +25,9 @@ export interface CaseData {
 }
 
 const MyStationPage: React.FC = () => {
+
+
+
     const { stationList } = useSelector((s: RootState) => s.auth)
 
     const [stationId, setStationId] = useState<string | null>(null);
@@ -36,6 +40,29 @@ const MyStationPage: React.FC = () => {
         docId: stationId,
         path: 'stations',
     })
+
+    const tabsData: { tabTitle: string, element?: ReactNode | null }[] = [
+        {
+            tabTitle: 'Staff',
+            element: <StationStaffList stationId={stationId} />,
+        },
+        {
+            tabTitle: 'Crime records',
+            element: <div>llloa</div>,
+        },
+        {
+            tabTitle: 'Financial records',
+            element: <div>llloa</div>,
+        },
+        {
+            tabTitle: 'Weapons',
+            element: <div>llloa</div>,
+        },
+        {
+            tabTitle: 'vehicles',
+            element: <div>llloa</div>,
+        },
+    ]
 
 
     const getStationNameById = (id: string | undefined) => {
@@ -168,6 +195,8 @@ const MyStationPage: React.FC = () => {
             </div>
         )
     }
+
+
 
     return (
         <div className="max-h-screen overflow-y-scroll overflow-hidden">
@@ -310,7 +339,57 @@ const MyStationPage: React.FC = () => {
                         ]}
                         />
                     </div>
-                    <StationStaffList stationId={stationId} />
+
+                    {/* station details tabs all or tabs */}
+                    <Tabs defaultValue="tabView" className="w-full card  md:my-8 my-4">
+                        <div className="w-full flex items-center justify-between bg-white rounded-md p-3 ">
+                            <h1 className="font-bold md:text-2xl text-base p-2">
+                                Station details
+                            </h1>
+
+                            <TabsList className="grid gap-2 grid-cols-2">
+                                <TabsTrigger value="tabView">Tab View</TabsTrigger>
+                                <TabsTrigger value="scrollView">Scroll view</TabsTrigger>
+                            </TabsList>
+                        </div>
+
+
+                        <TabsContent value="scrollView" className="my-3">
+                            {
+                                tabsData.map((tab, index) => (
+                                    <div key={index}>
+                                        {tab.element}
+                                    </div>))
+                            }
+                        </TabsContent>
+
+                        <TabsContent value="tabView" >
+                            <Tabs defaultValue={tabsData[0].tabTitle}
+                                className="w-full md:my-2 my-1">
+                                <div className="w-full bg-white rounded-md p-3 ">
+                                    <TabsList>
+                                        {
+                                            tabsData.map((tab, index) => (
+                                                <TabsTrigger
+                                                    value={tab.tabTitle}
+                                                    key={index}>
+                                                    {tab.tabTitle}
+                                                </TabsTrigger>
+                                            ))
+                                        }
+                                    </TabsList>
+                                    {
+                                        tabsData.map((tab, index) => (
+                                            <TabsContent value={tab.tabTitle} key={index}>
+                                                {tab.element}
+                                            </TabsContent>))
+                                    }
+                                </div>
+
+                            </Tabs>
+                        </TabsContent>
+
+                    </Tabs>
 
                     <div className="card bg-white grid grid-cols-1 gap-y-16">
                         <CrimeLineChart />
