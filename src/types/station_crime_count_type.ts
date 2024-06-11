@@ -1,6 +1,6 @@
 export interface FirTypeCount {
   id?: string;
-  stationId: string;
+  stationId?: string;
   Theft: number;
   Robbery: number;
   Assault: number;

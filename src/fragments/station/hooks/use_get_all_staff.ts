@@ -37,37 +37,34 @@ const useGetAllStaff = ({
         throw new Error("Station ID is null or undefined.");
       }
 
-      let newStaff: UserModel[] = [];
-      for (const post of posts) {
-        const staffQuery = startAfterDoc
-          ? query(
-              collection(firestore, "users"),
-              where("stationId", "==", stationId),
-              where("post", "==", post),
-              limit(limitSize),
-              startAfter(startAfterDoc)
-            )
-          : query(
-              collection(firestore, "users"),
-              where("stationId", "==", stationId),
-              where("post", "==", post),
-              limit(limitSize)
-            );
+      console.log(`station id is ${stationId}`);
 
-        const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
-          staffQuery
-        );
+      const staffQuery = startAfterDoc
+        ? query(
+            collection(firestore, "users"),
+            where("stationId", "==", stationId),
+            where("post", "in", posts),
+            limit(limitSize),
+            startAfter(startAfterDoc)
+          )
+        : query(
+            collection(firestore, "users"),
+            where("stationId", "==", stationId),
+            where("post", "in", posts),
+            limit(limitSize)
+          );
 
-        const postStaff = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        })) as UserModel[];
+      const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
+        staffQuery
+      );
 
-        newStaff = [...newStaff, ...postStaff];
-        setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1]);
-      }
+      const newStaff = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      })) as UserModel[];
 
       setStaff((prevStaff) => [...prevStaff, ...newStaff]);
+      setLastDoc(querySnapshot.docs[querySnapshot.docs.length - 1] || null);
     } catch (err) {
       setError((err as Error).message);
     } finally {

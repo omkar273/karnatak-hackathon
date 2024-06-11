@@ -22,8 +22,8 @@ interface Props {
 const StationStaffList: React.FC<Props> = ({ stationId }) => {
     const { loading, error, staff } = useGetAllStaff({
         stationId,
-        initialLimit: 1,
-        posts: [RanksEnum.Inspector, RanksEnum.SubInpector]
+        initialLimit: 12,
+        posts: [RanksEnum.Inspector, RanksEnum.SubInpector, RanksEnum.HeadConstable, RanksEnum.Inspector]
     });
 
     const [staffList, setStaffList] = useState<UserModel[]>([]);
@@ -33,6 +33,8 @@ const StationStaffList: React.FC<Props> = ({ stationId }) => {
     useEffect(() => {
         if (!loading) {
             let filteredStaff = staff;
+            console.log(staff);
+            
 
             if (filter !== 'all') {
 

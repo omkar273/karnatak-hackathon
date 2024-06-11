@@ -5,7 +5,6 @@ import { PieChart } from '@mui/x-charts/PieChart';
 import { Collapse, Rate, Table } from "antd";
 import { Landmark, Mail, MapPinned, Phone, ShieldPlus } from "lucide-react";
 import React, { ReactNode, useEffect, useState } from "react";
-import CrimeLineChart from "../components/chart";
 import { stationData } from "../data/station";
 import { useSelector } from "react-redux";
 import { RootState } from "@/common/redux/store";
@@ -17,6 +16,7 @@ import { StationModel } from "../models/station_model";
 import StaticMap from "@/common/components/static_map";
 import StationStaffList from "../components/station_staff_list";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import StationCrimRateChart from "../components/station_crime_rate_chart";
 export interface CaseData {
     month_year: string;
     theft_cases: number;
@@ -48,7 +48,7 @@ const MyStationPage: React.FC = () => {
         },
         {
             tabTitle: 'Crime records',
-            element: <div>llloa</div>,
+            element: <StationCrimRateChart stationId={stationId} />,
         },
         {
             tabTitle: 'Financial records',
@@ -392,7 +392,6 @@ const MyStationPage: React.FC = () => {
                     </Tabs>
 
                     <div className="card bg-white grid grid-cols-1 gap-y-16">
-                        <CrimeLineChart />
 
                         <div className="w-full grid md:grid-cols-2 gap-4 p-4 rounded border-2 border-gray-500">
 

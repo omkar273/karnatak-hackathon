@@ -10,7 +10,7 @@ import store from "./common/redux/store";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <div>
     {/* app */}
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
@@ -32,5 +32,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       theme="light"
       transition={Bounce}
     />
-  </React.StrictMode>
+  </div>
 );
