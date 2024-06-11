@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Keania+One&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital@0;1&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu:ital@0;1&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -77,4 +79,45 @@
 
 .leaflet-container {
   @apply h-[80vh] w-full z-0;
+}
+
+@layer components {
+  .pg {
+    @apply min-w-full  min-h-screen  font-open-sans;
+  }
+
+  .gr-pg {
+    @apply min-w-full  min-h-screen bg-gradient-to-b from-[#0066FF] to-[#36FFDB] font-open-sans;
+  }
+
+  .btn {
+    @apply w-full bg-blue-500 p-4 text-white font-semibold rounded-lg transition-transform transform active:scale-[1.02] hover:scale-100 text-center cursor-pointer;
+  }
+
+  .tap {
+    @apply transition-transform transform active:scale-[1.02] hover:scale-100 cursor-pointer;
+  }
+
+  .card {
+    @apply rounded-lg shadow-md p-4;
+  }
+
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(
+      100vh - 77px
+    ); /* calculate height of the screen minus the heading */
+  }
+
+  .map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* leaflet styles */
+.leaflet-container {
+  @apply h-[80vh] w-full;
 }

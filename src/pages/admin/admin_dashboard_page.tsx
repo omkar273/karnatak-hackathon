@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import HomeNavbar from '../home/components/home_navbar';
-import { main } from '@/data/data/dummy_data';
+import { customFaker, main } from '@/data/data/dummy_data';
 import { saveAs } from 'file-saver';
 import { toast } from 'react-toastify';
 
@@ -383,6 +383,59 @@ const AdminDashboardPage = () => {
         }
     }
 
+    const saveCrimeRates = async () => {
+        try {
+
+            const monthsArray = [
+                "2024-01",
+                "2024-02",
+                "2024-03",
+                "2024-04",
+                "2024-05",
+                "2024-06"
+            ];
+
+            for (const station of stations_data) {
+                for (const date of monthsArray) {
+                    const crime_rate = {
+                        Theft: customFaker.number.int({ min: 0, max: 10 }),
+                        Assault: customFaker.number.int({ min: 0, max: 10 }),
+                        Robbery: customFaker.number.int({ min: 0, max: 10 }),
+                        Burglary: customFaker.number.int({ min: 0, max: 10 }),
+                        Fraud: customFaker.number.int({ min: 0, max: 10 }),
+                        Murder: customFaker.number.int({ min: 0, max: 10 }),
+                        SexualAssault: customFaker.number.int({ min: 0, max: 10 }),
+                        DrugTrafficking: customFaker.number.int({ min: 0, max: 10 }),
+                        Cybercrime: customFaker.number.int({ min: 0, max: 10 }),
+                        Kidnapping: customFaker.number.int({ min: 0, max: 10 }),
+                        MoneyLaundering: customFaker.number.int({ min: 0, max: 10 }),
+                        Bribery: customFaker.number.int({ min: 0, max: 10 }),
+                        Stalking: customFaker.number.int({ min: 0, max: 10 }),
+                        DomesticViolence: customFaker.number.int({ min: 0, max: 10 }),
+                        IdentityTheft: customFaker.number.int({ min: 0, max: 10 }),
+                        Counterfeiting: customFaker.number.int({ min: 0, max: 10 }),
+                        Harassment: customFaker.number.int({ min: 0, max: 10 }),
+                    }
+
+                    const total = crime_rate.Assault + crime_rate.Bribery + crime_rate.Burglary + crime_rate.Counterfeiting + crime_rate.Cybercrime + crime_rate.DomesticViolence + crime_rate.DrugTrafficking + crime_rate.Cybercrime + crime_rate.Kidnapping + crime_rate.MoneyLaundering + crime_rate.Bribery + crime_rate.Stalking + crime_rate.Counterfeiting + crime_rate.Harassment;
+
+                    await saveAllDocs(`stations/${station.id}/fir_type_count/${date}`, crime_rate)
+                    await saveAllDocs(`stations/${station.id}/fir_counts/${date}`, {
+                        cases_closed: customFaker.number.int({ min: 0, max: total }),
+                        cases_open: total,
+                        cases_registered: total
+                    })
+                    toast.success(`added crime rate for ${station.station_name} for date ${date}`)
+                }
+            }
+
+
+        } catch (error) {
+            toast.error(`${error}`);
+        }
+    }
+
+
 
     return (
         <div className="pg max-h-screen overflow-hidden relative">
@@ -440,6 +493,12 @@ const AdminDashboardPage = () => {
                         className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
                         type="button">
                         save vehicles
+                    </button>
+                    <button
+                        onClick={saveCrimeRates}
+                        className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
+                        type="button">
+                        save crime rates
                     </button>
 
                 </div>

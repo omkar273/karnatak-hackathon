@@ -1,6 +1,5 @@
 import { VSpacer } from "@/common/components/spacer";
 import { RootState } from "@/common/redux/store";
-import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Rate } from "antd";
 import { ShieldEllipsis } from "lucide-react";
 import { useState } from "react";
@@ -14,6 +13,8 @@ const ProfilePage = () => {
 
   const [activeTab, setActiveTab] = useState("professionalDetails");
 
+
+
   return (
     <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
@@ -24,7 +25,9 @@ const ProfilePage = () => {
         <div className="flex gap-4 items-center card bg-white border-2">
           <div className="p-4 flex justify-center flex-col items-center">
             {/* <ShieldPlus className="text-center  size-28 mb-2" /> */}
-            <Avatar size={100} icon={<UserOutlined />} />
+            <Avatar size={100} >
+              <img src="https://xsgames.co/randomusers/avatar.php?g=male" />
+            </Avatar>
             <VSpacer height={30} />
             <Rate
               disabled
@@ -41,7 +44,7 @@ const ProfilePage = () => {
             <b>Name: {userdata?.name}</b>
             <p className="font-medium text-base">Awarded with</p>
             <p className="text-wrap text-base font-semibold">
-              {userdata?.awards}{" "}
+              {userdata?.awards?.at(0)}{" "}
             </p>
           </div>
           <div className="p-4 space-y-4">
@@ -155,9 +158,14 @@ const ProfilePage = () => {
                     Training Certifications:- {userdata?.training?.at(0)}
                   </p>
                   <hr className="col-span-3" />
-                  <p className="font-semibold my-2 flex gap-2 items-center">
-                    Award And Commendations:- {userdata?.awards}
-                  </p>
+                  <div>
+                    <p className="font-semibold my-2 flex gap-2 items-center">
+                      Award And Commendations:-
+                    </p>
+                    {userdata?.awards?.map((award, index) => (
+                      <p key={index} className="w-full">{award}</p>
+                    ))}
+                  </div>
                   <p className="font-semibold my-2 flex gap-2 items-center">
                     Current Posting:- {userdata?.currentPosting}
                   </p>
@@ -211,7 +219,7 @@ const ProfilePage = () => {
                     Name:- {userdata?.name}
                   </p>
                   <p className="font-semibold my-2 flex gap-2 items-center">
-                    Phone No:- {userdata?.phoneNo}
+                    Phone No:- {userdata?.phone_no}
                   </p>
                   {/* <p className="font-semibold my-2 flex gap-2 items-center">
                     Telephone No:- {userdata?.telephoneNo}
@@ -231,7 +239,9 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
-      <br></br>
+      <div className="md:h-48 h-12 ">
+
+      </div>
     </div>
   );
 };

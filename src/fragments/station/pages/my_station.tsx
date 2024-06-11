@@ -15,7 +15,7 @@ import useGetDocument from "@/common/hooks/use_get_document";
 import { GridLoader } from "react-spinners";
 import { StationModel } from "../models/station_model";
 import StaticMap from "@/common/components/static_map";
-import StationStaffList from "../components/staff_list";
+import StationStaffList from "../components/station_staff_list";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export interface CaseData {
     month_year: string;
@@ -341,7 +341,7 @@ const MyStationPage: React.FC = () => {
                     </div>
 
                     {/* station details tabs all or tabs */}
-                    <Tabs defaultValue="tabView" className="w-full card  md:my-8 my-4">
+                    <Tabs defaultValue="tabView" className="w-full   md:my-8 my-4">
                         <div className="w-full flex items-center justify-between bg-white rounded-md p-3 ">
                             <h1 className="font-bold md:text-2xl text-base p-2">
                                 Station details

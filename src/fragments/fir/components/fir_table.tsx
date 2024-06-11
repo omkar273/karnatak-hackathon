@@ -6,12 +6,17 @@ import { Link } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 import useGetAllFIRs from "../hooks/use_getall_fir";
 
-const FirDetailsTable = ({ reload = true }: { reload?: boolean }) => {
+const FirDetailsTable = ({ reload = true, stationId }: {
+    reload?: boolean,
+    stationId: string | undefined | null
+}) => {
 
 
 
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
-    const { documents, fetchFIRs, loading, error } = useGetAllFIRs({ timeFrame });
+    const { documents, fetchFIRs, loading, error } = useGetAllFIRs({
+        timeFrame, stationId
+    });
 
     useEffect(() => {
         fetchFIRs().catch(console.error);

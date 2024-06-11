@@ -25,4 +25,3 @@ export interface FIRCountsType {
   cases_open: number;
   cases_closed: number;
 }
-

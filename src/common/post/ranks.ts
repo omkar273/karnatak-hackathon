@@ -16,4 +16,5 @@ export enum RanksEnum {
   SubInpector = "Sub Inpector",
   HeadConstable = "Head Constable",
   Constable = "Constable",
+  all = "all",
 }

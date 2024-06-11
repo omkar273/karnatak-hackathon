@@ -12,7 +12,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useSelector } from 'react-redux';
 import { PulseLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import FirDetailsTable from "../components/fir_table";
 // import { doSaveFIR } from "../utils/do_save_fir";
 import { FIRRecord } from "../modals/fir_modal";
 
@@ -228,7 +227,7 @@ const AllFirPage = () => {
         </form>
 
         <VSpacer height={100} />
-        <FirDetailsTable reload={reload} />
+        {/* <FirDetailsTable stationId={stationi} reload={reload} /> */}
         <VSpacer height={100} />
       </div>
     </div>
