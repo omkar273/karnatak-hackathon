@@ -109,7 +109,6 @@ const useStationCounts = (
       } finally {
         setLoading(false);
       }
-      console.log(data, loading, error);
     };
 
     fetchData();

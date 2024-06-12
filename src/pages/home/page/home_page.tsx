@@ -62,14 +62,11 @@ const HomePage = () => {
               ...stationData,
               timestamp: stationData.timestamp ? stationData.timestamp.seconds * 1000 : null
             }]));
-            console.log(stationData);
           }
         } else if (userdata.post === RanksEnum.Commisioner || userdata.post === RanksEnum.AssistantCommisioner) {
 
           const search_field = userdata.post === RanksEnum.Commisioner ? 'commissioner_id' : 'assistant_commissioner_id'
 
-          console.log('user is a commisioner');
-          console.log(currentUser?.user.uid);
 
           const q = query(
             collection(firestore, "stations"),
@@ -77,10 +74,8 @@ const HomePage = () => {
             limit(3),
           );
 
-          console.log('starting to get stations');
 
           const querySnapshot = await getDocs(q);
-          console.log('finished to get stations');
 
           const stations: StationModel[] = [];
           querySnapshot.forEach((doc) => {
@@ -91,7 +86,6 @@ const HomePage = () => {
             ...station,
             timestamp: station.timestamp ? station.timestamp.seconds * 1000 : null,
           }))));
-          console.log('added all stations');
 
         }
       } catch (error) {

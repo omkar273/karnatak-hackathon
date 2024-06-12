@@ -20,6 +20,7 @@ import {
   updateDoc,
   where,
 } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 type SignUpData = {
   username: string;
@@ -32,7 +33,7 @@ export const doLogout = async () => {
   try {
     await signOut(auth);
   } catch (error) {
-    console.log("error logging out:", error);
+    toast.error(`error logging out: ${error}`);
   }
 };
 

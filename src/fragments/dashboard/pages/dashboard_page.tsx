@@ -10,6 +10,7 @@ import * as Select from '@radix-ui/react-select';
 import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 import DashboardUserDataCards from "../components/dashboard_data_cards";
 
+
 const DashboardPage = () => {
     const { stationList } = useSelector((s: RootState) => s.auth)
 
@@ -18,8 +19,6 @@ const DashboardPage = () => {
     useEffect(() => {
         setStationId(stationList?.at(0)?.id ?? '')
     }, [stationList])
-
-
 
     const getStationNameById = (id: string | undefined) => {
         const station = stationList.find((station) => station.id === id);
@@ -100,8 +99,6 @@ const DashboardPage = () => {
             <p className="font-bold text-3xl px-4 pb-4">
                 Station Data
             </p>
-
-
 
             {/* main content */}
             <div className="lg:flex lg:flex-grow lg:flex-row lg:gap-4">

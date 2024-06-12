@@ -60,7 +60,6 @@ const UnderlyingDataPage = () => {
             changeSuperiorId(id)
         }
 
-        console.log('ID:', id);
     }, [searchParams, setSearchParams]);
 
     const changeSuperiorId = (id: string) => {
@@ -82,14 +81,6 @@ const UnderlyingDataPage = () => {
         setEdges([])
         fetchUnderlyings();
     }, [superiorId]);
-
-    useEffect(() => {
-        console.log('logging');
-
-        console.log(documents);
-
-    }, [documents])
-
 
     useEffect(() => {
 

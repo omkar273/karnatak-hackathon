@@ -28,7 +28,6 @@ const Manpower = () => {
   }, [stationId]);
 
   useEffect(() => {
-    console.log(stations.documents);
     setstationsData([
       {
         stationId: userdata?.stationId,
@@ -48,10 +47,8 @@ const Manpower = () => {
   }, [stations.documents])
 
 
-  console.log(`sending station id ${stationId}`);
 
   // const handleChange = (value: { value: string; label: React.ReactNode }) => {
-  //   console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
   //   setstationId(value.value)
 
   // };

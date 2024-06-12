@@ -186,7 +186,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success('commisioner data saved')
-                console.log('commisioner data saved')
                 sleep(1000);
             }
 
@@ -195,7 +194,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success(`assistant_commisioner_data ${element.username} with index ${index} data saved`)
-                console.log(`assistant_commisioner_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
             for (let index = 0; index < inspector_data.length; index++) {
@@ -203,7 +201,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success(`inspector_data ${element.username} with index ${index} data saved`)
-                console.log(`inspector_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
             for (let index = 0; index < sub_inspector_data.length; index++) {
@@ -211,7 +208,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success(`sub_inspector_data ${element.username} with index ${index} data saved`)
-                console.log(`sub_inspector_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
             for (let index = 0; index < head_constable_data.length; index++) {
@@ -219,7 +215,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success(`head_constable_data ${element.username} with index ${index} data saved`)
-                console.log(`head_constable_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
 
@@ -228,7 +223,6 @@ const AdminDashboardPage = () => {
                 await saveUserData(element.id, element.email, element.username, element)
 
                 toast.success(`constable_data ${element.username} with index ${index} data saved`)
-                console.log(`constable_data ${element.username} with index ${index} data saved`)
                 sleep(1000);
             }
 
@@ -236,12 +230,10 @@ const AdminDashboardPage = () => {
             await saveUserData(element.id, element.email, element.username, element)
 
             toast.success('admin_data data saved')
-            console.log('admin_data data saved')
             sleep(1000);
 
         } catch (error) {
             toast.error(`${error}`);
-            console.log(error);
 
         }
     }
@@ -251,7 +243,6 @@ const AdminDashboardPage = () => {
     const saveStations = async () => {
         try {
             toast.success(`no of stations ${stations_data.length}`);
-            console.log(`no of stations ${stations_data.length}`);
             for (let index = 0; index < stations_data.length; index++) {
                 const element = stations_data[index];
                 await saveAllDocs(`stations/${element.id}`, { ...element, timestamp: serverTimestamp() })

@@ -52,7 +52,6 @@ const useStationRates = (
       }
       setLoading(true);
       setError(null);
-      console.log(stationId);
 
       const docRef = doc(firestore, `stations/${stationId}/rates/${year}`);
       try {

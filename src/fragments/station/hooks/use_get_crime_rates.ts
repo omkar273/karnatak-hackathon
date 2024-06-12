@@ -37,9 +37,6 @@ const useGetCrimeRates = ({
       const crimeRatesData: FirTypeCount[] = [];
 
       if (month) {
-        console.log("inside if condition");
-        console.log(month);
-
         const docId = `${year}-${month}`;
         const docRef = doc(
           firestore,
@@ -47,8 +44,6 @@ const useGetCrimeRates = ({
           docId
         );
         const docSnap = await getDoc(docRef);
-        console.log(docSnap.data());
-        console.log(docSnap.exists());
         if (docSnap.exists()) {
           crimeRatesData.push({
             id: docSnap.id,
@@ -58,8 +53,6 @@ const useGetCrimeRates = ({
           throw new Error("No such document!");
         }
       } else {
-        console.log("inside else condition");
-
         const crimeRateList = await getDocs(
           query(
             collection(firestore, `stations/${stationId}/fir_type_count`),
@@ -69,9 +62,6 @@ const useGetCrimeRates = ({
           )
         );
 
-        console.log("showinf firs");
-
-        crimeRateList.docs.map((doc) => console.log(doc.data()));
         crimeRateList.docs.map((doc) => {
           crimeRates.push({
             id: doc.id,
@@ -81,8 +71,6 @@ const useGetCrimeRates = ({
       }
 
       setCrimeRates(crimeRates);
-      console.log(`settings crime rates with station id ${stationId}`);
-      console.log(crimeRates);
     } catch (err) {
       setError((err as Error).message);
     } finally {

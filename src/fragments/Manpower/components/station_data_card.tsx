@@ -6,10 +6,8 @@ interface Props {
 }
 
 const StationDataCard: React.FC<Props> = ({ stationId }) => {
-    console.log(`got station id ${stationId}`);
 
     const { data, loading } = useGetStationDetails(stationId)
-    console.log(data);
 
     if (loading) {
         return <div>laoding</div>

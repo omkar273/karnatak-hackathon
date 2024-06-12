@@ -3,14 +3,14 @@ import karntankPoliceLogo from "@/assets/images/karnatak_police_logo.png";
 import { HSpacer } from "@/common/components/spacer";
 import { setLogout } from "@/common/redux/auth_slice";
 import { doLogout } from "@/pages/auth/utils/auth";
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Avatar, Badge, Drawer, Dropdown, Menu, MenuProps, Popconfirm } from "antd";
+import { Avatar, Drawer, Dropdown, Menu, MenuProps, Popconfirm } from "antd";
 import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import Searchbar from "./nav_searchbar";
 import { Link } from "react-router-dom";
 import { RootState } from "@/common/redux/store";
+import NotificationsModal from "@/common/components/notification_icon";
 
 type Props = {
     drawerOpen: boolean,
@@ -22,12 +22,8 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
     const dispatch = useDispatch();
     const { userdata } = useSelector((s: RootState) => s.auth)
 
-    const items: MenuProps['items'] = [
-        {
-            label: 'loading...',
-            key: '1',
-        },
-    ];
+
+
     const profileOptions: MenuProps['items'] = [
         {
             label: <Link to={'/user'}>Profile</Link>,
@@ -95,16 +91,7 @@ const Navbar: React.FC<Props> = ({ sidebarItems, drawerOpen, setdrawerOpen }) =>
 
             {/* right hand side options */}
             <div className="flex justify-start items-center gap-8 cursor-pointer">
-                <Dropdown
-                    menu={{ items }}
-                    placement="bottomRight"
-                    trigger={['click']}
-                    arrow={true}
-                >
-                    <Badge count={10} overflowCount={9} >
-                        <NotificationsIcon className="text-white" />
-                    </Badge>
-                </Dropdown>
+                <NotificationsModal />
 
                 <Dropdown menu={{ items: profileOptions }}
                     placement="bottomRight"

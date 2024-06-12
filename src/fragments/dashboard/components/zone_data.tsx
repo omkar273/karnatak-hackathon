@@ -45,7 +45,6 @@ const ZonalData = () => {
     }, [userdata]); // Include userdata in the dependency array
 
     if (!userdata || userdata.post !== RanksEnum.Commisioner) {
-        console.log('user is not commissioner');
         return null;
     }
 

@@ -33,15 +33,12 @@ const StationStaffList: React.FC<Props> = ({ stationId }) => {
     useEffect(() => {
         if (!loading) {
             let filteredStaff = staff;
-            console.log(staff);
 
 
             if (filter !== 'all') {
 
-                console.log(`filter is set to ${filter}`);
                 filteredStaff = filteredStaff.filter((s) => {
 
-                    console.log(`staff post ${s.post} passed : ${s.post === filter}`);
                     if (s.post === filter) {
                         return true;
                     }

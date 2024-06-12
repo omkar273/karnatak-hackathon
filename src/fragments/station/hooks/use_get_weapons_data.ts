@@ -41,7 +41,6 @@ function useGetAllStationWeaponsVehiclesData<T>({
       setError(null);
 
       try {
-        console.log("starting to get weapons data");
 
         // Base query
         const baseQuery = collection(

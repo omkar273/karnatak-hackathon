@@ -36,7 +36,6 @@ const LocationMarker = () => {
 const Map: React.FC<Props> = ({ stationId }) => {
 
     const { data } = useGetStationDetails(stationId)
-    console.log(data);
 
 
     return (

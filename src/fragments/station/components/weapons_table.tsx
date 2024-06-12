@@ -112,12 +112,10 @@ const StationWeaponsTable = ({ stationId }: { stationId: string | null }) => {
 
     useEffect(() => {
         fetchData();
-        console.log(documents);
 
     }, [stationId])
 
     useEffect(() => {
-        console.log(documents);
     }, [documents])
 
 

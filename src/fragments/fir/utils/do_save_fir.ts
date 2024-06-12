@@ -10,6 +10,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { FIRRecord } from "../modals/fir_modal";
+import { toast } from "react-toastify";
 
 // Helper function to get the current month in "YYYY-MM" format
 const getCurrentMonth = (): string => {
@@ -28,7 +29,7 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
     });
 
     const firId = firDocRef.id;
- 
+
     if (firData.stationId) {
       const stationDocRef = doc(firestore, "stations", firData.stationId);
       const currentMonth = getCurrentMonth();
@@ -71,8 +72,6 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
 
     // Iterate over the allotedTo field and update each user's task list and task count
     if (firData.allotedTo) {
-      console.log("fir alloted section detected");
-
       for (const allocation of firData.allotedTo) {
         const userDocRef = doc(firestore, "users", allocation.id);
 
@@ -126,7 +125,7 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
 
     return true;
   } catch (error) {
-    console.log("Error storing FIR details:", error);
+    toast.error(`Error storing FIR details: ${error}`);
     return false;
   }
 };
