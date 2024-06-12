@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
     ColumnDef,
     ColumnFiltersState,
@@ -112,7 +112,7 @@ const StationVehiclesTable = ({ stationId }: { stationId: string | null }) => {
 
     useEffect(() => {
         fetchData();
-    }, [stationId, fetchData]);
+    }, [stationId]);
 
     const [sorting, setSorting] = useState<SortingState>([]);
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
