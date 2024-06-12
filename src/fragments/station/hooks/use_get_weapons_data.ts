@@ -14,7 +14,7 @@ import { useCallback, useState } from "react";
 
 interface GetAllStationWeaponsVehiclesData {
   initialLimit?: number;
-  stationId?: string;
+  stationId?: string | null | undefined;
   data?: "weapons" | "vehicles";
 }
 
@@ -24,7 +24,7 @@ function useGetAllStationWeaponsVehiclesData<T>({
   data = "weapons",
 }: GetAllStationWeaponsVehiclesData = {}): {
   documents: T[];
-  fetchStations: (newPage?: boolean) => Promise<void>;
+  fetchData: (newPage?: boolean) => Promise<void>;
   loading: boolean;
   error: Error | null;
   hasMore: boolean;
@@ -42,12 +42,14 @@ function useGetAllStationWeaponsVehiclesData<T>({
       setError(null);
 
       try {
+        console.log("starting to get weapons data");
+
         // Base query
         const baseQuery = collection(
           firestore,
           data === "weapons" ? "weapons" : "vehicle_details"
         );
-        let q = query(baseQuery, orderBy("timestamp"), limit(initialLimit));
+        let q = query(baseQuery, limit(initialLimit));
 
         // Add stationId filter if provided
         if (stationId) {
@@ -83,7 +85,7 @@ function useGetAllStationWeaponsVehiclesData<T>({
     [initialLimit, stationId, data, lastDoc]
   );
 
-  return { documents, fetchStations: fetchData, loading, error, hasMore };
+  return { documents, fetchData, loading, error, hasMore };
 }
 
 export default useGetAllStationWeaponsVehiclesData;

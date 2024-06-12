@@ -89,7 +89,7 @@ const StationStaffList: React.FC<Props> = ({ stationId }) => {
     }
 
     return (
-        <div className='w-full p-4'>
+        <div className='w-full p-4 bg-white'>
             <h1 className='md:text-2xl font-bold font-open-sans'>
                 Employees {` (${staff.length}) `}
             </h1>
