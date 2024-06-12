@@ -4,7 +4,6 @@ import {
   DocumentData,
   getDocs,
   limit,
-  orderBy,
   query,
   QueryDocumentSnapshot,
   startAfter,

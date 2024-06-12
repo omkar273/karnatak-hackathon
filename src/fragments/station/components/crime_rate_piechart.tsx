@@ -1,6 +1,5 @@
 import { FirTypeCount } from '@/types/station_crime_count_type'
 import { PieChart } from '@mui/x-charts/PieChart'
-import React from 'react'
 
 const CrimeRatePiechart = ({ data }: { data: FirTypeCount }) => {
     return (

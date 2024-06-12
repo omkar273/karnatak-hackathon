@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import {
     ColumnDef,
     ColumnFiltersState,
@@ -34,6 +34,7 @@ import {
 } from "@/components/ui/table"
 import useGetAllStationWeaponsVehiclesData from '../hooks/use_get_weapons_data'
 import { WeaponType } from "@/types/weapon_type"
+import { GridLoader } from "react-spinners"
 
 
 const weaponColumns: ColumnDef<WeaponType>[] = [
@@ -144,6 +145,22 @@ const StationWeaponsTable = ({ stationId }: { stationId: string | null }) => {
             rowSelection,
         },
     });
+
+
+    if (loading) {
+        return (<div className="h-screen w-full flex justify-center items-center">
+            <GridLoader
+                color="#0891B2"
+                size={25}
+            />
+        </div>)
+    }
+
+    if (error) {
+        return (<div className="h-screen w-full flex justify-center items-center">
+            {error.message}
+        </div>)
+    }
 
     return (
         <div className="w-full">

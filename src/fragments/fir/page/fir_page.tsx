@@ -21,7 +21,7 @@ const AllFirPage = () => {
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
   const { data, loading } = useUnderlyingData(currentUser?.user.uid!)
-  const [reload, setreload] = useState(true)
+  const [_reload, setreload] = useState(true)
 
   const [underlyingData, setunderlyingData] = useState<DefaultOptionType[]>([]);
 
