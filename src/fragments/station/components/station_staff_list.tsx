@@ -22,7 +22,7 @@ interface Props {
 const StationStaffList: React.FC<Props> = ({ stationId }) => {
     const { loading, error, staff } = useGetAllStaff({
         stationId,
-        initialLimit: 12,
+        initialLimit: 4,
         posts: [RanksEnum.Inspector, RanksEnum.SubInpector, RanksEnum.HeadConstable, RanksEnum.Inspector]
     });
 
@@ -34,7 +34,7 @@ const StationStaffList: React.FC<Props> = ({ stationId }) => {
         if (!loading) {
             let filteredStaff = staff;
             console.log(staff);
-            
+
 
             if (filter !== 'all') {
 

@@ -2,7 +2,7 @@ import { ApexOptions } from 'apexcharts';
 import ReactApexChart from 'react-apexcharts';
 import useGetCrimeRates from '../hooks/use_get_crime_rates';
 import { GridLoader } from 'react-spinners';
-import { PieChart } from '@mui/x-charts/PieChart';
+import CrimeRatePiechart from './crime_rate_piechart';
 
 interface Props {
     stationId: string | null | undefined;
@@ -160,84 +160,10 @@ const StationCrimRateChart: React.FC<Props> = ({ stationId }) => {
             <div id="html-dist"></div>
 
             {/* piecharts */}
-            <div>
-                <PieChart
-                    series={[
-                        {
-                            data: [
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Bribery,
-                                    label: ".Bribery"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Burglary,
-                                    label: ".Burglary"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Counterfeiting,
-                                    label: ".Counterfeiting"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Cybercrime,
-                                    label: ".Cybercrime"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                                {
-                                    value: crimeRates[crimeRates.length - 1].Assault,
-                                    label: "Assault"
-                                },
-                            ],
-                            innerRadius: 30,
-                            outerRadius: 100,
-                            paddingAngle: 2,
-                            cornerRadius: 5,
-
-                            cx: 150,
-                            cy: 150,
-                            highlightScope: { faded: 'global', highlighted: 'item' },
-                            faded: {
-
-                                innerRadius: 30,
-                                additionalRadius: -30,
-                                color: 'gray'
-                            },
-
-                        }
-                    ]}
-                    slotProps={{
-
-                        legend: {
-
-                            direction: 'row',
-                            position: { vertical: 'bottom', horizontal: 'right' },
-                            padding: 25,
-                        },
-                    }}
-                    height={300}
-                />
+            <h1>Crime Trends</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2'>
+                <CrimeRatePiechart data={crimeRates[crimeRates.length - 1]} />
+                <CrimeRatePiechart data={crimeRates[crimeRates.length - 1]} />
             </div>
 
         </div>
