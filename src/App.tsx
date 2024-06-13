@@ -4,11 +4,14 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
 import { setUserdata } from "./common/redux/auth_slice";
 import { RootState } from "./common/redux/store";
+import ManpowerPages from "./fragments/Manpower/pages/manpowe3";
 import Manpower from "./fragments/Manpower/pages/manpower";
+import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
 import CourtTwo from "./fragments/court/cout_two";
 import ChargesheetPage from "./fragments/court/pages/chargesheet_page";
 import CourtT from "./fragments/court/third_page";
 import DashboardPage from "./fragments/dashboard/pages/dashboard_page";
+import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
 import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import ProfilePage from "./fragments/profile/page/profile_page";
@@ -18,13 +21,12 @@ import TaskAssignmentPage from "./fragments/tasks/pages/tasks_page";
 import UnderlyingDataPage from "./fragments/underlying/page/underlying_page";
 import RegisterFragment from "./fragments/user_management/register_page";
 import WitnessManagementPage from "./fragments/witness management/pages/witness_management_page";
+import AdminDashboardPage from "./pages/admin/admin_dashboard_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
-import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
-import AdminDashboardPage from "./pages/admin/admin_dashboard_page";
-import AllFirPage from "./fragments/fir/page/all_fir_page";
+import LawOrderPagess from "./fragments/law and order/pages/lawandoderpage";
 
 const App = () => {
   const { isUserLoggedIn, currentUser } = useSelector(
@@ -43,12 +45,14 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={getProtectedRoute(<HomePage />)}>
-
           <Route index element={getProtectedRoute(<DashboardPage />)} />
 
           {/* fir route */}
           <Route path="fir" element={getProtectedRoute(<AllFirPage />)} />
-          <Route path="fir/all" element={getProtectedRoute(<AllFirPage />)}></Route>
+          <Route
+            path="fir/all"
+            element={getProtectedRoute(<AllFirPage />)}
+          ></Route>
 
           <Route
             path="/fir_details"
@@ -57,13 +61,14 @@ const App = () => {
 
           {/* station routes */}
           <Route path="station">
-
             <Route index element={getProtectedRoute(<MyStationPage />)} />
 
             <Route path="add" element={getProtectedRoute(<AddStationPage />)} />
 
-            <Route path="tasks" element={getProtectedRoute(<TaskAssignmentPage />)} />
-
+            <Route
+              path="tasks"
+              element={getProtectedRoute(<TaskAssignmentPage />)}
+            />
           </Route>
 
           <Route path="user">
@@ -75,29 +80,37 @@ const App = () => {
               path="underlying"
               element={getProtectedRoute(<UnderlyingDataPage />)}
             />
-            <Route index element={getProtectedRoute(<ProfilePage />)}
-            />
+            <Route index element={getProtectedRoute(<ProfilePage />)} />
           </Route>
-
-
 
           <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
 
-          <Route path="/chargesheet" element={getProtectedRoute(<ChargesheetPage />)} />
+          <Route
+            path="/chargesheet"
+            element={getProtectedRoute(<ChargesheetPage />)}
+          />
 
           <Route path="/CourtTwo" element={getProtectedRoute(<CourtTwo />)} />
 
-          <Route path="/witness" element={getProtectedRoute(<WitnessManagementPage />)} />
+          <Route
+            path="/witness"
+            element={getProtectedRoute(<WitnessManagementPage />)}
+          />
 
-          <Route path="/Record" element={getProtectedRoute(<MyStationPage />)} />
+          <Route
+            path="/Record"
+            element={getProtectedRoute(<MyStationPage />)}
+          />
 
           <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
 
           <Route path="/man" element={getProtectedRoute(<ManpowerStatic />)} />
 
+          <Route path="/mans" element={getProtectedRoute(<ManpowerPages />)} />
+          
+          <Route path="/lawandoder" element={getProtectedRoute(<LawOrderPagess />)} />
+
           <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
-
-
         </Route>
 
         {/* auth route */}
@@ -108,7 +121,6 @@ const App = () => {
 
         {/* video page link */}
         <Route path="video" element={<VideoPage />} />
-
 
         {/* admin route */}
         <Route path="/admin" element={<AdminDashboardPage />} />

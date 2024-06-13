@@ -1,5 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { RanksEnum } from "@/common/post/ranks";
+import { setStationList } from "@/common/redux/auth_slice";
+import { RootState } from "@/common/redux/store";
+import { firestore } from "@/firebase/firebase_config";
+import { StationModel } from "@/fragments/station/models/station_model";
 import { Menu } from "antd";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  limit,
+  query,
+  where,
+} from "firebase/firestore";
 import {
   BarChartBig,
   ClipboardList,
@@ -19,16 +33,10 @@ import {
   Users,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/common/redux/store";
-import { StationModel } from "@/fragments/station/models/station_model";
-import { collection, doc, getDoc, getDocs, limit, query, where } from "firebase/firestore";
-import { firestore } from "@/firebase/firebase_config";
-import { RanksEnum } from "@/common/post/ranks";
-import { setStationList } from "@/common/redux/auth_slice";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -39,7 +47,7 @@ const HomePage = () => {
     navigate(path);
   };
 
-  const { userdata, currentUser } = useSelector((s: RootState) => s.auth)
+  const { userdata, currentUser } = useSelector((s: RootState) => s.auth);
 
   const [loading, setLoading] = useState<boolean>(false);
   const dispatch = useDispatch();
@@ -55,25 +63,36 @@ const HomePage = () => {
         if (userdata.stationId) {
           // Fetch specific station details for inspectors and constables
 
-          const stationDoc = await getDoc(doc(firestore, "stations", userdata.stationId));
+          const stationDoc = await getDoc(
+            doc(firestore, "stations", userdata.stationId)
+          );
           if (stationDoc.exists()) {
             const stationData = stationDoc.data() as StationModel;
-            dispatch(setStationList([{
-              ...stationData,
-              timestamp: stationData.timestamp ? stationData.timestamp.seconds * 1000 : null
-            }]));
+            dispatch(
+              setStationList([
+                {
+                  ...stationData,
+                  timestamp: stationData.timestamp
+                    ? stationData.timestamp.seconds * 1000
+                    : null,
+                },
+              ])
+            );
           }
-        } else if (userdata.post === RanksEnum.Commisioner || userdata.post === RanksEnum.AssistantCommisioner) {
-
-          const search_field = userdata.post === RanksEnum.Commisioner ? 'commissioner_id' : 'assistant_commissioner_id'
-
+        } else if (
+          userdata.post === RanksEnum.Commisioner ||
+          userdata.post === RanksEnum.AssistantCommisioner
+        ) {
+          const search_field =
+            userdata.post === RanksEnum.Commisioner
+              ? "commissioner_id"
+              : "assistant_commissioner_id";
 
           const q = query(
             collection(firestore, "stations"),
             where(search_field, "==", currentUser?.user.uid),
-            limit(3),
+            limit(3)
           );
-
 
           const querySnapshot = await getDocs(q);
 
@@ -82,16 +101,20 @@ const HomePage = () => {
             stations.push(doc.data() as StationModel);
           });
 
-          dispatch(setStationList(stations.map((station) => ({
-            ...station,
-            timestamp: station.timestamp ? station.timestamp.seconds * 1000 : null,
-          }))));
-
+          dispatch(
+            setStationList(
+              stations.map((station) => ({
+                ...station,
+                timestamp: station.timestamp
+                  ? station.timestamp.seconds * 1000
+                  : null,
+              }))
+            )
+          );
         }
       } catch (error) {
         console.error("Error fetching station data:", error);
       } finally {
-
         setLoading(false);
       }
     };
@@ -148,10 +171,22 @@ const HomePage = () => {
           onClick: () => navigateAndCloseDrawer("/man"),
         },
         {
+          key: "Manpower3",
+          label: "Manpower Mapping 2",
+          icon: <User />,
+          onClick: () => navigateAndCloseDrawer("/mans"),
+        },
+        {
           key: "Law and order",
           label: "Law and order",
           icon: <Scale />,
           onClick: () => navigateAndCloseDrawer("/law"),
+        },
+        {
+          key: "Law and order 2",
+          label: "Law and order 2",
+          icon: <Scale />,
+          onClick: () => navigateAndCloseDrawer("/lawandoder"),
         },
       ],
     },
