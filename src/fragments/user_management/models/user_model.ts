@@ -64,4 +64,7 @@ export type UserModel = {
   dateOfBirth?: string;
   mobileNo?: string;
   address?: string;
+
+  lat?: number;
+  lng?: number;
 };

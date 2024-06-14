@@ -64,7 +64,7 @@ function getTimeFrameTimestamps(
 interface GetAllFIRsParams {
   timeFrame?: "thisMonth" | "lastMonth" | "thisYear" | "all";
   initialLimit?: number;
-  status?: "registered" | "pending" | "in court" | "closed";
+  status?: "open" | "pending" | "in court" | "closed";
   stationId?: string | null;
 }
 
