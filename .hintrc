@@ -4,6 +4,7 @@
   ],
   "hints": {
     "no-inline-styles": "off",
+    "no-mixed-spaces-and-tabs":"off",
     "axe/forms": [
       "default",
       {

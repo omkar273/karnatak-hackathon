@@ -119,5 +119,5 @@
 
 /* leaflet styles */
 .leaflet-container {
-  @apply h-[80vh] w-full;
+  @apply h-screen w-full;
 }

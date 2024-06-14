@@ -73,8 +73,12 @@ const LocationMarker: React.FC<Props> = ({lat, station_id, lng}) => {
 			locationDetails: generateRandomLatLngWithinRadius({lng, lat}, 3)
 		}));
 		
+		map.flyTo([lat,lng], map.getZoom());
+		
 		setUserLocations(nearbyUsers);
 	}, [lat, lng, station_id]);
+	
+	
 	
 	
 	return (
@@ -86,7 +90,9 @@ const LocationMarker: React.FC<Props> = ({lat, station_id, lng}) => {
 			)}
 			
 			{userLocations.map((userdata, index) => (
-				<Marker key={index} position={[userdata.locationDetails.location.lat, userdata.locationDetails.location.lng]} icon={policeMarker}>
+				<Marker key={index}
+				        position={[userdata.locationDetails.location.lat, userdata.locationDetails.location.lng]}
+				        icon={policeMarker}>
 					<Popup>
 						<h1 className='font-semibold'>{userdata.name}</h1>
 						<h1 className='font-normal'>{userdata.post}</h1>
@@ -99,8 +105,9 @@ const LocationMarker: React.FC<Props> = ({lat, station_id, lng}) => {
 };
 
 const StaticMap: React.FC<Props> = ({lat, lng, station_name, station_id}) => {
+	console.log(lat, lng, station_name, station_id);
 	return (
-		<MapContainer center={[lat, lng]} zoom={13} scrollWheelZoom={false}>
+		<MapContainer center={[12.971599, 77.594566]} zoom={13} scrollWheelZoom={false}>
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

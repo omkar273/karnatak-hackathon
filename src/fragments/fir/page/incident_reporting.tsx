@@ -7,24 +7,48 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import station_data from '@/data/json/stations_data.json'
 import {StationModel} from "@/fragments/station/models/station_model.ts";
 import {VSpacer} from "@/common/components/spacer.tsx";
+import {UserModel} from "@/fragments/user_management/models/user_model.ts";
+import inspector_data from '@/data/json/inspector_data.json'
+import sub_inspector_data from '@/data/json/sub_inspector_data.json'
+import head_constable_data from '@/data/json/head_constable_data.json'
+import constable_data from '@/data/json/constable_data.json'
+import NearbyUserMap from "@/fragments/fir/components/nearby_user_map.tsx";
+import StaticMap from "@/common/components/static_map.tsx";
+import 'leaflet/dist/leaflet.css';
 
 
-const getStationById = (id: string): StationModel => {
-	for (const station of station_data) {
-		if (station.id === id) {
-			return station;
+const getStationById = (id: string | null | undefined): StationModel | null => {
+	
+	if (id) {
+		for (const station of station_data) {
+			if (station.id === id) {
+				return station;
+			}
 		}
 	}
+	return null;
 }
 
 const IncidentReporting = () => {
 	
 	const [stationsList, setStationsList] = useState<StationModel[]>();
+	const [stationId, setStationId] = useState<string | null>(null);
 	
-	const {handleSubmit, register, control, formState: {errors, isSubmitting}, setValue} = useForm<IncidentType>();
+	const [nearbyUserList, setNearbyUserList] = useState<UserModel[]>([]);
+	
+	
+	const {handleSubmit, register, formState: {errors, isSubmitting}, setValue} = useForm<IncidentType>();
 	
 	const onsubmit: SubmitHandler<IncidentType> = (data) => {
 		console.log(data);
+		const nearbyUsers = [
+			...inspector_data.filter(user => user.stationId === stationId),
+			...sub_inspector_data.filter(user => user.stationId === stationId),
+			...head_constable_data.filter(user => user.stationId === stationId),
+			...constable_data.filter(user => user.stationId === stationId),
+		]
+		setNearbyUserList(nearbyUsers)
+		console.log(nearbyUsers.length)
 	};
 	
 	const validationOptions: RegisterOptions = {
@@ -37,7 +61,7 @@ const IncidentReporting = () => {
 	
 	
 	return (
-		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
+		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 pb-24    ">
 			<p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
 				{"Report Incident"}
 			</p>
@@ -55,15 +79,17 @@ const IncidentReporting = () => {
 							<VSpacer height={5}/>
 							<Select onValueChange={(id) => {
 								const station = getStationById(id)
-								setValue('location', {lat: station.lat ?? 0, lng: station.lng ?? 0})
+								setStationId(station?.id ?? '')
+								setValue('location', {lat: station?.lat ?? 0, lng: station?.lng ?? 0})
 							}}>
 								<SelectTrigger className="w-full p-6">
 									<SelectValue placeholder="Select the location"/>
 								</SelectTrigger>
-								<SelectContent  id={'location-select'}>
+								<SelectContent id={'location-select'}>
 									{
 										stationsList?.map((station, index) => (
-											<SelectItem key={index} value={station.id ?? ''}>{station.address}</SelectItem>
+											<SelectItem key={index}
+											            value={station.id ?? ''}>{station.address}</SelectItem>
 										))
 									}
 								</SelectContent>
@@ -109,6 +135,20 @@ const IncidentReporting = () => {
 						{isSubmitting ? 'Submitting...' : 'Submit'}
 					</button>
 				</form>
+				
+				<div className={'w-full p-4 bg-white my-4'}>
+					<div className={'w-1/2'}>
+						{
+							nearbyUserList.length > 0 && (
+								<NearbyUserMap
+									userList={nearbyUserList}
+									lat={getStationById(stationId)?.lat || 0}
+									lng={getStationById(stationId)?.lng || 0}
+								/>
+							)
+						}
+					</div>
+				</div>
 			</div>
 		</div>
 	);

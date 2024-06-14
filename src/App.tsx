@@ -31,6 +31,7 @@ import EmergencyZones from "@/fragments/emergency_zones/emergency_zones.tsx";
 import ZoneDetails from "@/fragments/emergency_zones/zone_details.tsx";
 import StaffDistribution from "@/fragments/Manpower/pages/staff_distribution.tsx";
 import IncidentReporting from "@/fragments/fir/page/incident_reporting.tsx";
+import 'leaflet/dist/leaflet.css';
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
