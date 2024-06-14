@@ -15,6 +15,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import StationCrimeRateChart from "../components/station_crime_rate_chart";
 import StationWeaponsTable from "../components/weapons_table";
 import StationVehiclesTable from "../components/station_vehicles_table";
+import StationFirTable from "@/fragments/station/components/station_fir_table.tsx";
 
 const MyStationPage: React.FC = () => {
 	
@@ -46,6 +47,9 @@ const MyStationPage: React.FC = () => {
 		{
 			tabTitle: 'Crime records',
 			element: <StationCrimeRateChart stationId={stationId}/>,
+		},{
+			tabTitle: 'Fir',
+			element: <StationFirTable stationId={stationId}/>,
 		},
 		{
 			tabTitle: 'Financial records',

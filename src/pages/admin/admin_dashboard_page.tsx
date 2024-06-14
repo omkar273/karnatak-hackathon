@@ -47,7 +47,7 @@ function sleep(ms: number): Promise<void> {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export const saveToJson = (data: unknown, file_name: string) => {
+const saveToJson = (data: unknown, file_name: string) => {
 	const str = JSON.stringify(data, null, 2);
 	const blob = new Blob(
 		[str],
@@ -423,6 +423,21 @@ const AdminDashboardPage = () => {
 		}
 	}
 	
+	const saveUserLocations = () => {
+		try {
+			const temp = inspector_data.map(user=>{
+				return {
+					...user
+				}
+			});
+			temp;
+			
+		} catch (error) {
+			toast.error(`${error}`);
+			
+		}
+	}
+	
 	
 	return (
 		<div className="pg max-h-screen overflow-hidden relative">
@@ -486,6 +501,11 @@ const AdminDashboardPage = () => {
 						className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
 						type="button">
 						save crime rates
+					</button><button
+						onClick={saveUserLocations}
+						className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
+						type="button">
+						save user locations
 					</button>
 				
 				</div>

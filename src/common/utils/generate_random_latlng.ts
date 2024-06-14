@@ -7,7 +7,7 @@ function getRandomInRange(min: number, max: number): number {
   return Math.random() * (max - min) + min;
 }
 
-function haversineDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+export function haversineDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const toRad = (value: number) => value * Math.PI / 180;
   
   const R = 6371; // Earth's radius in km
