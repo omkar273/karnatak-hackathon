@@ -13,7 +13,6 @@ import sub_inspector_data from '@/data/json/sub_inspector_data.json'
 import head_constable_data from '@/data/json/head_constable_data.json'
 import constable_data from '@/data/json/constable_data.json'
 import NearbyUserMap from "@/fragments/fir/components/nearby_user_map.tsx";
-import StaticMap from "@/common/components/static_map.tsx";
 import 'leaflet/dist/leaflet.css';
 
 

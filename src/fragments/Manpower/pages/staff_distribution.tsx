@@ -3,9 +3,10 @@ import IncidentType from "@/types/incident_type.ts";
 
 const StaffDistribution = () => {
 	
-	const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm<IncidentType>()
+	const {handleSubmit} = useForm<IncidentType>()
 	
-	const onsubmit:SubmitHandler<IncidentType> = ()=>{}
+	const onsubmit: SubmitHandler<IncidentType> = () => {
+	}
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
