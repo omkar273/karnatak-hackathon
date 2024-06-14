@@ -39,7 +39,7 @@ const TasksPage = () => {
     reset,
   } = useForm<TaskType>();
 
-  const submit: SubmitHandler<TaskType> = (data) => {
+  const submit: SubmitHandler<TaskType> = () => {
     // Handle form submission logic here
     toast.success("Task assigned successfully");
     reset();
