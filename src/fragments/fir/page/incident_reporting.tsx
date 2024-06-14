@@ -13,8 +13,31 @@ import sub_inspector_data from '@/data/json/sub_inspector_data.json'
 import head_constable_data from '@/data/json/head_constable_data.json'
 import constable_data from '@/data/json/constable_data.json'
 import NearbyUserMap from "@/fragments/fir/components/nearby_user_map.tsx";
-import 'leaflet/dist/leaflet.css';
+import scrollToSection from "@/common/utils/scroll_to_section.ts";
+import {
+	ColumnDef,
+	ColumnFiltersState,
+	SortingState,
+	VisibilityState,
+	flexRender,
+	getCoreRowModel,
+	getFilteredRowModel,
+	getPaginationRowModel,
+	getSortedRowModel,
+	useReactTable,
+} from "@tanstack/react-table";
 
+import {
+	Table,
+	TableBody,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/ui/table";
+import {Checkbox} from "@/components/ui/checkbox"
+import {generateRandomLatLngWithinRadius} from "@/common/utils/generate_random_latlng.ts";
+import {toast} from "react-toastify";
 
 const getStationById = (id: string | null | undefined): StationModel | null => {
 	
@@ -27,6 +50,7 @@ const getStationById = (id: string | null | undefined): StationModel | null => {
 	}
 	return null;
 }
+
 
 const IncidentReporting = () => {
 	
@@ -46,8 +70,9 @@ const IncidentReporting = () => {
 			...head_constable_data.filter(user => user.stationId === stationId),
 			...constable_data.filter(user => user.stationId === stationId),
 		]
-		setNearbyUserList(nearbyUsers)
+		setNearbyUserList(nearbyUsers.slice(0, data.required_force))
 		console.log(nearbyUsers.length)
+		scrollToSection('nearby-police-section')
 	};
 	
 	const validationOptions: RegisterOptions = {
@@ -57,6 +82,86 @@ const IncidentReporting = () => {
 	useEffect(() => {
 		setStationsList(station_data)
 	}, []);
+	
+	
+	const nearbyUserColumns: ColumnDef<UserModel>[] = [
+		{
+			id: "select",
+			header: ({table}) => (
+				<Checkbox
+					checked={
+						table.getIsAllPageRowsSelected() ||
+						(table.getIsSomePageRowsSelected() && "indeterminate")
+					}
+					onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+					aria-label="Select all"
+				/>
+			),
+			cell: ({row}) => (
+				<Checkbox
+					checked={row.getIsSelected()}
+					onCheckedChange={(value) => row.toggleSelected(!!value)}
+					aria-label="Select row"
+				/>
+			),
+			enableSorting: false,
+			enableHiding: false,
+		},
+		
+		{
+			accessorKey: "name",
+			header: "Officer name",
+		},
+		{
+			accessorKey: "post",
+			header: "Rank",
+		},
+		{
+			id: "distance",
+			header: "Distance",
+			cell: () => {
+				const location = generateRandomLatLngWithinRadius({
+					lat: getStationById(stationId)?.lat || 0,
+					lng: getStationById(stationId)?.lng || 0
+				})
+				
+				return `${location.distance} km away`
+			}
+		},
+	]
+	
+	
+	const [sorting, setSorting] = useState<SortingState>([]);
+	const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+	const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+	const [rowSelection, setRowSelection] = useState({});
+	
+	const table = useReactTable<UserModel>({
+		data: nearbyUserList,
+		columns: nearbyUserColumns,
+		onSortingChange: setSorting,
+		onColumnFiltersChange: setColumnFilters,
+		getCoreRowModel: getCoreRowModel(),
+		getPaginationRowModel: getPaginationRowModel(),
+		getSortedRowModel: getSortedRowModel(),
+		getFilteredRowModel: getFilteredRowModel(),
+		onColumnVisibilityChange: setColumnVisibility,
+		onRowSelectionChange: setRowSelection,
+		state: {
+			sorting,
+			columnFilters,
+			columnVisibility,
+			rowSelection,
+		},
+	});
+	
+	const sendAlerts = () => {
+		const users = table.getFilteredSelectedRowModel().rows.map(row => row.original)
+		console.log(users)
+		toast.success(`Alerts sent successfully to ${users.length} selected officers`,
+			// {toastId:"alert-notification-nearby-police"}
+		)
+	}
 	
 	
 	return (
@@ -107,7 +212,7 @@ const IncidentReporting = () => {
 							register={register}
 							name="required_force"
 							error={errors.required_force?.message}
-							validateOptions={validationOptions}
+							validateOptions={{...validationOptions, min: 0, max: 10}}
 							label="Required Force"
 							type="number"
 						/>
@@ -135,17 +240,69 @@ const IncidentReporting = () => {
 					</button>
 				</form>
 				
-				<div className={'w-full p-4 bg-white my-4'}>
-					<div className={'w-1/2'}>
-						{
-							nearbyUserList.length > 0 && (
-								<NearbyUserMap
-									userList={nearbyUserList}
-									lat={getStationById(stationId)?.lat || 0}
-									lng={getStationById(stationId)?.lng || 0}
-								/>
-							)
-						}
+				<div className={`w-full p-4 bg-white my-4 ${nearbyUserList.length > 0 ? 'block' : 'hidden'}`}
+				     id={'nearby-police-section'}>
+					<h1 className={'text-3xl font-semibold mb-10'}>Nearby Police forces</h1>
+					<div className={'w-full grid grid-cols-2 gap-4'}>
+						
+						<div>
+							<Table>
+								<TableHeader>
+									{table.getHeaderGroups().map((headerGroup) => (
+										<TableRow key={headerGroup.id}>
+											{headerGroup.headers.map((header) => (
+												<TableHead key={header.id}>
+													{header.isPlaceholder
+														? null
+														: flexRender(header.column.columnDef.header, header.getContext())}
+												</TableHead>
+											))}
+										</TableRow>
+									))}
+								</TableHeader>
+								<TableBody>
+									{table.getRowModel().rows?.length ? (
+										table.getRowModel().rows.map((row) => (
+											<TableRow
+												key={row.id}
+												data-state={row.getIsSelected() && "selected"}
+											>
+												{row.getVisibleCells().map((cell) => (
+													<TableCell key={cell.id}>
+														{flexRender(cell.column.columnDef.cell, cell.getContext())}
+													</TableCell>
+												))}
+											</TableRow>
+										))
+									) : (
+										<TableRow>
+											<TableCell colSpan={nearbyUserList.length} className="h-24 text-center">
+												No results.
+											</TableCell>
+										</TableRow>
+									)}
+								</TableBody>
+							</Table>
+							
+							<button
+								onClick={sendAlerts}
+								type="button"
+								className={`bg-blue-600 text-white p-4 rounded-md my-4`}>
+								Send alerts
+							</button>
+						</div>
+						
+						<div className={'border-2'}>
+							{
+								nearbyUserList.length > 0 && (
+									<NearbyUserMap
+										userList={nearbyUserList}
+										lat={getStationById(stationId)?.lat || 0}
+										lng={getStationById(stationId)?.lng || 0}
+									/>
+								)
+							}
+						</div>
 					</div>
 				</div>
 			</div>
