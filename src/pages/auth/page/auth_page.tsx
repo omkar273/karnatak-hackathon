@@ -88,7 +88,7 @@ const AuthPage = () => {
 
       <div className="bg-cyan-500 py-3 px-6 shadow-lg z-10 md:hidden flex justify-between items-center">
         <img src={karntankPoliceLogo} alt="" className="w-16" />
-        <p className="text-white text-xl font-bold">Capital tech</p>
+        <p className="text-white text-xl font-bold">CAPITAL TECH</p>
       </div>
 
       <div
