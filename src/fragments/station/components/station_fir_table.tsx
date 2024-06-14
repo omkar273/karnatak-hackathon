@@ -27,6 +27,38 @@ import {toast} from "react-toastify";
 
 const firColumns: ColumnDef<FIRRecord>[] = [
 	{
+		id: "actions",
+		header: "Actions",
+		enableHiding: false,
+		cell: ({row}) => {
+			const fir = row.original;
+			
+			return (
+				<DropdownMenu>
+					<DropdownMenuTrigger asChild>
+						<Button variant="ghost" className="h-8 w-8 p-0">
+							<span className="sr-only">Open menu</span>
+							<MoreHorizontal className="h-4 w-4"/>
+						</Button>
+					</DropdownMenuTrigger>
+					<DropdownMenuContent align="end">
+						<DropdownMenuLabel>Actions</DropdownMenuLabel>
+						<DropdownMenuItem
+							onClick={() => {
+								navigator.clipboard.writeText(fir.id ?? "")
+								toast.success('Fir Id copied to clipboard')
+							}}
+						>
+							Copy FIR ID
+						</DropdownMenuItem>
+						<DropdownMenuSeparator/>
+						<DropdownMenuItem>View details</DropdownMenuItem>
+					</DropdownMenuContent>
+				</DropdownMenu>
+			);
+		},
+	},
+	{
 		accessorKey: "FIRNo",
 		header: "FIR No",
 	},
@@ -154,37 +186,7 @@ const firColumns: ColumnDef<FIRRecord>[] = [
 		accessorKey: "fir_status",
 		header: "FIR Status",
 	},
-	{
-		id: "actions",
-		enableHiding: false,
-		cell: ({row}) => {
-			const fir = row.original;
-			
-			return (
-				<DropdownMenu>
-					<DropdownMenuTrigger asChild>
-						<Button variant="ghost" className="h-8 w-8 p-0">
-							<span className="sr-only">Open menu</span>
-							<MoreHorizontal className="h-4 w-4"/>
-						</Button>
-					</DropdownMenuTrigger>
-					<DropdownMenuContent align="end">
-						<DropdownMenuLabel>Actions</DropdownMenuLabel>
-						<DropdownMenuItem
-							onClick={() => {
-								navigator.clipboard.writeText(fir.id ?? "")
-								toast.success('Fir Id copied to clipboard')
-							}}
-						>
-							Copy FIR ID
-						</DropdownMenuItem>
-						<DropdownMenuSeparator/>
-						<DropdownMenuItem>View details</DropdownMenuItem>
-					</DropdownMenuContent>
-				</DropdownMenu>
-			);
-		},
-	},
+
 ];
 
 const StationFirTable = ({stationId}: { stationId: string | null }) => {
@@ -266,7 +268,7 @@ const StationFirTable = ({stationId}: { stationId: string | null }) => {
 										key={column.id}
 										className="capitalize"
 										checked={column.getIsVisible()}
-										onCheckedChange={(value) => column.toggleVisibility(!!value)}
+										onCheckedChange={(value) => column.toggleVisibility(value)}
 									>
 										{column.id}
 									</DropdownMenuCheckboxItem>

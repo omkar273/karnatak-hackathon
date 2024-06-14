@@ -84,7 +84,6 @@ const StationStaffList: React.FC<Props> = ({ stationId }) => {
             </div>
         );
     }
-
     
     return (
         <div className='w-full p-4 bg-white'>

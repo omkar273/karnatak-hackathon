@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {ReactNode} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
-import { setUserdata } from "./common/redux/auth_slice";
-import { RootState } from "./common/redux/store";
+import {setUserdata} from "./common/redux/auth_slice";
+import {RootState} from "./common/redux/store";
 import ManpowerPages from "./fragments/Manpower/pages/manpowe3";
 import Manpower from "./fragments/Manpower/pages/manpower";
 import ManpowerStatic from "./fragments/Manpower/pages/manpower2";
@@ -27,109 +27,135 @@ import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
 import LawOrderPagess from "./fragments/law and order/pages/lawandoderpage";
+import EmergencyZones from "@/fragments/emergency_zones/emergency_zones.tsx";
+import ZoneDetails from "@/fragments/emergency_zones/zone_details.tsx";
+import StaffDistribution from "@/fragments/Manpower/pages/staff_distribution.tsx";
+import IncidentReporting from "@/fragments/fir/page/incident_reporting.tsx";
 
 const App = () => {
-  const { isUserLoggedIn, currentUser } = useSelector(
-    (state: RootState) => state.auth
-  );
-  const dispatch = useDispatch();
-  const userData = useUserData(currentUser?.user.uid);
-
-  dispatch(setUserdata(userData));
-
-  const getProtectedRoute = (element: ReactNode) => {
-    return isUserLoggedIn ? element : <Navigate to="/auth" replace />;
-  };
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={getProtectedRoute(<HomePage />)}>
-          <Route index element={getProtectedRoute(<DashboardPage />)} />
-
-          {/* fir route */}
-          <Route path="fir" element={getProtectedRoute(<AllFirPage />)} />
-          <Route
-            path="fir/all"
-            element={getProtectedRoute(<AllFirPage />)}
-          ></Route>
-
-          <Route
-            path="/fir_details"
-            element={getProtectedRoute(<FirDetailsPage />)}
-          />
-
-          {/* station routes */}
-          <Route path="station">
-            <Route index element={getProtectedRoute(<MyStationPage />)} />
-
-            <Route path="add" element={getProtectedRoute(<AddStationPage />)} />
-
-            <Route
-              path="tasks"
-              element={getProtectedRoute(<TaskAssignmentPage />)}
-            />
-          </Route>
-
-          <Route path="user">
-            <Route
-              path="register"
-              element={getProtectedRoute(<RegisterFragment />)}
-            />
-            <Route
-              path="underlying"
-              element={getProtectedRoute(<UnderlyingDataPage />)}
-            />
-            <Route index element={getProtectedRoute(<ProfilePage />)} />
-          </Route>
-
-          <Route path="/CourtT" element={getProtectedRoute(<CourtT />)} />
-
-          <Route
-            path="/chargesheet"
-            element={getProtectedRoute(<ChargesheetPage />)}
-          />
-
-          <Route path="/CourtTwo" element={getProtectedRoute(<CourtTwo />)} />
-
-          <Route
-            path="/witness"
-            element={getProtectedRoute(<WitnessManagementPage />)}
-          />
-
-          <Route
-            path="/Record"
-            element={getProtectedRoute(<MyStationPage />)}
-          />
-
-          <Route path="/Manpower" element={getProtectedRoute(<Manpower />)} />
-
-          <Route path="/man" element={getProtectedRoute(<ManpowerStatic />)} />
-
-          <Route path="/mans" element={getProtectedRoute(<ManpowerPages />)} />
-          
-          <Route path="/lawandoder" element={getProtectedRoute(<LawOrderPagess />)} />
-
-          <Route path="/law" element={getProtectedRoute(<LawOrderPage />)} />
-        </Route>
-
-        {/* auth route */}
-        <Route
-          path="/auth"
-          element={isUserLoggedIn ? <Navigate to="/" replace /> : <AuthPage />}
-        />
-
-        {/* video page link */}
-        <Route path="video" element={<VideoPage />} />
-
-        {/* admin route */}
-        <Route path="/admin" element={<AdminDashboardPage />} />
-
-        {/* error route */}
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
+	const {isUserLoggedIn, currentUser} = useSelector(
+		(state: RootState) => state.auth
+	);
+	const dispatch = useDispatch();
+	const userData = useUserData(currentUser?.user.uid);
+	
+	dispatch(setUserdata(userData));
+	
+	const getProtectedRoute = (element: ReactNode) => {
+		return isUserLoggedIn ? element : <Navigate to="/auth" replace/>;
+	};
+	
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={getProtectedRoute(<HomePage/>)}>
+					<Route index element={getProtectedRoute(<DashboardPage/>)}/>
+					
+					{/* fir route */}
+					<Route path="fir" >
+						<Route index element={getProtectedRoute(<AllFirPage/>)}/>
+						
+						<Route
+							path="all"
+							element={getProtectedRoute(<AllFirPage/>)}
+						/>
+						
+						<Route
+							path="report-incident"
+							element={getProtectedRoute(<IncidentReporting/>)}
+						/>
+						
+						<Route
+							path="fir_details"
+							element={getProtectedRoute(<FirDetailsPage/>)}
+						/>
+					
+					
+					</Route>
+					
+					
+					{/* station routes */}
+					<Route path="station">
+						<Route index element={getProtectedRoute(<MyStationPage/>)}/>
+						
+						<Route path="add" element={getProtectedRoute(<AddStationPage/>)}/>
+						
+						<Route
+							path="tasks"
+							element={getProtectedRoute(<TaskAssignmentPage/>)}
+						/>
+					</Route>
+					
+					<Route path="user">
+						<Route
+							path="register"
+							element={getProtectedRoute(<RegisterFragment/>)}
+						/>
+						<Route
+							path="underlying"
+							element={getProtectedRoute(<UnderlyingDataPage/>)}
+						/>
+						<Route index element={getProtectedRoute(<ProfilePage/>)}/>
+					</Route>
+					
+					<Route path="/CourtT" element={getProtectedRoute(<CourtT/>)}/>
+					
+					<Route
+						path="/chargesheet"
+						element={getProtectedRoute(<ChargesheetPage/>)}
+					/>
+					
+					<Route path="/CourtTwo" element={getProtectedRoute(<CourtTwo/>)}/>
+					
+					<Route
+						path="/witness"
+						element={getProtectedRoute(<WitnessManagementPage/>)}
+					/>
+					
+					<Route
+						path="/Record"
+						element={getProtectedRoute(<MyStationPage/>)}
+					/>
+					
+					<Route path="/manpower">
+						<Route index element={getProtectedRoute(<Manpower/>)}/>
+						<Route path="man" element={getProtectedRoute(<ManpowerStatic/>)}/>
+						
+						<Route path="mans" element={getProtectedRoute(<ManpowerPages/>)}/>
+						
+						<Route path="staff-distribution" element={getProtectedRoute(<StaffDistribution/>)}/>
+					</Route>
+					
+					<Route path="/lawandoder" element={getProtectedRoute(<LawOrderPagess/>)}/>
+					
+					<Route path="/law" element={getProtectedRoute(<LawOrderPage/>)}/>
+					
+					<Route path="emergency_zones">
+						<Route index element={getProtectedRoute(<EmergencyZones/>)}/>
+						<Route
+							path="zone"
+							element={getProtectedRoute(<ZoneDetails/>)}
+						/>
+					</Route>
+				</Route>
+				
+				{/* auth route */}
+				<Route
+					path="/auth"
+					element={isUserLoggedIn ? <Navigate to="/" replace/> : <AuthPage/>}
+				/>
+				
+				{/* video page link */}
+				<Route path="video" element={<VideoPage/>}/>
+				
+				{/* admin route */}
+				<Route path="/admin" element={<AdminDashboardPage/>}/>
+				
+				{/* error route */}
+				<Route path="*" element={<ErrorPage/>}/>
+			</Routes>
+		</BrowserRouter>
+	);
 };
 
 export default App;
