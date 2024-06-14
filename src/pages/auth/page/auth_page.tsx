@@ -96,7 +96,7 @@ const AuthPage = () => {
       >
         <form className=" p-4 md:p-16" onSubmit={handleSubmit(handleLogin)}>
           <p className="text-xl md:text-3xl font-poppins">
-            Welcome to capital tech
+            Welcome to CAPITAL TECH
           </p>
           <VSpacer height={50} />
 
