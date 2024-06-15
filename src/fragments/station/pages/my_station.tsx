@@ -48,7 +48,7 @@ const MyStationPage: React.FC = () => {
 			tabTitle: 'Crime records',
 			element: <StationCrimeRateChart stationId={stationId}/>,
 		},{
-			tabTitle: 'Fir',
+			tabTitle: 'FIR',
 			element: <StationFirTable stationId={stationId}/>,
 		},
 		{

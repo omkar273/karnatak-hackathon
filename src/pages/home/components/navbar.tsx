@@ -4,13 +4,13 @@ import { HSpacer } from "@/common/components/spacer";
 import { setLogout } from "@/common/redux/auth_slice";
 import { doLogout } from "@/pages/auth/utils/auth";
 import { Avatar, Drawer, Dropdown, Menu, MenuProps, Popconfirm } from "antd";
-import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import { MenuIcon, X } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import Searchbar from "./nav_searchbar";
 import { Link } from "react-router-dom";
 import { RootState } from "@/common/redux/store";
 import NotificationsModal from "@/common/components/notification_icon";
+import {MenuItemType} from "antd/es/menu/interface";
 
 type Props = {
     drawerOpen: boolean,

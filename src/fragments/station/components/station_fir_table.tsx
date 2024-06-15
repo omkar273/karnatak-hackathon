@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dropdown-menu.tsx";
 import {ChevronDown, MoreHorizontal} from "lucide-react";
 import {toast} from "react-toastify";
+import {Link} from "react-router-dom";
 
 const firColumns: ColumnDef<FIRRecord>[] = [
 	{
@@ -52,7 +53,11 @@ const firColumns: ColumnDef<FIRRecord>[] = [
 							Copy FIR ID
 						</DropdownMenuItem>
 						<DropdownMenuSeparator/>
-						<DropdownMenuItem>View details</DropdownMenuItem>
+						<DropdownMenuItem>
+							<Link to={`/fir/fir_details?id=${fir.id}`}>
+								View details
+							</Link>
+						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			);
