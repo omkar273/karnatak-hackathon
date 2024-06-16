@@ -1,5 +1,5 @@
 import { VSpacer } from "@/common/components/spacer";
-// import InputField from "@/pages/auth/components/input_field";
+// import InputField from "@/page/auth/components/input_field";
 import { useState } from "react";
 import { RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
 import { PulseLoader } from "react-spinners";
