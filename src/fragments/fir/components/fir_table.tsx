@@ -32,7 +32,7 @@ const FirDetailsTable = ({ reload = true, stationId }: {
             title: 'View',
             dataIndex: 'id',
             key: 'id',
-            render: (id: string) => (<Link to={`/fir_details?id=${id}`}>
+            render: (id: string) => (<Link to={`/fir/details?id=${id}`}>
                 <span className="mr-2">view</span> <ExportOutlined />
             </Link>)
         },

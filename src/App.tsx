@@ -71,7 +71,7 @@ const App = () => {
 							element={getProtectedRoute(<IncidentReporting/>)}
 						/>
 						<Route
-							path="fir_details"
+							path="details"
 							element={getProtectedRoute(<FirDetailsPage/>)}
 						/>
 					</Route>

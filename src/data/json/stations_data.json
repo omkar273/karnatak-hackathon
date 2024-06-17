@@ -1,7 +1,7 @@
 [
   {
     "id": "3394be1c59174502be8ac24e7838f0d2",
-    "station_name": "Kaithal",
+    "station_name": "DCP East",
     "email": "Devvrat.Johar@gmail.com",
     "phone": "+917769893687",
     "crime_rate": 17,
@@ -22,7 +22,7 @@
   },
   {
     "id": "0797fbe3c0f04e7db0bdab3c25435a2d",
-    "station_name": "Vijainagar, Ajmer",
+    "station_name": "DCP East",
     "email": "Bhasvan.Ahuja@yahoo.co.in",
     "phone": "+91-724-7403135",
     "crime_rate": 24,
@@ -43,7 +43,7 @@
   },
   {
     "id": "af5033afa47e42ffbc63bb32be6d804f",
-    "station_name": "Brahmapur",
+    "station_name": "PI D.J. Halli PS",
     "email": "Tanushree.Mahajan@gmail.com",
     "phone": "+91990-418-5266",
     "crime_rate": 17,
@@ -64,7 +64,7 @@
   },
   {
     "id": "9d71b8a5d39b46ccaf9306fa16312be0",
-    "station_name": "Vadnagar",
+    "station_name": "PI D.J. Halli PS",
     "email": "Bankimchandra_Adiga@gmail.com",
     "phone": "+91869-828-6130",
     "crime_rate": 16,
@@ -85,7 +85,7 @@
   },
   {
     "id": "d00476968164499497ac404f1647ea27",
-    "station_name": "Rasra",
+    "station_name": "PI Indiranagar ",
     "email": "Anunay98@hotmail.com",
     "phone": "+91-618-9429268",
     "crime_rate": 15,
@@ -106,7 +106,7 @@
   },
   {
     "id": "0e8e4619a8e04aefa597e97df61d2ef5",
-    "station_name": "Visakhapatnam",
+    "station_name": "PI Shivajinagar Women PS",
     "email": "Arindam.Bhattathiri@gmail.com",
     "phone": "+91-868-6396884",
     "crime_rate": 22,
@@ -127,7 +127,7 @@
   },
   {
     "id": "8e333d46632446a7b0ad591a6174622f",
-    "station_name": "Mahendragarh",
+    "station_name": "PI Shivajinagar Women PS",
     "email": "Agrata18@hotmail.com",
     "phone": "+91841-326-1984",
     "crime_rate": 17,
@@ -148,7 +148,7 @@
   },
   {
     "id": "33e715e25670415f95415555a170209c",
-    "station_name": "Guntur",
+    "station_name": "PI Hennur PS",
     "email": "Amodini2@yahoo.co.in",
     "phone": "+919358027668",
     "crime_rate": 21,
@@ -169,8 +169,7 @@
   },
   {
     "id": "eaec5c068b7c4cd09b4ea80e18f639f5",
-    "station_name": "Cuttack",
-    "email": "Raj.Chaturvedi@yahoo.co.in",
+    "station_name": "PI vedi@yahoo.co.in",
     "phone": "+918536152876",
     "crime_rate": 12,
     "crime_clearance_rate": 50,
@@ -184,13 +183,14 @@
     "assistant_commissioner_name": "Shridevi Sethi",
     "assistant_commissioner_id": "Hpkc6isnATQSxonFBEbhxghWlG93",
     "commissioner_name": "Vaishnavi Jha",
-    "commissioner_id": "LBTNcM3ACKRqA1d40QQeAnAqw4m1",
+    "commissioner_id": "K.G. Halli PSttack",
+    "email": "Raj.ChaturLBTNcM3ACKRqA1d40QQeAnAqw4m1",
     "lat": 13.0350,
     "lng": 77.5882
   },
   {
     "id": "aa6aea066ac146b7b15e0f1d32a97c6d",
-    "station_name": "Sinnar",
+    "station_name": "PI Govindarajpura PS",
     "email": "Baalaaditya97@yahoo.co.in",
     "phone": "+918631565857",
     "crime_rate": 24,
@@ -211,7 +211,7 @@
   },
   {
     "id": "cf940f38c6404631ba147a633bfde5ac",
-    "station_name": "Sunam",
+    "station_name": "PI Pulakeshinagar PS",
     "email": "Ajeet_Devar@hotmail.com",
     "phone": "+91-785-7813731",
     "crime_rate": 28,
@@ -232,7 +232,7 @@
   },
   {
     "id": "e2a24bf2c718445c8486e9964efed521",
-    "station_name": "Hapur",
+    "station_name": "PI Byappanahalli PS",
     "email": "Sucheta34@gmail.com",
     "phone": "+91-941-2859746",
     "crime_rate": 11,
@@ -253,7 +253,7 @@
   },
   {
     "id": "3e26b536be2d4dad9e81ca5639f62c27",
-    "station_name": "Mahemdabad",
+    "station_name": "DCP East",
     "email": "Aatmaja_Mahajan@gmail.com",
     "phone": "+91-841-5265217",
     "crime_rate": 12,
@@ -274,7 +274,7 @@
   },
   {
     "id": "432f1ae95c994b00948464d4bf161c91",
-    "station_name": "Merta City",
+    "station_name": "PI Pulakeshinagar PS",
     "email": "Kalpana64@gmail.com",
     "phone": "+91759-216-5608",
     "crime_rate": 25,
@@ -295,7 +295,7 @@
   },
   {
     "id": "1a0f33703ea94cdebc3c8779d35d7da3",
-    "station_name": "Alwar",
+    "station_name": "PI J.B. Nagar PS",
     "email": "Shreyashi.Verma@yahoo.co.in",
     "phone": "+91963-991-5691",
     "crime_rate": 19,
@@ -316,7 +316,7 @@
   },
   {
     "id": "deeeb87d2f304287a2a5f93c27d5eec0",
-    "station_name": "Raayachuru",
+    "station_name": "DCP East",
     "email": "Chandak0@gmail.com",
     "phone": "+916632962258",
     "crime_rate": 10,
@@ -337,7 +337,7 @@
   },
   {
     "id": "56bfb2bb282946119c82b2874a1975c6",
-    "station_name": "Vellore",
+    "station_name": "PI Shivajinagar PS",
     "email": "Sarala_Chattopadhyay@gmail.com",
     "phone": "+91-612-0574566",
     "crime_rate": 29,
@@ -358,7 +358,7 @@
   },
   {
     "id": "7d7b6176f82e488eb8ee946b1eb7b2fb",
-    "station_name": "Narkatiaganj",
+    "station_name": "CEN PS (Cyber Economic Narcotic)",
     "email": "Brahmanandam.Nayar@hotmail.com",
     "phone": "+91-979-0078479",
     "crime_rate": 11,
@@ -379,7 +379,7 @@
   },
   {
     "id": "208678ef02d14122840902cc108bd406",
-    "station_name": "Amroha",
+    "station_name": "PI J.B. Nagar PS",
     "email": "Bhaumik_Acharya27@hotmail.com",
     "phone": "+91-688-2588074",
     "crime_rate": 12,
@@ -400,7 +400,7 @@
   },
   {
     "id": "0d7eb88061654de9b719c4d2a44f7b6c",
-    "station_name": "Markapur",
+    "station_name": "PI J.B. Nagar PS",
     "email": "Mohan80@gmail.com",
     "phone": "+91-820-2161094",
     "crime_rate": 28,
@@ -421,7 +421,7 @@
   },
   {
     "id": "217c64d9e09d40298e2f3328e8a2f94e",
-    "station_name": "Sonamukhi",
+    "station_name": "PI Halasuru PS",
     "email": "Sarisha_Ahluwalia@gmail.com",
     "phone": "+918303978749",
     "crime_rate": 16,
@@ -442,7 +442,7 @@
   },
   {
     "id": "12b01d127ea2455e9b983baa098691c6",
-    "station_name": "Surandai",
+    "station_name": "PI Indiranagar PS",
     "email": "Suryakant_Bhadresha@hotmail.com",
     "phone": "+91-627-7296023",
     "crime_rate": 10,
@@ -463,7 +463,7 @@
   },
   {
     "id": "369816b9c28b4b85b63fb854b40cda50",
-    "station_name": "Jaipur",
+    "station_name": "PI Pulakeshinagar PS",
     "email": "Bhramar3@gmail.com",
     "phone": "+916448604226",
     "crime_rate": 18,
@@ -484,7 +484,7 @@
   },
   {
     "id": "53ff70e6f1cb455aa752f6f3a87ccbe0",
-    "station_name": "Maharajpur",
+    "station_name": "PI Ramamurthy Nagar PS",
     "email": "Shresth_Gowda@gmail.com",
     "phone": "+918624742938",
     "crime_rate": 22,
@@ -505,7 +505,7 @@
   },
   {
     "id": "3a6db9100fbd4bab81281c2dd86ee075",
-    "station_name": "Petlad",
+    "station_name": "ACP Halasuru",
     "email": "Kumuda.Saini@hotmail.com",
     "phone": "+91-701-7591258",
     "crime_rate": 32,
@@ -526,7 +526,7 @@
   },
   {
     "id": "8c0a9e038e674e2aa943e15d8dd049d7",
-    "station_name": "Sohna",
+    "station_name": "PI Govindarajpura PS",
     "email": "Kumar.Namboothiri@yahoo.co.in",
     "phone": "+918228875497",
     "crime_rate": 32,
@@ -547,7 +547,7 @@
   },
   {
     "id": "21862726629a4698b3798ea522c6a831",
-    "station_name": "Sonepur",
+    "station_name": "CEN PS (Cyber Economic Narcotic)",
     "email": "Balachandra.Panicker-Shukla@yahoo.co.in",
     "phone": "+917472098539",
     "crime_rate": 35,
@@ -568,7 +568,7 @@
   },
   {
     "id": "a65f03a4a37f4c97b35521e9614a2a89",
-    "station_name": "Samalkot",
+    "station_name": "PI Halasuru PS",
     "email": "Kanchan_Khanna71@gmail.com",
     "phone": "+916064870572",
     "crime_rate": 29,
@@ -589,7 +589,7 @@
   },
   {
     "id": "bad72e34a7754ff1b1720ee138ed3c6a",
-    "station_name": "Padrauna",
+    "station_name": "PI Govindarajpura PS",
     "email": "Sucheta97@hotmail.com",
     "phone": "+91925-179-0611",
     "crime_rate": 21,
@@ -610,7 +610,7 @@
   },
   {
     "id": "735fae3ce8664e08a42c80302e5823f3",
-    "station_name": "Ramganj Mandi",
+    "station_name": "PI Pulakeshinagar PS",
     "email": "Sarada.Talwar@yahoo.co.in",
     "phone": "+918929603100",
     "crime_rate": 35,
@@ -631,7 +631,7 @@
   },
   {
     "id": "99cf12a2f31a4a41bb993ee7966fa01f",
-    "station_name": "Takhatgarh",
+    "station_name": "ACP Pulakeshinagar",
     "email": "Chitramala.Johar71@yahoo.co.in",
     "phone": "+918954798836",
     "crime_rate": 22,
@@ -652,7 +652,7 @@
   },
   {
     "id": "754ed4dd03044edd81483334f6afc486",
-    "station_name": "Udhagamandalam",
+    "station_name": "PI J.B. Nagar PS",
     "email": "Sheela64@hotmail.com",
     "phone": "+91-906-6425574",
     "crime_rate": 28,
@@ -673,7 +673,7 @@
   },
   {
     "id": "a7affbfac82340daa960f7dc46c08cbf",
-    "station_name": "Savarkundla",
+    "station_name": "DCP East",
     "email": "Aaryan.Nair11@hotmail.com",
     "phone": "+917249512927",
     "crime_rate": 21,
@@ -694,7 +694,7 @@
   },
   {
     "id": "b45644f133b740aca5fa1bf31afe657c",
-    "station_name": "Thrissur",
+    "station_name": "PI Hennur PS",
     "email": "Ekaksh.Kaniyar3@hotmail.com",
     "phone": "+91844-351-8017",
     "crime_rate": 12,
@@ -716,7 +716,7 @@
   },
   {
     "id": "33fafeabbff74216951daad684d50231",
-    "station_name": "Talegaon Dabhade",
+    "station_name": "PI J.B. Nagar PS",
     "email": "Dinakar.Pillai46@gmail.com",
     "phone": "+91-956-0028715",
     "crime_rate": 35,
@@ -738,7 +738,7 @@
   },
   {
     "id": "3a99e0068108490f849022ef3e8d608b",
-    "station_name": "Srinagar",
+    "station_name": "ACP Banaswadi",
     "email": "Bhardwaj93@hotmail.com",
     "phone": "+918380984973",
     "crime_rate": 35,
@@ -760,7 +760,7 @@
   },
   {
     "id": "9ca670e156ab41d08812a285975e0250",
-    "station_name": "Chirkunda",
+    "station_name": "DCP East",
     "email": "Sameer_Chaturvedi@hotmail.com",
     "phone": "+91623-012-5618",
     "crime_rate": 25,
@@ -781,7 +781,7 @@
   },
   {
     "id": "1066d2c67fa548f89bbd3d13c23128ee",
-    "station_name": "Tekkalakote",
+    "station_name": "PI K.G. Halli PS",
     "email": "Jagadish.Chattopadhyay@gmail.com",
     "phone": "+91-844-7058887",
     "crime_rate": 29,
@@ -802,7 +802,7 @@
   },
   {
     "id": "030d8dea992a4435a28b067dd269cdc1",
-    "station_name": "Mavoor",
+    "station_name": "CEN PS (Cyber Economic Narcotic)",
     "email": "Uma.Reddy36@yahoo.co.in",
     "phone": "+91-972-8201938",
     "crime_rate": 27,
@@ -824,7 +824,7 @@
   },
   {
     "id": "f07720c4c4f3400c8edf4f3a1a355295",
-    "station_name": "Bobbili",
+    "station_name": "ACP Pulakeshinagar",
     "email": "Vaijayanti.Bharadwaj@hotmail.com",
     "phone": "+91976-940-0756",
     "crime_rate": 12,
@@ -846,7 +846,7 @@
   },
   {
     "id": "d500a196468141c2961c6f803ed6608a",
-    "station_name": "Sikanderpur",
+    "station_name": "PI Halasuru PS",
     "email": "Aanandaswarup_Rana52@hotmail.com",
     "phone": "+91724-173-0441",
     "crime_rate": 25,
@@ -868,7 +868,7 @@
   },
   {
     "id": "6f567cb1e1134c6cb7cbf74b47970055",
-    "station_name": "Narkhed",
+    "station_name": "PI Byappanahalli PS",
     "email": "Bhaanumati_Kaul@yahoo.co.in",
     "phone": "+91974-140-5998",
     "crime_rate": 18,
@@ -889,7 +889,7 @@
   },
   {
     "id": "30e185f3149840c8b1e8a65113128b9f",
-    "station_name": "Udaipur",
+    "station_name": "DCP East",
     "email": "Ritesh82@yahoo.co.in",
     "phone": "+91680-297-6039",
     "crime_rate": 14,
