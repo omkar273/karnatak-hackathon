@@ -1,5 +1,6 @@
 [
   {
+    "open_cases": 201,
     "ZoneCode": "ET",
     "zoneName": "East",
     "id": "etnSDAj88tulU7Fwe5hB",
@@ -9,6 +10,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "WT",
     "zoneName": "West",
     "id": "ep7PaoU4CtldPo5ds9nM",
@@ -18,6 +20,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "ST",
     "zoneName": "South",
     "id": "vMEM9q8D3Hs042pqOwqR",
@@ -27,6 +30,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "NT",
     "zoneName": "North",
     "id": "FCzjDzAYC29dTPhX0469",
@@ -36,6 +40,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "CL",
     "zoneName": "Central",
     "id": "NXgoECHBzzghpqAeB4qU",
@@ -45,6 +50,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "SE",
     "zoneName": "South East",
     "id": "dOZBJLa64Im9DpCmQtsD",
@@ -54,6 +60,7 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "NE",
     "zoneName": "North East",
     "id": "yJivRLZaWf1SbfntbdAV",
@@ -63,10 +70,11 @@
     "commisioner_name": "Vaishnavi Jha"
   },
   {
+    "open_cases": 201,
     "ZoneCode": "WD",
     "zoneName": "Whitefield",
     "id": "sdQRu2Fr4xjf3GVTJtz3",
-    "crime_rate":10,
+    "crime_rate": 10,
     "crime_clearance_rate": 8,
     "commisioner_id": "LBTNcM3ACKRqA1d40QQeAnAqw4m1",
     "commisioner_name": "Vaishnavi Jha"
