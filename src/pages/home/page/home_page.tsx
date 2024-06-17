@@ -130,8 +130,8 @@ const HomePage = () => {
 			icon: <BarChartBig/>,
 		},
 		{
-			key: "Station Management",
-			label: "Station Management",
+			key: "Station",
+			label: "Station",
 			icon: <Home/>,
 			children: [
 				{
@@ -194,19 +194,19 @@ const HomePage = () => {
 			],
 		},
 		{
-			key: "Fir Management",
-			label: "Fir Management",
+			key: "F.I.R Management",
+			label: "F.I.R Management",
 			icon: <FileText/>,
 			children: [
 				{
-					key: "Add Fir",
-					label: "Add Fir",
+					key: "Add F.I.R",
+					label: "Add F.I.R",
 					icon: <NotebookPen/>,
 					onClick: () => navigateAndCloseDrawer("/fir"),
 				},
 				{
-					key: "All Fir",
-					label: "All Fir",
+					key: "All F.I.R",
+					label: "All F.I.R",
 					icon: <FileStack/>,
 					onClick: () => navigateAndCloseDrawer("/fir/all"),
 				}, {

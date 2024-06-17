@@ -55,6 +55,7 @@ export interface FIRRecord {
 	}[];
 	fir_status?: string;
 	fir_type?: string;
-	
+	registered_by_name?: string;
+	registered_by_id?: string;
 	sections: string;
 }

@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useForm, SubmitHandler, RegisterOptions } from 'react-hook-form';
+import {useEffect, useState} from 'react';
+import {useForm, SubmitHandler, RegisterOptions} from 'react-hook-form';
 import IncidentType from '@/types/incident_type';
 import InputField from "pages/auth/components/input_field.tsx";
 import TextArea from "@/common/components/text_area.tsx";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select.tsx";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 import station_data from '@/data/json/stations_data.json';
-import { StationModel } from "@/fragments/station/models/station_model.ts";
-import { VSpacer } from "@/common/components/spacer.tsx";
-import { UserModel } from "@/fragments/user_management/models/user_model.ts";
+import {StationModel} from "@/fragments/station/models/station_model.ts";
+import {VSpacer} from "@/common/components/spacer.tsx";
+import {UserModel} from "@/fragments/user_management/models/user_model.ts";
 import inspector_data from '@/data/json/inspector_data.json';
 import sub_inspector_data from '@/data/json/sub_inspector_data.json';
 import head_constable_data from '@/data/json/head_constable_data.json';
@@ -35,9 +35,9 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import { Checkbox } from "@/components/ui/checkbox";
-import { generateRandomLatLngWithinRadius } from "@/common/utils/generate_random_latlng.ts";
-import { toast } from "react-toastify";
+import {Checkbox} from "@/components/ui/checkbox";
+import {haversineDistance} from "@/common/utils/generate_random_latlng.ts";
+import {toast} from "react-toastify";
 
 const getStationById = (id: string | null | undefined): StationModel | null => {
 	if (id) {
@@ -55,7 +55,7 @@ const IncidentReporting = () => {
 	const [stationId, setStationId] = useState<string | null>(null);
 	const [nearbyUserList, setNearbyUserList] = useState<UserModel[]>([]);
 	
-	const { handleSubmit, register, formState: { errors, isSubmitting }, setValue } = useForm<IncidentType>();
+	const {handleSubmit, register, formState: {errors, isSubmitting}, setValue} = useForm<IncidentType>();
 	
 	const onSubmit: SubmitHandler<IncidentType> = (data) => {
 		console.log(data);
@@ -81,7 +81,7 @@ const IncidentReporting = () => {
 	const nearbyUserColumns: ColumnDef<UserModel>[] = [
 		{
 			id: "select",
-			header: ({ table }) => (
+			header: ({table}) => (
 				<Checkbox
 					checked={
 						table.getIsAllPageRowsSelected() ||
@@ -91,7 +91,7 @@ const IncidentReporting = () => {
 					aria-label="Select all"
 				/>
 			),
-			cell: ({ row }) => (
+			cell: ({row}) => (
 				<Checkbox
 					checked={row.getIsSelected()}
 					onCheckedChange={(value) => row.toggleSelected(!!value)}
@@ -112,12 +112,15 @@ const IncidentReporting = () => {
 		{
 			id: "distance",
 			header: "Distance",
-			cell: () => {
-				const location = generateRandomLatLngWithinRadius({
-					lat: getStationById(stationId)?.lat || 0,
-					lng: getStationById(stationId)?.lng || 0
-				});
-				return `${location.distance} km away`;
+			cell: ({row}) => {
+				const user = row.original;
+				const location = haversineDistance(
+					getStationById(stationId)?.lat || 0,
+					getStationById(stationId)?.lng || 0,
+					user.lat || 0,
+					user.lng || 0
+				)
+				return `${location} km away`;
 			}
 		},
 	];
@@ -167,14 +170,14 @@ const IncidentReporting = () => {
 							>
 								{'Select the location'}
 							</label>
-							<VSpacer height={5} />
+							<VSpacer height={5}/>
 							<Select onValueChange={(id) => {
 								const station = getStationById(id);
 								setStationId(station?.id ?? '');
-								setValue('location', { lat: station?.lat ?? 0, lng: station?.lng ?? 0 });
+								setValue('location', {lat: station?.lat ?? 0, lng: station?.lng ?? 0});
 							}}>
 								<SelectTrigger className="w-full p-6">
-									<SelectValue placeholder="Select the location" />
+									<SelectValue placeholder="Select the location"/>
 								</SelectTrigger>
 								<SelectContent id={'location-select'}>
 									{
@@ -198,7 +201,11 @@ const IncidentReporting = () => {
 							register={register}
 							name="required_force"
 							error={errors.required_force?.message}
-							validateOptions={{ ...validationOptions, min: { value: 1, message: 'Must be at least 1' }, max: { value: 10, message: 'Cannot be more than 10' } }}
+							validateOptions={{
+								...validationOptions,
+								min: {value: 1, message: 'Must be at least 1'},
+								max: {value: 10, message: 'Cannot be more than 10'}
+							}}
 							label="Required Force"
 							type="number"
 						/>
@@ -222,7 +229,8 @@ const IncidentReporting = () => {
 						{isSubmitting ? 'Submitting...' : 'Submit'}
 					</button>
 				</form>
-				<div className={`w-full p-4 bg-white my-4 ${nearbyUserList.length > 0 ? 'block' : 'hidden'}`} id={'nearby-police-section'}>
+				<div className={`w-full p-4 bg-white my-4 ${nearbyUserList.length > 0 ? 'block' : 'hidden'}`}
+				     id={'nearby-police-section'}>
 					<h1 className={'text-3xl font-semibold mb-10'}>Nearby Police forces</h1>
 					<div className={'w-full grid grid-cols-2 gap-4'}>
 						<div>
