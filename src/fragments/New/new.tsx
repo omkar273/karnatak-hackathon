@@ -54,17 +54,17 @@ const VehiclePage = () => {
       title: "Colour",
       dataIndex: "colour",
       key: "colour",
-      render: (colour: string) => (
+      render: (colour) => (
         <span style={{ color: colour.toLowerCase() }}>{colour}</span>
       ),
     },
     {
-      title: "Name of Driver's",
+      title: "Name of Driver",
       dataIndex: "driverName",
       key: "driverName",
     },
     {
-      title: "Date of Provided",
+      title: "Date Provided",
       dataIndex: "dateProvided",
       key: "dateProvided",
     },
@@ -152,11 +152,75 @@ const VehiclePage = () => {
       title: "Status",
       dataIndex: "status",
       key: "status",
-      render: (status: string) => (
+      render: (status) => (
         <span style={{ color: status === "Approved" ? "green" : "red" }}>
           {status}
         </span>
       ),
+    },
+  ];
+
+  const weapon2Data = [
+    {
+      key: "1",
+      weaponName: "AK-47",
+      weaponType: "Assault Rifle",
+      weaponPicture: "url_to_image",
+      weaponIncharge: "Officer C",
+      bulletPerMagazine: 30,
+      magazineUsed: 5,
+      serviceDate: "2023-03-20",
+    },
+    {
+      key: "2",
+      weaponName: "M9",
+      weaponType: "Pistol",
+      weaponPicture: "url_to_image",
+      weaponIncharge: "Officer D",
+      bulletPerMagazine: 15,
+      magazineUsed: 3,
+      serviceDate: "2023-05-10",
+    },
+  ];
+
+  const weapon2Columns = [
+    {
+      title: "Weapon Name",
+      dataIndex: "weaponName",
+      key: "weaponName",
+    },
+    {
+      title: "Weapon Type",
+      dataIndex: "weaponType",
+      key: "weaponType",
+    },
+    {
+      title: "Weapon Picture",
+      dataIndex: "weaponPicture",
+      key: "weaponPicture",
+      render: (url) => (
+        <img src={url} alt="Weapon" style={{ width: 50, height: 50 }} />
+      ),
+    },
+    {
+      title: "Name of Weapon Incharge",
+      dataIndex: "weaponIncharge",
+      key: "weaponIncharge",
+    },
+    {
+      title: "No. of Bullet per Magazine",
+      dataIndex: "bulletPerMagazine",
+      key: "bulletPerMagazine",
+    },
+    {
+      title: "No. of Magazine Used",
+      dataIndex: "magazineUsed",
+      key: "magazineUsed",
+    },
+    {
+      title: "Date of Service",
+      dataIndex: "serviceDate",
+      key: "serviceDate",
     },
   ];
 
@@ -192,6 +256,23 @@ const VehiclePage = () => {
             columns={weaponsColumns}
             pagination={{
               total: weaponsData.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
+
+        {/* Weapon 2 */}
+        <div className="bg-white p-4 my-4 card">
+          <p className="my-4 font-bold text-xl">Weapon 2</p>
+          <Table
+            dataSource={weapon2Data}
+            columns={weapon2Columns}
+            pagination={{
+              total: weapon2Data.length,
               showSizeChanger: true,
               showQuickJumper: true,
               showTotal: (total, range) =>

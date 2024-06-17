@@ -10,7 +10,7 @@ const DashboardCasesPieCharts = ({ stationId }: { stationId: string }) => {
     }
 
     return (
-        <div className="p-4 grid grid-cols-1 md:gap-4 lg:grid-cols-2">
+        <div className="p-4 grid grid-cols-1 md:gap-4 lg:grid-cols-1">
             <div className="p-1 bg-white rounded-lg">
                 <p className="pl-5 pt-5 text-2xl font-semibold font-sans">Staff distribution</p>
                 <PieChart
