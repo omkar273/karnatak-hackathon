@@ -64,6 +64,7 @@ const StationCrimRateChart: React.FC<Props> = ({ stationId }) => {
       curve: "monotoneCubic",
     },
   };
+
   const chartData = {
     series: [
       {
