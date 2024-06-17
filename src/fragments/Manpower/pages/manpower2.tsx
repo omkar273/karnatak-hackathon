@@ -238,7 +238,7 @@ const ManpowerStatic = () => {
       {/* </div> */}
 
       {/* analytics */}
-      <div className="card grid md:grid-cols-2 grid-cols-1 bg-white">
+      <div className="card grid md:grid-cols-1 grid-cols-1 bg-white">
         <div className="flex flex-col w-full h-full justify-between items-center border border-gray-300 p-4 rounded-lg my-1 mx-0">
           <p className="text-xl my-3">Crime percentage in this last month</p>
           <PieChart
