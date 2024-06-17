@@ -80,7 +80,7 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
     ];
     
     return (
-        <div className="card">
+        <div className="card z-0">
             {/* heading */}
             <div className="md:flex justify-between items-center">
                 <p className="font-semibold text-xl">
@@ -116,6 +116,7 @@ const StationsTable = ({ reload = true }: { reload: boolean }) => {
                     showQuickJumper: true,
                     showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
                 }}
+                className={'z-0'}
                 loading={loading}
                 onChange={handleTableChange}
                 scroll={{ x: 'max-content' }}

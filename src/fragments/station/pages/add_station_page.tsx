@@ -34,8 +34,8 @@ const AddStationPage = () => {
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden">
-			<p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0">
-				{"Station Management"}
+			<p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-10">
+				{"Add Station"}
 			</p>
 			<div className="p-4">
 				<form onSubmit={handleSubmit(onSubmit)} className="card w-full p-5 bg-white">

@@ -10,9 +10,7 @@ const FirDetailsTable = ({ reload = true, stationId }: {
     reload?: boolean,
     stationId: string | undefined | null
 }) => {
-
-
-
+    
     const [timeFrame, setTimeFrame] = useState<"thisMonth" | "lastMonth" | "thisYear" | "all">("thisMonth");
     const { documents, fetchFIRs, loading, error } = useGetAllFIRs({
         timeFrame, stationId
@@ -86,7 +84,7 @@ const FirDetailsTable = ({ reload = true, stationId }: {
     ];
 
     return (
-        <div className="card bg-white">
+        <div className="card ">
 
             {/* heading */}
             <div className="md:flex justify-between items-center">
