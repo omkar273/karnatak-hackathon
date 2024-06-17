@@ -15,7 +15,7 @@ import {
 	where,
 } from "firebase/firestore";
 import {
-	BarChartBig,
+	BarChartBig, CalendarClock, CalendarRange,
 	ClipboardList,
 	FileStack,
 	FileText,
@@ -136,7 +136,7 @@ const HomePage = () => {
 			children: [
 				{
 					key: "My Station",
-					label: "My Station",
+					label: "Station Management",
 					onClick: () => navigateAndCloseDrawer("/station"),
 					icon: <Home/>,
 				},
@@ -147,24 +147,12 @@ const HomePage = () => {
 					onClick: () => navigateAndCloseDrawer("/station/add"),
 				},
 				{
-					key: "Station Management2",
-					label: "Station Management",
-					icon: <Mic/>,
-					onClick: () => navigateAndCloseDrawer("/Record"),
-				},
-				{
 					key: "Task Assignment",
 					label: "Task Assignment",
 					icon: <ClipboardList/>,
 					onClick: () => navigateAndCloseDrawer("/station/tasks"),
 				},
 				
-				{
-					key: "Manpower3",
-					label: "Manpower Mapping 2",
-					icon: <User/>,
-					onClick: () => navigateAndCloseDrawer("/mans"),
-				},
 				{
 					key: "Law and order",
 					label: "Law and order",
@@ -228,6 +216,19 @@ const HomePage = () => {
 					onClick: () => navigateAndCloseDrawer("/fir/report-incident"),
 				},
 			],
+		},
+		{
+			key: "event-section",
+			label: "Event Permissions",
+			icon: <CalendarRange/>,
+			children: [
+				{
+					key: "Events",
+					label: "Events",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/events")
+				}
+			]
 		},
 		{
 			key: "Emergency Zones",

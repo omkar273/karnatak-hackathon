@@ -1,175 +1,207 @@
-import TextArea from "@/common/components/text_area";
-import dummyUserData from "@/data/underlying_data";
-import InputField from "@/pages/auth/components/input_field";
-import { Select, Space } from "antd";
-import { Controller, RegisterOptions, SubmitHandler, useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import {useForm, Controller, SubmitHandler} from "react-hook-form";
+import {Input, Select, Button, Card} from "antd";
+import {toast} from "react-toastify";
+import TaskModel from "@/types/task_model.ts";
+import commisioner_data from '@/data/json/commisioner_data.json';
+import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
+import inspector_data from '@/data/json/inspector_data.json';
+import sub_inspector_data from '@/data/json/sub_inspector_data.json';
+import head_constable_data from '@/data/json/head_constable_data.json';
+import constable_data from '@/data/json/constable_data.json';
+import {useSelector} from "react-redux";
+import {RootState} from "@/common/redux/store.ts";
 
-export type taskType = {
-    // type: 'fir' | 'investigation' | 'patrolling';
-    type: string[];
-    allotedTo: string[];
-    task_title: string;
-    details: string,
-}
+const {TextArea} = Input;
 
-const TaskAssignmentPage = () => {
+const TaskForm = () => {
+	const {userdata} = useSelector((s: RootState) => s.auth);
+	
+	const {
+		register,
+		control,
+		handleSubmit,
+		setValue,
+		formState: {errors},
+		reset,
+	} = useForm<TaskModel>();
+	
+	const onSubmit: SubmitHandler<TaskModel> = (data) => {
+		console.log(data); // Handle form submission logic
+		toast.success("Task created successfully");
+		reset();
+	};
+	
+	const taskTypes = ["Bug Fix", "Feature Development", "Code Review"];
+	const priorities = ["Low", "Medium", "High"];
+	const users = [
+		...inspector_data,
+		...assistant_commisioner_data,
+		...commisioner_data,
+		...sub_inspector_data,
+		...head_constable_data,
+		...constable_data,
+	]
+		.filter((user) => user.reporting_officer_id === userdata?.id)
+		.map((user) => ({
+			label: user.name,
+			value: user.id,
+		}));
+	
+	return (
+		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
+			<p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
+				{"Task Assignment"}
+			</p>
+			<div className="bg-gray-100 p-6 mb-24">
+				<Card title="Create Task" className="shadow-md">
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+							<div className="col-span-2">
+								<label>Task Type</label>
+								<Controller
+									name="task_type"
+									control={control}
+									rules={{required: "Please select task type"}}
+									render={({field}) => (
+										<Select {...field} className="w-full" placeholder="Select Task Type">
+											{taskTypes.map((type) => (
+												<Select.Option key={type} value={type}>
+													{type}
+												</Select.Option>
+											))}
+										</Select>
+									)}
+								/>
+								<p className="text-xs text-red-600">{errors.task_type?.message}</p>
+							</div>
+							
+							<div className="col-span-2">
+								<label>Description</label>
+								<Controller
+									name="description"
+									control={control}
+									rules={{required: "Description is required"}}
+									render={({field}) => (
+										<TextArea {...field} rows={4} className="w-full"
+										          placeholder="Enter task description"/>
+									)}
+								/>
+								<p className="text-xs text-red-600">{errors.description?.message}</p>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Due Date</label>
+								<Controller
+									name="due_date"
+									control={control}
+									rules={{required: "Please select due date"}}
+									render={({field}) => (
+										<input
+											{...field}
+											type="datetime-local"
+											className="w-full p-2 border rounded"
+											onChange={(e) => setValue("due_date", e.target.value)}
+										/>
+									)}
+								/>
+								<p className="text-xs text-red-600">{errors.due_date?.message}</p>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Priority</label>
+								<Controller
+									name="priority"
+									control={control}
+									rules={{required: "Please select priority"}}
+									render={({field}) => (
+										<Select {...field} className="w-full" placeholder="Select Priority">
+											{priorities.map((priority) => (
+												<Select.Option key={priority} value={priority}>
+													{priority}
+												</Select.Option>
+											))}
+										</Select>
+									)}
+								/>
+								<p className="text-xs text-red-600">{errors.priority?.message}</p>
+							</div>
+							
+							<div className="col-span-2">
+								<label>Assigned To</label>
+								<Controller
+									name="alloted_to_id"
+									control={control}
+									rules={{required: "Please select user(s)"}}
+									render={({field}) => (
+										<Select {...field} mode="multiple" className="w-full"
+										        placeholder="Select User(s)"
+										        options={users}/>
+									)}
+								/>
+								<p className="text-xs text-red-600">{errors.alloted_to_id?.message}</p>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Current Status</label>
+								<Controller
+									name="current_status"
+									control={control}
+									render={({field}) => (
+										<Input {...field} className="w-full" placeholder="Enter current status"/>
+									)}
+								/>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Case Number</label>
+								<Controller
+									name="case_no"
+									control={control}
+									render={({field}) => (
+										<Input {...field} className="w-full" placeholder="Enter case number"/>
+									)}
+								/>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Zone Name</label>
+								<Controller
+									name="zone_name"
+									control={control}
+									render={({field}) => (
+										<Input {...field} className="w-full" placeholder="Enter zone name"/>
+									)}
+								/>
+							</div>
+							
+							<div className="col-span-1">
+								<label>Vehicle</label>
+								<Controller
+									name="vehicle"
+									control={control}
+									render={({field}) => (
+										<Input {...field} className="w-full" placeholder="Enter vehicle details"/>
+									)}
+								/>
+							</div>
+							
+							<div className="col-span-1">
+								<Input type="hidden" {...register("alloted_by_id")} defaultValue={userdata?.id}/>
+								<Input type="hidden" {...register("alloted_by_name")}
+								       defaultValue={userdata?.name}/>
+							</div>
+						</div>
+						
+						<Button type="primary" htmlType="submit" className="mt-4">
+							Create Task
+						</Button>
+					</form>
+				</Card>
+			</div>
+		</div>
+	
+	
+	);
+};
 
-    // const saveFir = async () => {
-    //     try {
-    //         dummyFIRData.map(async (data) => {
-    //             await doSaveFIR({
-    //                 ...data, allotedTo: [
-    //                     'Omkar sonawane',
-    //                     'Ojas deskhmukh',
-    //                     'pranav pansare',
-    //                     'Jeet javale',
-    //                     'Nisarga lokhande'
-    //                 ]
-    //             });
-    //             toast.success(`Fir saved with title ${data.title}`);
-    //         })
-    //     } catch (error) {
-    //         toast.error(`Error: ${error}`)
-    //     }
-    // }
-    const validationOptions: RegisterOptions = {
-        required: 'required',
-    }
-
-    const { control, register, handleSubmit, setValue, formState: { errors }, reset } = useForm<taskType>();
-
-    const submit: SubmitHandler<taskType> = () => {
-        toast.success('Task assigned successfully')
-        reset();
-    }
-
-    const handleChange = (value: string[]) => {
-        setValue('type', value);
-    };
-
-    const handleUnderlyingChange = (value: string[]) => {
-        setValue('allotedTo', value);
-    };
-
-    const taskTypes = [
-        {
-            label: 'Fir',
-            value: 'Fir',
-            desc: 'Fir',
-        },
-        {
-            label: 'Investigation',
-            value: 'Investigation',
-            desc: 'Investigation',
-        },
-        {
-            label: 'patrolling',
-            value: 'patrolling',
-            desc: 'patrolling',
-        },
-    ]
-
-    const underlyingValues = dummyUserData.map((user) => ({
-        label: user?.name,
-        value: user?.name,
-        desc: user?.name,
-        emoji: user?.post
-    }))
-
-
-    return (
-        <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
-            <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
-                {"FIR Details"}
-            </p>
-            <div className="p-4" >
-                {/* <div className="btn" onClick={saveFir}>Save firs</div> */}
-                <form onSubmit={handleSubmit(submit)}>
-                    <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-4 card bg-white">
-                        <div className="my-3">
-                            <p>Select the type of task</p>
-                            <Controller
-                                name="type"
-                                control={control}
-                                // defaultValue={['omkar']}
-                                rules={{ required: 'Please select user(s) to allot this case' }}
-                                render={({ field }) => (
-                                    <Select
-                                        {...field}
-                                        mode="multiple"
-                                        className="w-full h-12 text-black"
-                                        allowClear={true}
-                                        placeholder="Select the type of task"
-                                        onChange={handleChange}
-                                        options={taskTypes}
-                                        optionRender={(option) => (
-                                            <Space>
-                                                <span role="img" aria-label={option.data.label}>
-                                                    {option.data.emoji}
-                                                </span>
-                                                {option.data.desc}
-                                            </Space>
-                                        )}
-                                    />
-                                )}
-                            />
-                            <p className="mb-3 text-xs text-red-600">{errors.allotedTo?.message}</p>
-                        </div>
-                        <div className="my-3">
-                            <p>Select the underlyings</p>
-                            <Controller
-                                name="allotedTo"
-                                control={control}
-                                // defaultValue={['omkar']}
-                                rules={{ required: 'Please select user(s) to allot this case' }}
-                                render={({ field }) => (
-                                    <Select
-                                        {...field}
-                                        mode="multiple"
-                                        className="w-full h-12 text-black"
-                                        allowClear={true}
-                                        placeholder="Select user to allot this case"
-                                        onChange={handleUnderlyingChange}
-                                        options={underlyingValues}
-                                        optionRender={(option) => (
-                                            <Space>
-                                                <span role="img" aria-label={option.data.label}>
-                                                    {option.data.emoji}
-                                                </span>
-                                                {option.data.desc}
-                                            </Space>
-                                        )}
-                                    />
-                                )}
-                            />
-                            <p className="mb-3 text-xs text-red-600">{errors.allotedTo?.message}</p>
-                        </div>
-
-                        <InputField<taskType>
-                            validateOptions={validationOptions}
-                            register={register}
-                            label="Task Title"
-                            error={errors.task_title?.message}
-                            name="task_title"
-                        />
-
-                        <TextArea<taskType>
-                            validateOptions={validationOptions}
-                            register={register}
-                            label="Task description"
-                            error={errors.details?.message}
-                            name="details"
-                        />
-                    </div>
-
-                    <button type="submit" className="btn">
-                        Assign task
-                    </button>
-                </form>
-            </div>
-        </div>
-    )
-}
-
-export default TaskAssignmentPage
+export default TaskForm;

@@ -79,9 +79,8 @@ const App = () => {
 					<Route path="station">
 						<Route index element={getProtectedRoute(<MyStationPage/>)}/>
 						<Route path="add" element={getProtectedRoute(<AddStationPage/>)}/>
-						<Route
-							path="tasks"
-							element={getProtectedRoute(<TaskAssignmentPage/>)}
+						
+						<Route path="tasks" element={getProtectedRoute(<TaskAssignmentPage/>)}
 						/>
 						<Route path="task" element={getProtectedRoute(<TasksPage/>)}/>
 					</Route>
