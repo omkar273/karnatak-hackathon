@@ -22,7 +22,6 @@ const getCurrentMonth = (): string => {
 
 export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
   try {
-    // Save the FIR record in the fir_details collection
     const firDocRef = await addDoc(collection(firestore, "fir_details"), {
       ...firData,
       timestamp: serverTimestamp(),
@@ -125,6 +124,7 @@ export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
 
     return true;
   } catch (error) {
+    console.log(error)
     toast.error(`Error storing FIR details: ${error}`);
     return false;
   }

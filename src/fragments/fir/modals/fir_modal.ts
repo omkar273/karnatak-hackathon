@@ -47,15 +47,15 @@ export interface FIRRecord {
 	timestamp?: Timestamp;
 	
 	// meta data
-	stationId?: string;
 	allotedTo?: {
 		name: string;
 		id: string;
 		post: string;
 	}[];
-	fir_status?: string;
 	fir_type?: string;
+	fir_status?: string;
+	stationId?: string;
 	registered_by_name?: string;
 	registered_by_id?: string;
-	sections: string;
+	sections?: string;
 }

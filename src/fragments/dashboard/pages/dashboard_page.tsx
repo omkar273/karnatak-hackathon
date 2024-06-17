@@ -86,45 +86,7 @@ const DashboardPage = () => {
           </h1>
         )}
       </div>
-
-      {/*{*/}
-      {/*	userdata && (*/}
-      {/*		<button*/}
-      {/*			onClick={async () => {*/}
-      {/*				await sendNotification({*/}
-      {/*					sender_name: "omkar sonawane",*/}
-      {/*					notification_type: 'emergency',*/}
-      {/*					recepient_id: userdata.id ?? '',*/}
-      {/*					task_id: '54',*/}
-      {/*					sender_id: userdata.id ?? '',*/}
-      {/*				})*/}
-      {/*			}}*/}
-      {/*			className={'p-4 bg-cyan-500 my-4 rounded-md'}*/}
-      {/*		>*/}
-      {/*			send Emergency notification*/}
-      {/*		</button>*/}
-      {/*	)*/}
-      {/*}*/}
-
-      {/*{*/}
-      {/*	userdata && (*/}
-      {/*		<button*/}
-      {/*			onClick={async () => {*/}
-      {/*				await sendNotification({*/}
-      {/*					sender_name: "omkar sonawane",*/}
-      {/*					notification_type: 'fir',*/}
-      {/*					recepient_id: userdata.id ?? '',*/}
-      {/*					task_id: '54',*/}
-      {/*					sender_id: userdata.id ?? '',*/}
-      {/*				})*/}
-      {/*			}}*/}
-      {/*			className={'p-4 bg-cyan-500 my-4 rounded-md'}*/}
-      {/*		>*/}
-      {/*			send Normal notification*/}
-      {/*		</button>*/}
-      {/*	)*/}
-      {/*}*/}
-
+      
       {/* zonal data for commissioner */}
       <ZonalData />
       <DashboardUserDataCards />

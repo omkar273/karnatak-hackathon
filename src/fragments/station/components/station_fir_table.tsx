@@ -54,7 +54,7 @@ const firColumns: ColumnDef<FIRRecord>[] = [
 						</DropdownMenuItem>
 						<DropdownMenuSeparator/>
 						<DropdownMenuItem>
-							<Link to={`/fir/fir_details?id=${fir.id}`}>
+							<Link to={`/fir/details?id=${fir.id}`}>
 								View details
 							</Link>
 						</DropdownMenuItem>

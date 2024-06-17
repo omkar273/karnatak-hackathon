@@ -91,7 +91,8 @@ function useGetAllFIRs({
 					collection(firestore, "fir_details"),
 					where("timestamp", ">=", start),
 					where("timestamp", "<=", end),
-					orderBy("timestamp"),
+					orderBy("timestamp",'desc'),
+					
 					limit(initialLimit)
 				);
 				
