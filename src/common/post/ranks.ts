@@ -9,7 +9,7 @@ export const Ranks = {
 };
 
 export enum RanksEnum {
-  Admin = "admin",
+  Admin = "Admin",
   Commisioner = "Commisioner",
   "AssistantCommisioner" = "Assistant Commisioner",
   Inspector = "Inspector",

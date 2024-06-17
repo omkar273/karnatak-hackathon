@@ -50,7 +50,9 @@
       "First Aid and Emergency Response",
       "Cybercrime Investigation"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.040409467963922,
+    "lng": 77.57088959855699
   },
   {
     "id": "9CFEKw9cFoUGhboYdM8lCdVz6XE2",
@@ -103,7 +105,9 @@
       "Anti-Human Trafficking Training",
       "Public Relations and Media Handling"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.916125390783678,
+    "lng": 77.60124631330147
   },
   {
     "id": "a1c7a0f0e9a54acdac7d704bcc6853db",
@@ -156,7 +160,9 @@
       "Basic Police Training",
       "Counter-Terrorism Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.929154997527476,
+    "lng": 77.63387724303868
   },
   {
     "id": "654e8ab089de4a868f8b37313449bd56",
@@ -209,7 +215,9 @@
       "Surveillance and Reconnaissance",
       "First Aid and Emergency Response"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.929082983233146,
+    "lng": 77.48539809687466
   },
   {
     "id": "3fe2bc8842e04243b4ee54dd887a16d4",
@@ -262,7 +270,9 @@
       "Legal and Ethical Training",
       "Bomb Disposal and Explosive Handling"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.921409727562583,
+    "lng": 77.45970853844551
   },
   {
     "id": "4e509710940142deb0ecb20cb1c09012",
@@ -315,7 +325,9 @@
       "Incident Command System Training",
       "Advanced Driving Techniques"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.898860555010819,
+    "lng": 77.4787721411209
   },
   {
     "id": "eafce1b4a6bb4a68a4587fbe4de894ab",
@@ -368,7 +380,9 @@
       "Undercover Operations Training",
       "Intelligence Gathering and Analysis"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.037095108262214,
+    "lng": 77.60522737067643
   },
   {
     "id": "98bacfe9d2b34b3f8a79899ae69bc9ab",
@@ -421,7 +435,9 @@
       "Cultural Sensitivity and Diversity Training",
       "Legal and Ethical Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.95299077539692,
+    "lng": 77.48501949151809
   },
   {
     "id": "38988578cdab456ea059bb97d5212498",
@@ -474,7 +490,9 @@
       "Surveillance and Reconnaissance",
       "First Aid and Emergency Response"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.033399957105306,
+    "lng": 77.59666136124628
   },
   {
     "id": "abd47f5ddf7043738849bf4482f0642f",
@@ -527,7 +545,9 @@
       "Criminal Investigation Techniques",
       "Traffic Management and Accident Investigation"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.913360807857323,
+    "lng": 77.46737979583338
   },
   {
     "id": "12dbc4ff4fd74b298d32a3fb95f4e3bc",
@@ -580,7 +600,9 @@
       "Public Relations and Media Handling",
       "Interview and Interrogation Techniques"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.91539420449015,
+    "lng": 77.55293973280237
   },
   {
     "id": "96965d5bf5d24f0f91986409b66a0fd1",
@@ -633,7 +655,9 @@
       "Traffic Management and Accident Investigation",
       "Incident Command System Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.041831971792236,
+    "lng": 77.63074915317694
   },
   {
     "id": "7cf88184dee44104b200b8df02ad7652",
@@ -686,7 +710,9 @@
       "Search and Rescue Operations",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.938573402008712,
+    "lng": 77.61291037639961
   },
   {
     "id": "287650cf298d43a58dfd0359f0b1f96f",
@@ -739,7 +765,9 @@
       "Cybercrime Investigation",
       "Intelligence Gathering and Analysis"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.946575625598012,
+    "lng": 77.5781572033185
   },
   {
     "id": "b7be377e5cc9404784e770d5f30f1f4c",
@@ -792,7 +820,9 @@
       "Cybercrime Investigation",
       "Victim Assistance and Support"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.930830588484577,
+    "lng": 77.5130885846652
   },
   {
     "id": "be83bd0da88b4f5d9f433cbba002fa5d",
@@ -845,7 +875,9 @@
       "Mental Health Crisis Intervention",
       "Anti-Human Trafficking Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.048038919460367,
+    "lng": 77.61879437480034
   },
   {
     "id": "21e1d59dbf2742da82b152c48c2e6f98",
@@ -898,7 +930,9 @@
       "Criminal Investigation Techniques",
       "Forensic Science Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.05791257865872,
+    "lng": 77.57732943545649
   },
   {
     "id": "7e9e5cd775884caa89983cc0689b2352",
@@ -951,7 +985,9 @@
       "Legal and Ethical Training",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.003666469996451,
+    "lng": 77.57604407839001
   },
   {
     "id": "8e58e5f0573546d18b111b76c2bc1ced",
@@ -1004,7 +1040,9 @@
       "Victim Assistance and Support",
       "Self-Defense and Physical Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.950797043877312,
+    "lng": 77.52917161223591
   },
   {
     "id": "a63a1035e0ad41c3940cf10f6ab8d07c",
@@ -1057,7 +1095,9 @@
       "Mental Health Crisis Intervention",
       "Drug Enforcement Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.024068691269933,
+    "lng": 77.5679759931909
   },
   {
     "id": "0d4255e2810544148eedebf4d03aa3a7",
@@ -1110,7 +1150,9 @@
       "Self-Defense and Physical Training",
       "Emergency Vehicle Operations"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.939096940704095,
+    "lng": 77.62469187789917
   },
   {
     "id": "98a08c0c22804cf2aa7cb3d6abd98bfa",
@@ -1163,7 +1205,9 @@
       "Traffic Management and Accident Investigation",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.932413762508506,
+    "lng": 77.57082951616499
   },
   {
     "id": "bbba0174acf94536ace4b8edddeee3eb",
@@ -1216,7 +1260,9 @@
       "Intelligence Gathering and Analysis",
       "Firearms Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.006907085859924,
+    "lng": 77.63177282679258
   },
   {
     "id": "6f0aa322be274d5e84c0e9d4b19f0f34",
@@ -1269,7 +1315,9 @@
       "Legal and Ethical Training",
       "First Aid and Emergency Response"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.929855061994104,
+    "lng": 77.73512159546222
   },
   {
     "id": "23bd3118fb494ee297e7ad4243cb2e5e",
@@ -1322,7 +1370,9 @@
       "Maritime Law Enforcement Training",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.960698598105674,
+    "lng": 77.53093402973745
   },
   {
     "id": "f5344328deb244f0a5e1be92cb150e20",
@@ -1375,7 +1425,9 @@
       "Forensic Science Training",
       "Forensic Science Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.93602881946735,
+    "lng": 77.54154550155215
   },
   {
     "id": "01e617f4372048099bd09f74cf0fbea0",
@@ -1428,7 +1480,9 @@
       "Search and Rescue Operations",
       "Bomb Disposal and Explosive Handling"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.948943482012172,
+    "lng": 77.73356556742431
   },
   {
     "id": "86cb1bce20944d6780ffb194fdf41c4e",
@@ -1481,7 +1535,9 @@
       "Drug Enforcement Training",
       "Advanced Driving Techniques"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.88924687125518,
+    "lng": 77.47609497424557
   },
   {
     "id": "1528040c3c3f43b19ca17991d70087ea",
@@ -1534,7 +1590,9 @@
       "Self-Defense and Physical Training",
       "Crisis Negotiation and Hostage Rescue"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.925461151096966,
+    "lng": 77.72677023336831
   },
   {
     "id": "88b685cd676b43ed89140e1c69c7c174",
@@ -1587,7 +1645,9 @@
       "Bomb Disposal and Explosive Handling",
       "Search and Rescue Operations"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.965084511023205,
+    "lng": 77.71423491826906
   },
   {
     "id": "c63e018cc7394d9aa2297cd1bacce333",
@@ -1640,7 +1700,9 @@
       "Incident Command System Training",
       "Legal and Ethical Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 15.137841098017688,
+    "lng": 76.9188514313272
   },
   {
     "id": "6bf640b7deaa42529764200750429eea",
@@ -1693,7 +1755,9 @@
       "Undercover Operations Training",
       "Cybercrime Investigation"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.964820943312805,
+    "lng": 77.67394262765586
   },
   {
     "id": "9eef94712d78446ca35aa04540d02ac3",
@@ -1746,7 +1810,9 @@
       "Anti-Human Trafficking Training",
       "Community Policing Strategies"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.927504861998255,
+    "lng": 77.68185697535696
   },
   {
     "id": "67011bf70f4c4dbcb9f2acf9d1c673fb",
@@ -1799,7 +1865,9 @@
       "Criminal Investigation Techniques",
       "First Aid and Emergency Response"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.88294000942114,
+    "lng": 77.53457813385572
   },
   {
     "id": "22d716c15e5244478ce3f86f73d9ad24",
@@ -1852,7 +1920,9 @@
       "Public Order and Riot Control",
       "Legal and Ethical Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.95539873317042,
+    "lng": 77.5731631619538
   },
   {
     "id": "25c566b1e0624d218b7acfd149eb3212",
@@ -1905,7 +1975,9 @@
       "Patrol Procedures and Tactics",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.861872852011503,
+    "lng": 77.50518115457334
   },
   {
     "id": "ef9ea9f348134252b2eb20888254020f",
@@ -1958,7 +2030,9 @@
       "Surveillance and Reconnaissance",
       "Incident Command System Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.002144556491638,
+    "lng": 77.58729677043941
   },
   {
     "id": "045db6ab160d4fca90af8ae4a9210df9",
@@ -2011,7 +2085,9 @@
       "Anti-Human Trafficking Training",
       "Crisis Negotiation and Hostage Rescue"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.954499435902756,
+    "lng": 77.61733948550307
   },
   {
     "id": "ffd5665f638e4d54be9d8274f9a35e8a",
@@ -2064,7 +2140,9 @@
       "Counter-Terrorism Training",
       "Incident Command System Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.983416238629099,
+    "lng": 77.59391650187825
   },
   {
     "id": "1abbc4d4a13d481e91da7c9410b4a8e0",
@@ -2117,7 +2195,9 @@
       "Interview and Interrogation Techniques",
       "Public Order and Riot Control"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.91760621426256,
+    "lng": 77.58509976679382
   },
   {
     "id": "5eba2dcfd0f24825adf738dad00d2ebe",
@@ -2170,7 +2250,9 @@
       "Criminal Investigation Techniques",
       "Counter-Terrorism Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.911103472867566,
+    "lng": 77.57915663180138
   },
   {
     "id": "25c60a6ade2a44be8c5f9dba37629985",
@@ -2223,7 +2305,9 @@
       "Public Relations and Media Handling",
       "Undercover Operations Training"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 13.001458704877152,
+    "lng": 77.73958601717086
   },
   {
     "id": "a5885a5188974563a84671b31b090f5e",
@@ -2276,6 +2360,8 @@
       "Counter-Terrorism Training",
       "Mental Health Crisis Intervention"
     ],
-    "specialization": "NA"
+    "specialization": "NA",
+    "lat": 12.963761035650537,
+    "lng": 77.69610924053048
   }
 ]

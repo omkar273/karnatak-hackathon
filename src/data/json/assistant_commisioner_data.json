@@ -51,7 +51,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "Hpkc6isnATQSxonFBEbhxghWlG93",
@@ -105,7 +107,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "b6e0e78c41594be18a5ab574c5857c28",
@@ -159,7 +163,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "41273f7d4c1f4d3fa870b84af833919f",
@@ -213,7 +219,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "2a1e50863d3d4bc38edbb9f4fb584483",
@@ -267,7 +275,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "f8fc4317bebb4e2492424b2722654ae4",
@@ -321,7 +331,9 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   },
   {
     "id": "e2ac35dbf8f44e6f8159c04c2ec82602",
@@ -375,6 +387,8 @@
     ],
     "specialization": "NA",
     "zone_id": "etnSDAj88tulU7Fwe5hB",
-    "zone_name": "East"
+    "zone_name": "East",
+    "lat": 0,
+    "lng": 0
   }
 ]

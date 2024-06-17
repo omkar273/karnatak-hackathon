@@ -1,17 +1,17 @@
-import {useEffect, useState} from 'react';
-import {useForm, SubmitHandler, RegisterOptions} from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { useForm, SubmitHandler, RegisterOptions } from 'react-hook-form';
 import IncidentType from '@/types/incident_type';
 import InputField from "pages/auth/components/input_field.tsx";
 import TextArea from "@/common/components/text_area.tsx";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
-import station_data from '@/data/json/stations_data.json'
-import {StationModel} from "@/fragments/station/models/station_model.ts";
-import {VSpacer} from "@/common/components/spacer.tsx";
-import {UserModel} from "@/fragments/user_management/models/user_model.ts";
-import inspector_data from '@/data/json/inspector_data.json'
-import sub_inspector_data from '@/data/json/sub_inspector_data.json'
-import head_constable_data from '@/data/json/head_constable_data.json'
-import constable_data from '@/data/json/constable_data.json'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select.tsx";
+import station_data from '@/data/json/stations_data.json';
+import { StationModel } from "@/fragments/station/models/station_model.ts";
+import { VSpacer } from "@/common/components/spacer.tsx";
+import { UserModel } from "@/fragments/user_management/models/user_model.ts";
+import inspector_data from '@/data/json/inspector_data.json';
+import sub_inspector_data from '@/data/json/sub_inspector_data.json';
+import head_constable_data from '@/data/json/head_constable_data.json';
+import constable_data from '@/data/json/constable_data.json';
 import NearbyUserMap from "@/fragments/fir/components/nearby_user_map.tsx";
 import scrollToSection from "@/common/utils/scroll_to_section.ts";
 import {
@@ -35,12 +35,11 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
-import {Checkbox} from "@/components/ui/checkbox"
-import {generateRandomLatLngWithinRadius} from "@/common/utils/generate_random_latlng.ts";
-import {toast} from "react-toastify";
+import { Checkbox } from "@/components/ui/checkbox";
+import { generateRandomLatLngWithinRadius } from "@/common/utils/generate_random_latlng.ts";
+import { toast } from "react-toastify";
 
 const getStationById = (id: string | null | undefined): StationModel | null => {
-	
 	if (id) {
 		for (const station of station_data) {
 			if (station.id === id) {
@@ -49,30 +48,26 @@ const getStationById = (id: string | null | undefined): StationModel | null => {
 		}
 	}
 	return null;
-}
-
+};
 
 const IncidentReporting = () => {
-	
-	const [stationsList, setStationsList] = useState<StationModel[]>();
+	const [stationsList, setStationsList] = useState<StationModel[]>([]);
 	const [stationId, setStationId] = useState<string | null>(null);
-	
 	const [nearbyUserList, setNearbyUserList] = useState<UserModel[]>([]);
 	
+	const { handleSubmit, register, formState: { errors, isSubmitting }, setValue } = useForm<IncidentType>();
 	
-	const {handleSubmit, register, formState: {errors, isSubmitting}, setValue} = useForm<IncidentType>();
-	
-	const onsubmit: SubmitHandler<IncidentType> = (data) => {
+	const onSubmit: SubmitHandler<IncidentType> = (data) => {
 		console.log(data);
 		const nearbyUsers = [
 			...inspector_data.filter(user => user.stationId === stationId),
 			...sub_inspector_data.filter(user => user.stationId === stationId),
 			...head_constable_data.filter(user => user.stationId === stationId),
 			...constable_data.filter(user => user.stationId === stationId),
-		]
-		setNearbyUserList(nearbyUsers.slice(0, data.required_force))
-		console.log(nearbyUsers.length)
-		scrollToSection('nearby-police-section')
+		];
+		setNearbyUserList(nearbyUsers.slice(0, data.required_force));
+		console.log(nearbyUsers.length);
+		scrollToSection('nearby-police-section');
 	};
 	
 	const validationOptions: RegisterOptions = {
@@ -80,14 +75,13 @@ const IncidentReporting = () => {
 	};
 	
 	useEffect(() => {
-		setStationsList(station_data)
+		setStationsList(station_data);
 	}, []);
-	
 	
 	const nearbyUserColumns: ColumnDef<UserModel>[] = [
 		{
 			id: "select",
-			header: ({table}) => (
+			header: ({ table }) => (
 				<Checkbox
 					checked={
 						table.getIsAllPageRowsSelected() ||
@@ -97,7 +91,7 @@ const IncidentReporting = () => {
 					aria-label="Select all"
 				/>
 			),
-			cell: ({row}) => (
+			cell: ({ row }) => (
 				<Checkbox
 					checked={row.getIsSelected()}
 					onCheckedChange={(value) => row.toggleSelected(!!value)}
@@ -107,7 +101,6 @@ const IncidentReporting = () => {
 			enableSorting: false,
 			enableHiding: false,
 		},
-		
 		{
 			accessorKey: "name",
 			header: "Officer name",
@@ -123,13 +116,11 @@ const IncidentReporting = () => {
 				const location = generateRandomLatLngWithinRadius({
 					lat: getStationById(stationId)?.lat || 0,
 					lng: getStationById(stationId)?.lng || 0
-				})
-				
-				return `${location.distance} km away`
+				});
+				return `${location.distance} km away`;
 			}
 		},
-	]
-	
+	];
 	
 	const [sorting, setSorting] = useState<SortingState>([]);
 	const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -156,23 +147,19 @@ const IncidentReporting = () => {
 	});
 	
 	const sendAlerts = () => {
-		const users = table.getFilteredSelectedRowModel().rows.map(row => row.original)
-		console.log(users)
-		toast.success(`Alerts sent successfully to ${users.length} selected officers`,
-			// {toastId:"alert-notification-nearby-police"}
-		)
-	}
-	
+		const users = table.getFilteredSelectedRowModel().rows.map(row => row.original);
+		console.log(users);
+		toast.success(`Alerts sent successfully to ${users.length} selected officers`);
+	};
 	
 	return (
-		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 pb-24    ">
+		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 pb-24">
 			<p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
 				{"Report Incident"}
 			</p>
 			<div className="p-4">
-				<form onSubmit={handleSubmit(onsubmit)} className="p-4 md:p-16 bg-white rounded shadow-md">
+				<form onSubmit={handleSubmit(onSubmit)} className="p-4 md:p-16 bg-white rounded shadow-md">
 					<div className={'grid grid-cols-1 sm:grid-cols-2 gap-4 items-center'}>
-						
 						<div>
 							<label
 								htmlFor={'location-select'}
@@ -180,14 +167,14 @@ const IncidentReporting = () => {
 							>
 								{'Select the location'}
 							</label>
-							<VSpacer height={5}/>
+							<VSpacer height={5} />
 							<Select onValueChange={(id) => {
-								const station = getStationById(id)
-								setStationId(station?.id ?? '')
-								setValue('location', {lat: station?.lat ?? 0, lng: station?.lng ?? 0})
+								const station = getStationById(id);
+								setStationId(station?.id ?? '');
+								setValue('location', { lat: station?.lat ?? 0, lng: station?.lng ?? 0 });
 							}}>
 								<SelectTrigger className="w-full p-6">
-									<SelectValue placeholder="Select the location"/>
+									<SelectValue placeholder="Select the location" />
 								</SelectTrigger>
 								<SelectContent id={'location-select'}>
 									{
@@ -200,7 +187,6 @@ const IncidentReporting = () => {
 							</Select>
 							<p className="mb-3 text-xs text-red-600">{errors.location?.message}</p>
 						</div>
-						
 						<InputField
 							register={register}
 							name="incident_type"
@@ -212,11 +198,10 @@ const IncidentReporting = () => {
 							register={register}
 							name="required_force"
 							error={errors.required_force?.message}
-							validateOptions={{...validationOptions, min: 0, max: 10}}
+							validateOptions={{ ...validationOptions, min: { value: 1, message: 'Must be at least 1' }, max: { value: 10, message: 'Cannot be more than 10' } }}
 							label="Required Force"
 							type="number"
 						/>
-						
 						<InputField
 							register={register}
 							name="incident_reported_by"
@@ -224,7 +209,6 @@ const IncidentReporting = () => {
 							validateOptions={validationOptions}
 							label="Reported By"
 						/>
-					
 					</div>
 					<TextArea
 						register={register}
@@ -233,18 +217,14 @@ const IncidentReporting = () => {
 						validateOptions={validationOptions}
 						label="Description"
 					/>
-					
 					<button type="submit" disabled={isSubmitting}
 					        className="w-full mt-4 p-4 bg-blue-500 text-white font-semibold text-xl rounded-md hover:bg-blue-600">
 						{isSubmitting ? 'Submitting...' : 'Submit'}
 					</button>
 				</form>
-				
-				<div className={`w-full p-4 bg-white my-4 ${nearbyUserList.length > 0 ? 'block' : 'hidden'}`}
-				     id={'nearby-police-section'}>
+				<div className={`w-full p-4 bg-white my-4 ${nearbyUserList.length > 0 ? 'block' : 'hidden'}`} id={'nearby-police-section'}>
 					<h1 className={'text-3xl font-semibold mb-10'}>Nearby Police forces</h1>
 					<div className={'w-full grid grid-cols-2 gap-4'}>
-						
 						<div>
 							<Table>
 								<TableHeader>
@@ -283,7 +263,6 @@ const IncidentReporting = () => {
 									)}
 								</TableBody>
 							</Table>
-							
 							<button
 								onClick={sendAlerts}
 								type="button"
@@ -291,8 +270,7 @@ const IncidentReporting = () => {
 								Send alerts
 							</button>
 						</div>
-						
-						<div className={'border-2'}>
+						<div className={'border-2 h-[60vh] overflow-hidden'}>
 							{
 								nearbyUserList.length > 0 && (
 									<NearbyUserMap

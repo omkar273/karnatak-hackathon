@@ -40,6 +40,7 @@ import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
 import AddEventPage from "@/fragments/events/pages/add_event.tsx";
 import PublicPage from "pages/pulic/page/public_page.tsx";
+import EventManagement from "@/fragments/event/pages/event_management.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -131,6 +132,11 @@ const App = () => {
 							path="staff-distribution"
 							element={getProtectedRoute(<StaffDistribution/>)}
 						/>
+					</Route>
+					
+					<Route path="/events">
+						<Route index element={getProtectedRoute(<EventManagement/>)}/>
+						<Route path={'manage'} element={getProtectedRoute(<EventManagement/>)}/>
 					</Route>
 					
 					<Route

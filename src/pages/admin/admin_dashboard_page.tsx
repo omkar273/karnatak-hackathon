@@ -42,6 +42,7 @@ import {serverTimestamp} from 'firebase/firestore';
 import {getRandomElementFromArray} from '@/data/data/generate_user_data';
 import loginData from './utils/loginData';
 import {doSaveFIR} from '@/fragments/fir/utils/do_save_fir';
+import {generateRandomLatLngWithinRadius} from "@/common/utils/generate_random_latlng.ts";
 
 function sleep(ms: number): Promise<void> {
 	return new Promise(resolve => setTimeout(resolve, ms));
@@ -266,6 +267,7 @@ const AdminDashboardPage = () => {
 			toast.error(`${error}`);
 		}
 	}
+	
 	// const saveCounts = async () => {
 	//     try {
 	//         toast.success(`no of counts ${station_crime_data.length}`);
@@ -425,12 +427,79 @@ const AdminDashboardPage = () => {
 	
 	const saveUserLocations = () => {
 		try {
-			const temp = inspector_data.map(user=>{
+			
+			let temp = inspector_data.map(user => {
+				
+				const station = stations_data.filter(station => station.id === user.stationId)
+				const latLng = generateRandomLatLngWithinRadius(
+					{
+						lat: station[0].lat,
+						lng: station[0].lng
+					}, 4)
 				return {
-					...user
+					...user,
+					lat: latLng.location.lat,
+					lng: latLng.location.lng
+					
 				}
 			});
-			temp;
+			
+			saveToJson(temp, 'inspector_data')
+			
+			temp = head_constable_data.map(user => {
+				
+				const station = stations_data.filter(station => station.id === user.stationId)
+				const latLng = generateRandomLatLngWithinRadius(
+					{
+						lat: station[0].lat,
+						lng: station[0].lng
+					}, 4)
+				return {
+					...user,
+					lat: latLng.location.lat,
+					lng: latLng.location.lng
+					
+				}
+			});
+			
+			saveToJson(temp, 'head_constable_data')
+			
+			temp = sub_inspector_data.map(user => {
+				
+				const station = stations_data.filter(station => station.id === user.stationId)
+				const latLng = generateRandomLatLngWithinRadius(
+					{
+						lat: station[0].lat,
+						lng: station[0].lng
+					}, 4)
+				return {
+					...user,
+					lat: latLng.location.lat,
+					lng: latLng.location.lng
+					
+				}
+			});
+			
+			saveToJson(temp, 'sub_inspector_data')
+			
+			temp = constable_data.map(user => {
+				
+				const station = stations_data.filter(station => station.id === user.stationId)
+				const latLng = generateRandomLatLngWithinRadius(
+					{
+						lat: station[0].lat,
+						lng: station[0].lng
+					}, 4)
+				return {
+					...user,
+					lat: latLng.location.lat,
+					lng: latLng.location.lng
+					
+				}
+			});
+			
+			saveToJson(temp, 'constable_data')
+			
 			
 		} catch (error) {
 			toast.error(`${error}`);
@@ -501,7 +570,8 @@ const AdminDashboardPage = () => {
 						className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
 						type="button">
 						save crime rates
-					</button><button
+					</button>
+					<button
 						onClick={saveUserLocations}
 						className='bg-blue-500 p-4 rounded-md shadow-lg text-lg text-white'
 						type="button">

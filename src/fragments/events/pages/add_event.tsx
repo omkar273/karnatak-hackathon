@@ -1,8 +1,8 @@
 import {useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {EventType} from "@/types/event_type.ts";
+import {EventModel} from "@/types/event_type.ts";
 import {toast} from "react-toastify";
-import {addDoc, collection, } from "firebase/firestore";
+import {addDoc, collection, serverTimestamp,} from "firebase/firestore";
 import {firestore} from "@/firebase/firebase_config.ts";
 
 const AddEventPage = () => {
@@ -11,17 +11,21 @@ const AddEventPage = () => {
 		register,
 		reset,
 		formState: {errors, isSubmitting},
-	} = useForm<EventType>();
+	} = useForm<EventModel>();
 	
 	const [eventFormVisible, setEventFormVisible] = useState(true);
 	const [eventID, setEventID] = useState<string | null>(null);
 	// const [eventDetails, setEventDetails] = useState<EventType | null>(null);
 	// const [loading, setLoading] = useState(false);
 	eventID;
-	const onSubmit: SubmitHandler<EventType> = async (data) => {
+	const onSubmit: SubmitHandler<EventModel> = async (data) => {
 		try {
 			const eventsCollectionRef = collection(firestore, 'events');
-			const docRef = await addDoc(eventsCollectionRef, data);
+			const docRef = await addDoc(eventsCollectionRef, {
+				...data,
+				timestamp: serverTimestamp(),
+				status: 'Registered',
+			});
 			toast.success(`Event registered successfully! Event ID: ${docRef.id}`);
 			reset()
 			

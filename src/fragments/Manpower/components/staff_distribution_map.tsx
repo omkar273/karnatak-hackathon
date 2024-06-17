@@ -5,7 +5,6 @@ import police_station_icon from '@/assets/svg/police_station_ic.svg';
 import police_icon from '@/assets/svg/police_ic.svg';
 import L from 'leaflet';
 import {UserModel} from "@/fragments/user_management/models/user_model.ts";
-import {generateRandomLatLngWithinRadius} from "@/common/utils/generate_random_latlng.ts";
 import 'leaflet/dist/leaflet.css';
 import FullScreen from "react-fullscreen-crossbrowser";
 import {Expand, Shrink} from "lucide-react";
@@ -54,10 +53,10 @@ const getMarker = (user: UserModel, distributionType: StaffDistributionEnum): L.
 	}
 	
 	return policeMarker;
-	                                                   
+	
 }
 
-const StaffDistributionMap: React.FC<Props> = ({lat, lng, userList, stationList,distribution_type}) => {
+const StaffDistributionMap: React.FC<Props> = ({lat, lng, userList, stationList, distribution_type}) => {
 	
 	const [fullScreen, setFullScreen] = useState(false);
 	
@@ -67,25 +66,19 @@ const StaffDistributionMap: React.FC<Props> = ({lat, lng, userList, stationList,
 				enabled={fullScreen}
 				onChange={(e) => setFullScreen(e)}
 			>
-				<MapContainer center={[12.971599, 77.594566]} zoom={13} scrollWheelZoom={false} className={'h-[30vh]'}>
+				<MapContainer center={[12.971599, 77.594566]} zoom={13} scrollWheelZoom={fullScreen} className={'h-[30vh]'}>
 					{/*<MapContainer center={[lat, lng]} zoom={13} scrollWheelZoom={false}>*/}
 					<TileLayer
 						attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 					/>
-					{/*<Marker position={[lat, lng]} icon={policeStationMarker}>*/}
-					{/*	<Popup>*/}
-					{/*      <span className='font-bold'>*/}
-					{/*        {center_marker_title} Station*/}
-					{/*      </span>*/}
-					{/*	</Popup>*/}
-					{/*</Marker>*/}
 					
 					{userList?.map((user, i) => {
-						const latlng = generateRandomLatLngWithinRadius({lat, lng}, 4);
+						console.log(user.lat,user.lng)
+						
 						return (
-							<Marker position={[latlng.location.lat, latlng.location.lng]}
-							        icon={getMarker(user,distribution_type)} key={i}>
+							<Marker position={[user.lat || 0, user.lng || 0]}
+							        icon={getMarker(user, distribution_type)} key={i}>
 								<Popup>
 					              <span className='font-bold'>
 					                {user.name}
@@ -96,7 +89,6 @@ const StaffDistributionMap: React.FC<Props> = ({lat, lng, userList, stationList,
 					})}
 					
 					{stationList?.map((station, i) => {
-						
 						return (
 							<Marker position={[station.lat || 0, station.lng || 0]} icon={policeStationMarker} key={i}>
 								<Popup>
@@ -111,7 +103,7 @@ const StaffDistributionMap: React.FC<Props> = ({lat, lng, userList, stationList,
 					<LocationMarker lng={lng} lat={lat}/>
 				</MapContainer>
 				<button
-					className={'absolute bottom-0 left-0 p-4 bg-opacity-40 z-[100] bg-gray-900 rounded-md text-white text-lg font-bold'}
+					className={'absolute top-0 right-0 p-4 bg-opacity-40 z-[100] bg-gray-900 rounded-md text-white text-lg font-bold'}
 					onClick={
 						() => setFullScreen((prev => !prev))
 					}>

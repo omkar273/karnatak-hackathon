@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import LatLng from "@/types/latlng.ts";
 import {Marker, Popup, useMap, useMapEvents} from "react-leaflet";
 
-const LocationMarker: React.FC<{ lat: number; lng: number }> = ({lat, lng}) => {
+const LocationMarker: React.FC<{ lat: number; lng: number }> = () => {
 	const [position, setPosition] = useState<LatLng | null>(null);
 	
 	const map = useMap();
@@ -17,9 +17,9 @@ const LocationMarker: React.FC<{ lat: number; lng: number }> = ({lat, lng}) => {
 		},
 	});
 	
-	useEffect(() => {
-		map.flyTo([lat, lng], map.getZoom())
-	}, [lat, lng]);
+	// useEffect(() => {
+	// 	map.flyTo([lat, lng], map.getZoom())
+	// }, [lat, lng]);
 	
 	
 	return (

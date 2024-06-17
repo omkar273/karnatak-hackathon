@@ -1,20 +1,18 @@
 import {Radio} from 'antd'
 import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
-// import commisioner_data from '@/data/json/commisioner_data.json';
-// import inspector_data from '@/data/json/inspector_data.json';
-// import sub_inspector_data from '@/data/json/sub_inspector_data.json';
-// import head_constable_data from '@/data/json/head_constable_data.json';
-// import constable_data from '@/data/json/constable_data.json';
+import commisioner_data from '@/data/json/commisioner_data.json';
+import inspector_data from '@/data/json/inspector_data.json';
+import sub_inspector_data from '@/data/json/sub_inspector_data.json';
+import head_constable_data from '@/data/json/head_constable_data.json';
+import constable_data from '@/data/json/constable_data.json';
 import zones_data from '@/data/json/zones_data.json';
 import stations_data from '@/data/json/stations_data.json';
 import StaffDistributionMap from "@/fragments/Manpower/components/staff_distribution_map.tsx";
 import StaffDistributionEnum from "@/fragments/Manpower/enum/staff_distribution_enum.ts";
 import {useState} from "react";
 
-
 const StaffDistribution = () => {
 	const [distributionType, setDistributionType] = useState<StaffDistributionEnum>(StaffDistributionEnum.Ranks);
-	
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
@@ -54,7 +52,14 @@ const StaffDistribution = () => {
 						lng={0}
 						distribution_type={distributionType}
 						stationList={stations_data}
-						userList={assistant_commisioner_data}/>
+						userList={[
+							...inspector_data.slice(0,20),
+							...assistant_commisioner_data.slice(0,20),
+							...commisioner_data.slice(0,20),
+							...sub_inspector_data.slice(0,20),
+							...head_constable_data.slice(0,20),
+							...constable_data.slice(0,20),
+						]}/>
 					
 					<div className={'absolute'}>
 					

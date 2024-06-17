@@ -6,7 +6,6 @@ import police_station_icon from '@/assets/svg/police_station_ic.svg';
 import police_icon from '@/assets/svg/police_ic.svg';
 import L from 'leaflet';
 import {UserModel} from "@/fragments/user_management/models/user_model.ts";
-import {generateRandomLatLngWithinRadius} from "@/common/utils/generate_random_latlng.ts";
 import 'leaflet/dist/leaflet.css';
 import FullScreen from "react-fullscreen-crossbrowser";
 import {Expand, Shrink} from "lucide-react";
@@ -20,9 +19,9 @@ interface Props {
 
 const policeMarker = new L.Icon({
 	iconUrl: police_icon,
-	iconSize: [40, 40], // or new L.Point(40, 40)
-	iconAnchor: [20, 20], // Adjust icon anchor to center the icon
-	popupAnchor: [0, -20] // Adjust popup anchor to appear above the icon
+	iconSize: [40, 40],
+	iconAnchor: [20, 20],
+	popupAnchor: [0, -20]
 });
 
 const policeStationMarker = new L.Icon({
@@ -82,16 +81,16 @@ const StaticMap: React.FC<Props> = ({lat, lng, center_marker_title, userList}) =
 					/>
 					<Marker position={[lat, lng]} icon={policeStationMarker}>
 						<Popup>
-          <span className='font-bold'>
-            {center_marker_title} Station
-          </span>
+				          <span className='font-bold'>
+				            {center_marker_title} Station
+				          </span>
 						</Popup>
 					</Marker>
 					
 					{userList.map((user, i) => {
-						const latlng = generateRandomLatLngWithinRadius({lat, lng}, 4);
+						
 						return (
-							<Marker position={[latlng.location.lat, latlng.location.lng]} icon={policeMarker} key={i}>
+							<Marker position={[user.lat || 0, user.lng || 0]} icon={policeMarker} key={i}>
 								<Popup>
 					              <span className='font-bold'>
 					                {user.name}
@@ -104,7 +103,7 @@ const StaticMap: React.FC<Props> = ({lat, lng, center_marker_title, userList}) =
 					<LocationMarker lng={lng} lat={lat}/>
 				</MapContainer>
 				<button
-					className={'absolute bottom-0 left-0 p-4 bg-opacity-40 z-[100] bg-gray-900 rounded-md text-white text-lg font-bold'}
+					className={'absolute top-0 right-0 p-4 bg-opacity-40 z-[100] bg-gray-900 rounded-md text-white text-lg font-bold'}
 					onClick={
 						() => setFullScreen((prev => !prev))
 					}>
