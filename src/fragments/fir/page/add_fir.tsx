@@ -80,7 +80,7 @@ const AddFir = () => {
 		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
 			<div
 				className="w-full bg-white p-3 border-b-2 flex justify-between items-center text-base sticky top-0 z-[100]">
-				<p className="font-open-sans font-semibold ">{"Dashboard"}</p>
+				<p className="font-open-sans font-semibold ">{"Add F.I.R"}</p>
 				
 				{/* station dropdown */}
 				{stationList.length > 1 && (
@@ -92,6 +92,7 @@ const AddFir = () => {
 							className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
 							aria-label="Station"
 						>
+							
 							<Select2.Value>{getStationNameById(stationId ?? "")}</Select2.Value>
 							<Select2.Icon className="text-violet11">
 								<ChevronDownIcon/>

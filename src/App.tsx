@@ -42,6 +42,7 @@ import AddEventPage from "@/fragments/events/pages/add_event.tsx";
 import PublicPage from "pages/pulic/page/public_page.tsx";
 import EventManagement from "@/fragments/event/pages/event_management.tsx";
 import AddFir from "@/fragments/fir/page/add_fir.tsx";
+import LeaveRequest from "@/fragments/applications/pages/leave_request.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -97,6 +98,19 @@ const App = () => {
 						/>
 						<Route index element={getProtectedRoute(<ProfilePage/>)}/>
 					</Route>
+					
+					{/*application route*/}
+					<Route path="application">
+						<Route
+							path="register"
+							element={getProtectedRoute(<LeaveRequest/>)}
+						/>
+						
+						<Route index element={getProtectedRoute(<LeaveRequest/>)}/>
+					</Route>
+					
+				
+					
 					
 					<Route path="/CourtT" element={getProtectedRoute(<CourtT/>)}/>
 					<Route
