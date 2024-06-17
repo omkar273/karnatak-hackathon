@@ -1,6 +1,5 @@
 import {useForm, Controller, SubmitHandler} from "react-hook-form";
 import {Input, Select, Button, Card} from "antd";
-import {toast} from "react-toastify";
 import TaskModel from "@/types/task_model.ts";
 import commisioner_data from '@/data/json/commisioner_data.json';
 import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
@@ -10,6 +9,7 @@ import head_constable_data from '@/data/json/head_constable_data.json';
 import constable_data from '@/data/json/constable_data.json';
 import {useSelector} from "react-redux";
 import {RootState} from "@/common/redux/store.ts";
+import doSaveTask from "@/fragments/tasks/utils/save_task.ts";
 
 const {TextArea} = Input;
 
@@ -25,13 +25,13 @@ const TaskForm = () => {
 		reset,
 	} = useForm<TaskModel>();
 	
-	const onSubmit: SubmitHandler<TaskModel> = (data) => {
+	const onSubmit: SubmitHandler<TaskModel> = async (data) => {
 		console.log(data); // Handle form submission logic
-		toast.success("Task created successfully");
+		await doSaveTask(data, userdata?.id || '', userdata?.name || '')
 		reset();
 	};
 	
-	const taskTypes = ["Bug Fix", "Feature Development", "Code Review"];
+	const taskTypes = ["Fir", "Crime Investigation", "Patrolling", "Emergency Reporting", "other"];
 	const priorities = ["Low", "Medium", "High"];
 	const users = [
 		...inspector_data,
@@ -186,8 +186,8 @@ const TaskForm = () => {
 							</div>
 							
 							<div className="col-span-1">
-								<Input type="hidden" {...register("alloted_by_id")} defaultValue={userdata?.id}/>
-								<Input type="hidden" {...register("alloted_by_name")}
+								<Input type="hidden" {...register("assigned_by_id")} defaultValue={userdata?.id}/>
+								<Input type="hidden" {...register("assigned_by_name")}
 								       defaultValue={userdata?.name}/>
 							</div>
 						</div>

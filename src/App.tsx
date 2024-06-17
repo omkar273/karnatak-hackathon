@@ -41,6 +41,7 @@ import VideoPage from "./pages/videos/page/video_page";
 import AddEventPage from "@/fragments/events/pages/add_event.tsx";
 import PublicPage from "pages/pulic/page/public_page.tsx";
 import EventManagement from "@/fragments/event/pages/event_management.tsx";
+import AddFir from "@/fragments/fir/page/add_fir.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -63,7 +64,7 @@ const App = () => {
 					
 					{/* fir route */}
 					<Route path="fir">
-						<Route index element={getProtectedRoute(<AllFirPage/>)}/>
+						<Route index element={getProtectedRoute(<AddFir/>)}/>
 						<Route path="all" element={getProtectedRoute(<AllFirPage/>)}/>
 						<Route
 							path="report-incident"

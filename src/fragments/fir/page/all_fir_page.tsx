@@ -4,7 +4,6 @@ import {RootState} from "@/common/redux/store";
 import {useEffect, useState} from "react";
 import * as Select from '@radix-ui/react-select';
 import {CheckIcon, ChevronDownIcon} from '@radix-ui/react-icons';
-import AddFIRForm from "@/fragments/station/components/add_fir_form.tsx";
 
 const AllFirPage = () => {
 	
@@ -90,7 +89,7 @@ const AllFirPage = () => {
 			
 			{/*add station form*/}
 			
-			<AddFIRForm/>
+			
 			
 			<div className="p-4">
 				<FirDetailsTable stationId={stationId}/>

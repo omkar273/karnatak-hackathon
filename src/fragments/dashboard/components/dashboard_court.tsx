@@ -243,7 +243,7 @@ const CourtOrders: React.FC = () => {
   ];
 
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
+    <div className="bg-gray-100">
       <div className="p-4">
         <div className="bg-white p-4 my-4 card">
           <div className="flex justify-between items-center mb-4">

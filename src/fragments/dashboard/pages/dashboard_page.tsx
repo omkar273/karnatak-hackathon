@@ -12,7 +12,7 @@ import StationRatesGraph from "../components/station_rates_graph";
 import ZonalData from "../components/zone_data";
 
 const DashboardPage = () => {
-  const { stationList, userdata } = useSelector((s: RootState) => s.auth);
+  const { stationList } = useSelector((s: RootState) => s.auth);
 
   const [stationId, setStationId] = useState<string | null>(null);
 
@@ -26,7 +26,7 @@ const DashboardPage = () => {
   };
 
   return (
-    <div className="h-screen xl:overflow-hidden bg-gray-100 flex flex-col">
+    <div className="h-screen xl:overflow-y-scroll bg-gray-100 flex flex-col">
       <div className="w-full bg-white p-3 border-b-2 flex justify-between items-center text-base sticky top-0 z-[100]">
         <p className="font-open-sans font-semibold ">{"Dashboard"}</p>
 
@@ -129,11 +129,11 @@ const DashboardPage = () => {
       <ZonalData />
       <DashboardUserDataCards />
 
-      <div>
+      <div >
         <div className="p-5 grid grid-cols-2 md:gap-4 lg:grid-cols-2">
           <div className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
             <div className="flex-1">
-              <span className="text-lg font-semibold px-1">Recent Cases</span>
+              <span className="text-lg font-semibold p-4">Recent Cases</span>
             </div>
             <div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
               <span className="text-white">9</span>
@@ -141,7 +141,7 @@ const DashboardPage = () => {
           </div>
           <div className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
             <div className="flex-1">
-              <span className="text-lg font-semibold px-1">Pending Cases</span>
+              <span className="text-lg font-semibold p-4">Pending Cases</span>
             </div>
             <div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
               <span className="text-white">8</span>
@@ -155,7 +155,7 @@ const DashboardPage = () => {
       {/* main content */}
       <div className="lg:flex lg:flex-grow lg:flex-row lg:gap-4">
         {/* left container */}
-        <div className="flex-grow md:flex-[85%] px-4 xl:overflow-y-auto xl:max-h-[calc(100vh-138px)]">
+        <div className="flex-grow md:flex-[85%] px-4">
           {/* left container content */}
           <div>
             <DashboardStationCards stationId={stationId ?? ""} />

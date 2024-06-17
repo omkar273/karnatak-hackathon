@@ -1,16 +1,19 @@
+import {FieldValue, Timestamp} from "firebase/firestore";
+
 interface TaskModel {
 	alloted_to_id: string[];
 	task_type: string;
 	description: string;
 	due_date: string;
 	priority: string;
-	alloted_by_id: string,
-	alloted_by_name: string,
+	assigned_by_id: string,
+	assigned_by_name: string,
 	current_status?: string,
-	case_no?: string,
-	zone_name?: string,
-	vehicle?: string,
-	
+	case_no?: string | null,
+	zone_name?: string | null,
+	vehicle?: string | null,
+	timestamp?: Timestamp | FieldValue;
+	id?: string | null;
 }
 
 export default TaskModel
