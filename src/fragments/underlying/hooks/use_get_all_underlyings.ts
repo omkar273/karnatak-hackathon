@@ -1,5 +1,4 @@
 import {firestore} from "@/firebase/firebase_config";
-import {UnderlyingModel} from "@/fragments/user_management/models/underlying_model";
 import {
 	collection,
 	DocumentData,
@@ -11,9 +10,10 @@ import {
 	where,
 } from "firebase/firestore";
 import {useCallback, useState} from "react";
+import {UserModel} from "@/fragments/user_management/models/user_model.ts";
 
 interface UseFIRsReturn {
-	documents: UnderlyingModel[];
+	documents: UserModel[];
 	fetchUnderlyings: (newPage?: boolean) => Promise<void>;
 	loading: boolean;
 	error: Error | null;
@@ -24,7 +24,7 @@ function useGetAllUnderlyings(
 	initialLimit: number | null = 10,
 	userUid?: string | null
 ): UseFIRsReturn {
-	const [documents, setDocuments] = useState<UnderlyingModel[]>([]);
+	const [documents, setDocuments] = useState<UserModel[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<Error | null>(null);
 	const [lastDoc, setLastDoc] =
@@ -35,7 +35,7 @@ function useGetAllUnderlyings(
 		async (newPage = false) => {
 			setLoading(true);
 			setError(null);
-			const fetchedDocuments: UnderlyingModel[] = [];
+			const fetchedDocuments: UserModel[] = [];
 			try {
 				if (!userUid) {
 					return
@@ -57,7 +57,7 @@ function useGetAllUnderlyings(
 				let lastVisible: QueryDocumentSnapshot<DocumentData> | null = null;
 				
 				querySnapshot.forEach((doc) => {
-					const data = doc.data() as UnderlyingModel;
+					const data = doc.data() as UserModel;
 					fetchedDocuments.push({...data});
 					lastVisible = doc;
 				});

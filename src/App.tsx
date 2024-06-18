@@ -94,6 +94,11 @@ const App = () => {
 							element={getProtectedRoute(<RegisterFragment/>)}
 						/>
 						<Route
+							path="underlyings"
+							element={getProtectedRoute(<UnderlyingDataPage/>)}
+						/>
+						
+						<Route
 							path="underlying"
 							element={getProtectedRoute(<UnderlyingDataPage/>)}
 						/>
