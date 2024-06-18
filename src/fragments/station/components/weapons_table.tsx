@@ -35,6 +35,7 @@ import {
 import useGetAllStationWeaponsVehiclesData from '../hooks/use_get_weapons_data'
 import { WeaponType } from "@/types/weapon_type"
 import { GridLoader } from "react-spinners"
+import {Link} from "react-router-dom";
 
 
 const weaponColumns: ColumnDef<WeaponType>[] = [
@@ -58,10 +59,10 @@ const weaponColumns: ColumnDef<WeaponType>[] = [
         accessorKey: "owner_name",
         header: "Owner Name",
     },
-    {
-        accessorKey: "owner_id",
-        header: "Owner ID",
-    },
+    // {
+    //     accessorKey: "owner_id",
+    //     header: "Owner ID",
+    // },
     {
         accessorKey: "owner_post",
         header: "Owner Post",
@@ -73,6 +74,7 @@ const weaponColumns: ColumnDef<WeaponType>[] = [
     {
         id: "actions",
         enableHiding: false,
+        header : "Actions",
         cell: ({ row }) => {
             const weapon = row.original;
 
@@ -93,7 +95,12 @@ const weaponColumns: ColumnDef<WeaponType>[] = [
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>View owner</DropdownMenuItem>
-                        <DropdownMenuItem>View weapon details</DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link to={`/weapon/details?id=${weapon.id}`}>
+                                View weapon details
+                            </Link>
+                        </DropdownMenuItem>
+                        
                     </DropdownMenuContent>
                 </DropdownMenu>
             );
@@ -186,7 +193,7 @@ const StationWeaponsTable = ({ stationId }: { stationId: string | null }) => {
                                     key={column.id}
                                     className="capitalize"
                                     checked={column.getIsVisible()}
-                                    onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                                    onCheckedChange={(value) => column.toggleVisibility(value)}
                                 >
                                     {column.id}
                                 </DropdownMenuCheckboxItem>

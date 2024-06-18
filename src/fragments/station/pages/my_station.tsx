@@ -37,17 +37,19 @@ const MyStationPage: React.FC = () => {
 			element: <StationStaffList stationId={stationId}/>,
 		}, {
 			tabTitle: 'Staff Distribution',
-			element: <StaticMap
-				station_id={stationId ?? ''}
-				lat={stationDetails.data?.lat || 0}
-				lng={stationDetails.data?.lng || 0}
-				station_name={stationDetails.data?.station_name}
-			/>,
+			element: <div className={'md:max-h-[50vh] overflow-hidden'}>
+				<StaticMap
+					station_id={stationId ?? ''}
+					lat={stationDetails.data?.lat || 0}
+					lng={stationDetails.data?.lng || 0}
+					station_name={stationDetails.data?.station_name}
+				/>
+			</div>,
 		},
 		{
 			tabTitle: 'Crime records',
 			element: <StationCrimeRateChart stationId={stationId}/>,
-		},{
+		}, {
 			tabTitle: 'FIR',
 			element: <StationFirTable stationId={stationId}/>,
 		},

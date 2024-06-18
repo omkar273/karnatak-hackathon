@@ -44,6 +44,8 @@ import EventManagement from "@/fragments/event/pages/event_management.tsx";
 import AddFir from "@/fragments/fir/page/add_fir.tsx";
 import LeaveRequest from "@/fragments/applications/pages/leave_request.tsx";
 import LeaveApprovals from "@/fragments/applications/pages/leave_approvals.tsx";
+import VehicleDetails from "@/fragments/station/pages/vehicle_details.tsx";
+import WeaponDetails from "@/fragments/station/pages/weapon_details.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -137,6 +139,11 @@ const App = () => {
 						element={getProtectedRoute(<WitnessManagementPage/>)}
 					/>
 					<Route path="/vehicle" element={<VehiclePage/>}/>
+					
+					<Route path="/vehicle/details" element={<VehicleDetails/>}/>
+					
+					<Route path="/weapon/details" element={<WeaponDetails/>}/>
+					
 					<Route path="/notice" element={getProtectedRoute(<NoticeTable/>)}/>
 					<Route
 						path="/witnesss"
