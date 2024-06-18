@@ -57,6 +57,7 @@
     "react-scrollbars-custom": "^4.1.1",
     "react-spinners": "^0.13.8",
     "react-text-to-speech": "^0.16.1",
+    "react-to-pdf": "^1.0.1",
     "react-toastify": "^10.0.5",
     "react-vertical-timeline-component": "^3.6.0",
     "reactflow": "^11.11.3",

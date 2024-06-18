@@ -1,4 +1,4 @@
-import {MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents} from 'react-leaflet';
+import {CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {useEffect, useState} from 'react';
 import LatLng from '@/types/latlng';
@@ -73,12 +73,10 @@ const LocationMarker: React.FC<Props> = ({lat, station_id, lng}) => {
 			locationDetails: generateRandomLatLngWithinRadius({lng, lat}, 3)
 		}));
 		
-		map.flyTo([lat,lng], map.getZoom());
+		map.flyTo([lat, lng], map.getZoom());
 		
 		setUserLocations(nearbyUsers);
 	}, [lat, lng, station_id]);
-	
-	
 	
 	
 	return (
@@ -88,6 +86,14 @@ const LocationMarker: React.FC<Props> = ({lat, station_id, lng}) => {
 					<Popup>You are here</Popup>
 				</Marker>
 			)}
+			
+			{position && (
+				<CircleMarker center={[position.lat, position.lng]} pathOptions={{fillColor: 'blue'}} radius={20}>
+					<Popup>Popup in CircleMarker</Popup>
+				</CircleMarker>
+			
+			)}
+			
 			
 			{userLocations.map((userdata, index) => (
 				<Marker key={index}
@@ -119,6 +125,11 @@ const StaticMap: React.FC<Props> = ({lat, lng, station_name, station_id}) => {
                     </span>
 				</Popup>
 			</Marker>
+			
+			<CircleMarker center={[lat, lng]} pathOptions={{color: 'red'}} radius={20}>
+				<Popup>Popup in CircleMarker</Popup>
+			</CircleMarker>
+			
 			<LocationMarker lng={lng} lat={lat} station_id={station_id ?? ''}/>
 		</MapContainer>
 	);

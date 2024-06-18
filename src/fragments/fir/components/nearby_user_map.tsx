@@ -10,12 +10,15 @@ import 'leaflet/dist/leaflet.css';
 import FullScreen from "react-fullscreen-crossbrowser";
 import {Expand, Shrink} from "lucide-react";
 
+
+
 interface Props {
 	lat: number;
 	lng: number;
 	center_marker_title?: string;
 	userList: UserModel[];
 }
+
 
 const policeMarker = new L.Icon({
 	iconUrl: police_icon,
@@ -26,10 +29,12 @@ const policeMarker = new L.Icon({
 
 const policeStationMarker = new L.Icon({
 	iconUrl: police_station_icon,
-	iconSize: [60, 60], // or new L.Point(60, 60)
-	iconAnchor: [30, 30], // Adjust icon anchor to center the icon
-	popupAnchor: [0, -30] // Adjust popup anchor to appear above the icon
+	iconSize: [40, 40],
+	iconAnchor: [20, 20],
+	popupAnchor: [0, -20]
 });
+
+
 
 const LocationMarker: React.FC<{ lat: number; lng: number }> = ({lat, lng}) => {
 	const [position, setPosition] = useState<LatLng | null>(null);
