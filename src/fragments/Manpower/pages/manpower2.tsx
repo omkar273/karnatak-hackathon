@@ -238,46 +238,50 @@ const ManpowerStatic = () => {
       {/* </div> */}
 
       {/* analytics */}
-      <div className="card grid md:grid-cols-1 grid-cols-1 bg-white">
-        <div className="flex flex-col w-full h-full justify-between items-center border border-gray-300 p-4 rounded-lg my-1 mx-0">
+      <div className="card grid md:grid-cols-1 grid-cols-1 gap-2 bg-white">
+        <div className="flex flex-col items-center justify-center w-full h-full border border-gray-300 p-4 rounded-lg my-1 mx-0">
           <p className="text-xl my-3">Crime percentage in this last month</p>
-          <PieChart
-            series={[
-              {
-                data: pieChartData,
-                highlightScope: { faded: "global", highlighted: "item" },
-                faded: {
-                  innerRadius: 30,
-                  additionalRadius: -30,
-                  color: "gray",
+          <div className="flex items-center justify-center">
+            <PieChart
+              series={[
+                {
+                  data: pieChartData,
+                  highlightScope: { faded: "global", highlighted: "item" },
+                  faded: {
+                    innerRadius: 30,
+                    additionalRadius: -30,
+                    color: "gray",
+                  },
                 },
-              },
-            ]}
-            title="Crime percentage in this last"
-            height={300}
-            width={600}
-          />
+              ]}
+              title="Crime percentage in this last"
+              height={300}
+              width={600}
+            />
+          </div>
         </div>
 
-        <div className="border border-gray-300 p-4 rounded-lg my-1 mx-1">
-          <BarChart
-            dataset={departmentDetails}
-            xAxis={[
-              {
-                scaleType: "band",
-                dataKey: "dept_name",
-                label: "No of people alloted in different departments",
-              },
-            ]}
-            series={[
-              {
-                dataKey: "no_people",
-                label: "Number of People",
-                valueFormatter,
-              },
-            ]}
-            {...chartSettings}
-          />
+        <div className="border rounded-lg border-gray-300 flex justify-center">
+          <div className="p-4 my-1 mx-1">
+            <BarChart
+              dataset={departmentDetails}
+              xAxis={[
+                {
+                  scaleType: "band",
+                  dataKey: "dept_name",
+                  label: "No of people alloted in different departments",
+                },
+              ]}
+              series={[
+                {
+                  dataKey: "no_people",
+                  label: "Number of People",
+                  valueFormatter,
+                },
+              ]}
+              {...chartSettings}
+            />
+          </div>
         </div>
       </div>
 

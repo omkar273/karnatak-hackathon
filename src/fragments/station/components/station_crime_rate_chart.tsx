@@ -101,14 +101,14 @@ const StationCrimRateChart: React.FC<Props> = ({ stationId }) => {
 
       {/* piecharts */}
       <h1>Crime Trends</h1>
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-2 md:gap-4 lg:grid-cols-2">
         <div className="border p-4">
           <CrimeRatePiechart data={crimeRates[crimeRates.length - 2]} />
-          <div className="text-center mt-2">Previous Year</div>
+          <div className="text-center mt-2">Previous Month</div>
         </div>
         <div className="border p-4">
-          <CrimeRatePiechart data={crimeRates[crimeRates.length - 1]} />
-          <div className="text-center mt-2">Current Year</div>
+          <CrimeRatePiechart data={crimeRates[crimeRates.length - 1]}/>
+          <div className="text-center mt-2">Current Month</div>
         </div>
       </div>
     </div>
