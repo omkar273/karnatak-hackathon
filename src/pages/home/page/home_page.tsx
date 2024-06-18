@@ -5,17 +5,11 @@ import {RootState} from "@/common/redux/store";
 import {firestore} from "@/firebase/firebase_config";
 import {StationModel} from "@/fragments/station/models/station_model";
 import {Menu} from "antd";
+import {collection, doc, getDoc, getDocs, limit, query, where,} from "firebase/firestore";
 import {
-	collection,
-	doc,
-	getDoc,
-	getDocs,
-	limit,
-	query,
-	where,
-} from "firebase/firestore";
-import {
-	BarChartBig, CalendarClock, CalendarRange,
+	BarChartBig,
+	CalendarClock,
+	CalendarRange,
 	ClipboardList,
 	FileStack,
 	FileText,
@@ -25,7 +19,8 @@ import {
 	NotebookPen,
 	NotepadText,
 	Scale,
-	ScrollText, Siren,
+	ScrollText,
+	Siren,
 	University,
 	User,
 	UserCog,
@@ -219,15 +214,27 @@ const HomePage = () => {
 		},
 		{
 			key: "event-section",
-			label: "Event Permissions",
+			label: "Applications",
 			icon: <CalendarRange/>,
 			children: [
 				{
-					key: "Events",
-					label: "Events",
+					key: "Event Permissions",
+					label: "Event Permissions",
 					icon: <CalendarClock/>,
-					onClick: () => navigateAndCloseDrawer("/events")
-				}
+					onClick: () => navigateAndCloseDrawer("/application/events")
+				},
+				{
+					key: "Leaves",
+					label: "Leaves",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves")
+				},{
+					key: "Leave Approval",
+					label: "Leave Approval",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves/manage")
+				},
+				
 			]
 		},
 		{
@@ -241,12 +248,12 @@ const HomePage = () => {
 			label: "Manpower",
 			icon: <User/>,
 			children: [
-				{
-					key: "Manpower",
-					label: "Manpower",
-					icon: <User/>,
-					onClick: () => navigateAndCloseDrawer("/manpower"),
-				},
+				// {
+				// 	key: "Manpower",
+				// 	label: "Manpower",
+				// 	icon: <User/>,
+				// 	onClick: () => navigateAndCloseDrawer("/manpower"),
+				// },
 				{
 					key: "Manpower2",
 					label: "Manpower Mapping",

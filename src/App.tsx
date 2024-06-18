@@ -43,6 +43,7 @@ import PublicPage from "pages/pulic/page/public_page.tsx";
 import EventManagement from "@/fragments/event/pages/event_management.tsx";
 import AddFir from "@/fragments/fir/page/add_fir.tsx";
 import LeaveRequest from "@/fragments/applications/pages/leave_request.tsx";
+import LeaveApprovals from "@/fragments/applications/pages/leave_approvals.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -102,14 +103,18 @@ const App = () => {
 					{/*application route*/}
 					<Route path="application">
 						<Route
-							path="register"
+							path="leaves"
 							element={getProtectedRoute(<LeaveRequest/>)}
 						/>
 						
+						<Route index element={getProtectedRoute(<EventManagement/>)}/>
+						
+						<Route path={'events'} element={getProtectedRoute(<EventManagement/>)}/>
+						
+						<Route path={'leaves/manage'} element={getProtectedRoute(<LeaveApprovals/>)}/>
+						
 						<Route index element={getProtectedRoute(<LeaveRequest/>)}/>
 					</Route>
-					
-				
 					
 					
 					<Route path="/CourtT" element={getProtectedRoute(<CourtT/>)}/>
@@ -148,10 +153,6 @@ const App = () => {
 						/>
 					</Route>
 					
-					<Route path="/events">
-						<Route index element={getProtectedRoute(<EventManagement/>)}/>
-						<Route path={'manage'} element={getProtectedRoute(<EventManagement/>)}/>
-					</Route>
 					
 					<Route
 						path="/lawandoder"

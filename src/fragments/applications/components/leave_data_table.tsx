@@ -34,7 +34,8 @@ import {toast} from "react-toastify";
 import LeaveApplicationModel from "@/types/leave_application_type.ts";
 
 
-const LeaveApplicationTable = ({leaveApplications}: {	leaveApplications: LeaveApplicationModel[]
+const LeaveApplicationTable = ({leaveApplications}: {
+	leaveApplications: LeaveApplicationModel[]
 }) => {
 	const [leaveData, setLeaveData] = useState(leaveApplications);
 	const [sorting, setSorting] = useState<SortingState>([]);
@@ -47,13 +48,15 @@ const LeaveApplicationTable = ({leaveApplications}: {	leaveApplications: LeaveAp
 		setLeaveData(leaveApplications);
 	}, [leaveApplications]);
 	
-	const handleStatusChange = (leaveId: string, newStatus: string) => {
-		setLeaveData(prevData =>
-			prevData.map(leave =>
-				leave.id === leaveId ? {...leave, leave_status: newStatus} : leave
-			)
-		);
-	};
+	
+	const canApprove = (userId: string, send_to_id: string[]): boolean => {
+		for (const superiorId of send_to_id) {
+			if (superiorId === userId) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	const leaveColumns: ColumnDef<LeaveApplicationModel>[] = [
 		{
@@ -81,14 +84,14 @@ const LeaveApplicationTable = ({leaveApplications}: {	leaveApplications: LeaveAp
 			header: "Status",
 			cell: ({row}) => {
 				const leave = row.original;
-				if (userdata?.post === "Admin") {
+				if (canApprove(userdata?.id || '', leave.send_to_id)) {
 					return (
 						<Select
 							onValueChange={(newStatus) => {
-								updateFirebaseDocument('leaveApplications', leave.id || '', {
+								updateFirebaseDocument('leave_applications', leave.id || '', {
 									leave_status: newStatus
 								});
-								handleStatusChange(leave.id!, newStatus);
+								// handleStatusChange(leave.id!, newStatus);
 								toast.success(`Leave status updated to ${newStatus}`);
 							}}
 							defaultValue={leave.leave_status || ""}

@@ -2,14 +2,14 @@ import {useEffect, useState} from "react";
 import {
 	ColumnDef,
 	ColumnFiltersState,
-	SortingState,
-	VisibilityState,
 	flexRender,
 	getCoreRowModel,
 	getFilteredRowModel,
 	getPaginationRowModel,
 	getSortedRowModel,
+	SortingState,
 	useReactTable,
+	VisibilityState,
 } from "@tanstack/react-table";
 import {ChevronDown, MoreHorizontal} from "lucide-react";
 
@@ -24,15 +24,8 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {Input} from "@/components/ui/input";
-import {
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow,
-} from "@/components/ui/table";
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/ui/select"; // Ensure you have these components
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"; // Ensure you have these components
 import {GridLoader} from "react-spinners";
 
 import station_data from '@/data/json/stations_data.json';
@@ -63,7 +56,8 @@ const EventDataTable = ({events}: { events: EventModel[] }) => {
 			prevData.map(event =>
 				event.id === eventId ? {...event, stationId: newStationId} : event
 			)
-		);
+	)
+		;
 	};
 	
 	const eventColumns: ColumnDef<EventModel>[] = [
@@ -176,7 +170,7 @@ const EventDataTable = ({events}: { events: EventModel[] }) => {
 								<SelectItem value={'Decline'}>
 									Decline
 								</SelectItem>
-								
+							
 							</SelectContent>
 						</Select>
 					)
