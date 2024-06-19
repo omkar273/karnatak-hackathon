@@ -4,21 +4,22 @@ import {setStationList} from "@/common/redux/auth_slice";
 import {RootState} from "@/common/redux/store";
 import {firestore} from "@/firebase/firebase_config";
 import {StationModel} from "@/fragments/station/models/station_model";
-import {Menu} from "antd";
+import {Menu, MenuProps} from "antd";
 import {collection, doc, getDoc, getDocs, limit, query, where,} from "firebase/firestore";
 import {
 	BarChartBig,
 	CalendarClock,
 	CalendarRange,
+	Car,
 	ClipboardList,
+	ClipboardPlus,
+	File,
 	FileStack,
 	FileText,
 	Home,
 	Landmark,
-	Mic,
 	NotebookPen,
 	NotepadText,
-	Scale,
 	ScrollText,
 	Siren,
 	University,
@@ -26,12 +27,15 @@ import {
 	UserCog,
 	UserRoundPlus,
 	Users,
+	UserSearch,
+	UsersRound,
 } from "lucide-react";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Outlet, useNavigate} from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
+import {MenuItemType} from "antd/es/menu/interface";
 
 const HomePage = () => {
 	const navigate = useNavigate();
@@ -46,8 +50,8 @@ const HomePage = () => {
 	
 	const [loading, setLoading] = useState<boolean>(false);
 	const dispatch = useDispatch();
-	
 	loading;
+	
 	useEffect(() => {
 		const fetchData = async () => {
 			if (!userdata) return;
@@ -117,13 +121,37 @@ const HomePage = () => {
 		fetchData();
 	}, [userdata, currentUser]);
 	
-	const sidebarItems = [
+	
+	// sidebar logic
+	
+	
+	const initalItems: MenuProps['items'] = [
 		{
 			key: "Dashboard",
 			label: "Dashboard",
 			onClick: () => navigateAndCloseDrawer("/"),
 			icon: <BarChartBig/>,
 		},
+		{
+			key: "Admin",
+			label: "Admin",
+			icon: <User/>,
+			children: [
+				{
+					key: "Add new user",
+					label: "Add new user",
+					icon: <UserRoundPlus/>,
+					onClick: () => navigateAndCloseDrawer("/admin/add-user"),
+				},
+				{
+					key: "Add Station",
+					label: "Add Station",
+					icon: <University/>,
+					onClick: () => navigateAndCloseDrawer("/admin/add-station"),
+				},
+			]
+		},
+		
 		{
 			key: "Station",
 			label: "Station",
@@ -135,12 +163,7 @@ const HomePage = () => {
 					onClick: () => navigateAndCloseDrawer("/station"),
 					icon: <Home/>,
 				},
-				{
-					key: "Add Station",
-					label: "Add Station",
-					icon: <University/>,
-					onClick: () => navigateAndCloseDrawer("/station/add"),
-				},
+				
 				{
 					key: "Task Assignment",
 					label: "Task Assignment",
@@ -149,45 +172,28 @@ const HomePage = () => {
 				},
 				
 				{
-					key: "Law and order",
-					label: "Law and order",
-					icon: <Scale/>,
-					onClick: () => navigateAndCloseDrawer("/law"),
+					key: "Vehicles",
+					label: "Vehicles",
+					icon: <Car/>,
+					onClick: () => navigateAndCloseDrawer("/station/vehicle"),
+				},
+				
+				{
+					key: "Forensic Records",
+					label: "Forensic Records",
+					icon: <File/>,
+					onClick: () => navigateAndCloseDrawer("/records/forensic"),
 				},
 				{
-					key: "Law and order 2",
-					label: "Law and order 2",
-					icon: <Scale/>,
-					onClick: () => navigateAndCloseDrawer("/lawandoder"),
+					key: "Witness Records",
+					label: "Witness Records",
+					icon: <File/>,
+					onClick: () => navigateAndCloseDrawer("/records/witnesss"),
 				},
+			
 			],
 		},
-		{
-			key: "Court Monitoring",
-			label: "Court Monitoring",
-			icon: <Landmark/>,
-			children: [
-				{
-					key: "Chargesheet",
-					label: "Chargesheet",
-					icon: <ScrollText/>,
-					onClick: () => navigateAndCloseDrawer("/chargesheet"),
-				},
-				{
-					key: "Witness Management",
-					label: "Witness Management",
-					icon: <Mic/>,
-					onClick: () => navigateAndCloseDrawer("/witness"),
-				},
-				{
-					key: "Case Preparation",
-					label: "Case Preparation",
-					icon: <NotepadText/>,
-					
-					onClick: () => navigateAndCloseDrawer("/CourtTwo"),
-				},
-			],
-		},
+		
 		{
 			key: "F.I.R Management",
 			label: "F.I.R Management",
@@ -207,9 +213,97 @@ const HomePage = () => {
 				}, {
 					key: "Report Incident",
 					label: "Report Incident",
-					icon: <FileStack/>,
+					icon: <ClipboardPlus/>,
 					onClick: () => navigateAndCloseDrawer("/fir/report-incident"),
 				},
+			],
+		},
+		{
+			key: "Court Monitoring",
+			label: "Court Monitoring",
+			icon: <Landmark/>,
+			children: [
+				{
+					key: "Chargesheet",
+					label: "Chargesheet",
+					icon: <ScrollText/>,
+					onClick: () => navigateAndCloseDrawer("/chargesheet"),
+				},
+				{
+					key: "Witness Management",
+					label: "Witness Management",
+					icon: <UserSearch/>,
+					onClick: () => navigateAndCloseDrawer("/witness"),
+				},
+				{
+					key: "Case Preparation",
+					label: "Case Preparation",
+					icon: <NotepadText/>,
+					
+					onClick: () => navigateAndCloseDrawer("/CourtTwo"),
+				},
+			],
+		},
+		{
+			key: "Manpower",
+			label: "Manpower",
+			icon: <User/>,
+			children: [
+				
+				{
+					key: "laws",
+					label: "Laws",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/laws"),
+				},
+				{
+					key: "Law & Order",
+					label: "Law & Order",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/lawandoder"),
+				},
+				{
+					key: "Staff Distribution",
+					label: "Staff Distribution",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/staff-distribution"),
+				},
+				{
+					key: "Manpower2",
+					label: "Manpower Mapping",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/man"),
+				},
+				
+				{
+					key: "Manpower Management",
+					label: "Manpower Management",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/mans"),
+				},
+				{
+					
+					key: "Manpower",
+					label: "Manpower",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower"),
+				},
+			
+			]
+		},
+		{
+			key: "User Management",
+			label: "User Management",
+			icon: <UserCog/>,
+			children: [
+				
+				{
+					key: "Underlyings",
+					label: "Underlyings",
+					icon: <Users/>,
+					onClick: () => navigateAndCloseDrawer("/user/underlying"),
+				},
+			
 			],
 		},
 		{
@@ -228,14 +322,21 @@ const HomePage = () => {
 					label: "Leaves",
 					icon: <CalendarClock/>,
 					onClick: () => navigateAndCloseDrawer("/application/leaves")
-				},{
+				}, {
 					key: "Leave Approval",
 					label: "Leave Approval",
 					icon: <CalendarClock/>,
 					onClick: () => navigateAndCloseDrawer("/application/leaves/manage")
 				},
-				
+			
 			]
+		},
+		
+		{
+			key: "Notices",
+			label: "Notices",
+			onClick: () => navigateAndCloseDrawer("/notice"),
+			icon: <NotepadText/>,
 		},
 		{
 			key: "Emergency Zones",
@@ -244,16 +345,218 @@ const HomePage = () => {
 			onClick: () => navigateAndCloseDrawer("/emergency_zones"),
 		},
 		{
+			key: "Public Section",
+			label: "Public Section",
+			icon: <UsersRound/>,
+			onClick: () => navigateAndCloseDrawer("/public"),
+		},
+		{
+			key: "Profile",
+			label: "Profile",
+			icon: <User/>,
+			onClick: () => navigateAndCloseDrawer("/user"),
+		},
+	
+	]
+	const adminSidebarItems: MenuProps['items'] = [
+		{
+			key: "Dashboard",
+			label: "Dashboard",
+			onClick: () => navigateAndCloseDrawer("/"),
+			icon: <BarChartBig/>,
+		},
+		{
+			key: "Add new user",
+			label: "Add new user",
+			icon: <UserRoundPlus/>,
+			onClick: () => navigateAndCloseDrawer("/admin/add-user"),
+		},
+		{
+			key: "Add Station",
+			label: "Add Station",
+			icon: <University/>,
+			onClick: () => navigateAndCloseDrawer("/admin/add-station"),
+		},
+		
+		
+		{
+			key: "event-section",
+			label: "Applications",
+			icon: <CalendarRange/>,
+			children: [
+				{
+					key: "Event Permissions",
+					label: "Event Permissions",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/events")
+				},
+				{
+					key: "Leaves",
+					label: "Leaves",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves")
+				},
+				{
+					key: "Leave Approval",
+					label: "Leave Approval",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves/manage")
+				},
+			
+			]
+		},
+		
+		{
+			key: "Notices",
+			label: "Notices",
+			onClick: () => navigateAndCloseDrawer("/notice"),
+			icon: <NotepadText/>,
+		},
+		{
+			key: "Emergency Zones",
+			label: "Emergency Zones",
+			icon: <Siren/>,
+			onClick: () => navigateAndCloseDrawer("/emergency_zones"),
+		},
+		{
+			key: "Public Section",
+			label: "Public Section",
+			icon: <UsersRound/>,
+			onClick: () => navigateAndCloseDrawer("/public"),
+		},
+		{
+			key: "Profile",
+			label: "Profile",
+			icon: <User/>,
+			onClick: () => navigateAndCloseDrawer("/user"),
+		},
+	
+	
+	]
+	const commonSidebarItems: MenuProps['items'] = [
+		{
+			key: "Dashboard",
+			label: "Dashboard",
+			onClick: () => navigateAndCloseDrawer("/"),
+			icon: <BarChartBig/>,
+		},
+		
+		{
+			key: "Station",
+			label: "Station",
+			icon: <Home/>,
+			children: [
+				{
+					key: "My Station",
+					label: "Station Management",
+					onClick: () => navigateAndCloseDrawer("/station"),
+					icon: <Home/>,
+				},
+				
+				{
+					key: "Task Assignment",
+					label: "Task Assignment",
+					icon: <ClipboardList/>,
+					onClick: () => navigateAndCloseDrawer("/station/tasks"),
+				},
+				
+				{
+					key: "Vehicles",
+					label: "Vehicles",
+					icon: <Car/>,
+					onClick: () => navigateAndCloseDrawer("/station/vehicle"),
+				},
+				
+				{
+					key: "Forensic Records",
+					label: "Forensic Records",
+					icon: <File/>,
+					onClick: () => navigateAndCloseDrawer("/records/forensic"),
+				},
+				{
+					key: "Witness Records",
+					label: "Witness Records",
+					icon: <File/>,
+					onClick: () => navigateAndCloseDrawer("/records/witnesss"),
+				},
+			
+			],
+		},
+		
+		{
+			key: "F.I.R Management",
+			label: "F.I.R Management",
+			icon: <FileText/>,
+			children: [
+				{
+					key: "Add F.I.R",
+					label: "Add F.I.R",
+					icon: <NotebookPen/>,
+					onClick: () => navigateAndCloseDrawer("/fir"),
+				},
+				{
+					key: "All F.I.R",
+					label: "All F.I.R",
+					icon: <FileStack/>,
+					onClick: () => navigateAndCloseDrawer("/fir/all"),
+				}, {
+					key: "Report Incident",
+					label: "Report Incident",
+					icon: <ClipboardPlus/>,
+					onClick: () => navigateAndCloseDrawer("/fir/report-incident"),
+				},
+			],
+		},
+		{
+			key: "Court Monitoring",
+			label: "Court Monitoring",
+			icon: <Landmark/>,
+			children: [
+				{
+					key: "Chargesheet",
+					label: "Chargesheet",
+					icon: <ScrollText/>,
+					onClick: () => navigateAndCloseDrawer("/chargesheet"),
+				},
+				{
+					key: "Witness Management",
+					label: "Witness Management",
+					icon: <UserSearch/>,
+					onClick: () => navigateAndCloseDrawer("/witness"),
+				},
+				{
+					key: "Case Preparation",
+					label: "Case Preparation",
+					icon: <NotepadText/>,
+					
+					onClick: () => navigateAndCloseDrawer("/CourtTwo"),
+				},
+			],
+		},
+		{
 			key: "Manpower",
 			label: "Manpower",
 			icon: <User/>,
 			children: [
-				// {
-				// 	key: "Manpower",
-				// 	label: "Manpower",
-				// 	icon: <User/>,
-				// 	onClick: () => navigateAndCloseDrawer("/manpower"),
-				// },
+				
+				{
+					key: "laws",
+					label: "Laws",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/laws"),
+				},
+				{
+					key: "Law & Order",
+					label: "Law & Order",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/lawandoder"),
+				},
+				{
+					key: "Staff Distribution",
+					label: "Staff Distribution",
+					icon: <User/>,
+					onClick: () => navigateAndCloseDrawer("/manpower/staff-distribution"),
+				},
 				{
 					key: "Manpower2",
 					label: "Manpower Mapping",
@@ -267,13 +570,14 @@ const HomePage = () => {
 					icon: <User/>,
 					onClick: () => navigateAndCloseDrawer("/manpower/mans"),
 				},
-				
 				{
-					key: "Staff Distribution",
-					label: "Staff Distribution",
+					
+					key: "Manpower",
+					label: "Manpower",
 					icon: <User/>,
-					onClick: () => navigateAndCloseDrawer("/manpower/staff-distribution"),
+					onClick: () => navigateAndCloseDrawer("/manpower"),
 				},
+			
 			]
 		},
 		{
@@ -281,33 +585,83 @@ const HomePage = () => {
 			label: "User Management",
 			icon: <UserCog/>,
 			children: [
-				{
-					key: "Add new user",
-					label: "Add new user",
-					icon: <UserRoundPlus/>,
-					onClick: () => navigateAndCloseDrawer("/user/register"),
-				},
+				
 				{
 					key: "Underlyings",
 					label: "Underlyings",
 					icon: <Users/>,
 					onClick: () => navigateAndCloseDrawer("/user/underlying"),
 				},
-				{
-					key: "Profile",
-					label: "Profile",
-					icon: <User/>,
-					onClick: () => navigateAndCloseDrawer("/user"),
-				},
+			
 			],
 		},
+		{
+			key: "event-section",
+			label: "Applications",
+			icon: <CalendarRange/>,
+			children: [
+				{
+					key: "Event Permissions",
+					label: "Event Permissions",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/events")
+				},
+				{
+					key: "Leaves",
+					label: "Leaves",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves")
+				}, {
+					key: "Leave Approval",
+					label: "Leave Approval",
+					icon: <CalendarClock/>,
+					onClick: () => navigateAndCloseDrawer("/application/leaves/manage")
+				},
+			
+			]
+		},
+		
+		{
+			key: "Notices",
+			label: "Notices",
+			onClick: () => navigateAndCloseDrawer("/notice"),
+			icon: <NotepadText/>,
+		},
+		{
+			key: "Emergency Zones",
+			label: "Emergency Zones",
+			icon: <Siren/>,
+			onClick: () => navigateAndCloseDrawer("/emergency_zones"),
+		},
+		{
+			key: "Public Section",
+			label: "Public Section",
+			icon: <UsersRound/>,
+			onClick: () => navigateAndCloseDrawer("/public"),
+		},
+		{
+			key: "Profile",
+			label: "Profile",
+			icon: <User/>,
+			onClick: () => navigateAndCloseDrawer("/user"),
+		},
 	
-	];
+	]
+	
+	const [sidebarItems, setSidebarItems] = useState<MenuProps['items']>(initalItems)
+	useEffect(() => {
+		if (userdata?.post == RanksEnum.Admin) {
+			setSidebarItems(adminSidebarItems)
+		} else {
+			setSidebarItems(commonSidebarItems)
+		}
+	}, [userdata?.post]);
+	
 	
 	return (
 		<div className="pg max-h-screen overflow-hidden">
 			<Navbar
-				sidebarItems={sidebarItems}
+				sidebarItems={commonSidebarItems as MenuItemType[]}
 				drawerOpen={drawerOpen}
 				setdrawerOpen={setdrawerOpen}
 			/>

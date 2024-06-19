@@ -21,11 +21,9 @@ import CourtT from "./fragments/court/third_page";
 import DashboardPage from "./fragments/dashboard/pages/dashboard_page";
 import AllFirPage from "./fragments/fir/page/all_fir_page";
 import FirDetailsPage from "./fragments/fir/page/fir_details_page";
-import LawOrderPage from "./fragments/law and order/pages/law_order_page";
 import LawOrderPagess from "./fragments/law and order/pages/lawandoderpage";
 import NoticeTable from "./fragments/notice/odernotice";
 import ProfilePage from "./fragments/profile/page/profile_page";
-import AddStationPage from "./fragments/station/pages/add_station_page";
 import MyStationPage from "./fragments/station/pages/my_station";
 import TasksPage from "./fragments/tasks/pages/tasknew";
 import TaskAssignmentPage from "./fragments/tasks/pages/tasks_page";
@@ -33,7 +31,6 @@ import UnderlyingDataPage from "./fragments/underlying/page/underlying_page";
 import RegisterFragment from "./fragments/user_management/register_page";
 import WitnessManagementPages from "./fragments/witness management/pages/witness";
 import WitnessManagementPage from "./fragments/witness management/pages/witness_management_page";
-import AdminDashboardPage from "./pages/admin/admin_dashboard_page";
 import AuthPage from "./pages/auth/page/auth_page";
 import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
@@ -46,6 +43,9 @@ import LeaveRequest from "@/fragments/applications/pages/leave_request.tsx";
 import LeaveApprovals from "@/fragments/applications/pages/leave_approvals.tsx";
 import VehicleDetails from "@/fragments/station/pages/vehicle_details.tsx";
 import WeaponDetails from "@/fragments/station/pages/weapon_details.tsx";
+import LawOrderPage from "@/fragments/law and order/pages/law_order_page.tsx";
+import AdminDashboardPage from "pages/admin/admin_dashboard_page.tsx";
+import AddStationPage from "@/fragments/station/pages/add_station_page.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -63,8 +63,11 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
+				
+				
 				<Route path="/" element={getProtectedRoute(<HomePage/>)}>
 					<Route index element={getProtectedRoute(<DashboardPage/>)}/>
+					
 					
 					{/* fir route */}
 					<Route path="fir">
@@ -80,16 +83,36 @@ const App = () => {
 						/>
 					</Route>
 					
+					
 					{/* station routes */}
 					<Route path="station">
 						<Route index element={getProtectedRoute(<MyStationPage/>)}/>
-						<Route path="add" element={getProtectedRoute(<AddStationPage/>)}/>
 						
 						<Route path="tasks" element={getProtectedRoute(<TaskAssignmentPage/>)}
 						/>
 						<Route path="task" element={getProtectedRoute(<TasksPage/>)}/>
+						
+						<Route path="vehicle" element={<VehiclePage/>}/>
+						
+						<Route path="vehicle/details" element={<VehicleDetails/>}/>
+						
+						<Route path="weapon/details" element={<WeaponDetails/>}/>
+						
 					</Route>
 					
+					{/*admin paths*/}
+					{/* admin route */}
+					<Route path="/admin">
+						<Route index element={<AdminDashboardPage/>}/>
+						
+						<Route
+							path="add-user"
+							element={getProtectedRoute(<RegisterFragment/>)}
+						/>
+						<Route path="add-station" element={getProtectedRoute(<AddStationPage/>)}/>
+					</Route>
+					
+					{/*user route*/}
 					<Route path="user">
 						<Route
 							path="register"
@@ -106,6 +129,7 @@ const App = () => {
 						/>
 						<Route index element={getProtectedRoute(<ProfilePage/>)}/>
 					</Route>
+					
 					
 					{/*application route*/}
 					<Route path="application">
@@ -124,6 +148,7 @@ const App = () => {
 					</Route>
 					
 					
+					{/*court monitoring*/}
 					<Route path="/CourtT" element={getProtectedRoute(<CourtT/>)}/>
 					<Route
 						path="/CourtMm"
@@ -138,23 +163,22 @@ const App = () => {
 						path="/witness"
 						element={getProtectedRoute(<WitnessManagementPage/>)}
 					/>
-					<Route path="/vehicle" element={<VehiclePage/>}/>
 					
-					<Route path="/vehicle/details" element={<VehicleDetails/>}/>
-					
-					<Route path="/weapon/details" element={<WeaponDetails/>}/>
 					
 					<Route path="/notice" element={getProtectedRoute(<NoticeTable/>)}/>
-					<Route
-						path="/witnesss"
-						element={getProtectedRoute(<WitnessManagementPages/>)}
-					/>
-					<Route path="/forensic" element={getProtectedRoute(<Forensic/>)}/>
-					<Route
-						path="/Record"
-						element={getProtectedRoute(<MyStationPage/>)}
-					/>
 					
+					
+					<Route path="records">
+						<Route index element={getProtectedRoute(<MyStationPage/>)}/>
+						<Route
+							path="witnesss"
+							element={getProtectedRoute(<WitnessManagementPages/>)}
+						/>
+						<Route path="forensic" element={getProtectedRoute(<Forensic/>)}/>
+					</Route>
+					
+					
+					{/*manpower route*/}
 					<Route path="/manpower">
 						<Route index element={getProtectedRoute(<Manpower/>)}/>
 						<Route path="man" element={getProtectedRoute(<ManpowerStatic/>)}/>
@@ -163,19 +187,21 @@ const App = () => {
 							path="staff-distribution"
 							element={getProtectedRoute(<StaffDistribution/>)}
 						/>
+						<Route path="laws" element={getProtectedRoute(<LawOrderPage/>)}/>
+						
+						<Route
+							path="lawandoder"
+							element={getProtectedRoute(<LawOrderPagess/>)}
+						/>
 					</Route>
 					
 					
-					<Route
-						path="/lawandoder"
-						element={getProtectedRoute(<LawOrderPagess/>)}
-					/>
-					<Route path="/law" element={getProtectedRoute(<LawOrderPage/>)}/>
-					
+					{/*emergency zones*/}
 					<Route path="emergency_zones">
 						<Route index element={getProtectedRoute(<EmergencyZones/>)}/>
 						<Route path="zone" element={getProtectedRoute(<ZoneDetails/>)}/>
 					</Route>
+				
 				</Route>
 				
 				{/* auth route */}
@@ -190,11 +216,10 @@ const App = () => {
 					<Route path={'add-event'} element={<AddEventPage/>}/>
 				</Route>
 				
+				
 				{/* video page link */}
 				<Route path="video" element={<VideoPage/>}/>
 				
-				{/* admin route */}
-				<Route path="/admin" element={<AdminDashboardPage/>}/>
 				
 				{/* error route */}
 				<Route path="*" element={<ErrorPage/>}/>

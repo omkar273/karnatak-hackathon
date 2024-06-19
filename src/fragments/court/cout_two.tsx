@@ -89,14 +89,11 @@ const CourtTwo: React.FC = () => {
   return (
     <div className="bg-gray-200">
       <div className="bg-gray-50">
-        <div className="w-full h-12 bg-blue-300">
-          <p className="p-3 font-semibold">Court Monitoring</p>
-        </div>
-        <h1 className="px-4 py-2 text-xl font-bold">Case Preparation</h1>
+        
 
         {/* chargeet copies */}
         <div className="card bg-white">
-          <p className="text-2xl my-3 font-semibold">All chargesheet</p>
+          <p className="text-2xl my-3 font-semibold">Case Preparation</p>
           <Table
             dataSource={chargesheetData}
             columns={chargesheetColumns}
