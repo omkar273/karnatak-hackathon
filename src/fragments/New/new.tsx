@@ -250,7 +250,7 @@ const VehiclePage = () => {
 
         {/* Weapons */}
         <div className="bg-white p-4 my-4 card">
-          <p className="my-4 font-bold text-xl">Weapons</p>
+          <p className="my-4 font-bold text-xl">Weapon Holdings Details</p>
           <Table
             dataSource={weaponsData}
             columns={weaponsColumns}
@@ -267,7 +267,7 @@ const VehiclePage = () => {
 
         {/* Weapon 2 */}
         <div className="bg-white p-4 my-4 card">
-          <p className="my-4 font-bold text-xl">Weapon 2</p>
+          <p className="my-4 font-bold text-xl">Weapon Details</p>
           <Table
             dataSource={weapon2Data}
             columns={weapon2Columns}

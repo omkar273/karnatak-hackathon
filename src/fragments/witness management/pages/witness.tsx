@@ -26,7 +26,7 @@ const WitnessManagementPages = () => {
       render: () => <FilePdfOutlined />,
     },
     {
-      title: "FIR resolution rates(%)",
+      title: "Case resolution rates(%)",
       dataIndex: "firResolutionRates",
       key: "firResolutionRates",
     },

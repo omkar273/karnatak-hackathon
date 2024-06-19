@@ -162,6 +162,8 @@ const App = () => {
             path="/witness"
             element={getProtectedRoute(<WitnessManagementPage />)}
           />
+
+          
           <Route path="/notice" element={getProtectedRoute(<NoticeTable />)} />
           <Route
             path="/CasePreparationTable"

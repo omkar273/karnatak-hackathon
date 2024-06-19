@@ -1,4 +1,5 @@
 import { Table } from "antd";
+import LawOrderPage from "./law_order_page";
 
 
 const LawOrderPagess = () => {
@@ -284,6 +285,7 @@ const LawOrderPagess = () => {
           scroll={{ x: "max-content" }}
         />
       </div>
+      <LawOrderPage/>
     </div>
   );
 };
