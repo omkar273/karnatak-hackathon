@@ -90,7 +90,7 @@ const HomePage = () => {
 					const q = query(
 						collection(firestore, "stations"),
 						where(search_field, "==", currentUser?.user.uid),
-						limit(3)
+						limit(15)
 					);
 					
 					const querySnapshot = await getDocs(q);
