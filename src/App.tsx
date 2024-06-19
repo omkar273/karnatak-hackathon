@@ -163,7 +163,8 @@ const App = () => {
             element={getProtectedRoute(<WitnessManagementPage />)}
           />
 
-          
+          <Route path="/x" element={getProtectedRoute(<LawOrderPagess />)} />
+
           <Route path="/notice" element={getProtectedRoute(<NoticeTable />)} />
           <Route
             path="/CasePreparationTable"
