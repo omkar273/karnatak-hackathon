@@ -193,7 +193,7 @@ const HomePage = () => {
         },
         {
           key: "Witness Records",
-          label: "Witness Records",
+          label: "Crime Investigation",
           icon: <File />,
           onClick: () => navigateAndCloseDrawer("/records/witnesss"),
         },
@@ -466,7 +466,7 @@ const HomePage = () => {
         },
         {
           key: "Witness Records",
-          label: "Witness Records",
+          label: "Crime Investigation",
           icon: <File />,
           onClick: () => navigateAndCloseDrawer("/records/witnesss"),
         },
