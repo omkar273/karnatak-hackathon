@@ -3,7 +3,7 @@ import { ExportOutlined } from "@ant-design/icons";
 import { BarChart } from "@mui/x-charts/BarChart";
 import { axisClasses } from "@mui/x-charts/ChartsAxis";
 import { PieChart } from "@mui/x-charts/PieChart";
-import { Collapse, Table } from "antd";
+import { Table } from "antd";
 import { Link } from "react-router-dom";
 import { manpowerMappingData } from "../../../data/manpower_mapping";
 
@@ -286,7 +286,7 @@ const ManpowerStatic = () => {
       </div>
 
       <div className="p-4">
-        <div className="card bg-white my-4">
+        {/* <div className="card bg-white my-4">
           <Collapse
             defaultActiveKey={["1"]}
             items={[
@@ -303,7 +303,7 @@ const ManpowerStatic = () => {
               },
             ]}
           />
-        </div>
+        </div>*/}
 
         {/* <div className="card bg-white my-4">
           <Collapse defaultActiveKey={['1']} items={[
