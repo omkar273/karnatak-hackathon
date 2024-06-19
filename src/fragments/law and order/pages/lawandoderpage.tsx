@@ -1,6 +1,4 @@
 import { Table } from "antd";
-import LawOrderPage from "./law_order_page";
-
 
 const LawOrderPagess = () => {
   const incidentReportingColumns = [
@@ -159,28 +157,94 @@ const LawOrderPagess = () => {
   // Sample data
   const sampleData = {
     incident_reporting: [
-      { location: "Location 1", time: "10:00 AM", nature: "Theft", involved_parties: "Person A, Person B", actions_taken: "Reported to Police" },
-      { location: "Location 2", time: "02:00 PM", nature: "Accident", involved_parties: "Car 1, Car 2", actions_taken: "Ambulance Called" },
+      {
+        location: "Location 1",
+        time: "10:00 AM",
+        nature: "Theft",
+        involved_parties: "Person A, Person B",
+        actions_taken: "Reported to Police",
+      },
+      {
+        location: "Location 2",
+        time: "02:00 PM",
+        nature: "Accident",
+        involved_parties: "Car 1, Car 2",
+        actions_taken: "Ambulance Called",
+      },
     ],
     riot_management: [
-      { location: "Area 1", crowd_size: 500, movement_patterns: "North to South", potential_hotspots: "Market Area" },
-      { location: "Area 2", crowd_size: 300, movement_patterns: "East to West", potential_hotspots: "City Square" },
+      {
+        location: "Area 1",
+        crowd_size: 500,
+        movement_patterns: "North to South",
+        potential_hotspots: "Market Area",
+      },
+      {
+        location: "Area 2",
+        crowd_size: 300,
+        movement_patterns: "East to West",
+        potential_hotspots: "City Square",
+      },
     ],
     traffic_management: [
-      { traffic_condition: "Heavy", congestion_levels: "High", traffic_incidents: "Accident", road_closures: "Main St", construction_zones: "Broadway" },
-      { traffic_condition: "Moderate", congestion_levels: "Medium", traffic_incidents: "Breakdown", road_closures: "2nd Ave", construction_zones: "Elm St" },
+      {
+        traffic_condition: "Heavy",
+        congestion_levels: "High",
+        traffic_incidents: "Accident",
+        road_closures: "Main St",
+        construction_zones: "Broadway",
+      },
+      {
+        traffic_condition: "Moderate",
+        congestion_levels: "Medium",
+        traffic_incidents: "Breakdown",
+        road_closures: "2nd Ave",
+        construction_zones: "Elm St",
+      },
     ],
     crowd_management: [
-      { crowd_size: 1000, density: "High", movement_patterns: "Circle", potential_areas_of_concern: "Stage Area" },
-      { crowd_size: 700, density: "Medium", movement_patterns: "Line", potential_areas_of_concern: "Entrance" },
+      {
+        crowd_size: 1000,
+        density: "High",
+        movement_patterns: "Circle",
+        potential_areas_of_concern: "Stage Area",
+      },
+      {
+        crowd_size: 700,
+        density: "Medium",
+        movement_patterns: "Line",
+        potential_areas_of_concern: "Entrance",
+      },
     ],
     vip_security: [
-      { name: "VIP 1", personal_details: "Detail 1", contact_information: "1234567890", travel_itineraries: "Itinerary 1", security_preferences: "High" },
-      { name: "VIP 2", personal_details: "Detail 2", contact_information: "0987654321", travel_itineraries: "Itinerary 2", security_preferences: "Medium" },
+      {
+        name: "VIP 1",
+        personal_details: "Detail 1",
+        contact_information: "1234567890",
+        travel_itineraries: "Itinerary 1",
+        security_preferences: "High",
+      },
+      {
+        name: "VIP 2",
+        personal_details: "Detail 2",
+        contact_information: "0987654321",
+        travel_itineraries: "Itinerary 2",
+        security_preferences: "Medium",
+      },
     ],
     public_events: [
-      { event_details: "Event 1", police_forces_demand: "High", location_time: "Location A (12:00 PM)", permission: "Approved" },
-      { event_details: "Event 2", police_forces_demand: "Medium", location_time: "Location B (04:00 PM)", permission: "Rejected" },
+      {
+        event_details: "Event 1",
+        police_forces_demand: "High",
+        location_time: "Location A (12:00 PM)",
+        permission: "Approved",
+      },
+      {
+        event_details: "Event 2",
+        police_forces_demand: "Medium",
+        location_time: "Location B (04:00 PM)",
+        permission: "Rejected",
+      },
     ],
   };
 
@@ -200,7 +264,8 @@ const LawOrderPagess = () => {
             total: sampleData.incident_reporting.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
@@ -216,7 +281,8 @@ const LawOrderPagess = () => {
             total: sampleData.riot_management.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
@@ -232,7 +298,8 @@ const LawOrderPagess = () => {
             total: sampleData.traffic_management.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
@@ -248,7 +315,8 @@ const LawOrderPagess = () => {
             total: sampleData.crowd_management.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
@@ -264,7 +332,8 @@ const LawOrderPagess = () => {
             total: sampleData.vip_security.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
@@ -280,12 +349,12 @@ const LawOrderPagess = () => {
             total: sampleData.public_events.length,
             showSizeChanger: true,
             showQuickJumper: true,
-            showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total} items`,
+            showTotal: (total, range) =>
+              `Showing ${range[0]}-${range[1]} of ${total} items`,
           }}
           scroll={{ x: "max-content" }}
         />
       </div>
-      <LawOrderPage/>
     </div>
   );
 };

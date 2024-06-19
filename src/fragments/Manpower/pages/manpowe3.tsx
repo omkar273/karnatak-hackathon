@@ -271,131 +271,134 @@ const ManpowerPages = () => {
   };
 
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 p-4 space-y-8">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 ">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
         {"Manpower Management"}
       </p>
+      <div className="p-4 space-y-8">
+        {/* Unit List */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Unit List</p>
+          <Table
+            dataSource={sampleData.unit_list}
+            columns={unitListColumns}
+            pagination={{
+              total: sampleData.unit_list.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Unit List */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Unit List</p>
-        <Table
-          dataSource={sampleData.unit_list}
-          columns={unitListColumns}
-          pagination={{
-            total: sampleData.unit_list.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
+        {/* Status Indicator */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Status Indicator</p>
+          <Table
+            dataSource={sampleData.status_indicator}
+            columns={statusIndicatorColumns}
+            pagination={{
+              total: sampleData.status_indicator.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Status Indicator */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Status Indicator</p>
-        <Table
-          dataSource={sampleData.status_indicator}
-          columns={statusIndicatorColumns}
-          pagination={{
-            total: sampleData.status_indicator.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
+        {/* Resources */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">
+            Resources (Rapid action force)
+          </p>
+          <Table
+            dataSource={sampleData.resources}
+            columns={resourcesColumns}
+            pagination={{
+              total: sampleData.resources.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Resources */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Resources (Rapid action force)</p>
-        <Table
-          dataSource={sampleData.resources}
-          columns={resourcesColumns}
-          pagination={{
-            total: sampleData.resources.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
+        {/* Fleet Management */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Fleet Management</p>
+          <Table
+            dataSource={sampleData.fleet_management}
+            columns={fleetManagementColumns}
+            pagination={{
+              total: sampleData.fleet_management.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Fleet Management */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Fleet Management</p>
-        <Table
-          dataSource={sampleData.fleet_management}
-          columns={fleetManagementColumns}
-          pagination={{
-            total: sampleData.fleet_management.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
+        {/* Surveillance */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Surveillance</p>
+          <Table
+            dataSource={sampleData.surveillance}
+            columns={surveillanceColumns}
+            pagination={{
+              total: sampleData.surveillance.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Surveillance */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Surveillance</p>
-        <Table
-          dataSource={sampleData.surveillance}
-          columns={surveillanceColumns}
-          pagination={{
-            total: sampleData.surveillance.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
+        {/* Reporting */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Reporting</p>
+          <Table
+            dataSource={sampleData.reporting}
+            columns={reportingColumns}
+            pagination={{
+              total: sampleData.reporting.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
 
-      {/* Reporting */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Reporting</p>
-        <Table
-          dataSource={sampleData.reporting}
-          columns={reportingColumns}
-          pagination={{
-            total: sampleData.reporting.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
+        {/* Deployed Employees */}
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+          <p className="font-bold text-xl mb-4">Deployed Employees</p>
+          <Table
+            dataSource={sampleData.deployed_employees}
+            columns={deployedEmployeesColumns}
+            pagination={{
+              total: sampleData.deployed_employees.length,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `Showing ${range[0]}-${range[1]} of ${total} items`,
+            }}
+            scroll={{ x: "max-content" }}
+          />
+        </div>
+        <br />
+        <br />
       </div>
-
-      {/* Deployed Employees */}
-      <div className="bg-white p-4 rounded-lg shadow-lg">
-        <p className="font-bold text-xl mb-4">Deployed Employees</p>
-        <Table
-          dataSource={sampleData.deployed_employees}
-          columns={deployedEmployeesColumns}
-          pagination={{
-            total: sampleData.deployed_employees.length,
-            showSizeChanger: true,
-            showQuickJumper: true,
-            showTotal: (total, range) =>
-              `Showing ${range[0]}-${range[1]} of ${total} items`,
-          }}
-          scroll={{ x: "max-content" }}
-        />
-      </div>
-      <br />
-      <br />
     </div>
   );
 };
