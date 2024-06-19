@@ -6,13 +6,16 @@ import EvidencesCard from "../components/fir_evidence_card";
 import ProgressCard from "../components/fir_progress_card";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 import {usePDF} from "react-to-pdf";
+import {useSpeech} from "react-text-to-speech";
+import capital_tech_logo from "@/assets/images/capital_tech_logo.png";
 
 
 const FirDetailsPage = () => {
 	const [queryParams] = useSearchParams()
 	const id = queryParams.get('id');
 	const {data, error, loading} = useGetFirDetails(id);
-	const { toPDF, targetRef } = usePDF({filename: 'fir_details.pdf'});
+	const {toPDF, targetRef} = usePDF({filename: 'fir_details.pdf'});
+	
 	
 	if (loading) {
 		return (
@@ -27,7 +30,15 @@ const FirDetailsPage = () => {
 	}
 	
 	return (
-		<div className="max-h-screen overflow-y-scroll overflow-hidden" >
+		<div className="max-h-screen overflow-y-scroll overflow-hidden relative">
+			
+			{/* ai chat bot */}
+			{/*<div className={'size-14 flex justify-center items-center bg-blue-400 border-2 border-blue-700 cursor-pointer active:scale-95 fixed rounded-full p-2 bottom-10 right-10 z-50'}>*/}
+			{/*	<img src={capital_tech_logo} className={'size-10 object-cover'} alt="chatbot"/>*/}
+			{/*</div>*/}
+			
+			
+			
 			<div
 				className="bg-white p-3 border-b-2 border font-open-sans  flex justify-between items-center text-base sticky top-0 z-[100]">
 				<h1 className={'font-semibold'}>

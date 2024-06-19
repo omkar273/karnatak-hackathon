@@ -36,6 +36,7 @@ import {Outlet, useNavigate} from "react-router-dom";
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
 import {MenuItemType} from "antd/es/menu/interface";
+import {AiAssistantButton} from "@sista/ai-assistant-react";
 
 const HomePage = () => {
 	const navigate = useNavigate();
@@ -570,14 +571,7 @@ const HomePage = () => {
 					icon: <User/>,
 					onClick: () => navigateAndCloseDrawer("/manpower/mans"),
 				},
-				{
-					
-					key: "Manpower",
-					label: "Manpower",
-					icon: <User/>,
-					onClick: () => navigateAndCloseDrawer("/manpower"),
-				},
-			
+				
 			]
 		},
 		{
@@ -692,6 +686,7 @@ const HomePage = () => {
 					</div>
 				</main>
 			</div>
+			<AiAssistantButton style={{position:'fixed',bottom :'2rem' , right:'2rem'}} />
 		</div>
 	);
 };
