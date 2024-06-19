@@ -257,12 +257,6 @@ const HomePage = () => {
       icon: <User />,
       children: [
         {
-          key: "laws",
-          label: "Laws",
-          icon: <User />,
-          onClick: () => navigateAndCloseDrawer("/manpower/laws"),
-        },
-        {
           key: "Law & Order",
           label: "Law & Order",
           icon: <User />,
@@ -536,16 +530,10 @@ const HomePage = () => {
       icon: <User />,
       children: [
         {
-          key: "laws",
-          label: "Laws",
-          icon: <User />,
-          onClick: () => navigateAndCloseDrawer("/manpower/laws"),
-        },
-        {
           key: "Law & Order",
           label: "Law & Order",
           icon: <User />,
-          onClick: () => navigateAndCloseDrawer("/manpower/lawandoder"),
+          onClick: () => navigateAndCloseDrawer("/x"),
         },
         {
           key: "Staff Distribution",
