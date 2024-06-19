@@ -67,7 +67,7 @@ const LocationMarker: React.FC<{ lat: number; lng: number }> = ({lat, lng}) => {
 	);
 };
 
-const NearbyUsersMap: React.FC<Props> = ({lat, lng, center_marker_title, userList}) => {
+const EmergencyZonesMap: React.FC<Props> = ({lat, lng, center_marker_title, userList}) => {
 	
 	const [fullScreen, setFullScreen] = useState(false);
 	
@@ -120,4 +120,4 @@ const NearbyUsersMap: React.FC<Props> = ({lat, lng, center_marker_title, userLis
 	);
 };
 
-export default NearbyUsersMap;
+export default EmergencyZonesMap;

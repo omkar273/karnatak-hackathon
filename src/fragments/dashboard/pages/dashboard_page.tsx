@@ -31,6 +31,11 @@ const DashboardPage = () => {
 		return station ? station.station_name : "Select a station";
 	};
 	
+	const getStationDataById = (id: string | undefined) => {
+		const station = stationList.find((station) => station.id === id);
+		return station;
+	};
+	
 	const getZoneNameById = (id: string | undefined) => {
 		const zone = zones_data.find((zone) => zone.id === id);
 		return zone ? `${zone.zoneName} zone` : "Select a Zone";
@@ -206,7 +211,15 @@ const DashboardPage = () => {
 						<DashboardStationCards stationId={stationId ?? ""}/>
 						<StationRatesGraph stationId={stationId ?? ""}/>
 						<DashboardCasesPieCharts stationId={stationId ?? ""}/>
-						<CourtOrders/>
+						{
+							stationId && (
+								<CourtOrders
+									lat={getStationDataById(stationId)?.lat || 0}
+									lng={getStationDataById(stationId)?.lng || 0}
+									station_name={getStationNameById(stationId)}
+									station_id={stationId}
+								/>
+							)}
 						
 						<div className="min-h-96"/>
 					</div>
