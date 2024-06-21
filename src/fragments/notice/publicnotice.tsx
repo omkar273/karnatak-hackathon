@@ -1,3 +1,4 @@
+import { FilePdfOutlined } from "@ant-design/icons"; // Import the PDF icon
 import { Table } from "antd";
 import React from "react";
 
@@ -7,6 +8,7 @@ interface PublicNoticeData {
   type: string;
   issuedBy: string;
   date: string;
+  pdfLink?: string; // Add an optional pdfLink property for the PDF file URL
 }
 
 const PublicNoticeTable: React.FC = () => {
@@ -18,6 +20,7 @@ const PublicNoticeTable: React.FC = () => {
       type: "Meeting",
       issuedBy: "Local Police Department",
       date: "2023-05-15",
+      pdfLink: "/path/to/pdf1.pdf",
     },
     {
       key: "2",
@@ -25,6 +28,7 @@ const PublicNoticeTable: React.FC = () => {
       type: "Traffic",
       issuedBy: "City Police",
       date: "2023-06-01",
+      pdfLink: "/path/to/pdf2.pdf",
     },
     {
       key: "3",
@@ -32,6 +36,7 @@ const PublicNoticeTable: React.FC = () => {
       type: "Awareness",
       issuedBy: "Police Department",
       date: "2023-06-10",
+      pdfLink: "/path/to/pdf3.pdf",
     },
     {
       key: "4",
@@ -39,6 +44,7 @@ const PublicNoticeTable: React.FC = () => {
       type: "Informational",
       issuedBy: "Neighborhood Police",
       date: "2023-06-20",
+      pdfLink: "/path/to/pdf4.pdf",
     },
   ];
 
@@ -63,6 +69,15 @@ const PublicNoticeTable: React.FC = () => {
       title: "Date Of Notice",
       dataIndex: "date",
       key: "date",
+    },
+    {
+      title: "View",
+      key: "pdf",
+      render: (text: any, record: PublicNoticeData) => (
+        <a href={record.pdfLink} target="_blank" rel="noopener noreferrer">
+          <FilePdfOutlined style={{ fontSize: "20px", color: "#d9534f" }} />
+        </a>
+      ),
     },
   ];
 
