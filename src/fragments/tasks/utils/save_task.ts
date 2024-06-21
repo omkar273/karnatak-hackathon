@@ -2,6 +2,7 @@ import TaskModel from "@/types/task_model.ts";
 import {toast} from "react-toastify";
 import {addDocTOFirebase} from "@/utils/add_doc.ts";
 import {serverTimestamp} from "firebase/firestore";
+import sendNotification from "@/common/utils/send_notification.ts";
 
 function getCurrentDateTime() {
 	const now = new Date();
@@ -34,7 +35,19 @@ const doSaveTask = async (
 			vehicle: data.vehicle || null,
 			id: data.id || null
 		}
+		
 		console.log(newData)
+		
+		for (const userId of newData.alloted_to_id) {
+			sendNotification({
+				sender_name: newData.assigned_by_name || '',
+				sender_id: newData.assigned_by_id,
+				message: `New task assigned to you`,
+				notification_type: "task",
+				recepient_id: userId,
+			})
+		}
+		
 		await addDocTOFirebase(`tasks`, newData)
 		toast.success("Task created successfully");
 	} catch (e) {
