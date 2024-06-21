@@ -2,11 +2,38 @@ import React, {useEffect, useState} from 'react';
 import {Link, useSearchParams} from 'react-router-dom';
 import useGetDocument from '@/common/hooks/use_get_document.ts';
 import TaskModel, {TaskUpdateModel} from '@/types/task_model.ts';
-import TaskTimeline from '@/fragments/tasks/components/task_timeline.tsx';
-import { Modal} from 'antd';
+import {Modal} from 'antd';
 import {SubmitHandler, useForm} from "react-hook-form";
 import {toast} from "react-toastify";
 import {ArrowLeft} from "lucide-react";
+import Timeline, {DateHeader, SidebarHeader, TimelineHeaders} from "react-calendar-timeline";
+import moment from "moment/moment";
+import 'react-calendar-timeline/lib/Timeline.css'
+import inspector_data from "@/data/json/inspector_data.json";
+import assistant_commisioner_data from "@/data/json/assistant_commisioner_data.json";
+import commisioner_data from "@/data/json/commisioner_data.json";
+import sub_inspector_data from "@/data/json/sub_inspector_data.json";
+import head_constable_data from "@/data/json/head_constable_data.json";
+import constable_data from "@/data/json/constable_data.json";
+
+
+const getNamebyId = (id: string): string => {
+	const users = [
+		...inspector_data,
+		...assistant_commisioner_data,
+		...commisioner_data,
+		...sub_inspector_data,
+		...head_constable_data,
+		...constable_data,
+	]
+	
+	users.forEach(user => {
+		if (user.id === id) {
+			return user.name;
+		}
+	})
+	return 'user'
+}
 
 const TaskDetails = () => {
 	const [queryParams] = useSearchParams();
@@ -26,9 +53,57 @@ const TaskDetails = () => {
 			toast.error(`Error: ${e}`);
 		}
 	};
+	
+	
+	const [groups, setGroups] = useState<{ id: string | number | null; title: string | null; }[]>([])
+	// add groups or updates
 	useEffect(() => {
 		console.log(data);
+		console.log(data?.alloted_to_id)
+		const tempGroups = data?.alloted_to_id?.map(user => ({
+			id: user,
+			// title: id
+			title: getNamebyId(user),
+		}))
+		
+		console.log(tempGroups)
+		
+		setGroups([{id: 1, title: 'group 1'}, {id: 2, title: 'group 2'}])
 	}, [data]);
+	
+	
+	// const groups = [{id: 1, title: 'group 1'}, {id: 2, title: 'group 2'}]
+	
+	const items = [
+		// {
+		// 	id: 1,
+		// 	group: 1,
+		// 	title: 'item 1',
+		// 	start_time: moment(),
+		// 	end_time: moment().add(1, 'hour')
+		// },
+		// {
+		// 	id: 2,
+		// 	group: 2,
+		// 	title: 'item 2',
+		// 	start_time: moment().add(-0.5, 'hour'),
+		// 	end_time: moment().add(0.5, 'hour')
+		// },
+		// {
+		// 	id: 3,
+		// 	group: 1,
+		// 	title: 'item 3',
+		// 	start_time: moment().add(2, 'hour'),
+		// 	end_time: moment().add(3, 'hour')
+		// }, {
+		// 	id: 4,
+		// 	group: 1,
+		// 	title: 'item 3',
+		// 	start_time: moment().add(5, 'hour'),
+		// 	end_time: moment().add(9, 'day')
+		// }
+	]
+	
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll bg-gray-100">
@@ -37,35 +112,11 @@ const TaskDetails = () => {
 				centered
 				open={modalOpen}
 				onCancel={() => setModalOpen(false)}
-				footer={[
-				
-				]}
+				footer={[]}
 			>
 				<form onSubmit={handleSubmit(onSubmit)}
 				      className=" w-full rounded-lg p-6 bg-white">
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-						{/*<div>*/}
-						{/*	<label htmlFor="updated_by_id" className="text-gray-700">Updated By ID</label>*/}
-						{/*	<input*/}
-						{/*		id="updated_by_id"*/}
-						{/*		{...register("updated_by_id", {required: "Updated by ID is required"})}*/}
-						{/*		type="text"*/}
-						{/*		className="w-full p-3 border rounded-md mt-1"*/}
-						{/*	/>*/}
-						{/*	{errors.updated_by_id && <p className="text-red-500">{errors.updated_by_id.message}</p>}*/}
-						{/*</div>*/}
-						
-						{/*<div>*/}
-						{/*	<label htmlFor="updated_by_name" className="text-gray-700">Updated By Name</label>*/}
-						{/*	<input*/}
-						{/*		id="updated_by_name"*/}
-						{/*		{...register("updated_by_name", {required: "Updated by name is required"})}*/}
-						{/*		type="text"*/}
-						{/*		className="w-full p-3 border rounded-md mt-1"*/}
-						{/*	/>*/}
-						{/*	{errors.updated_by_name &&*/}
-                        {/*        <p className="text-red-500">{errors.updated_by_name.message}</p>}*/}
-						{/*</div>*/}
 						
 						<div>
 							<label htmlFor="start_date_time" className="text-gray-700">Start Date Time</label>
@@ -109,16 +160,8 @@ const TaskDetails = () => {
 							/>
 							{errors.description && <p className="text-red-500">{errors.description.message}</p>}
 						</div>
-						
-						{/*<div className="col-span-1 sm:col-span-2">*/}
-						{/*	<label htmlFor="update_date_time" className="text-gray-700">Update Date Time</label>*/}
-						{/*	<input*/}
-						{/*		id="update_date_time"*/}
-						{/*		{...register("update_date_time")}*/}
-						{/*		type="datetime-local"*/}
-						{/*		className="w-full p-3 border rounded-md mt-1"*/}
-						{/*	/>*/}
-						{/*</div>*/}
+					
+					
 					</div>
 					
 					<button
@@ -135,12 +178,12 @@ const TaskDetails = () => {
 			>
 				<p className="font-semibold text-lg flex gap-2 items-center">
 					
-						<Link to={'/tasks'}>
-							<ArrowLeft/>
-						</Link>
-						<h1>
-							{`Task details`}
-						</h1>
+					<Link to={'/tasks'}>
+						<ArrowLeft/>
+					</Link>
+					<h1>
+						{`Task details`}
+					</h1>
 				</p>
 				<button
 					onClick={() => setModalOpen(true)}
@@ -166,7 +209,29 @@ const TaskDetails = () => {
 					</div>
 				)}
 				
-				<TaskTimeline/>
+				<div className={'p-4 bg-white rounded-md'}>
+					<Timeline
+						groups={groups}
+						items={items}
+						defaultTimeStart={moment().add(-2, 'day')}
+						defaultTimeEnd={moment().add(1, 'day')}
+					>
+						<TimelineHeaders>
+							<SidebarHeader>
+								{({getRootProps}) => {
+									return <div {...getRootProps()}
+									            className={'flex w-full justify-center items-center text-lg text-white font-semibold'}>Police
+										officers</div>
+								}}
+							</SidebarHeader>
+							<DateHeader unit="primaryHeader"/>
+							
+							<DateHeader/>
+						
+						</TimelineHeaders>
+					
+					</Timeline>
+				</div>
 			</div>
 		</div>
 	);

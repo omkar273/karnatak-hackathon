@@ -9,9 +9,9 @@ import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.j
 import sub_inspector_data from '@/data/json/sub_inspector_data.json';
 import head_constable_data from '@/data/json/head_constable_data.json';
 import constable_data from '@/data/json/constable_data.json';
+import commisioner_data from '@/data/json/commisioner_data.json';
 import {useSelector} from "react-redux";
 import {RootState} from "@/common/redux/store.ts";
-import commisioner_data from '@/data/json/commisioner_data.json';
 import {useEffect, useState} from "react";
 import * as Select2 from "@radix-ui/react-select";
 
