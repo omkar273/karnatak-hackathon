@@ -189,7 +189,6 @@ const App = () => {
 						element={getProtectedRoute(<WitnessManagementPage/>)}
 					/>
 					
-					<Route path="/x" element={getProtectedRoute(<LawOrderPage/>)}/>
 					
 					<Route path="/notice" element={getProtectedRoute(<NoticeTable/>)}/>
 					<Route
@@ -238,6 +237,8 @@ const App = () => {
 				<Route path="/public" element={<PublicPage/>}>
 					<Route index element={<AddEventPage/>}/>
 					<Route path={"add-event"} element={<AddEventPage/>}/>
+					<Route path="x" element={getProtectedRoute(<LawOrderPage/>)}/>
+					
 				</Route>
 				
 				{/* video page link */}

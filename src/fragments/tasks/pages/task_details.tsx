@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useSearchParams} from "react-router-dom";
 import useGetDocument from "@/common/hooks/use_get_document.ts";
 import TaskModel, {TaskUpdateModel} from "@/types/task_model.ts";
+import TaskTimeline from "@/fragments/tasks/components/task_timeline.tsx";
 
 const TaskDetails = () => {
 	const [queryParams] = useSearchParams();
@@ -39,67 +40,10 @@ const TaskDetails = () => {
 					</div>
 				)}
 				
-				<TaskUpdatesSection updates={updates} onAddUpdate={handleAddUpdate}/>
+				
+				
+				<TaskTimeline/>
 			</div>
-		</div>
-	);
-};
-
-const TaskUpdatesSection = ({updates, onAddUpdate}: { updates: TaskUpdateModel[], onAddUpdate: any }) => {
-	const [newUpdate, setNewUpdate] = useState<TaskUpdateModel>({title: '', description: ''});
-	
-	const handleChange = (e) => {
-		const {name, value} = e.target;
-		setNewUpdate({...newUpdate, [name]: value});
-	};
-	
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (newUpdate.title && newUpdate.description) {
-			onAddUpdate({...newUpdate, update_date_time: new Date().toISOString()});
-			setNewUpdate({title: '', description: ''});
-		}
-	};
-	
-	return (
-		<div className="mt-6">
-			<h3 className="text-lg font-semibold mb-4">Updates</h3>
-			<div className="space-y-4">
-				{updates.map((update, index) => (
-					<div key={index} className="bg-white shadow rounded-lg p-4">
-						<h4 className="font-bold">{update.title}</h4>
-						<p>{update.description}</p>
-						<p className="text-sm text-gray-500">{update.update_date_time}</p>
-					</div>
-				))}
-			</div>
-			<form onSubmit={handleSubmit} className="bg-white shadow rounded-lg p-4 mt-6">
-				<div className="mb-4">
-					<label className="block text-sm font-medium text-gray-700">Title</label>
-					<input
-						type="text"
-						name="title"
-						value={newUpdate.title}
-						onChange={handleChange}
-						className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-					/>
-				</div>
-				<div className="mb-4">
-					<label className="block text-sm font-medium text-gray-700">Description</label>
-					<textarea
-						name="description"
-						value={newUpdate.description}
-						onChange={handleChange}
-						className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-					></textarea>
-				</div>
-				<button
-					type="submit"
-					className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
-				>
-					Add Update
-				</button>
-			</form>
 		</div>
 	);
 };

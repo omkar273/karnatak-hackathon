@@ -168,39 +168,7 @@ const DashboardPage = () => {
 			
 			
 			</div>
-			{/* <DashboardUserDataCards /> */}
-			<p className="font-bold text-3xl px-4 pb-4">Station Data</p>
-			<div className="p-5 grid md:grid-cols-3 md:gap-4 grid-cols-2">
-				<div
-					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
-					<div className="flex-1">
-						<span className="text-lg font-semibold p-4">Recent Cases</span>
-					</div>
-					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
-						<span className="text-white">9</span>
-					</div>
-				</div>
-				
-				<div
-					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
-					<div className="flex-1">
-						<span className="text-lg font-semibold p-4">Pending Cases</span>
-					</div>
-					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
-						<span className="text-white">8</span>
-					</div>
-				</div>
-				
-				<div
-					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
-					<div className="flex-1">
-						<span className="text-lg font-semibold p-4">Closed Cases</span>
-					</div>
-					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
-						<span className="text-white">12</span>
-					</div>
-				</div>
-			</div>
+			
 			
 			{/* main content */}
 			<div className="lg:flex lg:flex-grow lg:flex-row lg:gap-4">
