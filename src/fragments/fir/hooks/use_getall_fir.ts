@@ -12,10 +12,10 @@ import {
 	where,
 } from "firebase/firestore";
 import {useCallback, useState} from "react";
-import {FIRRecord} from "../modals/fir_modal";
+import {TaskType} from "../modals/fir_modal";
 
 interface UseFIRsReturn {
-	documents: FIRRecord[];
+	documents: TaskType[];
 	fetchFIRs: (newPage?: boolean) => Promise<void>;
 	loading: boolean;
 	error: Error | null;
@@ -72,7 +72,7 @@ function useGetAllFIRs({
 	                       status = null,
 	                       stationId = null,
                        }: GetAllFIRsParams = {}): UseFIRsReturn {
-	const [documents, setDocuments] = useState<FIRRecord[]>([]);
+	const [documents, setDocuments] = useState<TaskType[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<Error | null>(null);
 	const [lastDoc, setLastDoc] =
@@ -83,7 +83,7 @@ function useGetAllFIRs({
 		async (newPage = false) => {
 			setLoading(true);
 			setError(null);
-			const fetchedDocuments: FIRRecord[] = [];
+			const fetchedDocuments: TaskType[] = [];
 			try {
 				const {start, end} = getTimeFrameTimestamps(timeFrame);
 				
@@ -113,7 +113,7 @@ function useGetAllFIRs({
 				let lastVisible: QueryDocumentSnapshot<DocumentData> | null = null;
 				
 				querySnapshot.forEach((doc) => {
-					const data = doc.data() as FIRRecord;
+					const data = doc.data() as TaskType;
 					fetchedDocuments.push({...data, id: doc.id});
 					lastVisible = doc;
 				});

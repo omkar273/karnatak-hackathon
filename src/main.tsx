@@ -8,6 +8,7 @@ import App from "./App";
 import store from "./common/redux/store";
 import "./index.css";
 import {AiAssistantProvider} from "@sista/ai-assistant-react";
+import "@bitnoi.se/react-scheduler/dist/style.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<div>

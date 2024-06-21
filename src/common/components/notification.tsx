@@ -1,21 +1,28 @@
 import React from 'react'
-import { NotificationData } from '../utils/send_notification'
+import {NotificationData} from '../utils/send_notification'
+import {User} from "lucide-react";
 
 interface Props {
-    data: NotificationData
+	data: NotificationData
 }
 
-const Notification: React.FC<Props> = ({ data }) => {
-    return (
-        <div className='p-2 '>
-            <h1 className=''>
-                {data.sender_name ?? 'Someone'}{' has alloted new task to you'}
-            </h1>
-            <p>
-                {data.notification_type}
-            </p>
-        </div>
-    )
+const Notification: React.FC<Props> = ({data}) => {
+	return (
+		<div className='p-4 rounded-md border min-w-[300px]'>
+			<div className={'font-semibold flex gap-4 items-center'}>
+				<span className={'size-4 text-xs'}>
+					<User/>
+				</span>
+				<p className={'text-base'}>
+					{data.sender_name}
+				</p>
+			</div>
+			<h1 className='pt-4'>
+				{data.message}
+			</h1>
+		
+		</div>
+	)
 }
 
 export default Notification

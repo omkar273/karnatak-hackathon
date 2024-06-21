@@ -11,7 +11,7 @@ import {
 import { generate_station_data } from "./generate_station_data";
 import VehicleType from "@/types/vehicle_type";
 import { weaponData } from "./weapon_data";
-import { FIRRecord } from "@/fragments/fir/modals/fir_modal";
+import { TaskType } from "@/fragments/fir/modals/fir_modal";
 import { fir_dataset } from "../fir_data";
 import { FirTypeCount } from "@/types/station_crime_count_type";
 import { WeaponType } from "@/types/weapon_type";
@@ -34,7 +34,7 @@ export const main = () => {
   const vehicle_data: VehicleType[] = [];
   const weapons_data: WeaponType[] = [];
 
-  const fir_data: FIRRecord[] = [];
+  const fir_data: TaskType[] = [];
   const station_dept_data: FirTypeCount[] = [];
   const station_crime_data: FirTypeCount[] = [];
 
@@ -219,7 +219,7 @@ export const main = () => {
           const user4 = getRandomElementFromArray(tempStationStafflist);
           const temp = getRandomElementFromArray(fir_dataset);
 
-          const fir: FIRRecord = {
+          const fir: TaskType = {
             ...temp,
             id: customFaker.string.uuid().replace(/-/g, ""),
             stationId: station.id,

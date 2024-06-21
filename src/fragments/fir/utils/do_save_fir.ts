@@ -9,7 +9,7 @@ import {
   setDoc,
   getDoc,
 } from "firebase/firestore";
-import { FIRRecord } from "../modals/fir_modal";
+import { TaskType } from "../modals/fir_modal";
 import { toast } from "react-toastify";
 
 // Helper function to get the current month in "YYYY-MM" format
@@ -20,7 +20,7 @@ const getCurrentMonth = (): string => {
   return `${year}-${month}`;
 };
 
-export const doSaveFIR = async (firData: FIRRecord): Promise<boolean> => {
+export const doSaveFIR = async (firData: TaskType): Promise<boolean> => {
   try {
     const firDocRef = await addDoc(collection(firestore, "fir_details"), {
       ...firData,

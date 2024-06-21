@@ -1,4 +1,4 @@
-import TaskAssignmentPage from "@/fragments/tasks/pages/tasks_page";
+import TaskAssignmentPage from "@/fragments/tasks/pages/add_task_page.tsx";
 import {SnippetsOutlined} from "@ant-design/icons";
 import {Button, Modal} from "antd";
 import {ShieldPlus} from "lucide-react";

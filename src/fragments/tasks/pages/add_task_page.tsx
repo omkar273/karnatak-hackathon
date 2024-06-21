@@ -1,5 +1,5 @@
-import {useForm, Controller, SubmitHandler} from "react-hook-form";
-import {Input, Select, Button, Card} from "antd";
+import {Controller, SubmitHandler, useForm} from "react-hook-form";
+import {Button, Card, Input, Select} from "antd";
 import TaskModel from "@/types/task_model.ts";
 import commisioner_data from '@/data/json/commisioner_data.json';
 import assistant_commisioner_data from '@/data/json/assistant_commisioner_data.json';
@@ -13,7 +13,7 @@ import doSaveTask from "@/fragments/tasks/utils/save_task.ts";
 
 const {TextArea} = Input;
 
-const TaskForm = () => {
+const AddTaskPage = () => {
 	const {userdata} = useSelector((s: RootState) => s.auth);
 	
 	const {
@@ -27,7 +27,7 @@ const TaskForm = () => {
 	
 	const onSubmit: SubmitHandler<TaskModel> = async (data) => {
 		console.log(data); // Handle form submission logic
-		await doSaveTask(data, userdata?.id || '', userdata?.name || '')
+		await doSaveTask(data, userdata?.id || '', userdata?.name || '');
 		reset();
 	};
 	
@@ -134,8 +134,7 @@ const TaskForm = () => {
 									rules={{required: "Please select user(s)"}}
 									render={({field}) => (
 										<Select {...field} mode="multiple" className="w-full"
-										        placeholder="Select User(s)"
-										        options={users}/>
+										        placeholder="Select User(s)" options={users}/>
 									)}
 								/>
 								<p className="text-xs text-red-600">{errors.alloted_to_id?.message}</p>
@@ -186,9 +185,9 @@ const TaskForm = () => {
 							</div>
 							
 							<div className="col-span-1">
-								<Input type="hidden" {...register("assigned_by_id")} defaultValue={userdata?.id}/>
+								<Input type="hidden" {...register("assigned_by_id")} defaultValue={userdata?.id || ''}/>
 								<Input type="hidden" {...register("assigned_by_name")}
-								       defaultValue={userdata?.name}/>
+								       defaultValue={userdata?.name || ''}/>
 							</div>
 						</div>
 						
@@ -199,9 +198,7 @@ const TaskForm = () => {
 				</Card>
 			</div>
 		</div>
-	
-	
 	);
 };
 
-export default TaskForm;
+export default AddTaskPage;

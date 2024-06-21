@@ -12,7 +12,7 @@ import {
 	VisibilityState,
 } from "@tanstack/react-table";
 import useGetAllFIRs from "@/fragments/fir/hooks/use_getall_fir";
-import {FIRRecord} from "@/fragments/fir/modals/fir_modal";
+import {TaskType} from "@/fragments/fir/modals/fir_modal";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table";
 import {Input} from "@/components/ui/input.tsx";
 import {Button} from "@/components/ui/button.tsx";
@@ -26,7 +26,7 @@ import {ChevronDown, MoreHorizontal} from "lucide-react";
 import {toast} from "react-toastify";
 import {Link} from "react-router-dom";
 
-const firColumns: ColumnDef<FIRRecord>[] = [
+const firColumns: ColumnDef<TaskType>[] = [
 	{
 		id: "actions",
 		header: "Actions",
@@ -202,7 +202,7 @@ const StationFirTable = ({stationId}: { stationId: string | null }) => {
 	const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
 	const [rowSelection, setRowSelection] = useState({});
 	
-	const table = useReactTable<FIRRecord>({
+	const table = useReactTable<TaskType>({
 		data: documents,
 		columns: firColumns,
 		onSortingChange: setSorting,

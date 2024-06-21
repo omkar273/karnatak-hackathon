@@ -96,7 +96,7 @@ const weaponColumns: ColumnDef<WeaponType>[] = [
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>View owner</DropdownMenuItem>
                         <DropdownMenuItem>
-                            <Link to={`/weapon/details?id=${weapon.id}`}>
+                            <Link to={`/station/weapon/details?id=${weapon.id}`}>
                                 View weapon details
                             </Link>
                         </DropdownMenuItem>

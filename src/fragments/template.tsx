@@ -8,6 +8,7 @@ const FirDetailsPage = () => {
                 {"FIR Details"}
             </p>
             <div className="p-4">
+            
             </div>
         </div>
     );

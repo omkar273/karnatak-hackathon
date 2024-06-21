@@ -25,53 +25,54 @@ import {
 } from "@/components/ui/dropdown-menu";
 import {Input} from "@/components/ui/input";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table";
-import useGetAllStationWeaponsVehiclesData from '../hooks/use_get_weapons_data';
-import VehicleType from "@/types/vehicle_type";
 import {GridLoader} from "react-spinners";
+import TaskModel from "@/types/task_model";
+import useGetTasks from "@/fragments/tasks/utils/use_get_all_tasks.ts";
 import {Link} from "react-router-dom";
 
-const vehicleColumns: ColumnDef<VehicleType>[] = [
+const taskColumns: ColumnDef<TaskModel>[] = [
 	{
-		accessorKey: "name",
-		header: "Vehicle Name",
-	},
-	// {
-	// 	accessorKey: "color",
-	// 	header: "Color",
-	// },
-	// {
-	// 	accessorKey: "fuel_type",
-	// 	header: "Fuel Type",
-	// },
-	// {
-	// 	accessorKey: "manufacturer",
-	// 	header: "Manufacturer",
-	// },
-	{
-		accessorKey: "chasis_no",
-		header: "Chasis No",
+		accessorKey: "description",
+		header: "Description",
 	},
 	{
-		accessorKey: "vehicle_model",
-		header: "Model",
+		accessorKey: "task_type",
+		header: "Task Type",
 	},
 	{
-		accessorKey: "vehicle_type",
-		header: "Type",
+		accessorKey: "due_date",
+		header: "Due Date",
+		cell: ({row}) => {
+			const date = new Date(row.getValue("due_date"));
+			return <div>{date.toLocaleDateString()}</div>;
+		},
 	},
-	// {
-	// 	accessorKey: "vin",
-	// 	header: "VIN",
-	// },
 	{
-		accessorKey: "vehicle_registration_no",
-		header: "Registration No",
+		accessorKey: "priority",
+		header: "Priority",
+	},
+	{
+		accessorKey: "alloted_date_time",
+		header: "Alloted Date & Time",
+		cell: ({row}) => {
+			const date = new Date(row.getValue("alloted_date_time"));
+			return <div>{date.toLocaleDateString()}</div>;
+		},
+	},
+	{
+		accessorKey: "status",
+		header: "Status",
+	},
+	{
+		accessorKey: "assigned_by_name",
+		header: "Assigned By",
 	},
 	{
 		id: "actions",
 		enableHiding: false,
+		header: "Actions",
 		cell: ({row}) => {
-			const vehicle = row.original;
+			const task = row.original;
 			
 			return (
 				<DropdownMenu>
@@ -84,13 +85,13 @@ const vehicleColumns: ColumnDef<VehicleType>[] = [
 					<DropdownMenuContent align="end">
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuItem
-							onClick={() => navigator.clipboard.writeText(vehicle.id ?? "")}
+							onClick={() => navigator.clipboard.writeText(task.id ?? "")}
 						>
-							Copy vehicle ID
+							Copy task ID
 						</DropdownMenuItem>
 						<DropdownMenuSeparator/>
 						<DropdownMenuItem>
-							<Link to={`/station/vehicle/details?id=${vehicle.id}`}>
+							<Link to={`/tasks/details?id=${task.id}`}>
 								View details
 							</Link>
 						</DropdownMenuItem>
@@ -101,25 +102,25 @@ const vehicleColumns: ColumnDef<VehicleType>[] = [
 	},
 ];
 
-const StationVehiclesTable = ({stationId}: { stationId: string | null }) => {
-	const {documents, error, loading, fetchData} = useGetAllStationWeaponsVehiclesData<VehicleType>({
-		initialLimit: 5,
-		data: 'vehicles',
-		stationId,
+const TaskTable = ({userId, role}: { userId: string, role: "alloted_by_user" | "alloted_to_user" }) => {
+	const {tasks, error, loading, fetchTasks} = useGetTasks({
+		userId,
+		role,
+		initialLimit: 10,
 	});
 	
 	useEffect(() => {
-		fetchData();
-	}, [stationId]);
+		fetchTasks();
+	}, [userId, role]);
 	
 	const [sorting, setSorting] = useState<SortingState>([]);
 	const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 	const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
 	const [rowSelection, setRowSelection] = useState({});
 	
-	const table = useReactTable<VehicleType>({
-		data: documents,
-		columns: vehicleColumns,
+	const table = useReactTable<TaskModel>({
+		data: tasks,
+		columns: taskColumns,
 		onSortingChange: setSorting,
 		onColumnFiltersChange: setColumnFilters,
 		getCoreRowModel: getCoreRowModel(),
@@ -137,27 +138,30 @@ const StationVehiclesTable = ({stationId}: { stationId: string | null }) => {
 	});
 	
 	if (loading) {
-		return (<div className="h-screen w-full flex justify-center items-center">
-			<GridLoader
-				color="#0891B2"
-				size={25}
-			/>
-		</div>)
+		return (
+			<div className="h-screen w-full flex justify-center items-center">
+				<GridLoader color="#0891B2" size={25}/>
+			</div>
+		);
 	}
 	
 	if (error) {
-		return (<div className="h-screen w-full flex justify-center items-center">
-			{error.message}
-		</div>)
+		console.log(error)
+		return (
+			<div className="h-screen w-full flex justify-center items-center">
+				{error.message}
+			</div>
+		);
 	}
+	
 	return (
-		<div className="w-full">
+		<div className="w-full bg-white p-4 rounded-md">
 			<div className="flex items-center py-4">
 				<Input
-					placeholder="Filter vehicle names..."
-					value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+					placeholder="Filter tasks..."
+					value={(table.getColumn("description")?.getFilterValue() as string) ?? ""}
 					onChange={(event) =>
-						table.getColumn("name")?.setFilterValue(event.target.value)
+						table.getColumn("description")?.setFilterValue(event.target.value)
 					}
 					className="max-w-sm"
 				/>
@@ -215,7 +219,7 @@ const StationVehiclesTable = ({stationId}: { stationId: string | null }) => {
 							))
 						) : (
 							<TableRow>
-								<TableCell colSpan={vehicleColumns.length} className="h-24 text-center">
+								<TableCell colSpan={taskColumns.length} className="h-24 text-center">
 									No results.
 								</TableCell>
 							</TableRow>
@@ -251,4 +255,4 @@ const StationVehiclesTable = ({stationId}: { stationId: string | null }) => {
 	);
 };
 
-export default StationVehiclesTable;
+export default TaskTable;

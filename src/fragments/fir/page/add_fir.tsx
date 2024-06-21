@@ -1,6 +1,6 @@
 import {Controller, SubmitHandler, useForm} from "react-hook-form";
 import {Select} from "antd";
-import {FIRRecord} from '@/fragments/fir/modals/fir_modal.ts';
+import {TaskType} from '@/fragments/fir/modals/fir_modal.ts';
 import {doSaveFIR} from "@/fragments/fir/utils/do_save_fir.ts";
 import {toast} from "react-toastify";
 import {CheckIcon, ChevronDownIcon} from "@radix-ui/react-icons";
@@ -36,9 +36,9 @@ const AddFir = () => {
 		setValue,
 		formState: {errors, isSubmitting},
 		reset,
-	} = useForm<FIRRecord>();
+	} = useForm<TaskType>();
 	
-	const onSubmit: SubmitHandler<FIRRecord> = async (data) => {
+	const onSubmit: SubmitHandler<TaskType> = async (data) => {
 		
 		if (!userdata || !stationId) {
 			return;

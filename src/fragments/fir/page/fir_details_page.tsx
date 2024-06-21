@@ -6,9 +6,6 @@ import EvidencesCard from "../components/fir_evidence_card";
 import ProgressCard from "../components/fir_progress_card";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 import {usePDF} from "react-to-pdf";
-import {useSpeech} from "react-text-to-speech";
-import capital_tech_logo from "@/assets/images/capital_tech_logo.png";
-
 
 const FirDetailsPage = () => {
 	const [queryParams] = useSearchParams()

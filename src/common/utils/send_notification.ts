@@ -1,10 +1,5 @@
 import {firestore} from "@/firebase/firebase_config";
-import {
-	addDoc,
-	collection,
-	serverTimestamp,
-	Timestamp,
-} from "firebase/firestore";
+import {addDoc, collection, serverTimestamp, Timestamp,} from "firebase/firestore";
 import {toast} from "react-toastify";
 
 export interface NotificationData {
@@ -12,10 +7,11 @@ export interface NotificationData {
 	sender_name?: string;
 	sender_id: string;
 	recepient_id: string;
-	notification_type: 'fir' | 'task' | 'emergency' | 'other';
+	notification_type: 'fir' | 'task' | 'emergency' | 'update' | 'other';
 	task_id?: string;
 	timestamp?: Timestamp;
 	isRead?: boolean;
+	message: string
 }
 
 

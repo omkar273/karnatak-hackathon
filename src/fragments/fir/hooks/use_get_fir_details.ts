@@ -2,12 +2,12 @@ import { firestore } from "@/firebase/firebase_config";
 import { FirebaseError } from "firebase/app";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { FIRRecord } from "../modals/fir_modal";
+import { TaskType } from "../modals/fir_modal";
 
 const useGetFirDetails = (firID: string | undefined | null) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>(""); // Default empty error message
-  const [data, setData] = useState<FIRRecord | null>(null);
+  const [data, setData] = useState<TaskType | null>(null);
 
   useEffect(() => {
     const fetchDocument = async () => {
@@ -22,7 +22,7 @@ const useGetFirDetails = (firID: string | undefined | null) => {
         const docSnapshot = await getDoc(docRef);
 
         if (docSnapshot.exists()) {
-          setData(docSnapshot.data() as FIRRecord);
+          setData(docSnapshot.data() as TaskType);
         } else {
           setError("Document does not exist.");
         }
