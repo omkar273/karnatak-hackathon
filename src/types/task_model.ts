@@ -21,9 +21,12 @@ interface TaskModel {
 
 export interface TaskUpdateModel {
 	id?: string;
+	updated_by_id: string,
+	updated_by_name: string,
+	start_date_time: string,
+	end_date_time: string,
 	title?: string;
-	description : string;
-	update_date_time?: string
+	description: string;
 }
 
 export default TaskModel

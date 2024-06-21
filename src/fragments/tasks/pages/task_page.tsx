@@ -14,7 +14,7 @@ const TaskPage = () => {
 			<div
 				className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
 				<p className="font-semibold text-xl">
-					<FileTextOutlined/> {"FIR Details"}
+					<FileTextOutlined/> {"Tasks"}
 				</p>
 				<Radio.Group defaultValue={taskType} buttonStyle="solid"
 				             onChange={(e) => setTaskType(e.target.value)}
@@ -24,6 +24,7 @@ const TaskPage = () => {
 				</Radio.Group>
 			</div>
 			<div className="p-4">
+				
 				<TaskTable userId={userdata?.id || ''} role={taskType}/>
 			</div>
 		</div>
