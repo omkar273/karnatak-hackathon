@@ -71,7 +71,6 @@ const EmergencyZonesMap: React.FC<Props> = ({lat, lng, center_marker_title, user
 	
 	const [fullScreen, setFullScreen] = useState(false);
 	
-	
 	return (
 		<div className={'relative w-full'}>
 			<FullScreen

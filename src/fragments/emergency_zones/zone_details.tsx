@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { ZoneModel } from "@/fragments/station/models/zone_model.ts";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {ZoneModel} from "@/fragments/station/models/zone_model.ts";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
 import emergency_zones_data from '@/data/json/zones_data.json';
-import { ArrowLeft } from "lucide-react";
-import { Input } from "antd";
-import { CloseOutlined, SearchOutlined } from "@ant-design/icons";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select.tsx";
-import { RanksEnum } from "@/common/post/ranks.ts";
+import {ArrowLeft} from "lucide-react";
+import {Input} from "antd";
+import {CloseOutlined, SearchOutlined} from "@ant-design/icons";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 import stations_data from '@/data/json/stations_data.json';
-import { StationModel } from "@/fragments/station/models/station_model.ts";
+import {StationModel} from "@/fragments/station/models/station_model.ts";
 import StationCard from "@/fragments/emergency_zones/components/station_data_card.tsx";
 
 const ZoneDetails = () => {
@@ -39,12 +38,28 @@ const ZoneDetails = () => {
 		const stations = stations_data.filter(station => station.zoneId === id);
 		setStationList(stations);
 	}, [queryParams, navigate]);
+
 	
-	const filteredStations = stationList.filter(station => {
-		const matchesFilter = filter === 'all' || station.zoneId === filter;
-		const matchesQuery = station.station_name.toLowerCase().includes(query.toLowerCase());
-		return matchesFilter && matchesQuery;
-	});
+	useEffect(() => {
+		
+		console.log(filter, query)
+		let stations = stations_data.filter(station => station.zoneId === zoneData?.id);
+		
+		if (filter === 'highest-to-lowest') {
+			stations = stations.sort((a, b) => b.crime_rate - a.crime_rate)
+		}
+		
+		if (filter === 'lowest-to-highest') {
+			stations = stations.sort((a, b) => a.crime_rate - b.crime_rate)
+		}
+		
+		
+		
+		setStationList(stations)
+		
+		
+	}, [filter, query, zoneData]);
+	
 	
 	const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setQuery(e.target.value);
@@ -56,9 +71,10 @@ const ZoneDetails = () => {
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
-			<div className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex items-center text-base sticky gap-2 top-0 z-[100]">
+			<div
+				className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex items-center text-base sticky gap-2 top-0 z-[100]">
 				<Link to={'/emergency_zones'}>
-					<ArrowLeft />
+					<ArrowLeft/>
 				</Link>
 				<h1>
 					{`${zoneData?.zoneName} Zone`}
@@ -67,7 +83,7 @@ const ZoneDetails = () => {
 			
 			<div className='w-full p-4 bg-white'>
 				<h1 className='md:text-2xl font-bold font-open-sans'>
-					Stations {` (${filteredStations.length}) `}
+					Stations {` (${stationList.length}) `}
 				</h1>
 				<h2>
 					All the police personnel in station are listed here
@@ -80,30 +96,32 @@ const ZoneDetails = () => {
 						value={query}
 						onChange={handleSearch}
 						suffix={query === '' ? (
-							<SearchOutlined className="cursor-pointer text-xl" />
+							<SearchOutlined className="cursor-pointer text-xl"/>
 						) : (
 							<CloseOutlined
 								onClick={handleClearSearch}
-								className="cursor-pointer text-xl" />
+								className="cursor-pointer text-xl"/>
 						)}
 					/>
-					<Select onValueChange={(s) => setFilter(s)}>
+					<Select onValueChange={(s) => {
+						console.log(s)
+						setFilter(s)
+					}}>
 						<SelectTrigger className="w-[180px]">
-							<SelectValue placeholder="Filter" />
+							<SelectValue placeholder="Filter"/>
 						</SelectTrigger>
 						<SelectContent>
 							<SelectItem value="all">All</SelectItem>
-							<SelectItem value={RanksEnum.Inspector}>High priority Zones</SelectItem>
-							<SelectItem value={RanksEnum.SubInpector}>Low Priority Zones</SelectItem>
-							<SelectItem value={RanksEnum.HeadConstable}>Safe Zones</SelectItem>
-							<SelectItem value={RanksEnum.Constable}>Constable</SelectItem>
+							<SelectItem value={'highest-to-lowest'}>High priority Zones</SelectItem>
+							<SelectItem value={'lowest-to-highest'}>Low Priority Zones</SelectItem>
+							{/*<SelectItem value={'ll'}>Safe Zones</SelectItem>*/}
 						</SelectContent>
 					</Select>
 				</div>
 				
 				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-8'>
-					{filteredStations.map((station, index) => (
-						<StationCard station={station} key={index} />
+					{stationList.map((station, index) => (
+						<StationCard station={station} key={index}/>
 					))}
 				</div>
 			</div>
