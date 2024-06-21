@@ -42,7 +42,7 @@ const PublicPage = () => {
           <button>Public Notices</button>
           <button>Alerts</button>
           <button></button>
-          <Link to={"/x"}>Report Incident</Link>
+          <Link to={"/public/x"}>Report Incident</Link>
           <Link to={"/public/add-event"}>Event Permission</Link>
           <Link to={"/public/add-event"}>Wanted List</Link>
         </div>

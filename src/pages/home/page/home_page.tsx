@@ -493,6 +493,12 @@ const HomePage = () => {
 					icon: <ScrollText/>,
 					onClick: () => navigateAndCloseDrawer("/tasks"),
 				},
+				{
+					key: "Add Task",
+					label: "Add Task",
+					icon: <ScrollText/>,
+					onClick: () => navigateAndCloseDrawer("/tasks/add"),
+				},
 			]
 		},
 		{
@@ -608,7 +614,10 @@ const HomePage = () => {
 			key: "Public Section",
 			label: "Public Section",
 			icon: <UsersRound/>,
-			onClick: () => navigateAndCloseDrawer("/public"),
+			onClick: () => {
+				const url = `${window.location.origin}/public`;
+				window.open(url, '_blank', 'noopener,noreferrer');
+			},
 		},
 		{
 			key: "Profile",
