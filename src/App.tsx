@@ -49,6 +49,8 @@ import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
 import TaskPage from "@/fragments/tasks/pages/task_page.tsx";
 import TaskDetails from "@/fragments/tasks/pages/task_details.tsx";
+import WeaponsPage from "./fragments/New/weapons.tsx";
+import VehiclesPagess from "./fragments/New/vehicalsss.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -89,6 +91,8 @@ const App = () => {
 						<Route path="task" element={getProtectedRoute(<TasksPage/>)}/>
 						
 						<Route path="vehicle" element={<VehiclePage/>}/>
+            <Route path="weop" element={<WeaponsPage />} />
+            <Route path="VehiclesPagess" element={<VehiclesPagess />} />
 						
 						<Route path="vehicle/details" element={<VehicleDetails/>}/>
 						

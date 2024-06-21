@@ -1,6 +1,8 @@
-import { Table } from "antd";
+import { Button, Table } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const VehiclePage = () => {
+  const navigate = useNavigate();
   const vehicleData = [
     {
       key: "1",
@@ -112,6 +114,15 @@ const VehiclePage = () => {
       title: "Servicing Date",
       dataIndex: "servicingDate",
       key: "servicingDate",
+    },
+    {
+      title: "Action",
+      key: "action",
+      render: (k, record) => (
+        <Button type="primary" onClick={() => navigate(`/station/weop`)}>
+          View
+        </Button>
+      ),
     },
   ];
 
