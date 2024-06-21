@@ -88,7 +88,7 @@ const DashboardPage = () => {
 															<CheckIcon/>
 														</Select.ItemIndicator>
 													</Select.Item>
-													{index < stationList.length - 1 && (
+													{index < stationList?.length - 1 && (
 														<div className="border-b border-gray-200 my-2"/>
 													)}
 												</div>
@@ -100,7 +100,7 @@ const DashboardPage = () => {
 						)}
 					
 					
-					{stationList.length > 1 && (
+					{stationList?.length > 1 && (
 						<Select.Root
 							value={stationId ?? ""}
 							onValueChange={(s) => setStationId(s)}
@@ -137,7 +137,7 @@ const DashboardPage = () => {
 														<CheckIcon/>
 													</Select.ItemIndicator>
 												</Select.Item>
-												{index < stationList.length - 1 && (
+												{index < stationList?.length - 1 && (
 													<div className="border-b border-gray-200 my-2"/>
 												)}
 											</div>
@@ -149,7 +149,7 @@ const DashboardPage = () => {
 					)}
 					
 					{/* station name  */}
-					{stationList.length === 1 && (
+					{stationList?.length === 1 && (
 						<h1>
 							{stationList[0].station_name}
 							{" station"}
