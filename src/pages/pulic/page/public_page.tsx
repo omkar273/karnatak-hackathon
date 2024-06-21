@@ -39,12 +39,10 @@ const PublicPage = () => {
             "flex max-w-full overflow-x-scroll justify-center gap-8 text-white py-4 pl-4 bg-cyan-800"
           }
         >
-          <button>Public Notices</button>
-          <button>Alerts</button>
-          <button></button>
-          <Link to={"/public/x"}>Report Incident</Link>
+          <Link to={"/public/PublicNoticeTable"}>Public Notices</Link>
+          <Link to={"/public/PublicIncidentReporting"}>Report Incident</Link>
           <Link to={"/public/add-event"}>Event Permission</Link>
-          <Link to={"/public/add-event"}>Wanted List</Link>
+          <Link to={"/public/WantedList"}>Wanted List</Link>
         </div>
         <div>
           <Outlet />

@@ -243,7 +243,7 @@ const EventDataTable = ({events}: { events: EventModel[] }) => {
 		<div className="w-full bg-white p-4 rounded-md card ">
 			<div className="flex items-center py-4">
 				<Input
-					placeholder="Filter event descriptions..."
+					placeholder="Search event descriptions..."
 					value={(table.getColumn("description")?.getFilterValue() as string) ?? ""}
 					onChange={(event) =>
 						table.getColumn("description")?.setFilterValue(event.target.value)

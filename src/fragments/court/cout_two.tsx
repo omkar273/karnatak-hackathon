@@ -99,6 +99,9 @@ const CourtTwo: React.FC = () => {
   return (
     <div className="bg-gray-200">
       <div className="bg-gray-50">
+        <CasePreparationTable />
+        <VSpacer height={25} />
+
         {/* chargeet copies */}
         <div className="card bg-white">
           <p className="text-2xl my-3 font-semibold">Case Preparation</p>
@@ -117,8 +120,6 @@ const CourtTwo: React.FC = () => {
         </div>
 
         <VSpacer height={25} />
-
-        <CasePreparationTable />
 
         <div className="flex space-x-5 mx-4 rounded-lg">
           {/* First box */}
