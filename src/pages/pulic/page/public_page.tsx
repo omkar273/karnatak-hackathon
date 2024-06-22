@@ -43,6 +43,9 @@ const PublicPage = () => {
           <Link to={"/public/PublicIncidentReporting"}>Report Incident</Link>
           <Link to={"/public/add-event"}>Event Permission</Link>
           <Link to={"/public/WantedList"}>Wanted List</Link>
+          <Link to={"/public/PublicComplent"}>Complaint</Link>
+          <Link to={"/public/PublicFedback"}>Feedback</Link>
+
         </div>
         <div>
           <Outlet />
