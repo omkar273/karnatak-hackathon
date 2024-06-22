@@ -69,38 +69,38 @@ const HotspotZoneMap: React.FC<Props> = ({lat, lng, station_name}) => {
 	console.log(lat, lng, station_name);
 	const alertZones = [
 		{
-			'color': '',
-			"lat": 12.4354,
-			"lng": 76.8182
+			'color': 'red',
+			"lat": 12.9780,
+			"lng": 77.6800  // North-East direction, about 7 km away
 		},
 		{
-			'color': '',
-			"lat": 12.9364,
-			"lng": 77.6192
+			'color': 'orange',
+			"lat": 12.8890,
+			"lng": 77.6590  // South-West direction, about 7 km away
 		},
 		{
-			'color': '',
-			"lat": 12.9314,
-			"lng": 77.6162
+			'color': 'yellow',
+			"lat": 12.9880,
+			"lng": 77.5900  // North-West direction, about 10 km away
 		},
 		{
-			'color': '',
-			"lat": 11.256,
-			"lng": 77.6195
+			'color': 'green',
+			"lat": 12.8690,
+			"lng": 77.6890  // South-East direction, about 10 km away
 		},
 		{
-			'color': '',
-			"lat": 12.9342,
-			"lng": 77.6792
-		},
-		{
-			'color': '',
+			'color': 'blue',
 			"lat": 12.9344,
-			"lng": 77.6194
+			"lng": 77.5292  // West direction, about 5 km away
 		},
-	
-	]
+		{
+			'color': 'purple',
+			"lat": 12.9344,
+			"lng": 77.7192  // East direction, about 5 km away
+		},
+	];
 	return (
+		
 		<MapContainer center={[12.971599, 77.594566]} zoom={13} scrollWheelZoom={false}>
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -120,7 +120,7 @@ const HotspotZoneMap: React.FC<Props> = ({lat, lng, station_name}) => {
 			
 			{
 				alertZones.map((zone, i) => (
-					<CircleMarker center={[zone.lat, zone.lng]} pathOptions={{color: 'red'}} radius={50}>
+					<CircleMarker center={[zone.lat, zone.lng]} pathOptions={{color: zone.color}} radius={30}>
 						<Popup>Popup in CircleMarker</Popup>
 					</CircleMarker>
 				))
