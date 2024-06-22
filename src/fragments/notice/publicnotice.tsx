@@ -82,7 +82,7 @@ const PublicNoticeTable: React.FC = () => {
   ];
 
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 p-4">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
         {"Public Notices"}
       </p>

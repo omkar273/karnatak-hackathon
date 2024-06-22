@@ -170,7 +170,7 @@ const PublicIncidentReporting = () => {
   };
 
   return (
-    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 pb-24">
+    <div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100 p-4 pb-24 ">
       <p className="bg-white p-3 border-b-2 border font-open-sans font-semibold flex justify-between items-center text-base sticky top-0 z-[100]">
         {"Public Incident Reporting"}
       </p>

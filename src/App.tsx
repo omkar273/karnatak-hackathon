@@ -245,7 +245,7 @@ const App = () => {
 				
 				{/* event add page */}
 				<Route path="/public" element={<PublicPage/>}>
-					<Route index element={<AddEventPage/>}/>
+					<Route index element={<PublicNoticeTable/>}/>
 					<Route path={"add-event"} element={<AddEventPage/>}/>
 					<Route
 						path="PublicNoticeTable"
