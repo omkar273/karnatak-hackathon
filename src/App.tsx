@@ -55,6 +55,8 @@ import ErrorPage from "./pages/error/error_page";
 import HomePage from "./pages/home/page/home_page";
 import VideoPage from "./pages/videos/page/video_page";
 import AdminLogs from "@/common/pages/admin_logs.tsx";
+import ComplaintPage from "./fragments/fir/page/complnent.tsx";
+import FeedbackPage from "./fragments/fir/page/feedback.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -245,6 +247,14 @@ const App = () => {
 					<Route
 						path="PublicNoticeTable"
 						element={getProtectedRoute(<PublicNoticeTable/>)}
+					/>
+					<Route
+						path="PublicComplent"
+						element={getProtectedRoute(<ComplaintPage/>)}
+					/>
+					<Route
+						path="PublicFedback"
+						element={getProtectedRoute(<FeedbackPage/>)}
 					/>
 					<Route
 						path="PublicIncidentReporting"
