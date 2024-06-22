@@ -6,6 +6,10 @@ import EvidencesCard from "../components/fir_evidence_card";
 import ProgressCard from "../components/fir_progress_card";
 import useGetFirDetails from "../hooks/use_get_fir_details";
 import {usePDF} from "react-to-pdf";
+import {useSelector} from "react-redux";
+import {RootState} from "@/common/redux/store.ts";
+import {useEffect, useState} from "react";
+import {RanksEnum} from "@/common/post/ranks.ts";
 
 const FirDetailsPage = () => {
 	const [queryParams] = useSearchParams()
@@ -13,6 +17,25 @@ const FirDetailsPage = () => {
 	const {data, error, loading} = useGetFirDetails(id);
 	const {toPDF, targetRef} = usePDF({filename: 'fir_details.pdf'});
 	
+	const {userdata} = useSelector((s: RootState) => s.auth);
+	const [userAcces, setuserAcces] = useState(false);
+	
+	const acess = (id: string, arr: undefined | Array<{ name: string; id: string; post: string }>) => {
+		for (const acessorId of arr) {
+			if (acessorId.id === id) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	useEffect(() => {
+		if (userdata && !loading && data) {
+			if (userdata?.id === data?.registered_by_id || acess(userdata?.id || '', data?.allotedTo) || userdata.post === RanksEnum.Commisioner) {
+				setuserAcces(true)
+			}
+		}
+	}, [userdata, data, loading]);
 	
 	if (loading) {
 		return (
@@ -26,6 +49,14 @@ const FirDetailsPage = () => {
 		)
 	}
 	
+	if (!userAcces) {
+		return (
+			<div className={'min-h-screen bg-white flex justify-center items-center'}>
+				<p>You dont have authority to acess this page</p>
+			</div>
+		)
+	}
+	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden relative">
 			
@@ -33,7 +64,6 @@ const FirDetailsPage = () => {
 			{/*<div className={'size-14 flex justify-center items-center bg-blue-400 border-2 border-blue-700 cursor-pointer active:scale-95 fixed rounded-full p-2 bottom-10 right-10 z-50'}>*/}
 			{/*	<img src={capital_tech_logo} className={'size-10 object-cover'} alt="chatbot"/>*/}
 			{/*</div>*/}
-			
 			
 			
 			<div

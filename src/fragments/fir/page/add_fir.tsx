@@ -14,6 +14,7 @@ import {useSelector} from "react-redux";
 import {RootState} from "@/common/redux/store.ts";
 import {useEffect, useState} from "react";
 import * as Select2 from "@radix-ui/react-select";
+import addLog from "@/utils/add_log.ts";
 
 const AddFir = () => {
 	const {userdata, stationList} = useSelector((s: RootState) => s.auth);
@@ -27,6 +28,16 @@ const AddFir = () => {
 		const station = stationList.find((station) => station.id === id);
 		return station ? station.station_name : "Select a station";
 	};
+	
+	useEffect(() => {
+		if (userdata) {
+			addLog({
+				user_id: userdata?.id,
+				message: "new fir added",
+				user_name: userdata?.name,
+			})
+		}
+	}, [userdata]);
 	
 	const {
 		

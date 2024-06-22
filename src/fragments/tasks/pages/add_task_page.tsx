@@ -10,6 +10,8 @@ import constable_data from '@/data/json/constable_data.json';
 import {useSelector} from "react-redux";
 import {RootState} from "@/common/redux/store.ts";
 import doSaveTask from "@/fragments/tasks/utils/save_task.ts";
+import {useEffect} from "react";
+import addLog from "@/utils/add_log.ts";
 
 const {TextArea} = Input;
 
@@ -46,6 +48,16 @@ const AddTaskPage = () => {
 			label: user.name,
 			value: user.id,
 		}));
+	
+	useEffect(() => {
+		if (userdata) {
+			addLog({
+				user_id: userdata?.id,
+				message: "new task added",
+				user_name: userdata?.name,
+			})
+		}
+	}, [userdata]);
 	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden bg-gray-100">

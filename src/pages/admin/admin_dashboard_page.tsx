@@ -323,8 +323,8 @@ const AdminDashboardPage = () => {
 	
 	const saveFir = async () => {
 		try {
-			toast.success(`no of stations ${fir_data.length}`);
-			for (let index = 916; index < fir_data.length; index++) {
+			toast.success(`no of stations ${50}`);
+			for (let index = 0; index < fir_data.length; index++) {
 				const element = fir_data[index];
 				
 				await doSaveFIR({

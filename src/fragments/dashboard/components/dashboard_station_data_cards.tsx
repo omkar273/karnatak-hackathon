@@ -1,6 +1,7 @@
 import {GridLoader} from "react-spinners"
 import useStationCounts from "../utils/use_station_counts"
 import DataCard from "./data_card"
+import {Link} from "react-router-dom";
 
 const DashboardStationCards = ({stationId}: { stationId: string }) => {
 	
@@ -24,7 +25,8 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 			{/* <DashboardUserDataCards /> */}
 			<p className="font-bold text-3xl px-4 pb-4">Station Data</p>
 			<div className="p-5 grid md:grid-cols-3 md:gap-4 grid-cols-2">
-				<div
+				
+				<Link to={'/station'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Recent Cases</span>
@@ -32,9 +34,9 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
 						<span className="text-white">9</span>
 					</div>
-				</div>
+				</Link>
 				
-				<div
+				<Link to={'/station'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Pending Cases</span>
@@ -42,9 +44,9 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
 						<span className="text-white">8</span>
 					</div>
-				</div>
+				</Link>
 				
-				<div
+				<Link to={'/station'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Closed Cases</span>
@@ -52,7 +54,7 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 					<div className="w-[80px] h-[65px] bg-[#3283FC] flex items-center justify-center rounded-lg">
 						<span className="text-white">12</span>
 					</div>
-				</div>
+				</Link>
 			</div>
 			<div
 				className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-3  ">
