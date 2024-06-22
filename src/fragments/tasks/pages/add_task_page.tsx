@@ -30,7 +30,15 @@ const AddTaskPage = () => {
 	const onSubmit: SubmitHandler<TaskModel> = async (data) => {
 		console.log(data); // Handle form submission logic
 		await doSaveTask(data, userdata?.id || '', userdata?.name || '');
+		if (userdata) {
+			addLog({
+				user_id: userdata?.id,
+				message: "user created a new task",
+				user_name: userdata?.name,
+			})
+		}
 		reset();
+		
 	};
 	
 	const taskTypes = ["Fir", "Crime Investigation", "Patrolling", "Emergency Reporting", "other"];
