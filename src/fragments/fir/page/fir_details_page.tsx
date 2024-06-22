@@ -12,6 +12,7 @@ import {useEffect, useState} from "react";
 import {RanksEnum} from "@/common/post/ranks.ts";
 import {FirModel} from "@/fragments/fir/modals/fir_modal.ts";
 import {useSpeech} from "react-text-to-speech";
+import {Button, Modal} from "antd";
 
 const FirDetailsPage = () => {
 	const [queryParams] = useSearchParams()
@@ -26,8 +27,9 @@ const FirDetailsPage = () => {
 		// isInQueue,
 		start,
 		// pause,
-		// stop,
+		stop,
 	} = useSpeech({text: speechText});
+	const [modalOpen, setmodalOpen] = useState<boolean>(false);
 	
 	const {userdata} = useSelector((s: RootState) => s.auth);
 	const [userAcces, setuserAcces] = useState(false);
@@ -94,6 +96,38 @@ ${data?.allotedTo?.map(officer => `- ${officer.name}, ${officer.post}`).join('\n
 			
 			<div
 				className="bg-white p-3 border-b-2 border font-open-sans  flex justify-between items-center text-base sticky top-0 z-[100]">
+				
+				{/* modal  */}
+				<Modal
+					// title="Test Credentials"
+					centered
+					open={modalOpen}
+					onCancel={() => {
+						setmodalOpen(false)
+						stop()
+					}}
+					footer={[
+						<Button
+							key="submit"
+							type="primary"
+							className="bg-blue-600"
+							onClick={() => {
+								setmodalOpen(false);
+								stop()
+							}}
+						>
+							Ok
+						</Button>,
+					]}
+				>
+					<div>
+						<h1 className={'text-center text-xl mb-6'}>Fir Summary</h1>
+						<p className={'text-base px-4'}>
+							{createFIRSummary(data ?? '')}
+						</p>
+					</div>
+				</Modal>
+				
 				<h1 className={'font-semibold'}>
 					{"FIR Details"}
 				</h1>
@@ -109,12 +143,11 @@ ${data?.allotedTo?.map(officer => `- ${officer.name}, ${officer.post}`).join('\n
 							console.log(sumamry)
 							setSpeechText(sumamry)
 							start()
+							setmodalOpen(true)
 						}}
 					>
 						<Volume2/>
 					</button>
-					
-					
 					
 					
 					<button
