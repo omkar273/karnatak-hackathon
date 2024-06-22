@@ -1,6 +1,6 @@
-import {TaskType} from "../fragments/fir/modals/fir_modal";
+import {FirModel} from "../fragments/fir/modals/fir_modal";
 
-export const fir_dataset: TaskType[] = [
+export const fir_dataset: FirModel[] = [
 	{
 		District_Name: "Bagalkot",
 		UnitName: "Amengad PS",

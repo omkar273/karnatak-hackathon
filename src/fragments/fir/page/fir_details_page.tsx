@@ -1,5 +1,5 @@
 import {VSpacer} from "@/common/components/spacer";
-import {Calendar, CircleUserRound, Clock9, FileDown, MapPinned, ReceiptText, UserRound} from "lucide-react";
+import {Calendar, CircleUserRound, Clock9, FileDown, MapPinned, ReceiptText, UserRound, Volume2} from "lucide-react";
 import {useSearchParams} from "react-router-dom";
 import {FadeLoader} from "react-spinners";
 import EvidencesCard from "../components/fir_evidence_card";
@@ -10,12 +10,24 @@ import {useSelector} from "react-redux";
 import {RootState} from "@/common/redux/store.ts";
 import {useEffect, useState} from "react";
 import {RanksEnum} from "@/common/post/ranks.ts";
+import {FirModel} from "@/fragments/fir/modals/fir_modal.ts";
+import {useSpeech} from "react-text-to-speech";
 
 const FirDetailsPage = () => {
 	const [queryParams] = useSearchParams()
 	const id = queryParams.get('id');
 	const {data, error, loading} = useGetFirDetails(id);
 	const {toPDF, targetRef} = usePDF({filename: 'fir_details.pdf'});
+	const [speechText, setSpeechText] = useState('');
+	
+	const {
+		// Text,
+		// speechStatus,
+		// isInQueue,
+		start,
+		// pause,
+		// stop,
+	} = useSpeech({text: speechText});
 	
 	const {userdata} = useSelector((s: RootState) => s.auth);
 	const [userAcces, setuserAcces] = useState(false);
@@ -57,6 +69,20 @@ const FirDetailsPage = () => {
 		)
 	}
 	
+	const createFIRSummary = (data: FirModel): string => {
+		return `
+The FIR, numbered ${data.FIRNo}, was registered at the ${data.UnitName} in the ${data.District_Name} district. The offence took place on ${new Date(data.Offence_From_Date).toLocaleString()} and was reported on the same day at ${new Date(data.FIR_Reg_DateTime).toLocaleString()}. This case, categorized as a ${data.FIR_Type} offence, falls under the section ${data.ActSection} of the Karnataka Police Act, 1963.
+
+The incident occurred at ${data.Place_of_Offence}, approximately ${data.Distance_from_PS} from the police station. The investigation was led by ${data.IOName}, identified by KGID ${data.KGID}. The case was initiated suo-moto by the police and involves the crime of ${data.CrimeHead_Name} under the ${data.CrimeGroup_Name}.
+
+No victims were recorded in this case. However, there were two accused, both male, who were arrested and charged. One of them has been convicted. The crime scene is part of the Aminagad Town beat in the Aminagad village area.
+
+The officers assigned to this case were:
+${data?.allotedTo?.map(officer => `- ${officer.name}, ${officer.post}`).join('\n')}.
+    `.trim();
+	};
+	
+	
 	return (
 		<div className="max-h-screen overflow-y-scroll overflow-hidden relative">
 			
@@ -72,14 +98,31 @@ const FirDetailsPage = () => {
 					{"FIR Details"}
 				</h1>
 				
-				<button
-					className="bg-blue-600 text-white px-3 py-2 rounded-md flex gap-2 items-center transition-transform transform active:scale-95"
-					type="submit"
-					onClick={() => toPDF()}
-				>
-					<FileDown/>
-					<p>Download Pdf</p>
-				</button>
+				<div className={'flex gap-2 items-center'}>
+					
+					<button
+						disabled={!data}
+						className="bg-blue-600 text-white px-3 py-2 rounded-md flex gap-2 items-center transition-transform transform active:scale-95"
+						type="submit"
+						onClick={() => {
+							const sumamry = createFIRSummary(data!);
+							console.log(sumamry)
+							setSpeechText(sumamry)
+							start()
+						}}
+					>
+						<Volume2/>
+					</button>
+					
+					<button
+						className="bg-blue-600 text-white px-3 py-2 rounded-md flex gap-2 items-center transition-transform transform active:scale-95"
+						type="submit"
+						onClick={() => toPDF()}
+					>
+						<FileDown/>
+						<p>Download Pdf</p>
+					</button>
+				</div>
 			
 			</div>
 			<div className="p-4">

@@ -86,7 +86,7 @@ const AdminLogs = () => {
 						<p>
 							{log.message}
 						</p>
-						{`${log.timestamp.toDate()}`}
+						{`${log.timestamp?.toDate()}`}
 					</li>
 				))}
 			</ul>

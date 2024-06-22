@@ -1,13 +1,15 @@
 import React from 'react';
 import {FaEnvelope, FaMapMarkerAlt, FaPhone, FaUser} from 'react-icons/fa';
 import {StationModel} from "@/fragments/station/models/station_model.ts";
+import {Link} from "react-router-dom";
 
 interface StationCardProps {
 	station: StationModel;
 }
 
 const StationCard: React.FC<StationCardProps> = ({station}) => {
-	return (<div className="max-w-md rounded overflow-hidden shadow-lg bg-white p-6 cursor-pointer active:scale-95 transition-all duration-300" >
+	return (<Link to={`/emergency_zones/zone/hotspot?id=${station.id}`}
+	              className="max-w-md rounded overflow-hidden shadow-lg bg-white p-6 cursor-pointer active:scale-95 transition-all duration-300">
 		
 		<div className="font-bold text-2xl mb-6">
 			{station.station_name}
@@ -59,6 +61,6 @@ const StationCard: React.FC<StationCardProps> = ({station}) => {
 					Incharge: {station.station_incharge_name}
 				</div>)}
 		</div>
-	</div>);
+	</Link>);
 };
 export default StationCard;

@@ -1,6 +1,6 @@
 import {Timestamp} from "firebase/firestore";
 
-export interface TaskType {
+export interface FirModel {
 	id?: string;
 	District_Name: string;
 	UnitName: string;
