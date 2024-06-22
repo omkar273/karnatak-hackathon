@@ -16,7 +16,7 @@ import TaskPage from "@/fragments/tasks/pages/task_page.tsx";
 import "leaflet/dist/leaflet.css";
 import AdminDashboardPage from "pages/admin/admin_dashboard_page.tsx";
 import PublicPage from "pages/pulic/page/public_page.tsx";
-import {ReactNode} from "react";
+import React, {ReactNode} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import useUserData from "./common/hooks/useUserData";
@@ -57,8 +57,8 @@ import VideoPage from "./pages/videos/page/video_page";
 import AdminLogs from "@/common/pages/admin_logs.tsx";
 import ComplaintPage from "./fragments/fir/page/complnent.tsx";
 import FeedbackPage from "./fragments/fir/page/feedback.tsx";
-import HotspotZoneMap from "@/common/components/hotspt_zones_map.tsx";
 import AlertZoneHotspot from "@/common/pages/alert_zone_hotspot.tsx";
+import RecentCasePages from "@/common/pages/recent_case_pages.tsx";
 
 const App = () => {
 	const {isUserLoggedIn, currentUser} = useSelector(
@@ -96,6 +96,8 @@ const App = () => {
 						<Route index element={getProtectedRoute(<MyStationPage/>)}/>
 						
 						<Route path="task" element={getProtectedRoute(<TasksPage/>)}/>
+						
+						<Route path="recent-cases" element={getProtectedRoute(<RecentCasePages/>)}/>
 						
 						<Route path="vehicle" element={<VehiclePage/>}/>
 						<Route path="weop" element={<WeaponsPage/>}/>

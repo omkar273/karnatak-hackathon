@@ -26,7 +26,7 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 			<p className="font-bold text-3xl px-4 pb-4">Station Data</p>
 			<div className="p-5 grid md:grid-cols-3 md:gap-4 grid-cols-2">
 				
-				<Link to={'/station'}
+				<Link to={'/station/recent-cases'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Recent Cases</span>
@@ -36,7 +36,7 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 					</div>
 				</Link>
 				
-				<Link to={'/station'}
+				<Link to={'/station/recent-cases'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Pending Cases</span>
@@ -46,7 +46,7 @@ const DashboardStationCards = ({stationId}: { stationId: string }) => {
 					</div>
 				</Link>
 				
-				<Link to={'/station'}
+				<Link to={'/station/recent-cases'}
 					className="w-[276px] h-[65px] bg-white flex items-center justify-between p-0 shadow-md rounded-lg">
 					<div className="flex-1">
 						<span className="text-lg font-semibold p-4">Closed Cases</span>

@@ -242,7 +242,7 @@ const StationFirTable = ({stationId}: { stationId: string | null }) => {
 	};
 	
 	return (
-		<div className="p-4 rounded-md my-2">
+		<div className="p-4 rounded-md my-2 bg-white" >
 			{loading && <p>Loading...</p>}
 			{error && <p>Error: {error.message}</p>}
 			
